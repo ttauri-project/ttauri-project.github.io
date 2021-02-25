@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -130,11 +130,11 @@ $(function() {
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classtt_1_1sync__clock__calibration__type.html#ab77e4112d279035217fed7b6bd972c25">   64</a></span>&#160;    <span class="keyword">typename</span> slow_clock::time_point <a class="code" href="classtt_1_1sync__clock__calibration__type.html#ab77e4112d279035217fed7b6bd972c25">convert</a>(<span class="keyword">typename</span> fast_clock::time_point fast_time) <span class="keyword">const</span> noexcept {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> convert(gain.load(std::memory_order_relaxed), bias.load(std::memory_order_relaxed), fast_time);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> convert(gain.load(std::memory_order_relaxed), bias.load(std::memory_order::relaxed), fast_time);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classtt_1_1sync__clock__calibration__type.html#a86da4bd4581ae9af9346be21aed71ddf">   68</a></span>&#160;    <span class="keyword">typename</span> slow_clock::duration <a class="code" href="classtt_1_1sync__clock__calibration__type.html#a86da4bd4581ae9af9346be21aed71ddf">convert</a>(<span class="keyword">typename</span> fast_clock::duration fast_duration) <span class="keyword">const</span> noexcept {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> convert(gain.load(std::memory_order_relaxed), fast_duration);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">return</span> convert(gain.load(std::memory_order::relaxed), fast_duration);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">/* Calibrate the sync clock.</span></div>
@@ -245,7 +245,7 @@ $(function() {
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> do_gain_calibration = calibration_nr &lt;= 5;</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> new_gain = do_gain_calibration ? getGain() : gain.load(std::memory_order_relaxed);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> new_gain = do_gain_calibration ? getGain() : gain.load(std::memory_order::relaxed);</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> new_bias = getBias(new_gain);</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> leap_adjustment = getLeapAdjustment(new_gain, new_bias);</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
@@ -265,9 +265,9 @@ $(function() {
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        }</div>
 <div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        </div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">if</span> (do_gain_calibration) {</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            gain.store(new_gain, std::memory_order_relaxed);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            gain.store(new_gain, std::memory_order::relaxed);</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        bias.store(new_bias + leap_adjustment, std::memory_order_relaxed);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        bias.store(new_bias + leap_adjustment, std::memory_order::relaxed);</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        leapsecond_offset += leap_adjustment;</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    }</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
@@ -329,7 +329,7 @@ $(function() {
 <div class="ttc" id="aclasstt_1_1sync__clock__calibration__type_html_a86da4bd4581ae9af9346be21aed71ddf"><div class="ttname"><a href="classtt_1_1sync__clock__calibration__type.html#a86da4bd4581ae9af9346be21aed71ddf">tt::sync_clock_calibration_type::convert</a></div><div class="ttdeci">slow_clock::duration convert(typename fast_clock::duration fast_duration) const noexcept</div><div class="ttdef"><b>Definition:</b> sync_clock.hpp:68</div></div>
 <div class="ttc" id="aclasstt_1_1sync__clock__calibration__type_html_ab77e4112d279035217fed7b6bd972c25"><div class="ttname"><a href="classtt_1_1sync__clock__calibration__type.html#ab77e4112d279035217fed7b6bd972c25">tt::sync_clock_calibration_type::convert</a></div><div class="ttdeci">slow_clock::time_point convert(typename fast_clock::time_point fast_time) const noexcept</div><div class="ttdef"><b>Definition:</b> sync_clock.hpp:64</div></div>
 <div class="ttc" id="aclasstt_1_1sync__clock__calibration__type_html_ae2d49436ea628523eb645a1432b41aec"><div class="ttname"><a href="classtt_1_1sync__clock__calibration__type.html#ae2d49436ea628523eb645a1432b41aec">tt::sync_clock_calibration_type::calibrate_tick</a></div><div class="ttdeci">void calibrate_tick() noexcept</div><div class="ttdef"><b>Definition:</b> sync_clock.hpp:75</div></div>
-<div class="ttc" id="alogger_8hpp_html_a59bd14993f487d857f4ae6931ccb6127"><div class="ttname"><a href="logger_8hpp.html#a59bd14993f487d857f4ae6931ccb6127">tt_log_info</a></div><div class="ttdeci">#define tt_log_info(fmt,...)</div><div class="ttdef"><b>Definition:</b> logger.hpp:240</div></div>
+<div class="ttc" id="alogger_8hpp_html_a59bd14993f487d857f4ae6931ccb6127"><div class="ttname"><a href="logger_8hpp.html#a59bd14993f487d857f4ae6931ccb6127">tt_log_info</a></div><div class="ttdeci">#define tt_log_info(fmt,...)</div><div class="ttdef"><b>Definition:</b> logger.hpp:266</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
 <div class="ttc" id="anamespacett_html_a0f4d8ca44520b2347b30141df0091cd9"><div class="ttname"><a href="namespacett.html#a0f4d8ca44520b2347b30141df0091cd9">tt::sync_clock_calibration</a></div><div class="ttdeci">sync_clock_calibration_type&lt; C1, C2 &gt; * sync_clock_calibration</div><div class="ttdef"><b>Definition:</b> sync_clock.hpp:228</div></div>
 <div class="ttc" id="anamespacett_html_a75eabcc82f784ea8d4892ab05faf682f"><div class="ttname"><a href="namespacett.html#a75eabcc82f784ea8d4892ab05faf682f">tt::ubig128</a></div><div class="ttdeci">bigint&lt; uint64_t, 2 &gt; ubig128</div><div class="ttdef"><b>Definition:</b> bigint.hpp:600</div></div>

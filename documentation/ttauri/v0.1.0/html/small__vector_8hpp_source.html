@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_bda4b65898e911bd8f6b1403950ffc28.html">TTauri</a></li><li class="navelem"><a class="el" href="dir_5cfb5b6b41438301859963e67b747eb9.html">Foundation</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9f87200816c308c69831370edcfdd251.html">TTauri</a></li><li class="navelem"><a class="el" href="dir_7fadd25447c0a04ed6951ae08d30b831.html">Foundation</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -112,19 +112,19 @@ $(function() {
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        _end = <a class="code" href="range__map_8hpp.html#ace33f8d9fdf1a7c8bc9fce3a0649ef07">items</a>.begin();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classtt_1_1small__vector.html#a58489510230a19bce3ee01dc25f63315">   42</a></span>&#160;    constexpr <span class="keywordtype">bool</span> <a class="code" href="classtt_1_1small__vector.html#a58489510230a19bce3ee01dc25f63315">push_back</a>(value_type &amp;&amp;value) <a class="code" href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">noexcept</a> {</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classtt_1_1small__vector.html#a58489510230a19bce3ee01dc25f63315">   42</a></span>&#160;    constexpr <span class="keywordtype">bool</span> <a class="code" href="classtt_1_1small__vector.html#a58489510230a19bce3ee01dc25f63315">push_back</a>(value_type &amp;&amp;<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>) <a class="code" href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">noexcept</a> {</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span> (_end == <a class="code" href="range__map_8hpp.html#ace33f8d9fdf1a7c8bc9fce3a0649ef07">items</a>.end()) {</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        *(_end++) = std::move(value);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        *(_end++) = std::move(<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classtt_1_1small__vector.html#a75ad1408c1d011ad98a0cdccdf74bb9e">   50</a></span>&#160;    constexpr <span class="keywordtype">bool</span> <a class="code" href="classtt_1_1small__vector.html#a75ad1408c1d011ad98a0cdccdf74bb9e">push_back</a>(value_type <span class="keyword">const</span> &amp;value) <a class="code" href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">noexcept</a> {</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classtt_1_1small__vector.html#a75ad1408c1d011ad98a0cdccdf74bb9e">   50</a></span>&#160;    constexpr <span class="keywordtype">bool</span> <a class="code" href="classtt_1_1small__vector.html#a75ad1408c1d011ad98a0cdccdf74bb9e">push_back</a>(value_type <span class="keyword">const</span> &amp;<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>) <a class="code" href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">noexcept</a> {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">if</span> (_end == <a class="code" href="range__map_8hpp.html#ace33f8d9fdf1a7c8bc9fce3a0649ef07">items</a>.end()) {</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        *(_end++) = value;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        *(_end++) = <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
@@ -139,6 +139,7 @@ $(function() {
 <div class="ttc" id="aclasstt_1_1small__vector_html_a75ad1408c1d011ad98a0cdccdf74bb9e"><div class="ttname"><a href="classtt_1_1small__vector.html#a75ad1408c1d011ad98a0cdccdf74bb9e">tt::small_vector::push_back</a></div><div class="ttdeci">constexpr bool push_back(value_type const &amp;value) noexcept</div><div class="ttdef"><b>Definition:</b> small_vector.hpp:50</div></div>
 <div class="ttc" id="aclasstt_1_1small__vector_html_a8a6562dcf5aa3162888c8677ceddfca9"><div class="ttname"><a href="classtt_1_1small__vector.html#a8a6562dcf5aa3162888c8677ceddfca9">tt::small_vector::size</a></div><div class="ttdeci">constexpr size_t size() const noexcept</div><div class="ttdef"><b>Definition:</b> small_vector.hpp:34</div></div>
 <div class="ttc" id="aclasstt_1_1small__vector_html_ae95474605b570b21ef8789d4115cff88"><div class="ttname"><a href="classtt_1_1small__vector.html#ae95474605b570b21ef8789d4115cff88">tt::small_vector::small_vector</a></div><div class="ttdeci">constexpr small_vector() noexcept</div><div class="ttdef"><b>Definition:</b> small_vector.hpp:22</div></div>
+<div class="ttc" id="anamespacebase-93_html_ab5ed527bf01cca4c86801670d4da33d8"><div class="ttname"><a href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">base-93.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> base-93.py:5</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> Application.hpp:11</div></div>
 <div class="ttc" id="anamespacett_html_a9142b8051c10151b83cdfb00d6ecb351"><div class="ttname"><a href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">tt::noexcept</a></div><div class="ttdeci">size_t alignment noexcept</div><div class="ttdef"><b>Definition:</b> memory.hpp:31</div></div>
 <div class="ttc" id="anamespacett_html_ab5d6d07ac9bc944839d2347c615efd47ab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="namespacett.html#ab5d6d07ac9bc944839d2347c615efd47ab9ece18c950afbfa6b0fdbfa4ff731d3">tt::KeyboardVirtualKey::T</a></div><div class="ttdeci">@ T</div></div>

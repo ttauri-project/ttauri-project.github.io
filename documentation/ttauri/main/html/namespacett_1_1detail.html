@@ -99,10 +99,6 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1detail_1_1observable__value.html">observable_value</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1detail_1_1error__info__entry__base.html">error_info_entry_base</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1detail_1_1error__info__entry.html">error_info_entry</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1detail_1_1label__arguments__base.html">label_arguments_base</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1detail_1_1label__arguments.html">label_arguments</a></td></tr>
@@ -156,6 +152,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a99905864f91d4c8311208fadbcf8970f"><td class="memTemplParams" colspan="2">template&lt;typename Arg &gt; </td></tr>
 <tr class="memitem:a99905864f91d4c8311208fadbcf8970f"><td class="memTemplItemLeft" align="right" valign="top">auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacett_1_1detail.html#a99905864f91d4c8311208fadbcf8970f">u8format_argument_cast</a> (Arg const &amp;arg) noexcept -&gt; std::conditional_t&lt; std::is_same_v&lt; Arg, std::u8string_view &gt;||std::is_same_v&lt; Arg, std::u8string &gt;, std::string_view, Arg const &amp; &gt;</td></tr>
 <tr class="separator:a99905864f91d4c8311208fadbcf8970f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1653883f5eb1cd56cbedf10c38a74316"><td class="memTemplParams" colspan="2">template&lt;typename InitFunc , typename DeinitFunc &gt; </td></tr>
+<tr class="memitem:a1653883f5eb1cd56cbedf10c38a74316"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="os__detect_8hpp.html#ab70b26c90340b2dcd1f43bfca2337e0c">tt_no_inline</a> bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacett_1_1detail.html#a1653883f5eb1cd56cbedf10c38a74316">system_status_start_subsystem</a> (<a class="el" href="namespacett.html#a6f3952171f3f6e6d4fbbe85e47b0953c">system_status_type</a> subsystem, InitFunc init_function, DeinitFunc deinit_function)</td></tr>
+<tr class="separator:a1653883f5eb1cd56cbedf10c38a74316"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96ca54e1b3291e0d640be493dd2d91d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacett_1_1detail.html#a7b113ebe0c3076d2fdc004875d0d85ea">unicode_bidi_char_info_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacett_1_1detail.html#a96ca54e1b3291e0d640be493dd2d91d6">unicode_bidi_P1</a> (<a class="el" href="namespacett_1_1detail.html#a7b113ebe0c3076d2fdc004875d0d85ea">unicode_bidi_char_info_iterator</a> first, <a class="el" href="namespacett_1_1detail.html#a7b113ebe0c3076d2fdc004875d0d85ea">unicode_bidi_char_info_iterator</a> last, <a class="el" href="structtt_1_1detail_1_1unicode__bidi__test__parameters.html">unicode_bidi_test_parameters</a> test_parameters={}) noexcept</td></tr>
 <tr class="separator:a96ca54e1b3291e0d640be493dd2d91d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -213,6 +212,18 @@ Variables</h2></td></tr>
 <tr class="separator:aa8a07ba7e2ba74a8ddfeffec68d37cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc02ee7571190bf3b040b528e45d9b5f"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacett_1_1detail.html#acc02ee7571190bf3b040b528e45d9b5f">BON8_code_eot</a> = uint8_t{0xff}</td></tr>
 <tr class="separator:acc02ee7571190bf3b040b528e45d9b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae10cd9bdf178277af77ebe894dba778"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::function&lt; void()&gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacett_1_1detail.html#aae10cd9bdf178277af77ebe894dba778">system_status_deinit_list</a></td></tr>
+<tr class="memdesc:aae10cd9bdf178277af77ebe894dba778"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of deinit function to be called on shutdown.  <a href="namespacett_1_1detail.html#aae10cd9bdf178277af77ebe894dba778">More...</a><br /></td></tr>
+<tr class="separator:aae10cd9bdf178277af77ebe894dba778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0750c7013abe535c0a87f698d87e68cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1unfair__mutex.html">unfair_mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacett_1_1detail.html#a0750c7013abe535c0a87f698d87e68cd">system_status_mutex</a></td></tr>
+<tr class="memdesc:a0750c7013abe535c0a87f698d87e68cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mutex to be held when writing to system_status or accessing system_status_deinit_list.  <a href="namespacett_1_1detail.html#a0750c7013abe535c0a87f698d87e68cd">More...</a><br /></td></tr>
+<tr class="separator:a0750c7013abe535c0a87f698d87e68cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7f57f034d6ce4395068831277babab4"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacett_1_1detail.html#af7f57f034d6ce4395068831277babab4">unicode_db_description_table</a></td></tr>
+<tr class="separator:af7f57f034d6ce4395068831277babab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a782ad1f68ff308e05e9cec05d0998b13"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacett_1_1detail.html#a782ad1f68ff308e05e9cec05d0998b13">unicode_db_composition_table</a></td></tr>
+<tr class="separator:a782ad1f68ff308e05e9cec05d0998b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07428387c78e4660b1d8d2492316dd88"><td class="memItemLeft" align="right" valign="top">constexpr auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacett_1_1detail.html#a07428387c78e4660b1d8d2492316dd88">unicode_db_decomposition_table</a></td></tr>
+<tr class="separator:a07428387c78e4660b1d8d2492316dd88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94ee7e6a7474b8011f1dc31a0b768897"><td class="memItemLeft" align="right" valign="top">constexpr char32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacett_1_1detail.html#a94ee7e6a7474b8011f1dc31a0b768897">unicode_hangul_S_base</a> = U'\uac00'</td></tr>
 <tr class="separator:a94ee7e6a7474b8011f1dc31a0b768897"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a835fc888a7cb471cc608f836370f182b"><td class="memItemLeft" align="right" valign="top">constexpr char32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacett_1_1detail.html#a835fc888a7cb471cc608f836370f182b">unicode_hangul_L_base</a> = U'\u1100'</td></tr>
@@ -541,6 +552,42 @@ Variables</h2></td></tr>
           <td class="paramtype"><a class="el" href="namespacett.html#aec37e5f48519c8dbb9bda815a02dd9c6">datum</a> const &amp;&#160;</td>
           <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1653883f5eb1cd56cbedf10c38a74316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1653883f5eb1cd56cbedf10c38a74316">&#9670;&nbsp;</a></span>system_status_start_subsystem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InitFunc , typename DeinitFunc &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="os__detect_8hpp.html#ab70b26c90340b2dcd1f43bfca2337e0c">tt_no_inline</a> bool tt::detail::system_status_start_subsystem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacett.html#a6f3952171f3f6e6d4fbbe85e47b0953c">system_status_type</a>&#160;</td>
+          <td class="paramname"><em>subsystem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InitFunc&#160;</td>
+          <td class="paramname"><em>init_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DeinitFunc&#160;</td>
+          <td class="paramname"><em>deinit_function</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1273,6 +1320,121 @@ template&lt;typename Arg &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">constexpr auto tt::detail::BON8_code_object_empty = uint8_t{0xbe}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae10cd9bdf178277af77ebe894dba778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae10cd9bdf178277af77ebe894dba778">&#9670;&nbsp;</a></span>system_status_deinit_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::function&lt;void()&gt; &gt; tt::detail::system_status_deinit_list</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A list of deinit function to be called on shutdown. </p>
+
+</div>
+</div>
+<a id="a0750c7013abe535c0a87f698d87e68cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0750c7013abe535c0a87f698d87e68cd">&#9670;&nbsp;</a></span>system_status_mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtt_1_1unfair__mutex.html">unfair_mutex</a> tt::detail::system_status_mutex</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mutex to be held when writing to system_status or accessing system_status_deinit_list. </p>
+<p>The system status is also an atomic variable so that reads on system_status without holding the mutex is still possible. </p>
+
+</div>
+</div>
+<a id="a782ad1f68ff308e05e9cec05d0998b13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a782ad1f68ff308e05e9cec05d0998b13">&#9670;&nbsp;</a></span>unicode_db_composition_table</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto tt::detail::unicode_db_composition_table</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07428387c78e4660b1d8d2492316dd88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07428387c78e4660b1d8d2492316dd88">&#9670;&nbsp;</a></span>unicode_db_decomposition_table</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto tt::detail::unicode_db_decomposition_table</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7f57f034d6ce4395068831277babab4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7f57f034d6ce4395068831277babab4">&#9670;&nbsp;</a></span>unicode_db_description_table</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr auto tt::detail::unicode_db_description_table</td>
         </tr>
       </table>
   </td>

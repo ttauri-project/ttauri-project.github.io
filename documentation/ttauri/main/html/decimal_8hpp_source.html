@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -632,9 +632,9 @@ $(function() {
 <div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160; </div>
 <div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;<span class="keyword">template</span>&lt;&gt;</div>
 <div class="line"><a name="l00586"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01tt_1_1decimal_01_4.html">  586</a></span>&#160;<span class="keyword">struct </span>hash&lt;<a class="code" href="namespacett.html">tt</a>::decimal&gt; {</div>
-<div class="line"><a name="l00587"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01tt_1_1decimal_01_4.html#a2ba1b24b4563bfe7bf73e448ce369985">  587</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">size_t</span> <a class="code" href="structstd_1_1hash_3_01tt_1_1decimal_01_4.html#a2ba1b24b4563bfe7bf73e448ce369985">operator()</a>(<a class="code" href="classtt_1_1decimal.html">tt::decimal</a> <span class="keyword">const</span> &amp;value)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00587"></a><span class="lineno"><a class="line" href="structstd_1_1hash_3_01tt_1_1decimal_01_4.html#a2ba1b24b4563bfe7bf73e448ce369985">  587</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">size_t</span> <a class="code" href="structstd_1_1hash_3_01tt_1_1decimal_01_4.html#a2ba1b24b4563bfe7bf73e448ce369985">operator()</a>(<a class="code" href="classtt_1_1decimal.html">tt::decimal</a> <span class="keyword">const</span> &amp;<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;        <span class="keywordflow">return</span> value.<a class="code" href="classtt_1_1decimal.html#a327a9e3ac2367a6d36796b745903fcf3">hash</a>();</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>.hash();</div>
 <div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;    }</div>
 <div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;};</div>
 <div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160; </div>
@@ -706,6 +706,7 @@ $(function() {
 <div class="ttc" id="aexception_8hpp_html"><div class="ttname"><a href="exception_8hpp.html">exception.hpp</a></div></div>
 <div class="ttc" id="aint__overflow_8hpp_html"><div class="ttname"><a href="int__overflow_8hpp.html">int_overflow.hpp</a></div></div>
 <div class="ttc" id="amath_8hpp_html"><div class="ttname"><a href="math_8hpp.html">math.hpp</a></div></div>
+<div class="ttc" id="anamespacebase-93_html_ab5ed527bf01cca4c86801670d4da33d8"><div class="ttname"><a href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">base-93.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> base-93.py:5</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
 <div class="ttc" id="anamespacett_html_a5defe95d962d46932d8ab58fd1f63de8"><div class="ttname"><a href="namespacett.html#a5defe95d962d46932d8ab58fd1f63de8">tt::to_string</a></div><div class="ttdeci">std::string to_string(audio_device_state const &amp;rhs) noexcept</div><div class="ttdef"><b>Definition:</b> audio_device.hpp:41</div></div>
 <div class="ttc" id="anamespacett_html_a7116b477fa697d3569555f5bff126d75"><div class="ttname"><a href="namespacett.html#a7116b477fa697d3569555f5bff126d75">tt::mul_overflow</a></div><div class="ttdeci">bool mul_overflow(T lhs, T rhs, T *r)</div><div class="ttdoc">Multiply with overflow detection.</div><div class="ttdef"><b>Definition:</b> int_overflow.hpp:94</div></div>

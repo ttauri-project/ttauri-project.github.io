@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -113,7 +113,7 @@ $(function() {
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">//</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// This only works for comparing the owner with the current thread, it would</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// not work to check the owner with a thread_id of another thread.</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> (owner.load(std::memory_order::memory_order_acquire) == <a class="code" href="namespacett.html#a8879c0dcc6ef74837c87a183d3d5e5bd">current_thread_id</a>()) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> (owner.load(std::memory_order::acquire) == <a class="code" href="namespacett.html#a8879c0dcc6ef74837c87a183d3d5e5bd">current_thread_id</a>()) {</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">return</span> count;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">return</span> 0;</div>
@@ -127,7 +127,7 @@ $(function() {
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">// The following load() is:</span></div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="comment">// - valid-and-equal to thread_id when the OWNER has the lock.</span></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">// - zero or valid-and-not-equal to thread_id when this is an OTHER thread.</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">if</span> (owner.load(std::memory_order::memory_order_acquire) == <a class="code" href="namespacett.html#a04a8423797f0e9b052ae9963f3bbd35c">thread_id</a>) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">if</span> (owner.load(std::memory_order::acquire) == <a class="code" href="namespacett.html#a04a8423797f0e9b052ae9963f3bbd35c">thread_id</a>) {</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="comment">// FIRST | OWNER</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <a class="code" href="assert_8hpp.html#a7e4741fb683d5c0fbebd761c072e3bbf">tt_axiom</a>(count != 0);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            ++count;</div>
@@ -140,7 +140,7 @@ $(function() {
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <a class="code" href="assert_8hpp.html#a7e4741fb683d5c0fbebd761c072e3bbf">tt_axiom</a>(count == 0);</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            count = 1;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <a class="code" href="assert_8hpp.html#a7e4741fb683d5c0fbebd761c072e3bbf">tt_axiom</a>(owner == 0);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            owner.store(<a class="code" href="namespacett.html#a04a8423797f0e9b052ae9963f3bbd35c">thread_id</a>, std::memory_order::memory_order_release);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            owner.store(<a class="code" href="namespacett.html#a04a8423797f0e9b052ae9963f3bbd35c">thread_id</a>, std::memory_order::release);</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
@@ -157,7 +157,7 @@ $(function() {
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="comment">// The following load() is:</span></div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="comment">// - valid-and-equal to thread_id when the OWNER has the lock.</span></div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="comment">// - zero or valid-and-not-equal to thread_id when this is an OTHER thread.</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">if</span> (owner.load(std::memory_order::memory_order_acquire) == <a class="code" href="namespacett.html#a04a8423797f0e9b052ae9963f3bbd35c">thread_id</a>) {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">if</span> (owner.load(std::memory_order::acquire) == <a class="code" href="namespacett.html#a04a8423797f0e9b052ae9963f3bbd35c">thread_id</a>) {</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="comment">// FIRST | OWNER</span></div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <a class="code" href="assert_8hpp.html#a7e4741fb683d5c0fbebd761c072e3bbf">tt_axiom</a>(count != 0);</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            ++count;</div>
@@ -172,7 +172,7 @@ $(function() {
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <a class="code" href="assert_8hpp.html#a7e4741fb683d5c0fbebd761c072e3bbf">tt_axiom</a>(count == 0);</div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            count = 1;</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            <a class="code" href="assert_8hpp.html#a7e4741fb683d5c0fbebd761c072e3bbf">tt_axiom</a>(owner == 0);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            owner.store(<a class="code" href="namespacett.html#a04a8423797f0e9b052ae9963f3bbd35c">thread_id</a>, std::memory_order::memory_order_release);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            owner.store(<a class="code" href="namespacett.html#a04a8423797f0e9b052ae9963f3bbd35c">thread_id</a>, std::memory_order::release);</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    }</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
@@ -186,7 +186,7 @@ $(function() {
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="comment">// Only OTHER can execute in `lock()` or `try_lock()`,</span></div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="comment">// where it will either see the thread_id of FIRST or zero.</span></div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="comment">// In both cases the OTHER thread is detected correctly.</span></div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            owner.store(0, std::memory_order::memory_order_release);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            owner.store(0, std::memory_order::release);</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            mutex.<a class="code" href="classtt_1_1unfair__mutex.html#ad34d8cac91a78f659efc4de0a8688727">unlock</a>();</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="comment">// OTHER</span></div>

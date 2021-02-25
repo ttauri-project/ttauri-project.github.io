@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_bda4b65898e911bd8f6b1403950ffc28.html">TTauri</a></li><li class="navelem"><a class="el" href="dir_a4aabcc8303d77c1c9d56c91cb5b8c3f.html">Text</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9f87200816c308c69831370edcfdd251.html">TTauri</a></li><li class="navelem"><a class="el" href="dir_397cf2ee7d20664acbe3d520e7bab147.html">Text</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -234,7 +234,7 @@ $(function() {
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    [[nodiscard]] <span class="keyword">static</span> uint64_t create_pointer(char32_t <span class="keyword">const</span> *data, <span class="keywordtype">size_t</span> <a class="code" href="classtt_1_1_grapheme.html#aef21dc1062121c144165181b116933ab">size</a>) <a class="code" href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">noexcept</a> {</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <a class="code" href="assert_8hpp.html#a1e0b75648732ce91c38b6e0159e35ebe">tt_assert</a>(<a class="code" href="classtt_1_1_grapheme.html#aef21dc1062121c144165181b116933ab">size</a> &lt;= std::tuple_size&lt;long_Grapheme&gt;::value);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <a class="code" href="assert_8hpp.html#a1e0b75648732ce91c38b6e0159e35ebe">tt_assert</a>(<a class="code" href="classtt_1_1_grapheme.html#aef21dc1062121c144165181b116933ab">size</a> &lt;= <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">std::tuple_size&lt;long_Grapheme&gt;::value</a>);</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keyword">auto</span> ptr = <span class="keyword">new</span> <a class="code" href="namespacett.html#adb0b2ab0838437e87c6da3a09f511791">long_Grapheme</a>();</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        memcpy(ptr-&gt;data(), data, <a class="code" href="classtt_1_1_grapheme.html#aef21dc1062121c144165181b116933ab">size</a>);</div>
@@ -245,7 +245,7 @@ $(function() {
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    [[nodiscard]] <a class="code" href="os__detect_8hpp.html#a0e647054ee38d1476b2ea49d6fa628bf">tt_force_inline</a> <a class="code" href="namespacett.html#adb0b2ab0838437e87c6da3a09f511791">long_Grapheme</a> *get_pointer() const <a class="code" href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">noexcept</a> {</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keyword">auto</span> uptr = (value &lt;&lt; 16);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keyword">auto</span> uptr = (<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> &lt;&lt; 16);</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keyword">auto</span> iptr = <span class="keyword">static_cast&lt;</span>ptrdiff_t<span class="keyword">&gt;</span>(uptr) &gt;&gt; 16;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">return</span> std::launder(<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="namespacett.html#adb0b2ab0838437e87c6da3a09f511791">long_Grapheme</a> *<span class="keyword">&gt;</span>(iptr));</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
@@ -343,6 +343,7 @@ $(function() {
 <div class="ttc" id="aclasstt_1_1_grapheme_html_aef21dc1062121c144165181b116933ab"><div class="ttname"><a href="classtt_1_1_grapheme.html#aef21dc1062121c144165181b116933ab">tt::Grapheme::size</a></div><div class="ttdeci">tt_force_inline size_t size() const noexcept</div><div class="ttdef"><b>Definition:</b> Grapheme.hpp:120</div></div>
 <div class="ttc" id="aclasstt_1_1_grapheme_html_af812df8dee58d7b2443664eca6234cdc"><div class="ttname"><a href="classtt_1_1_grapheme.html#af812df8dee58d7b2443664eca6234cdc">tt::Grapheme::NFKC</a></div><div class="ttdeci">std::u32string NFKC() const noexcept</div></div>
 <div class="ttc" id="ahash_8hpp_html"><div class="ttname"><a href="hash_8hpp.html">hash.hpp</a></div></div>
+<div class="ttc" id="anamespacebase-93_html_ab5ed527bf01cca4c86801670d4da33d8"><div class="ttname"><a href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">base-93.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> base-93.py:5</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> Application.hpp:11</div></div>
 <div class="ttc" id="anamespacett_html_a7f77109b276a89a693fd901dcbe65e92"><div class="ttname"><a href="namespacett.html#a7f77109b276a89a693fd901dcbe65e92">tt::hash_mix_two</a></div><div class="ttdeci">size_t hash_mix_two(size_t hash1, size_t hash2) noexcept</div><div class="ttdef"><b>Definition:</b> hash.hpp:16</div></div>
 <div class="ttc" id="anamespacett_html_a9142b8051c10151b83cdfb00d6ecb351"><div class="ttname"><a href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">tt::noexcept</a></div><div class="ttdeci">size_t alignment noexcept</div><div class="ttdef"><b>Definition:</b> memory.hpp:31</div></div>

@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -145,61 +145,63 @@ $(function() {
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> std::clamp(<a class="code" href="namespacett.html#ae4bb98382fd42f6bdb05a279bc482119a4a8a08f09d37b73795649038408b5f33">c</a>, std::min(a, b), std::max(a, b));</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="namespacett.html#a6e4436d2aaf836734be5243244f236d8">   80</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="namespacett.html#a6e4436d2aaf836734be5243244f236d8">almost_equal</a>(<span class="keywordtype">float</span> a, <span class="keywordtype">float</span> b) noexcept {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    uint32_t a_;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    uint32_t b_;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    std::memcpy(&amp;a_, &amp;a, <span class="keyword">sizeof</span>(a_));</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    std::memcpy(&amp;b_, &amp;b, <span class="keyword">sizeof</span>(b_));</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="namespacett.html#a0d1eacc9384a680c5e5bee0057ea4341">   84</a></span>&#160;constexpr <span class="keywordtype">bool</span> <a class="code" href="namespacett.html#a0d1eacc9384a680c5e5bee0057ea4341">almost_equal</a>(<span class="keywordtype">float</span> a, <span class="keywordtype">float</span> b) noexcept {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    constexpr int32_t epsilon = 5;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">auto</span> a__ = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(a_ &amp; 0x7ffffff);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">auto</span> b__ = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(b_ &amp; 0x7ffffff);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> a_ = std::bit_cast&lt;int32_t&gt;(a);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> b_ = std::bit_cast&lt;int32_t&gt;(b);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">if</span> ((a_ &lt; 0) == (b_ &lt; 0)) {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">return</span> std::abs(a__ - b__) &lt; 10;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">return</span> std::abs(a__ + b__) &lt; 10;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator&gt;</div>
-<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="namespacett.html#ae2724849c5f8afe263eb1812e5524b53">   98</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacett.html#ae2724849c5f8afe263eb1812e5524b53">mean</a>(Iterator first, Iterator last)</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> init = <span class="keyword">static_cast&lt;</span>typename std::iterator_traits&lt;Iterator&gt;::value_type<span class="keyword">&gt;</span>(0);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="comment">// Strip the sign bit, and extend to not overflow when calculating the delta.</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> a_abs = <span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(a_ &amp; 0x7ffffff);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> b_abs = <span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(b_ &amp; 0x7ffffff);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">// If both floats have the same size, we can subtract to get the delta.</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="comment">// If they have a different sign then we need to add.</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> delta = (a_ &lt; 0) == (b_ &lt; 0) ? a_abs - b_abs : a_abs + b_abs;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="comment">// Check if the delta is with epsilon.</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">return</span> delta &lt; epsilon &amp;&amp; delta &gt; -epsilon;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> sum = std::reduce(first, last, init);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> count = <span class="keyword">static_cast&lt;</span>decltype(sum)<span class="keyword">&gt;</span>(std::distance(first, last));</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">return</span> count &gt; 0.0 ? sum / count : sum;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="namespacett.html#a751e3040d7b60e821b14a86b282862d7">  109</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacett.html#a751e3040d7b60e821b14a86b282862d7">stddev</a>(Iterator first, Iterator last, T <a class="code" href="namespacett.html#ae2724849c5f8afe263eb1812e5524b53">mean</a>)</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> init = <span class="keyword">static_cast&lt;</span>typename std::iterator_traits&lt;Iterator&gt;::value_type<span class="keyword">&gt;</span>(0);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator&gt;</div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="namespacett.html#ae2724849c5f8afe263eb1812e5524b53">  103</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacett.html#ae2724849c5f8afe263eb1812e5524b53">mean</a>(Iterator first, Iterator last)</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> init = <span class="keyword">static_cast&lt;</span>typename std::iterator_traits&lt;Iterator&gt;::value_type<span class="keyword">&gt;</span>(0);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> sum = std::reduce(first, last, init);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> count = <span class="keyword">static_cast&lt;</span>decltype(sum)<span class="keyword">&gt;</span>(std::distance(first, last));</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> count &gt; 0.0 ? sum / count : sum;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> sum = std::accumulate(first, last, init, [=](<a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;acc, <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;value) {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> tmp = value - <a class="code" href="namespacett.html#ae2724849c5f8afe263eb1812e5524b53">mean</a>;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">return</span> acc + tmp*tmp;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    });</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Iterator, <span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="namespacett.html#a751e3040d7b60e821b14a86b282862d7">  114</a></span>&#160;<span class="keyword">auto</span> <a class="code" href="namespacett.html#a751e3040d7b60e821b14a86b282862d7">stddev</a>(Iterator first, Iterator last, T <a class="code" href="namespacett.html#ae2724849c5f8afe263eb1812e5524b53">mean</a>)</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> init = <span class="keyword">static_cast&lt;</span>typename std::iterator_traits&lt;Iterator&gt;::value_type<span class="keyword">&gt;</span>(0);</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> count = <span class="keyword">static_cast&lt;</span>decltype(sum)<span class="keyword">&gt;</span>(std::distance(first, last));</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">return</span> count &gt; 0.0 ? sum / count : sum;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> sum = std::accumulate(first, last, init, [=](<a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;acc, <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>) {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> tmp = <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> - <a class="code" href="namespacett.html#ae2724849c5f8afe263eb1812e5524b53">mean</a>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">return</span> acc + tmp*tmp;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    });</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> count = <span class="keyword">static_cast&lt;</span>decltype(sum)<span class="keyword">&gt;</span>(std::distance(first, last));</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordflow">return</span> count &gt; 0.0 ? sum / count : sum;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
 <div class="ttc" id="aassert_8hpp_html_a7e4741fb683d5c0fbebd761c072e3bbf"><div class="ttname"><a href="assert_8hpp.html#a7e4741fb683d5c0fbebd761c072e3bbf">tt_axiom</a></div><div class="ttdeci">#define tt_axiom(expression,...)</div><div class="ttdoc">Specify an axiom; an expression that is true.</div><div class="ttdef"><b>Definition:</b> assert.hpp:37</div></div>
 <div class="ttc" id="acast_8hpp_html"><div class="ttname"><a href="cast_8hpp.html">cast.hpp</a></div></div>
+<div class="ttc" id="anamespacebase-93_html_ab5ed527bf01cca4c86801670d4da33d8"><div class="ttname"><a href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">base-93.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> base-93.py:5</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
+<div class="ttc" id="anamespacett_html_a0d1eacc9384a680c5e5bee0057ea4341"><div class="ttname"><a href="namespacett.html#a0d1eacc9384a680c5e5bee0057ea4341">tt::almost_equal</a></div><div class="ttdeci">constexpr bool almost_equal(float a, float b) noexcept</div><div class="ttdoc">Compare two floating point values to be almost equal.</div><div class="ttdef"><b>Definition:</b> math.hpp:84</div></div>
 <div class="ttc" id="anamespacett_html_a2230efe67f1c1056c67d58be0adf896d"><div class="ttname"><a href="namespacett.html#a2230efe67f1c1056c67d58be0adf896d">tt::bsr</a></div><div class="ttdeci">constexpr int bsr(T x) noexcept</div><div class="ttdoc">Find the position of the left-most '1' bit.</div><div class="ttdef"><b>Definition:</b> math.hpp:59</div></div>
 <div class="ttc" id="anamespacett_html_a5abdb96631feb0879a534eaf8db7dd23"><div class="ttname"><a href="namespacett.html#a5abdb96631feb0879a534eaf8db7dd23">tt::pow10ll</a></div><div class="ttdeci">constexpr long long pow10ll(int x) noexcept</div><div class="ttdef"><b>Definition:</b> math.hpp:50</div></div>
-<div class="ttc" id="anamespacett_html_a6e4436d2aaf836734be5243244f236d8"><div class="ttname"><a href="namespacett.html#a6e4436d2aaf836734be5243244f236d8">tt::almost_equal</a></div><div class="ttdeci">bool almost_equal(float a, float b) noexcept</div><div class="ttdef"><b>Definition:</b> math.hpp:80</div></div>
-<div class="ttc" id="anamespacett_html_a751e3040d7b60e821b14a86b282862d7"><div class="ttname"><a href="namespacett.html#a751e3040d7b60e821b14a86b282862d7">tt::stddev</a></div><div class="ttdeci">auto stddev(Iterator first, Iterator last, T mean)</div><div class="ttdef"><b>Definition:</b> math.hpp:109</div></div>
+<div class="ttc" id="anamespacett_html_a751e3040d7b60e821b14a86b282862d7"><div class="ttname"><a href="namespacett.html#a751e3040d7b60e821b14a86b282862d7">tt::stddev</a></div><div class="ttdeci">auto stddev(Iterator first, Iterator last, T mean)</div><div class="ttdef"><b>Definition:</b> math.hpp:114</div></div>
 <div class="ttc" id="anamespacett_html_a90f9d3be3e3baae2add7e57d5844a150"><div class="ttname"><a href="namespacett.html#a90f9d3be3e3baae2add7e57d5844a150">tt::pow10_table</a></div><div class="ttdeci">constexpr long long pow10_table[20]</div><div class="ttdef"><b>Definition:</b> math.hpp:28</div></div>
 <div class="ttc" id="anamespacett_html_aa63c34dbb3c3f81e877977129d86c1fb"><div class="ttname"><a href="namespacett.html#aa63c34dbb3c3f81e877977129d86c1fb">tt::make_mask</a></div><div class="ttdeci">constexpr T make_mask(T x)</div><div class="ttdoc">Make a bit-mask which includes the given value.</div><div class="ttdef"><b>Definition:</b> math.hpp:67</div></div>
 <div class="ttc" id="anamespacett_html_acde365deb48958169e05e6e5c3bb2e58"><div class="ttname"><a href="namespacett.html#acde365deb48958169e05e6e5c3bb2e58">tt::median</a></div><div class="ttdeci">constexpr T median(T a, T b, T c) noexcept</div><div class="ttdef"><b>Definition:</b> math.hpp:76</div></div>
 <div class="ttc" id="anamespacett_html_ada81ca03357d7a2768e276cd7794bdb3ab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="namespacett.html#ada81ca03357d7a2768e276cd7794bdb3ab9ece18c950afbfa6b0fdbfa4ff731d3">tt::keyboard_virtual_key::T</a></div><div class="ttdeci">@ T</div></div>
-<div class="ttc" id="anamespacett_html_ae2724849c5f8afe263eb1812e5524b53"><div class="ttname"><a href="namespacett.html#ae2724849c5f8afe263eb1812e5524b53">tt::mean</a></div><div class="ttdeci">auto mean(Iterator first, Iterator last)</div><div class="ttdef"><b>Definition:</b> math.hpp:98</div></div>
+<div class="ttc" id="anamespacett_html_ae2724849c5f8afe263eb1812e5524b53"><div class="ttname"><a href="namespacett.html#ae2724849c5f8afe263eb1812e5524b53">tt::mean</a></div><div class="ttdeci">auto mean(Iterator first, Iterator last)</div><div class="ttdef"><b>Definition:</b> math.hpp:103</div></div>
 <div class="ttc" id="anamespacett_html_ae4bb98382fd42f6bdb05a279bc482119a4a8a08f09d37b73795649038408b5f33"><div class="ttname"><a href="namespacett.html#ae4bb98382fd42f6bdb05a279bc482119a4a8a08f09d37b73795649038408b5f33">tt::unicode_bidi_bracket_type::c</a></div><div class="ttdeci">@ c</div><div class="ttdoc">Close bracket.</div></div>
 <div class="ttc" id="arequired_8hpp_html"><div class="ttname"><a href="required_8hpp.html">required.hpp</a></div></div>
 <div class="ttc" id="arequired_8hpp_html_a96edbf598a3958f315e8a989dbafdec0"><div class="ttname"><a href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a></div><div class="ttdeci">#define ttlet</div><div class="ttdef"><b>Definition:</b> required.hpp:21</div></div>

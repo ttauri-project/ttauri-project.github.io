@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -156,7 +156,7 @@ $(function() {
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="comment">// There should not be much false sharing since the thread that uses the message is</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="comment">// also the one that updates the in_use atomic.</span></div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        std::atomic&lt;bool&gt; in_use = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        value_type value;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        value_type <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    };</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    </div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">static</span> constexpr index_type capacity = Capacity;</div>
@@ -178,15 +178,15 @@ $(function() {
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
 <div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="classtt_1_1wfree__message__queue.html#a006eb252f6effd7aeeff21e497aa1fa1">  111</a></span>&#160;    index_type <a class="code" href="classtt_1_1wfree__message__queue.html#a006eb252f6effd7aeeff21e497aa1fa1">size</a>() const noexcept {</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="comment">// head and tail are extremelly large integers, they will never wrap arround.</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">return</span> head.load(std::memory_order_relaxed) - tail.load(std::memory_order_relaxed);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">return</span> head.load(std::memory_order::relaxed) - tail.load(std::memory_order::relaxed);</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    }</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
 <div class="line"><a name="l00116"></a><span class="lineno"><a class="line" href="classtt_1_1wfree__message__queue.html#ade813222a93b8a401d88d2642d720279">  116</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtt_1_1wfree__message__queue.html#ade813222a93b8a401d88d2642d720279">empty</a>() const noexcept {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">return</span> head.load(std::memory_order_relaxed) &lt;= tail.load(std::memory_order_relaxed);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordflow">return</span> head.load(std::memory_order::relaxed) &lt;= tail.load(std::memory_order::relaxed);</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
 <div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="classtt_1_1wfree__message__queue.html#aa1ec9e3feb02cd097b30ff3cb81da5c0">  120</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classtt_1_1wfree__message__queue.html#aa1ec9e3feb02cd097b30ff3cb81da5c0">full</a>() const noexcept {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">return</span> head.load(std::memory_order_relaxed) &gt;= (tail.load(std::memory_order_relaxed) + (capacity - slack));</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keywordflow">return</span> head.load(std::memory_order::relaxed) &gt;= (tail.load(std::memory_order::relaxed) + (capacity - slack));</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">template</span>&lt;<a class="code" href="structtt_1_1basic__fixed__string.html">basic_fixed_string</a> BlockCounterTag = <span class="stringliteral">&quot;&quot;</span>&gt;</div>
@@ -208,14 +208,14 @@ $(function() {
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">template</span>&lt;<a class="code" href="structtt_1_1basic__fixed__string.html">basic_fixed_string</a> CounterTag = <span class="stringliteral">&quot;&quot;</span>&gt;</div>
 <div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="classtt_1_1wfree__message__queue.html#a38d9a007860d546ca7b31ff604046e26">  159</a></span>&#160;    index_type <a class="code" href="classtt_1_1wfree__message__queue.html#a38d9a007860d546ca7b31ff604046e26">write_start</a>() noexcept {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> index = head.fetch_add(1, std::memory_order_acquire);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> index = head.fetch_add(1, std::memory_order::acquire);</div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keyword">auto</span> &amp;message = messages[index % capacity];</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="comment">// We acquired the index before we knew if the queue was full.</span></div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="comment">// So we have to wait until the message is empty, however when it is empty we are</span></div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="comment">// the only one that holds the message, so we only need to mark it that we are done with</span></div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="comment">// writing the message.</span></div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        wait_for_transition&lt;CounterTag&gt;(message.in_use, <span class="keyword">false</span>, std::memory_order_acquire);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        wait_for_transition&lt;CounterTag&gt;(message.in_use, <span class="keyword">false</span>, std::memory_order::acquire);</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">return</span> index;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    }</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
@@ -223,16 +223,16 @@ $(function() {
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keyword">auto</span> &amp;message = messages[index % capacity];</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="comment">// Mark that the message is finished with writing.</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        message.in_use.store(<span class="keyword">true</span>, std::memory_order_release);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        message.in_use.store(<span class="keyword">true</span>, std::memory_order::release);</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keyword">template</span>&lt;<a class="code" href="structtt_1_1basic__fixed__string.html">basic_fixed_string</a> CounterTag = <span class="stringliteral">&quot;&quot;</span>&gt;</div>
 <div class="line"><a name="l00190"></a><span class="lineno"><a class="line" href="classtt_1_1wfree__message__queue.html#acc12c1b4e94f79327e054e2501cf82f8">  190</a></span>&#160;    index_type <a class="code" href="classtt_1_1wfree__message__queue.html#acc12c1b4e94f79327e054e2501cf82f8">read_start</a>() noexcept {</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> index = tail.fetch_add(1, std::memory_order_acquire);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> index = tail.fetch_add(1, std::memory_order::acquire);</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keyword">auto</span> &amp;message = messages[index % capacity];</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="comment">// We acquired the index before we knew if the message was ready.</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        wait_for_transition&lt;CounterTag&gt;(message.in_use, <span class="keyword">true</span>, std::memory_order_acquire);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        wait_for_transition&lt;CounterTag&gt;(message.in_use, <span class="keyword">true</span>, std::memory_order::acquire);</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordflow">return</span> index;</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
@@ -240,7 +240,7 @@ $(function() {
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keyword">auto</span> &amp;message = messages[index % capacity];</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="comment">// We acquired the index before we knew if the message was ready.</span></div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        message.in_use.store(<span class="keyword">false</span>, std::memory_order_release);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        message.in_use.store(<span class="keyword">false</span>, std::memory_order::release);</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="comment">// The message itself does not need to be destructed.</span></div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="comment">// This will happen automatically when wrapping around the ring buffer overwrites the message.</span></div>
@@ -279,6 +279,7 @@ $(function() {
 <div class="ttc" id="aclasstt_1_1wfree__message__queue_html_acc12c1b4e94f79327e054e2501cf82f8"><div class="ttname"><a href="classtt_1_1wfree__message__queue.html#acc12c1b4e94f79327e054e2501cf82f8">tt::wfree_message_queue::read_start</a></div><div class="ttdeci">index_type read_start() noexcept</div><div class="ttdef"><b>Definition:</b> wfree_message_queue.hpp:190</div></div>
 <div class="ttc" id="aclasstt_1_1wfree__message__queue_html_ade813222a93b8a401d88d2642d720279"><div class="ttname"><a href="classtt_1_1wfree__message__queue.html#ade813222a93b8a401d88d2642d720279">tt::wfree_message_queue::empty</a></div><div class="ttdeci">bool empty() const noexcept</div><div class="ttdef"><b>Definition:</b> wfree_message_queue.hpp:116</div></div>
 <div class="ttc" id="afixed__string_8hpp_html"><div class="ttname"><a href="fixed__string_8hpp.html">fixed_string.hpp</a></div></div>
+<div class="ttc" id="anamespacebase-93_html_ab5ed527bf01cca4c86801670d4da33d8"><div class="ttname"><a href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">base-93.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> base-93.py:5</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
 <div class="ttc" id="anamespacett_html_ada81ca03357d7a2768e276cd7794bdb3ab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="namespacett.html#ada81ca03357d7a2768e276cd7794bdb3ab9ece18c950afbfa6b0fdbfa4ff731d3">tt::keyboard_virtual_key::T</a></div><div class="ttdeci">@ T</div></div>
 <div class="ttc" id="arequired_8hpp_html"><div class="ttname"><a href="required_8hpp.html">required.hpp</a></div></div>

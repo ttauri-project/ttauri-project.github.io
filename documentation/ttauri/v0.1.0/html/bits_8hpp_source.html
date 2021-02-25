@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_bda4b65898e911bd8f6b1403950ffc28.html">TTauri</a></li><li class="navelem"><a class="el" href="dir_5cfb5b6b41438301859963e67b747eb9.html">Foundation</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9f87200816c308c69831370edcfdd251.html">TTauri</a></li><li class="navelem"><a class="el" href="dir_7fadd25447c0a04ed6951ae08d30b831.html">Foundation</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -96,7 +96,7 @@ $(function() {
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespacett.html#a6d736ec399153b286de67829ae9b6b60">   46</a></span>&#160;[[nodiscard]] <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="namespacett.html#a6d736ec399153b286de67829ae9b6b60">get_bits</a>(nonstd::span&lt;std::byte const&gt; buffer, <a class="code" href="namespacett.html#a9a2de1c31d0c379796fe5d2cd2bcfd98">ssize_t</a> &amp;index, <span class="keywordtype">int</span> length) <a class="code" href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">noexcept</a></div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">auto</span> value = 0;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">auto</span> <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> = 0;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">auto</span> todo = length;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">auto</span> done = 0;</div>
@@ -111,18 +111,19 @@ $(function() {
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">auto</span> mask = (1 &lt;&lt; nr_bits) - 1;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">auto</span> tmp = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(buffer[byte_index] &gt;&gt; bit_index) &amp; mask;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        value |= tmp &lt;&lt; done;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> |= tmp &lt;&lt; done;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        todo -= nr_bits;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        done += nr_bits;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        index += nr_bits;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;} </div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
 <div class="ttc" id="aexceptions_8hpp_html"><div class="ttname"><a href="exceptions_8hpp.html">exceptions.hpp</a></div></div>
+<div class="ttc" id="anamespacebase-93_html_ab5ed527bf01cca4c86801670d4da33d8"><div class="ttname"><a href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">base-93.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> base-93.py:5</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> Application.hpp:11</div></div>
 <div class="ttc" id="anamespacett_html_a6d736ec399153b286de67829ae9b6b60"><div class="ttname"><a href="namespacett.html#a6d736ec399153b286de67829ae9b6b60">tt::get_bits</a></div><div class="ttdeci">int get_bits(nonstd::span&lt; std::byte const &gt; buffer, ssize_t &amp;index, int length) noexcept</div><div class="ttdoc">Read a single bit of span of bytes Bits are ordered LSB first.</div><div class="ttdef"><b>Definition:</b> bits.hpp:46</div></div>
 <div class="ttc" id="anamespacett_html_a9142b8051c10151b83cdfb00d6ecb351"><div class="ttname"><a href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">tt::noexcept</a></div><div class="ttdeci">size_t alignment noexcept</div><div class="ttdef"><b>Definition:</b> memory.hpp:31</div></div>

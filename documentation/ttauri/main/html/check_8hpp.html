@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -74,9 +74,7 @@ $(function() {
 <div class="title">check.hpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="error__info_8hpp_source.html">error_info.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="source__location_8hpp_source.html">source_location.hpp</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="exception_8hpp_source.html">exception.hpp</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="exception_8hpp_source.html">exception.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ttauri_2utils_8hpp_source.html">utils.hpp</a>&quot;</code><br />
 </div>
 <p><a href="check_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -111,12 +109,10 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    ([](HRESULT result) { \</div>
 <div class="line">        if (FAILED(result)) { \</div>
-<div class="line">            ::tt::error_info(<a class="code" href="classtt_1_1source__location.html">tt::source_location</a>(__LINE__, 0, __FILE__, __func__)); \</div>
 <div class="line">            throw ::tt::io_error(<span class="stringliteral">&quot;Call to &#39;{}&#39; failed with {:08x}&quot;</span>, #expression, result); \</div>
 <div class="line">        } \</div>
 <div class="line">        return result; \</div>
 <div class="line">    }(expression))</div>
-<div class="ttc" id="aclasstt_1_1source__location_html"><div class="ttname"><a href="classtt_1_1source__location.html">tt::source_location</a></div><div class="ttdef"><b>Definition:</b> source_location.hpp:10</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -147,7 +143,6 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keywordflow">do</span> { \</div>
 <div class="line">        if (!(expression)) { \</div>
-<div class="line">            ::tt::error_info(::<a class="code" href="classtt_1_1source__location.html">tt::source_location</a>(__LINE__, 0, __FILE__, __func__)); \</div>
 <div class="line">            if constexpr (::<a class="code" href="namespacett.html#a8779e9d00b07be557a94ae00ed6b91cc">tt::nr_arguments</a>(__VA_ARGS__) == 0) { \</div>
 <div class="line">                throw ::tt::parse_error(#expression); \</div>
 <div class="line">            } <span class="keywordflow">else</span> { \</div>

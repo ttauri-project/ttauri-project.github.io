@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -142,10 +142,10 @@ $(function() {
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> It, <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="namespacett.html#a8321f550f024e7d3bf0e6542603bb666">   86</a></span>&#160;constexpr It <a class="code" href="namespacett.html#a8321f550f024e7d3bf0e6542603bb666">rfind</a>(It <span class="keyword">const</span> first, It <span class="keyword">const</span> last, T <span class="keyword">const</span> &amp;value)</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="namespacett.html#a8321f550f024e7d3bf0e6542603bb666">   86</a></span>&#160;constexpr It <a class="code" href="namespacett.html#a8321f550f024e7d3bf0e6542603bb666">rfind</a>(It <span class="keyword">const</span> first, It <span class="keyword">const</span> last, T <span class="keyword">const</span> &amp;<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>)</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacett.html#abc2998c1210a20a7ceda2b8f8e2d9a0c">rfind_if</a>(first, last, [&amp;](<a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;x) {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> x == value;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> x == <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    });</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
@@ -153,8 +153,8 @@ $(function() {
 <div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="namespacett.html#a84383b19e370985f35fa8006c030b4e2">  101</a></span>&#160;[[nodiscard]] constexpr It <a class="code" href="namespacett.html#a84383b19e370985f35fa8006c030b4e2">find_any</a>(It data_first, It data_last, ItAny value_first, ItAny value_last) noexcept</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span> std::find_if(data_first, data_last, [value_first, value_last](<a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;data) {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> std::any_of(value_first, value_last, [&amp;data](<a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;value) {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">return</span> data == value;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> std::any_of(value_first, value_last, [&amp;data](<a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">return</span> data == <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        });</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    });</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
@@ -321,38 +321,36 @@ $(function() {
 <div class="line"><a name="l00334"></a><span class="lineno"><a class="line" href="namespacett.html#a5d5cd1745a5752593d83202354af6ded">  334</a></span>&#160;DataIt <a class="code" href="namespacett.html#a5d5cd1745a5752593d83202354af6ded">front_strip</a>(DataIt data_first, DataIt data_last, ValueIt value_first, ValueIt value_last) noexcept</div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;{</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = data_first; it != data_last; ++it) {</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;data = *it;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keywordflow">if</span> (!std::any_of(value_first, value_last, [&amp;data](<a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;value) {</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                <span class="keywordflow">return</span> data == value;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            })) {</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            <span class="keywordflow">return</span> it;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        }</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    }</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">return</span> data_last;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;}</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> DataIt, <span class="keyword">typename</span> ValueIt&gt;</div>
-<div class="line"><a name="l00357"></a><span class="lineno"><a class="line" href="namespacett.html#a1b2194d50afea7da849a9b7a02cc5658">  357</a></span>&#160;DataIt <a class="code" href="namespacett.html#a1b2194d50afea7da849a9b7a02cc5658">back_strip</a>(DataIt data_first, DataIt data_last, ValueIt value_first, ValueIt value_last) noexcept</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;{</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = data_last - 1; it &gt;= data_first; ++it) {</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;data = *it;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keywordflow">if</span> (!std::any_of(value_first, value_last, [&amp;data](<a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;value) {</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                <span class="keywordflow">return</span> data == value;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            })) {</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            <span class="keywordflow">return</span> it + 1;</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        }</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    }</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="keywordflow">if</span> (std::find(value_first, value_last, *it) == value_last) {</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            <span class="comment">// Return the iterator pointing to the data that is not part of the value set.</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            <span class="keywordflow">return</span> it;</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        }</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <span class="keywordflow">return</span> data_last;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;}</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160; </div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> DataIt, <span class="keyword">typename</span> ValueIt&gt;</div>
+<div class="line"><a name="l00355"></a><span class="lineno"><a class="line" href="namespacett.html#a1b2194d50afea7da849a9b7a02cc5658">  355</a></span>&#160;DataIt <a class="code" href="namespacett.html#a1b2194d50afea7da849a9b7a02cc5658">back_strip</a>(DataIt data_first, DataIt data_last, ValueIt value_first, ValueIt value_last) noexcept</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;{</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keyword">auto</span> it = data_last;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordflow">while</span> (it != data_first) {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="keywordflow">if</span> (std::find(value_first, value_last, *(--it)) == value_last) {</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            <span class="comment">// Return an iterator one beyond the data that is not part of the value set.</span></div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            <span class="keywordflow">return</span> it + 1;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        }</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160; </div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    <span class="keywordflow">return</span> data_first;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;}</div>
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordflow">return</span> data_first;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;}</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;} <span class="comment">// namespace tt</span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;} <span class="comment">// namespace tt</span></div>
 <div class="ttc" id="aassert_8hpp_html"><div class="ttname"><a href="assert_8hpp.html">assert.hpp</a></div></div>
 <div class="ttc" id="aassert_8hpp_html_a7e4741fb683d5c0fbebd761c072e3bbf"><div class="ttname"><a href="assert_8hpp.html#a7e4741fb683d5c0fbebd761c072e3bbf">tt_axiom</a></div><div class="ttdeci">#define tt_axiom(expression,...)</div><div class="ttdoc">Specify an axiom; an expression that is true.</div><div class="ttdef"><b>Definition:</b> assert.hpp:37</div></div>
 <div class="ttc" id="acast_8hpp_html"><div class="ttname"><a href="cast_8hpp.html">cast.hpp</a></div></div>
+<div class="ttc" id="anamespacebase-93_html_ab5ed527bf01cca4c86801670d4da33d8"><div class="ttname"><a href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">base-93.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> base-93.py:5</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
-<div class="ttc" id="anamespacett_html_a1b2194d50afea7da849a9b7a02cc5658"><div class="ttname"><a href="namespacett.html#a1b2194d50afea7da849a9b7a02cc5658">tt::back_strip</a></div><div class="ttdeci">DataIt back_strip(DataIt data_first, DataIt data_last, ValueIt value_first, ValueIt value_last) noexcept</div><div class="ttdoc">Strip data from the back side.</div><div class="ttdef"><b>Definition:</b> algorithm.hpp:357</div></div>
+<div class="ttc" id="anamespacett_html_a1b2194d50afea7da849a9b7a02cc5658"><div class="ttname"><a href="namespacett.html#a1b2194d50afea7da849a9b7a02cc5658">tt::back_strip</a></div><div class="ttdeci">DataIt back_strip(DataIt data_first, DataIt data_last, ValueIt value_first, ValueIt value_last) noexcept</div><div class="ttdoc">Strip data from the back side.</div><div class="ttdef"><b>Definition:</b> algorithm.hpp:355</div></div>
 <div class="ttc" id="anamespacett_html_a4636d55e6ae2ed9ea20a100d00d9aeef"><div class="ttname"><a href="namespacett.html#a4636d55e6ae2ed9ea20a100d00d9aeef">tt::find_cluster</a></div><div class="ttdeci">constexpr It find_cluster(ConstIt last, It start, UnaryPredicate predicate)</div><div class="ttdoc">Find the start of the current cluster.</div><div class="ttdef"><b>Definition:</b> algorithm.hpp:117</div></div>
 <div class="ttc" id="anamespacett_html_a575dd10dafd07089de4d2a4f513e96ac"><div class="ttname"><a href="namespacett.html#a575dd10dafd07089de4d2a4f513e96ac">tt::generate_array</a></div><div class="ttdeci">constexpr std::array&lt; T, N &gt; generate_array(F operation)</div><div class="ttdoc">Generate data in an array.</div><div class="ttdef"><b>Definition:</b> algorithm.hpp:37</div></div>
 <div class="ttc" id="anamespacett_html_a58eca1c1642896677690e50f878530b4"><div class="ttname"><a href="namespacett.html#a58eca1c1642896677690e50f878530b4">tt::erase_if</a></div><div class="ttdeci">void erase_if(T &amp;v, F predicate)</div><div class="ttdoc">Remove an element from an container.</div><div class="ttdef"><b>Definition:</b> algorithm.hpp:53</div></div>

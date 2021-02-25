@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -142,11 +142,11 @@ $(function() {
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="comment">// First look for an empty (0) item, highly likely when doing insert.</span></div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordtype">size_t</span> item_hash = 0;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">if</span> (item.hash.compare_exchange_strong(item_hash, 1, std::memory_order_acquire)) {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">if</span> (item.hash.compare_exchange_strong(item_hash, 1, std::memory_order::acquire)) {</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="comment">// Success, we found an empty entry, we marked it as busy (1).</span></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                item.key = std::move(<a class="code" href="structtt_1_1wfree__unordered__map__item.html#a37b6f673a224e9ae9e478df27c37ce6c">key</a>);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                item.value = <a class="code" href="structtt_1_1wfree__unordered__map__item.html#a193958f9ed0d9433b70079f220306a3e">value</a>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                item.hash.store(<a class="code" href="structtt_1_1wfree__unordered__map__item.html#a02fc87747f0bb604c9f9a25e9dfc9a3b">hash</a>, std::memory_order_release);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                item.hash.store(<a class="code" href="structtt_1_1wfree__unordered__map__item.html#a02fc87747f0bb604c9f9a25e9dfc9a3b">hash</a>, std::memory_order::release);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (item_hash == <a class="code" href="structtt_1_1wfree__unordered__map__item.html#a02fc87747f0bb604c9f9a25e9dfc9a3b">hash</a> &amp;&amp; <a class="code" href="structtt_1_1wfree__unordered__map__item.html#a37b6f673a224e9ae9e478df27c37ce6c">key</a> == item.key) {</div>
@@ -186,10 +186,10 @@ $(function() {
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="comment">// First look for an empty (0) item, highly likely when doing insert.</span></div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keywordtype">size_t</span> item_hash = 0;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">if</span> (item.hash.compare_exchange_strong(item_hash, 1, std::memory_order_acquire)) {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordflow">if</span> (item.hash.compare_exchange_strong(item_hash, 1, std::memory_order::acquire)) {</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="comment">// Success, we found an empty entry, we marked it as busy (1).</span></div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                item.key = std::move(<a class="code" href="structtt_1_1wfree__unordered__map__item.html#a37b6f673a224e9ae9e478df27c37ce6c">key</a>);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                item.hash.store(<a class="code" href="structtt_1_1wfree__unordered__map__item.html#a02fc87747f0bb604c9f9a25e9dfc9a3b">hash</a>, std::memory_order_release);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                item.hash.store(<a class="code" href="structtt_1_1wfree__unordered__map__item.html#a02fc87747f0bb604c9f9a25e9dfc9a3b">hash</a>, std::memory_order::release);</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                <span class="keywordflow">if</span> constexpr (std::is_default_constructible_v&lt;V&gt;) {</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                    item.value = {};</div>
@@ -221,7 +221,7 @@ $(function() {
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keyword">auto</span> &amp;item = items[index];</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keyword">auto</span> item_hash = item.hash.load(std::memory_order_acquire);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keyword">auto</span> item_hash = item.hash.load(std::memory_order::acquire);</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keywordflow">if</span> (item_hash == <a class="code" href="structtt_1_1wfree__unordered__map__item.html#a02fc87747f0bb604c9f9a25e9dfc9a3b">hash</a> &amp;&amp; <a class="code" href="structtt_1_1wfree__unordered__map__item.html#a37b6f673a224e9ae9e478df27c37ce6c">key</a> == item.key) {</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                <span class="comment">// Found key</span></div>
@@ -251,11 +251,11 @@ $(function() {
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <span class="keyword">auto</span> index = <a class="code" href="structtt_1_1wfree__unordered__map__item.html#a02fc87747f0bb604c9f9a25e9dfc9a3b">hash</a> % CAPACITY;</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="keyword">auto</span> &amp;item = items[index];</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="keyword">auto</span> item_hash = item.hash.load(std::memory_order_acquire);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="keyword">auto</span> item_hash = item.hash.load(std::memory_order::acquire);</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordflow">if</span> (item_hash == <a class="code" href="structtt_1_1wfree__unordered__map__item.html#a02fc87747f0bb604c9f9a25e9dfc9a3b">hash</a> &amp;&amp; <a class="code" href="structtt_1_1wfree__unordered__map__item.html#a37b6f673a224e9ae9e478df27c37ce6c">key</a> == item.key) {</div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                <span class="comment">// Set tombstone. Don&#39;t actually delete the key or value.</span></div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                item.hash.store(1, std::memory_order_release);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                item.hash.store(1, std::memory_order::release);</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                <span class="keywordflow">return</span> { item.value };</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (item_hash == 0) {</div>

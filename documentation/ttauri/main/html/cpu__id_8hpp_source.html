@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -93,14 +93,14 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#if TT_COMPILER == TT_CC_MSVC</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;std::array&lt;uint32_t,4&gt; cpu_id_x64_result cpu_id_x64(uint32_t cpu_id_leaf)</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    std::array&lt;int,4&gt; info;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    __cpuid(info.data(), <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(cpu_id_leaf));</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    std::array&lt;int,4&gt; <a class="code" href="namespacett.html#a84f3761898fe6cfd5bce36ecc5ce851dacaf9b6b99962bf5c2264824231d7a40c">info</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    __cpuid(<a class="code" href="namespacett.html#a84f3761898fe6cfd5bce36ecc5ce851dacaf9b6b99962bf5c2264824231d7a40c">info</a>.data(), <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(cpu_id_leaf));</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::array&lt;uint32_t,4&gt; r;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    r[0] = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>info[0];</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    r[1] = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>info[1];</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    r[2] = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>info[2];</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    r[3] = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>info[3];</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    r[0] = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span><a class="code" href="namespacett.html#a84f3761898fe6cfd5bce36ecc5ce851dacaf9b6b99962bf5c2264824231d7a40c">info</a>[0];</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    r[1] = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span><a class="code" href="namespacett.html#a84f3761898fe6cfd5bce36ecc5ce851dacaf9b6b99962bf5c2264824231d7a40c">info</a>[1];</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    r[2] = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span><a class="code" href="namespacett.html#a84f3761898fe6cfd5bce36ecc5ce851dacaf9b6b99962bf5c2264824231d7a40c">info</a>[2];</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    r[3] = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span><a class="code" href="namespacett.html#a84f3761898fe6cfd5bce36ecc5ce851dacaf9b6b99962bf5c2264824231d7a40c">info</a>[3];</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> r;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
@@ -397,6 +397,7 @@ $(function() {
 <div class="ttc" id="anamespacett_html_a814c2dbef910072a43956c4f29c4415b"><div class="ttname"><a href="namespacett.html#a814c2dbef910072a43956c4f29c4415b">tt::cpu_has_bmi2</a></div><div class="ttdeci">bool cpu_has_bmi2()</div><div class="ttdef"><b>Definition:</b> cpu_id.hpp:181</div></div>
 <div class="ttc" id="anamespacett_html_a821d3a59b33e336f6f2bc5190ee9f427"><div class="ttname"><a href="namespacett.html#a821d3a59b33e336f6f2bc5190ee9f427">tt::cpu_has_tm2</a></div><div class="ttdeci">bool cpu_has_tm2()</div><div class="ttdef"><b>Definition:</b> cpu_id.hpp:122</div></div>
 <div class="ttc" id="anamespacett_html_a848aedf36c99cecc2b0238558f0cb16c"><div class="ttname"><a href="namespacett.html#a848aedf36c99cecc2b0238558f0cb16c">tt::cpu_has_psn</a></div><div class="ttdeci">bool cpu_has_psn()</div><div class="ttdef"><b>Definition:</b> cpu_id.hpp:98</div></div>
+<div class="ttc" id="anamespacett_html_a84f3761898fe6cfd5bce36ecc5ce851dacaf9b6b99962bf5c2264824231d7a40c"><div class="ttname"><a href="namespacett.html#a84f3761898fe6cfd5bce36ecc5ce851dacaf9b6b99962bf5c2264824231d7a40c">tt::log_level::info</a></div><div class="ttdeci">@ info</div></div>
 <div class="ttc" id="anamespacett_html_a87ef9a6d7298b37b0072198f09f8d6f6"><div class="ttname"><a href="namespacett.html#a87ef9a6d7298b37b0072198f09f8d6f6">tt::cpu_has_smep</a></div><div class="ttdeci">bool cpu_has_smep()</div><div class="ttdef"><b>Definition:</b> cpu_id.hpp:180</div></div>
 <div class="ttc" id="anamespacett_html_a8a9cfb96b91f306bfbd4fb4d891b9cf3"><div class="ttname"><a href="namespacett.html#a8a9cfb96b91f306bfbd4fb4d891b9cf3">tt::cpu_has_5level_paging</a></div><div class="ttdeci">bool cpu_has_5level_paging()</div><div class="ttdef"><b>Definition:</b> cpu_id.hpp:226</div></div>
 <div class="ttc" id="anamespacett_html_a8b8b8c472f8770bdffad470b59a87758"><div class="ttname"><a href="namespacett.html#a8b8b8c472f8770bdffad470b59a87758">tt::cpu_has_movdir64b</a></div><div class="ttdeci">bool cpu_has_movdir64b()</div><div class="ttdef"><b>Definition:</b> cpu_id.hpp:234</div></div>

@@ -99,8 +99,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a29c276fd4eb673e6b093b49cbe1e6d50"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline__box_1_1device__shared.html#a29c276fd4eb673e6b093b49cbe1e6d50">placeVertices</a> (<a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline__box_1_1vertex.html">vertex</a> &gt; &amp;vertices, <a class="el" href="classtt_1_1rect.html">rect</a> box, <a class="el" href="classtt_1_1color.html">color</a> backgroundColor, float borderSize, <a class="el" href="classtt_1_1color.html">color</a> borderColor, <a class="el" href="namespacett.html#adaf211430d8bb84d2b53b4e0da491987">f32x4</a> cornerShapes, <a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> clippingRectangle)</td></tr>
-<tr class="separator:a29c276fd4eb673e6b093b49cbe1e6d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66544695f4947410be68933a6ca391e3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline__box_1_1device__shared.html#a66544695f4947410be68933a6ca391e3">place_vertices</a> (<a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline__box_1_1vertex.html">vertex</a> &gt; &amp;vertices, <a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> clipping_rectangle, <a class="el" href="classtt_1_1rect.html">rect</a> box, <a class="el" href="classtt_1_1color.html">color</a> fill_color, <a class="el" href="classtt_1_1color.html">color</a> line_color, float line_width, <a class="el" href="classtt_1_1corner__shapes.html">corner_shapes</a> <a class="el" href="classtt_1_1corner__shapes.html">corner_shapes</a>)</td></tr>
+<tr class="separator:a66544695f4947410be68933a6ca391e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
@@ -291,8 +291,8 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="a29c276fd4eb673e6b093b49cbe1e6d50"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29c276fd4eb673e6b093b49cbe1e6d50">&#9670;&nbsp;</a></span>placeVertices()</h2>
+<a id="a66544695f4947410be68933a6ca391e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66544695f4947410be68933a6ca391e3">&#9670;&nbsp;</a></span>place_vertices()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -301,10 +301,16 @@ Data Fields</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void tt::pipeline_box::device_shared::placeVertices </td>
+          <td class="memname">static void tt::pipeline_box::device_shared::place_vertices </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline__box_1_1vertex.html">vertex</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
+          <td class="paramname"><em>clipping_rectangle</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -316,31 +322,25 @@ Data Fields</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classtt_1_1color.html">color</a>&#160;</td>
-          <td class="paramname"><em>backgroundColor</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>borderSize</em>, </td>
+          <td class="paramname"><em>fill_color</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classtt_1_1color.html">color</a>&#160;</td>
-          <td class="paramname"><em>borderColor</em>, </td>
+          <td class="paramname"><em>line_color</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacett.html#adaf211430d8bb84d2b53b4e0da491987">f32x4</a>&#160;</td>
-          <td class="paramname"><em>cornerShapes</em>, </td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>line_width</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
-          <td class="paramname"><em>clippingRectangle</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classtt_1_1corner__shapes.html">corner_shapes</a>&#160;</td>
+          <td class="paramname"><em>corner_shapes</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li><li class="navelem"><a class="el" href="dir_1e2a75da19201e1aa801ccebbc2d9567.html">formula</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li><li class="navelem"><a class="el" href="dir_f4df16e2edff70d9c3dfb29b624ef307.html">formula</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -89,31 +89,29 @@ $(function() {
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">auto</span> rhs_ = <a class="code" href="structtt_1_1formula__unary__operator__node.html#a1fb03b67b84726ff3e5e5adf856a4990">rhs</a>-&gt;evaluate(context);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">try</span> {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">return</span> ~rhs_;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        } <span class="keywordflow">catch</span> (...) {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <a class="code" href="classtt_1_1error__info.html">error_info</a>(<span class="keyword">true</span>).<a class="code" href="classtt_1_1error__info.html#a6a5bc1d71e2f3a2f5b2564df41314014">set</a>&lt;<span class="stringliteral">&quot;parse_location&quot;</span>&gt;(<a class="code" href="structtt_1_1formula__node.html#a4ef06ab64c02e08cf9f3574da6dfbddc">location</a>);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">throw</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structtt_1_1formula__invert__node.html#a5e6767c0ede3e0bbd53cb8ca8df5c885">   25</a></span>&#160;    std::string <a class="code" href="structtt_1_1formula__invert__node.html#a5e6767c0ede3e0bbd53cb8ca8df5c885">string</a>() const noexcept<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespacett.html#a957879460174ecbf80927388419922f5">fmt::format</a>(<span class="stringliteral">&quot;(~ {})&quot;</span>, *<a class="code" href="structtt_1_1formula__unary__operator__node.html#a1fb03b67b84726ff3e5e5adf856a4990">rhs</a>);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        } <span class="keywordflow">catch</span> (std::exception <span class="keyword">const</span> &amp;e) {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="classtt_1_1operation__error.html">operation_error</a>(<span class="stringliteral">&quot;{}: Can not evaluate binary-not.\n{}&quot;</span>, <a class="code" href="structtt_1_1formula__node.html#a4ef06ab64c02e08cf9f3574da6dfbddc">location</a>, e.what());</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structtt_1_1formula__invert__node.html#a5e6767c0ede3e0bbd53cb8ca8df5c885">   24</a></span>&#160;    std::string <a class="code" href="structtt_1_1formula__invert__node.html#a5e6767c0ede3e0bbd53cb8ca8df5c885">string</a>() const noexcept<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespacett.html#a957879460174ecbf80927388419922f5">fmt::format</a>(<span class="stringliteral">&quot;(~ {})&quot;</span>, *<a class="code" href="structtt_1_1formula__unary__operator__node.html#a1fb03b67b84726ff3e5e5adf856a4990">rhs</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
 <div class="ttc" id="aclasstt_1_1datum__impl_html"><div class="ttname"><a href="classtt_1_1datum__impl.html">tt::datum_impl&lt; true &gt;</a></div></div>
-<div class="ttc" id="aclasstt_1_1error__info_html"><div class="ttname"><a href="classtt_1_1error__info.html">tt::error_info</a></div><div class="ttdoc">Error information passed alongside an error code or exception.</div><div class="ttdef"><b>Definition:</b> error_info.hpp:81</div></div>
-<div class="ttc" id="aclasstt_1_1error__info_html_a6a5bc1d71e2f3a2f5b2564df41314014"><div class="ttname"><a href="classtt_1_1error__info.html#a6a5bc1d71e2f3a2f5b2564df41314014">tt::error_info::set</a></div><div class="ttdeci">error_info &amp; set(Arg &amp;&amp;value) noexcept</div><div class="ttdoc">Set an information for a given tag.</div><div class="ttdef"><b>Definition:</b> error_info.hpp:144</div></div>
+<div class="ttc" id="aclasstt_1_1operation__error_html"><div class="ttname"><a href="classtt_1_1operation__error.html">tt::operation_error</a></div><div class="ttdoc">Exception thrown during execution of a dynamic operation.</div><div class="ttdef"><b>Definition:</b> exception.hpp:42</div></div>
 <div class="ttc" id="aclasstt_1_1parse__location_html"><div class="ttname"><a href="classtt_1_1parse__location.html">tt::parse_location</a></div><div class="ttdef"><b>Definition:</b> parse_location.hpp:16</div></div>
 <div class="ttc" id="aformula__unary__operator__node_8hpp_html"><div class="ttname"><a href="formula__unary__operator__node_8hpp.html">formula_unary_operator_node.hpp</a></div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
 <div class="ttc" id="anamespacett_html_a957879460174ecbf80927388419922f5"><div class="ttname"><a href="namespacett.html#a957879460174ecbf80927388419922f5">tt::format</a></div><div class="ttdeci">std::u8string format(const std::locale &amp;loc, std::u8string_view fmt, const Args &amp;... args)</div><div class="ttdef"><b>Definition:</b> format.hpp:23</div></div>
 <div class="ttc" id="astructtt_1_1formula__evaluation__context_html"><div class="ttname"><a href="structtt_1_1formula__evaluation__context.html">tt::formula_evaluation_context</a></div><div class="ttdef"><b>Definition:</b> formula_evaluation_context.hpp:16</div></div>
 <div class="ttc" id="astructtt_1_1formula__invert__node_html"><div class="ttname"><a href="structtt_1_1formula__invert__node.html">tt::formula_invert_node</a></div><div class="ttdef"><b>Definition:</b> formula_invert_node.hpp:11</div></div>
-<div class="ttc" id="astructtt_1_1formula__invert__node_html_a5e6767c0ede3e0bbd53cb8ca8df5c885"><div class="ttname"><a href="structtt_1_1formula__invert__node.html#a5e6767c0ede3e0bbd53cb8ca8df5c885">tt::formula_invert_node::string</a></div><div class="ttdeci">std::string string() const noexcept override</div><div class="ttdef"><b>Definition:</b> formula_invert_node.hpp:25</div></div>
+<div class="ttc" id="astructtt_1_1formula__invert__node_html_a5e6767c0ede3e0bbd53cb8ca8df5c885"><div class="ttname"><a href="structtt_1_1formula__invert__node.html#a5e6767c0ede3e0bbd53cb8ca8df5c885">tt::formula_invert_node::string</a></div><div class="ttdeci">std::string string() const noexcept override</div><div class="ttdef"><b>Definition:</b> formula_invert_node.hpp:24</div></div>
 <div class="ttc" id="astructtt_1_1formula__invert__node_html_a9c8fe2d4a2765af7fbf6da7908d09d8c"><div class="ttname"><a href="structtt_1_1formula__invert__node.html#a9c8fe2d4a2765af7fbf6da7908d09d8c">tt::formula_invert_node::formula_invert_node</a></div><div class="ttdeci">formula_invert_node(parse_location location, std::unique_ptr&lt; formula_node &gt; rhs)</div><div class="ttdef"><b>Definition:</b> formula_invert_node.hpp:12</div></div>
 <div class="ttc" id="astructtt_1_1formula__invert__node_html_afdac5dd58441ce0d6f117a745cb9e36d"><div class="ttname"><a href="structtt_1_1formula__invert__node.html#afdac5dd58441ce0d6f117a745cb9e36d">tt::formula_invert_node::evaluate</a></div><div class="ttdeci">datum evaluate(formula_evaluation_context &amp;context) const override</div><div class="ttdoc">Evaluate an rvalue.</div><div class="ttdef"><b>Definition:</b> formula_invert_node.hpp:15</div></div>
-<div class="ttc" id="astructtt_1_1formula__node_html_a4ef06ab64c02e08cf9f3574da6dfbddc"><div class="ttname"><a href="structtt_1_1formula__node.html#a4ef06ab64c02e08cf9f3574da6dfbddc">tt::formula_node::location</a></div><div class="ttdeci">parse_location location</div><div class="ttdef"><b>Definition:</b> formula_node.hpp:23</div></div>
+<div class="ttc" id="astructtt_1_1formula__node_html_a4ef06ab64c02e08cf9f3574da6dfbddc"><div class="ttname"><a href="structtt_1_1formula__node.html#a4ef06ab64c02e08cf9f3574da6dfbddc">tt::formula_node::location</a></div><div class="ttdeci">parse_location location</div><div class="ttdef"><b>Definition:</b> formula_node.hpp:22</div></div>
 <div class="ttc" id="astructtt_1_1formula__unary__operator__node_html"><div class="ttname"><a href="structtt_1_1formula__unary__operator__node.html">tt::formula_unary_operator_node</a></div><div class="ttdef"><b>Definition:</b> formula_unary_operator_node.hpp:11</div></div>
 <div class="ttc" id="astructtt_1_1formula__unary__operator__node_html_a1fb03b67b84726ff3e5e5adf856a4990"><div class="ttname"><a href="structtt_1_1formula__unary__operator__node.html#a1fb03b67b84726ff3e5e5adf856a4990">tt::formula_unary_operator_node::rhs</a></div><div class="ttdeci">std::unique_ptr&lt; formula_node &gt; rhs</div><div class="ttdef"><b>Definition:</b> formula_unary_operator_node.hpp:12</div></div>
 </div><!-- fragment --></div><!-- contents -->

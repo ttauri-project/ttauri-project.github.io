@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['datum_5fimpl_4044',['datum_impl',['../classtt_1_1datum__impl.html',1,'tt']]],
-  ['datum_5fimpl_3c_20true_20_3e_4045',['datum_impl&lt; true &gt;',['../classtt_1_1datum__impl.html',1,'tt']]],
-  ['decimal_4046',['decimal',['../classtt_1_1decimal.html',1,'tt']]],
-  ['delayed_5fformat_4047',['delayed_format',['../classtt_1_1delayed__format.html',1,'tt']]],
-  ['delayed_5fformat_3c_20fmt_2c_20values_2e_2e_2e_20_3e_4048',['delayed_format&lt; Fmt, Values... &gt;',['../classtt_1_1delayed__format.html',1,'tt']]],
-  ['device_5fshared_4049',['device_shared',['../structtt_1_1pipeline__box_1_1device__shared.html',1,'tt::pipeline_box::device_shared'],['../structtt_1_1pipeline__flat_1_1device__shared.html',1,'tt::pipeline_flat::device_shared'],['../structtt_1_1pipeline__image_1_1device__shared.html',1,'tt::pipeline_image::device_shared'],['../structtt_1_1pipeline___s_d_f_1_1device__shared.html',1,'tt::pipeline_SDF::device_shared'],['../structtt_1_1pipeline__tone__mapper_1_1device__shared.html',1,'tt::pipeline_tone_mapper::device_shared']]],
-  ['draw_5fcontext_4050',['draw_context',['../classtt_1_1draw__context.html',1,'tt']]]
+  ['datum_5fimpl_4129',['datum_impl',['../classtt_1_1datum__impl.html',1,'tt']]],
+  ['datum_5fimpl_3c_20true_20_3e_4130',['datum_impl&lt; true &gt;',['../classtt_1_1datum__impl.html',1,'tt']]],
+  ['decimal_4131',['decimal',['../classtt_1_1decimal.html',1,'tt']]],
+  ['delayed_5fformat_4132',['delayed_format',['../classtt_1_1delayed__format.html',1,'tt']]],
+  ['delayed_5fformat_3c_20fmt_2c_20values_2e_2e_2e_20_3e_4133',['delayed_format&lt; Fmt, Values... &gt;',['../classtt_1_1delayed__format.html',1,'tt']]],
+  ['device_5fshared_4134',['device_shared',['../structtt_1_1pipeline__box_1_1device__shared.html',1,'tt::pipeline_box::device_shared'],['../structtt_1_1pipeline__flat_1_1device__shared.html',1,'tt::pipeline_flat::device_shared'],['../structtt_1_1pipeline__image_1_1device__shared.html',1,'tt::pipeline_image::device_shared'],['../structtt_1_1pipeline___s_d_f_1_1device__shared.html',1,'tt::pipeline_SDF::device_shared'],['../structtt_1_1pipeline__tone__mapper_1_1device__shared.html',1,'tt::pipeline_tone_mapper::device_shared']]],
+  ['draw_5fcontext_4135',['draw_context',['../classtt_1_1draw__context.html',1,'tt']]]
 ];

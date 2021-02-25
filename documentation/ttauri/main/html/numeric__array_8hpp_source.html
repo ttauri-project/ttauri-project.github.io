@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -695,7 +695,7 @@ $(function() {
 <div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160; </div>
 <div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;        <span class="keyword">auto</span> r = <a class="code" href="classtt_1_1numeric__array.html">numeric_array</a>{};</div>
 <div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="namespacett.html#a9a2de1c31d0c379796fe5d2cd2bcfd98">ssize_t</a> i = 0; i != <a class="code" href="namespacett.html#ada81ca03357d7a2768e276cd7794bdb3a8d9c307cb7f3c4a32822a51922d1ceaa">N</a>; ++i) {</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;            <span class="keywordflow">if</span> ((Mask &gt;&gt; i) &amp; 1 == 1) {</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>((Mask &gt;&gt; i) &amp; 1)) {</div>
 <div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;                r.v[i] = <a class="code" href="namespacett.html#ada81ca03357d7a2768e276cd7794bdb3ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>{0};</div>
 <div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;                r.v[i] = rhs.v[i];</div>
@@ -715,7 +715,7 @@ $(function() {
 <div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160; </div>
 <div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;        <span class="keyword">auto</span> r = <a class="code" href="classtt_1_1numeric__array.html">numeric_array</a>{};</div>
 <div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="namespacett.html#a9a2de1c31d0c379796fe5d2cd2bcfd98">ssize_t</a> i = 0; i != <a class="code" href="namespacett.html#ada81ca03357d7a2768e276cd7794bdb3a8d9c307cb7f3c4a32822a51922d1ceaa">N</a>; ++i) {</div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;            <span class="keywordflow">if</span> (((Mask &gt;&gt; i) &amp; 1) == 1) {</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>((Mask &gt;&gt; i) &amp; 1)) {</div>
 <div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;                r.v[i] = -rhs.v[i];</div>
 <div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;                r.v[i] = rhs.v[i];</div>
@@ -1101,7 +1101,7 @@ $(function() {
 <div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160; </div>
 <div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;        <span class="keyword">auto</span> r = <a class="code" href="classtt_1_1numeric__array.html#ac4d250b8a7f841d083178b29faf9e58c">numeric_array</a>{};</div>
 <div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="namespacett.html#a9a2de1c31d0c379796fe5d2cd2bcfd98">ssize_t</a> i = 0; i != <a class="code" href="namespacett.html#ada81ca03357d7a2768e276cd7794bdb3a8d9c307cb7f3c4a32822a51922d1ceaa">N</a>; ++i) {</div>
-<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;            <span class="keywordflow">if</span> ((Mask &gt;&gt; i) &amp; 1 == 1) {</div>
+<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;            <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span><span class="keywordtype">bool</span><span class="keyword">&gt;</span>((Mask &gt;&gt; i) &amp; 1)) {</div>
 <div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;                r.v[i] = lhs.v[i] + rhs.v[i];</div>
 <div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;            } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;                r.v[i] = lhs.v[i] - rhs.v[i];</div>
@@ -1755,7 +1755,7 @@ $(function() {
 <div class="ttc" id="anamespacett_html_a6e64b0b7e0af6e8023a552ef7681400c"><div class="ttname"><a href="namespacett.html#a6e64b0b7e0af6e8023a552ef7681400c">tt::f32x4_sse_le_mask</a></div><div class="ttdeci">unsigned int f32x4_sse_le_mask(f32x4_raw const &amp;lhs, f32x4_raw const &amp;rhs) noexcept</div><div class="ttdoc">Compare if less-or-equal elements of two SSE registers and return a mask.</div><div class="ttdef"><b>Definition:</b> f32x4_sse.hpp:294</div></div>
 <div class="ttc" id="anamespacett_html_a762b44c44b9229185a615f21c8ea2c89"><div class="ttname"><a href="namespacett.html#a762b44c44b9229185a615f21c8ea2c89">tt::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;lhs, audio_device_state const &amp;rhs)</div><div class="ttdef"><b>Definition:</b> audio_device.hpp:46</div></div>
 <div class="ttc" id="anamespacett_html_a76da18a0902b94b0f20d482857d4b1b4"><div class="ttname"><a href="namespacett.html#a76da18a0902b94b0f20d482857d4b1b4">tt::f32x4_sse_transpose</a></div><div class="ttdeci">std::array&lt; f32x4_raw, 4 &gt; f32x4_sse_transpose(f32x4_raw const &amp;col0, f32x4_raw const &amp;col1, f32x4_raw const &amp;col2, f32x4_raw const &amp;col3) noexcept</div><div class="ttdef"><b>Definition:</b> f32x4_sse.hpp:394</div></div>
-<div class="ttc" id="anamespacett_html_a7731e520150c4d78685f7051c2b60565"><div class="ttname"><a href="namespacett.html#a7731e520150c4d78685f7051c2b60565">tt::composit</a></div><div class="ttdeci">void composit(pixel_map&lt; sfloat_rgba16 &gt; &amp;under, pixel_map&lt; sfloat_rgba16 &gt; const &amp;over) noexcept</div><div class="ttdef"><b>Definition:</b> sfloat_rgba16.hpp:109</div></div>
+<div class="ttc" id="anamespacett_html_a7731e520150c4d78685f7051c2b60565"><div class="ttname"><a href="namespacett.html#a7731e520150c4d78685f7051c2b60565">tt::composit</a></div><div class="ttdeci">void composit(pixel_map&lt; sfloat_rgba16 &gt; &amp;under, pixel_map&lt; sfloat_rgba16 &gt; const &amp;over) noexcept</div><div class="ttdef"><b>Definition:</b> sfloat_rgba16.hpp:112</div></div>
 <div class="ttc" id="anamespacett_html_a824e0d4b6d2d42e5a063b3a452104687"><div class="ttname"><a href="namespacett.html#a824e0d4b6d2d42e5a063b3a452104687">tt::f32x4_sse_ge_mask</a></div><div class="ttdeci">unsigned int f32x4_sse_ge_mask(f32x4_raw const &amp;lhs, f32x4_raw const &amp;rhs) noexcept</div><div class="ttdoc">Compare if greater-or-equal elements of two SSE registers and return a mask.</div><div class="ttdef"><b>Definition:</b> f32x4_sse.hpp:303</div></div>
 <div class="ttc" id="anamespacett_html_a83330681019bc5653f43326d74d320dda2ffe4e77325d9a7152f7086ea7aa5114"><div class="ttname"><a href="namespacett.html#a83330681019bc5653f43326d74d320dda2ffe4e77325d9a7152f7086ea7aa5114">tt::text_decoration::max</a></div><div class="ttdeci">@ max</div></div>
 <div class="ttc" id="anamespacett_html_a83e4ca3ad97a48bddb45a7d1e1cc5cf0"><div class="ttname"><a href="namespacett.html#a83e4ca3ad97a48bddb45a7d1e1cc5cf0">tt::f32x4_sse_hadd</a></div><div class="ttdeci">f32x4_raw f32x4_sse_hadd(f32x4_raw const &amp;lhs, f32x4_raw const &amp;rhs) noexcept</div><div class="ttdoc">Add elements horizontally together.</div><div class="ttdef"><b>Definition:</b> f32x4_sse.hpp:113</div></div>

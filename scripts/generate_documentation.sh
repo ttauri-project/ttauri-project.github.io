@@ -10,16 +10,18 @@ fi
 
 VERSIONS=`cat ttauri_versions.txt`
 
-git submodule init
-git submodule update
+TTAURI_DIR="ttauri"
+git clone https://github.com/ttauri-project/ttauri.git "${TTAURI_DIR}"
 
-for VERSION in $VERSIONS
+for VERSION in ${VERSIONS}
 do
-    echo "Checkout out version $VERSION of ttauri."
-    (cd ttauri; git checkout -q "$VERSION")
+    echo "Checkout out version ${VERSION} of ttauri."
+    (cd "${TTAURI_DIR}"; git checkout -q "${VERSION}")
 
-    mkdir -p "documentation/ttauri/$VERSION"
+    mkdir -p "documentation/ttauri/${VERSION}"
 
-    TTAURI_VERSION="$VERSION" "$DOXYGEN"
+    TTAURI_DIR="${TTAURI_DIR}" TTAURI_VERSION="$VERSION" "$DOXYGEN"
 done
+
+rm -fr ${TTAURI_DIR}
 

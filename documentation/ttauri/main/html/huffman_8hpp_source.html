@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -105,22 +105,22 @@ $(function() {
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordtype">int</span> select = (code &gt;&gt; code_length) &amp; 1;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            offset += select;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;          </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordtype">int</span> value = tree[offset];</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordtype">int</span> <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> = tree[offset];</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="comment">// value may not be a leaf.</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="assert_8hpp.html#a7e4741fb683d5c0fbebd761c072e3bbf">tt_axiom</a>(value &lt;= 0); </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <a class="code" href="assert_8hpp.html#a7e4741fb683d5c0fbebd761c072e3bbf">tt_axiom</a>(<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> &lt;= 0); </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">if</span> (value == 0) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> == 0) {</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="comment">// Unused node entry. Point to the first of two new entries.</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                value = -(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::ssize(tree)) - offset);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> = -(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::ssize(tree)) - offset);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                tree[offset] = narrow_cast&lt;T&gt;(value);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                tree[offset] = narrow_cast&lt;T&gt;(<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                tree.push_back(0);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                tree.push_back(0);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="comment">// Go to the next entry.</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            offset -= value;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            offset -= <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// place the symbol as a leaf.</span></div>
@@ -142,16 +142,16 @@ $(function() {
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keywordflow">throw</span> <a class="code" href="classtt_1_1parse__error.html">parse_error</a>(<span class="stringliteral">&quot;Code not in huffman tree.&quot;</span>);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">auto</span> value = *state;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        state -= <span class="keyword">static_cast&lt;</span>ptrdiff_t<span class="keyword">&gt;</span>(value);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> value - 1;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">auto</span> <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> = *state;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        state -= <span class="keyword">static_cast&lt;</span>ptrdiff_t<span class="keyword">&gt;</span>(<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> - 1;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classtt_1_1huffman__tree.html#a5277d9d3f8f6bda3fa1c99d1a32c7404">  101</a></span>&#160;    [[nodiscard]] <span class="keywordtype">int</span> <a class="code" href="classtt_1_1huffman__tree.html#a5277d9d3f8f6bda3fa1c99d1a32c7404">get_symbol</a>(std::span&lt;std::byte const&gt; bytes, <a class="code" href="namespacett.html#a9a2de1c31d0c379796fe5d2cd2bcfd98">ssize_t</a> &amp;bit_offset) <span class="keyword">const</span> noexcept {</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="classtt_1_1huffman__tree.html#a5277d9d3f8f6bda3fa1c99d1a32c7404">  101</a></span>&#160;    [[nodiscard]] <span class="keywordtype">int</span> <a class="code" href="classtt_1_1huffman__tree.html#a5277d9d3f8f6bda3fa1c99d1a32c7404">get_symbol</a>(std::span&lt;std::byte const&gt; <a class="code" href="namespacebase-93.html#a6afec4a0d84ed1427b1a030661fc34d1">bytes</a>, <a class="code" href="namespacett.html#a9a2de1c31d0c379796fe5d2cd2bcfd98">ssize_t</a> &amp;bit_offset) <span class="keyword">const</span> noexcept {</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keyword">auto</span> state = <a class="code" href="classtt_1_1huffman__tree.html#aa4c2562844e0aa980ba7627f78704f70">start</a>();</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordtype">int</span> symbol;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">if</span> ((symbol = <a class="code" href="classtt_1_1huffman__tree.html#a949e320a8f107a8b6ec6adfc2df21a58">get</a>(<a class="code" href="namespacett.html#abd675f3af4e124bdd799f76e679c7f5e">get_bit</a>(bytes, bit_offset), state)) &gt;= 0) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">if</span> ((symbol = <a class="code" href="classtt_1_1huffman__tree.html#a949e320a8f107a8b6ec6adfc2df21a58">get</a>(<a class="code" href="namespacett.html#abd675f3af4e124bdd799f76e679c7f5e">get_bit</a>(<a class="code" href="namespacebase-93.html#a6afec4a0d84ed1427b1a030661fc34d1">bytes</a>, bit_offset), state)) &gt;= 0) {</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="keywordflow">return</span> symbol;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            }</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
@@ -218,7 +218,9 @@ $(function() {
 <div class="ttc" id="aclasstt_1_1huffman__tree_html_a949e320a8f107a8b6ec6adfc2df21a58"><div class="ttname"><a href="classtt_1_1huffman__tree.html#a949e320a8f107a8b6ec6adfc2df21a58">tt::huffman_tree::get</a></div><div class="ttdeci">int get(bool code_bit, state_t &amp;state) const</div><div class="ttdoc">Get a symbol from the huffman-tree.</div><div class="ttdef"><b>Definition:</b> huffman.hpp:89</div></div>
 <div class="ttc" id="aclasstt_1_1huffman__tree_html_aa4c2562844e0aa980ba7627f78704f70"><div class="ttname"><a href="classtt_1_1huffman__tree.html#aa4c2562844e0aa980ba7627f78704f70">tt::huffman_tree::start</a></div><div class="ttdeci">state_t start() const noexcept</div><div class="ttdef"><b>Definition:</b> huffman.hpp:73</div></div>
 <div class="ttc" id="aclasstt_1_1huffman__tree_html_ade3cb9346480014a82c1aec512c1b7a5"><div class="ttname"><a href="classtt_1_1huffman__tree.html#ade3cb9346480014a82c1aec512c1b7a5">tt::huffman_tree::huffman_tree</a></div><div class="ttdeci">huffman_tree()</div><div class="ttdef"><b>Definition:</b> huffman.hpp:31</div></div>
-<div class="ttc" id="aclasstt_1_1parse__error_html"><div class="ttname"><a href="classtt_1_1parse__error.html">tt::parse_error</a></div><div class="ttdoc">Exception thrown during parsing on an error.</div><div class="ttdef"><b>Definition:</b> exception.hpp:21</div></div>
+<div class="ttc" id="aclasstt_1_1parse__error_html"><div class="ttname"><a href="classtt_1_1parse__error.html">tt::parse_error</a></div><div class="ttdoc">Exception thrown during parsing on an error.</div><div class="ttdef"><b>Definition:</b> exception.hpp:26</div></div>
+<div class="ttc" id="anamespacebase-93_html_a6afec4a0d84ed1427b1a030661fc34d1"><div class="ttname"><a href="namespacebase-93.html#a6afec4a0d84ed1427b1a030661fc34d1">base-93.bytes</a></div><div class="ttdeci">tuple bytes</div><div class="ttdef"><b>Definition:</b> base-93.py:12</div></div>
+<div class="ttc" id="anamespacebase-93_html_ab5ed527bf01cca4c86801670d4da33d8"><div class="ttname"><a href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">base-93.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> base-93.py:5</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
 <div class="ttc" id="anamespacett_html_a9a2de1c31d0c379796fe5d2cd2bcfd98"><div class="ttname"><a href="namespacett.html#a9a2de1c31d0c379796fe5d2cd2bcfd98">tt::ssize_t</a></div><div class="ttdeci">std::ptrdiff_t ssize_t</div><div class="ttdef"><b>Definition:</b> required.hpp:26</div></div>
 <div class="ttc" id="anamespacett_html_abd675f3af4e124bdd799f76e679c7f5e"><div class="ttname"><a href="namespacett.html#abd675f3af4e124bdd799f76e679c7f5e">tt::get_bit</a></div><div class="ttdeci">bool get_bit(std::span&lt; std::byte const &gt; buffer, ssize_t &amp;index) noexcept</div><div class="ttdoc">Read a single bit of span of bytes Bits are ordered LSB first.</div><div class="ttdef"><b>Definition:</b> bits.hpp:20</div></div>

@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -77,39 +77,33 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="error__info_8hpp.html">error_info.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="source__location_8hpp.html">source_location.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="exception_8hpp.html">exception.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ttauri_2utils_8hpp.html">utils.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="exception_8hpp.html">exception.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="ttauri_2utils_8hpp.html">utils.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacett.html">tt</a> {</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacett.html">tt</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="check_8hpp.html#a9c5a5be5d118cff00cc51c3dbbbe2f09">   14</a></span>&#160;<span class="preprocessor">#define tt_parse_check(expression, ...) \</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">    do { \</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">        if (!(expression)) { \</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">            ::tt::error_info(::tt::source_location(__LINE__, 0, __FILE__, __func__)); \</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">            if constexpr (::tt::nr_arguments(__VA_ARGS__) == 0) { \</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">                throw ::tt::parse_error(#expression); \</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">            } else { \</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">                throw ::tt::parse_error(__VA_ARGS__); \</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">            } \</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">        } \</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">    } while (false)</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="check_8hpp.html#a540b80b8300f2cedf88988806179a802">   26</a></span>&#160;<span class="preprocessor">#define tt_hresult_check(expression) \</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">    ([](HRESULT result) { \</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">        if (FAILED(result)) { \</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">            ::tt::error_info(tt::source_location(__LINE__, 0, __FILE__, __func__)); \</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">            throw ::tt::io_error(&quot;Call to &#39;{}&#39; failed with {:08x}&quot;</span>, #expression, result); \</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        } \</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        return result; \</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }(expression))</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
-<div class="ttc" id="aerror__info_8hpp_html"><div class="ttname"><a href="error__info_8hpp.html">error_info.hpp</a></div></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="check_8hpp.html#a9c5a5be5d118cff00cc51c3dbbbe2f09">   12</a></span>&#160;<span class="preprocessor">#define tt_parse_check(expression, ...) \</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">    do { \</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">        if (!(expression)) { \</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">            if constexpr (::tt::nr_arguments(__VA_ARGS__) == 0) { \</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">                throw ::tt::parse_error(#expression); \</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">            } else { \</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">                throw ::tt::parse_error(__VA_ARGS__); \</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">            } \</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">        } \</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">    } while (false)</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="check_8hpp.html#a540b80b8300f2cedf88988806179a802">   23</a></span>&#160;<span class="preprocessor">#define tt_hresult_check(expression) \</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">    ([](HRESULT result) { \</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">        if (FAILED(result)) { \</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">            throw ::tt::io_error(&quot;Call to &#39;{}&#39; failed with {:08x}&quot;</span>, #expression, result); \</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        } \</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        return result; \</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }(expression))</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 <div class="ttc" id="aexception_8hpp_html"><div class="ttname"><a href="exception_8hpp.html">exception.hpp</a></div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
-<div class="ttc" id="asource__location_8hpp_html"><div class="ttname"><a href="source__location_8hpp.html">source_location.hpp</a></div></div>
 <div class="ttc" id="attauri_2utils_8hpp_html"><div class="ttname"><a href="ttauri_2utils_8hpp.html">utils.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_bda4b65898e911bd8f6b1403950ffc28.html">TTauri</a></li><li class="navelem"><a class="el" href="dir_5cfb5b6b41438301859963e67b747eb9.html">Foundation</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9f87200816c308c69831370edcfdd251.html">TTauri</a></li><li class="navelem"><a class="el" href="dir_7fadd25447c0a04ed6951ae08d30b831.html">Foundation</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -85,9 +85,9 @@ $(function() {
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacett.html">tt</a> {</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="namespacett.html#a8548ab005602f834db17157765a1d65b">   78</a></span>&#160;[[nodiscard]] constexpr uint16_t <a class="code" href="namespacett.html#a8548ab005602f834db17157765a1d65b">tt5_code</a>(uint16_t page, uint16_t prefix, uint16_t value)</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="namespacett.html#a8548ab005602f834db17157765a1d65b">   78</a></span>&#160;[[nodiscard]] constexpr uint16_t <a class="code" href="namespacett.html#a8548ab005602f834db17157765a1d65b">tt5_code</a>(uint16_t page, uint16_t prefix, uint16_t <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>)</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> (page &lt;&lt; 10) | (prefix &lt;&lt; 5) | value;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">return</span> (page &lt;&lt; 10) | (prefix &lt;&lt; 5) | <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
 <div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="namespacett.html#a869f8e422b590fe891760f59fa5f8260">   86</a></span>&#160;[[nodiscard]] constexpr uint16_t <a class="code" href="namespacett.html#a869f8e422b590fe891760f59fa5f8260">tt5_code_table_generate_entry</a>(uint8_t c) <a class="code" href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">noexcept</a></div>
@@ -231,14 +231,14 @@ $(function() {
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;}</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="namespacett.html#aa1600d07a09d040056acf123a2215351">  247</a></span>&#160;constexpr <a class="code" href="namespacett.html#ab5d6d07ac9bc944839d2347c615efd47ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> <a class="code" href="namespacett.html#aa1600d07a09d040056acf123a2215351">tt5_reverse</a>(T value) <a class="code" href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">noexcept</a></div>
+<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="namespacett.html#aa1600d07a09d040056acf123a2215351">  247</a></span>&#160;constexpr <a class="code" href="namespacett.html#ab5d6d07ac9bc944839d2347c615efd47ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> <a class="code" href="namespacett.html#aa1600d07a09d040056acf123a2215351">tt5_reverse</a>(T <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>) <a class="code" href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">noexcept</a></div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;{</div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keyword">auto</span> r = <a class="code" href="namespacett.html#ab5d6d07ac9bc944839d2347c615efd47ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>{};</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">while</span> (value) {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>) {</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        r &lt;&lt;=5;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        r |= value &amp; 0x1f;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        value &gt;&gt;= 5;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        r |= <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> &amp; 0x1f;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> &gt;&gt;= 5;</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">return</span> r;</div>
@@ -312,9 +312,9 @@ $(function() {
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;}</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
 <div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00331"></a><span class="lineno"><a class="line" href="namespacett.html#a33a092b5498523e6c118499f7ab8e053">  331</a></span>&#160;constexpr <span class="keywordtype">void</span> <a class="code" href="namespacett.html#a33a092b5498523e6c118499f7ab8e053">fill_buffer_from_tt5</a>(<span class="keywordtype">char</span> *str, T <span class="keyword">const</span> &amp;value) <a class="code" href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">noexcept</a></div>
+<div class="line"><a name="l00331"></a><span class="lineno"><a class="line" href="namespacett.html#a33a092b5498523e6c118499f7ab8e053">  331</a></span>&#160;constexpr <span class="keywordtype">void</span> <a class="code" href="namespacett.html#a33a092b5498523e6c118499f7ab8e053">fill_buffer_from_tt5</a>(<span class="keywordtype">char</span> *str, T <span class="keyword">const</span> &amp;<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>) <a class="code" href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">noexcept</a></div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;{</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keyword">auto</span> value_ = <a class="code" href="namespacett.html#aa1600d07a09d040056acf123a2215351">tt5_reverse</a>(value);</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <span class="keyword">auto</span> value_ = <a class="code" href="namespacett.html#aa1600d07a09d040056acf123a2215351">tt5_reverse</a>(<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>);</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
 <div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    uint8_t current_page = 0;</div>
 <div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    uint8_t locked_page = 0;</div>
@@ -334,12 +334,12 @@ $(function() {
 <div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;}</div>
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00358"></a><span class="lineno"><a class="line" href="namespacett.html#acdc76f5f0217c4ccaa47388b3dbf3f6b">  358</a></span>&#160;[[nodiscard]] std::string <a class="code" href="namespacett.html#acdc76f5f0217c4ccaa47388b3dbf3f6b">tt5_decode</a>(T <span class="keyword">const</span> &amp;value) <a class="code" href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">noexcept</a> {</div>
+<div class="line"><a name="l00358"></a><span class="lineno"><a class="line" href="namespacett.html#acdc76f5f0217c4ccaa47388b3dbf3f6b">  358</a></span>&#160;[[nodiscard]] std::string <a class="code" href="namespacett.html#acdc76f5f0217c4ccaa47388b3dbf3f6b">tt5_decode</a>(T <span class="keyword">const</span> &amp;<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>) <a class="code" href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">noexcept</a> {</div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    constexpr <a class="code" href="namespacett.html#a9a2de1c31d0c379796fe5d2cd2bcfd98">ssize_t</a> max_nr_bits = <span class="keyword">sizeof</span>(<a class="code" href="namespacett.html#ab5d6d07ac9bc944839d2347c615efd47ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a>) * CHAR_BIT;</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    constexpr <a class="code" href="namespacett.html#a9a2de1c31d0c379796fe5d2cd2bcfd98">ssize_t</a> max_nr_chars = max_nr_bits / 5;</div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160; </div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    std::array&lt;char, max_nr_chars + 1&gt; buffer;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <a class="code" href="namespacett.html#a33a092b5498523e6c118499f7ab8e053">fill_buffer_from_tt5</a>(buffer.data(), value);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    <a class="code" href="namespacett.html#a33a092b5498523e6c118499f7ab8e053">fill_buffer_from_tt5</a>(buffer.data(), <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>);</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keywordflow">return</span> {buffer.data()};</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;}</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
@@ -366,6 +366,7 @@ $(function() {
 <div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;}</div>
 <div class="ttc" id="aassert_8hpp_html_a62cfcca32393a97b8b3cd36cf640471c"><div class="ttname"><a href="assert_8hpp.html#a62cfcca32393a97b8b3cd36cf640471c">tt_no_default</a></div><div class="ttdeci">#define tt_no_default</div><div class="ttdef"><b>Definition:</b> assert.hpp:13</div></div>
 <div class="ttc" id="abigint_8hpp_html"><div class="ttname"><a href="bigint_8hpp.html">bigint.hpp</a></div></div>
+<div class="ttc" id="anamespacebase-93_html_ab5ed527bf01cca4c86801670d4da33d8"><div class="ttname"><a href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">base-93.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> base-93.py:5</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> Application.hpp:11</div></div>
 <div class="ttc" id="anamespacett_html_a1275e862ae2b4b96c74b6db4bf05f088"><div class="ttname"><a href="namespacett.html#a1275e862ae2b4b96c74b6db4bf05f088">tt::tt5_code_table</a></div><div class="ttdeci">constexpr auto tt5_code_table</div><div class="ttdef"><b>Definition:</b> TT5.hpp:123</div></div>
 <div class="ttc" id="anamespacett_html_a147a5effdeb55b681f25f8cf516bce31"><div class="ttname"><a href="namespacett.html#a147a5effdeb55b681f25f8cf516bce31">tt::tt5_code_table_generator</a></div><div class="ttdeci">constexpr auto tt5_code_table_generator() noexcept</div><div class="ttdef"><b>Definition:</b> TT5.hpp:112</div></div>

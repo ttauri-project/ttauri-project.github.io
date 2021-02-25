@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_bda4b65898e911bd8f6b1403950ffc28.html">TTauri</a></li><li class="navelem"><a class="el" href="dir_5cfb5b6b41438301859963e67b747eb9.html">Foundation</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9f87200816c308c69831370edcfdd251.html">TTauri</a></li><li class="navelem"><a class="el" href="dir_7fadd25447c0a04ed6951ae08d30b831.html">Foundation</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -137,9 +137,9 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> It, <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="namespacett.html#a8321f550f024e7d3bf0e6542603bb666">   81</a></span>&#160;constexpr It <a class="code" href="namespacett.html#a8321f550f024e7d3bf0e6542603bb666">rfind</a>(It <span class="keyword">const</span> first, It <span class="keyword">const</span> last, T <span class="keyword">const</span> &amp;value)</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="namespacett.html#a8321f550f024e7d3bf0e6542603bb666">   81</a></span>&#160;constexpr It <a class="code" href="namespacett.html#a8321f550f024e7d3bf0e6542603bb666">rfind</a>(It <span class="keyword">const</span> first, It <span class="keyword">const</span> last, T <span class="keyword">const</span> &amp;<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>)</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacett.html#abc2998c1210a20a7ceda2b8f8e2d9a0c">rfind_if</a>(first, last, [&amp;](<a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;x) { <span class="keywordflow">return</span> x == value; });</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacett.html#abc2998c1210a20a7ceda2b8f8e2d9a0c">rfind_if</a>(first, last, [&amp;](<a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;x) { <span class="keywordflow">return</span> x == <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>; });</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> ConstIt, <span class="keyword">typename</span> It, <span class="keyword">typename</span> UnaryPredicate&gt;</div>
@@ -287,6 +287,7 @@ $(function() {
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;}</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="ttc" id="anamespacebase-93_html_ab5ed527bf01cca4c86801670d4da33d8"><div class="ttname"><a href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">base-93.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> base-93.py:5</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> Application.hpp:11</div></div>
 <div class="ttc" id="anamespacett_html_a121e7672c2d48dd342941fe11f7e9732"><div class="ttname"><a href="namespacett.html#a121e7672c2d48dd342941fe11f7e9732">tt::rmismatch</a></div><div class="ttdeci">std::pair&lt; InputIt1, InputIt2 &gt; rmismatch(InputIt1 first1, InputIt1 last1, InputIt2 first2, InputIt2 last2, BinaryPredicate predicate) noexcept</div><div class="ttdef"><b>Definition:</b> algorithm.hpp:190</div></div>
 <div class="ttc" id="anamespacett_html_a3b9522a81169e2df1c5d4fc824762f8d"><div class="ttname"><a href="namespacett.html#a3b9522a81169e2df1c5d4fc824762f8d">tt::ends_with</a></div><div class="ttdeci">bool ends_with(InputIt1 haystack_first, InputIt1 haystack_last, InputIt2 needle_first, InputIt2 needle_last) noexcept</div><div class="ttdef"><b>Definition:</b> algorithm.hpp:217</div></div>

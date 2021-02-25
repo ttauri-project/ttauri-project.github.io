@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li><li class="navelem"><a class="el" href="dir_0027c40d462ac5972248d215596ed657.html">text</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li><li class="navelem"><a class="el" href="dir_27000111608f1c17bb0b2d77b2430862.html">text</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -278,7 +278,7 @@ $(function() {
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    [[nodiscard]] <span class="keyword">static</span> uint64_t create_pointer(char32_t <span class="keyword">const</span> *data, <span class="keywordtype">size_t</span> <a class="code" href="classtt_1_1grapheme.html#a1374e2bfb9eb5fce2d4174cbaddb66e7">size</a>) noexcept</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    {</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <a class="code" href="assert_8hpp.html#a94bb317e6294954c283e3f36e7e5450d">tt_assert</a>(<a class="code" href="classtt_1_1grapheme.html#a1374e2bfb9eb5fce2d4174cbaddb66e7">size</a> &lt;= std::tuple_size&lt;long_grapheme&gt;::value);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <a class="code" href="assert_8hpp.html#a94bb317e6294954c283e3f36e7e5450d">tt_assert</a>(<a class="code" href="classtt_1_1grapheme.html#a1374e2bfb9eb5fce2d4174cbaddb66e7">size</a> &lt;= <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">std::tuple_size&lt;long_grapheme&gt;::value</a>);</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keyword">auto</span> ptr = <span class="keyword">new</span> <a class="code" href="namespacett.html#ab882677a24f70be3b2e62a226f45a92d">long_grapheme</a>();</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        memcpy(ptr-&gt;data(), data, <a class="code" href="classtt_1_1grapheme.html#a1374e2bfb9eb5fce2d4174cbaddb66e7">size</a>);</div>
@@ -290,7 +290,7 @@ $(function() {
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    [[nodiscard]] <a class="code" href="namespacett.html#ab882677a24f70be3b2e62a226f45a92d">long_grapheme</a> *get_pointer() const noexcept</div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    {</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keyword">auto</span> uptr = (value &lt;&lt; 16);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keyword">auto</span> uptr = (<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> &lt;&lt; 16);</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keyword">auto</span> iptr = <span class="keyword">static_cast&lt;</span>ptrdiff_t<span class="keyword">&gt;</span>(uptr) &gt;&gt; 16;</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">return</span> std::launder(<span class="keyword">reinterpret_cast&lt;</span><a class="code" href="namespacett.html#ab882677a24f70be3b2e62a226f45a92d">long_grapheme</a> *<span class="keyword">&gt;</span>(iptr));</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    }</div>
@@ -406,6 +406,7 @@ $(function() {
 <div class="ttc" id="aclasstt_1_1grapheme_html_adb941a60550ce04a923964b5d8851a39"><div class="ttname"><a href="classtt_1_1grapheme.html#adb941a60550ce04a923964b5d8851a39">tt::grapheme::grapheme</a></div><div class="ttdeci">grapheme(const grapheme &amp;other) noexcept</div><div class="ttdef"><b>Definition:</b> grapheme.hpp:48</div></div>
 <div class="ttc" id="aclasstt_1_1grapheme_html_adce77491ec07b3d7fbb0c8bb14f27eba"><div class="ttname"><a href="classtt_1_1grapheme.html#adce77491ec07b3d7fbb0c8bb14f27eba">tt::grapheme::NFKC</a></div><div class="ttdeci">std::u32string NFKC() const noexcept</div></div>
 <div class="ttc" id="aclasstt_1_1grapheme_html_afabf158de4b5fc4f70c2deebb32aa312"><div class="ttname"><a href="classtt_1_1grapheme.html#afabf158de4b5fc4f70c2deebb32aa312">tt::grapheme::grapheme</a></div><div class="ttdeci">grapheme(char32_t codePoint) noexcept</div><div class="ttdef"><b>Definition:</b> grapheme.hpp:84</div></div>
+<div class="ttc" id="anamespacebase-93_html_ab5ed527bf01cca4c86801670d4da33d8"><div class="ttname"><a href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">base-93.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> base-93.py:5</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
 <div class="ttc" id="anamespacett_html_a53effdf0a1dfeac6f978f6fc8d5093c4"><div class="ttname"><a href="namespacett.html#a53effdf0a1dfeac6f978f6fc8d5093c4">tt::to_u8string</a></div><div class="ttdeci">std::u8string to_u8string(std::u16string_view const &amp;rhs) noexcept</div><div class="ttdoc">UTF-16 string to UTF-8 string conversion.</div><div class="ttdef"><b>Definition:</b> UTF.hpp:478</div></div>
 <div class="ttc" id="anamespacett_html_a5defe95d962d46932d8ab58fd1f63de8"><div class="ttname"><a href="namespacett.html#a5defe95d962d46932d8ab58fd1f63de8">tt::to_string</a></div><div class="ttdeci">std::string to_string(audio_device_state const &amp;rhs) noexcept</div><div class="ttdef"><b>Definition:</b> audio_device.hpp:41</div></div>

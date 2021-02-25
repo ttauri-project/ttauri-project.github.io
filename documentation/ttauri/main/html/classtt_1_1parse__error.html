@@ -94,7 +94,9 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Exception thrown during parsing on an error. </p>
 <p>This exception is often thrown due to an error in the syntax in both text and binary files.</p>
-<p>The <code><a class="el" href="classtt_1_1error__info.html" title="Error information passed alongside an error code or exception.">error_info</a></code>-<code>"parse_location"</code> is often filled in for the specific file name and location inside the file where the error was. </p>
+<p>The what-string should start with the location of the error in the file followed with ": " and the error message. The what-string may be shown to the user, when the parser was working on user supplied files.</p>
+<p>The location for a text file will be: a path followed by line_nr (starting at line 1) and column_nr (starting at column 1). The location for a binary: a path followed by an optional chunk names, followed by a byte number within the chunk.</p>
+<p>If there are nested errors, such as an error in an included file, then the what-string may be multiple-lines, where the nested error appears later in the what-string. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a5eb0fbb27cf98706ff93e5e93f7419ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5eb0fbb27cf98706ff93e5e93f7419ba">&#9670;&nbsp;</a></span>parse_error()</h2>

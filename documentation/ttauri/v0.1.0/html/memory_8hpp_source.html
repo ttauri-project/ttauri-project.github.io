@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_bda4b65898e911bd8f6b1403950ffc28.html">TTauri</a></li><li class="navelem"><a class="el" href="dir_5cfb5b6b41438301859963e67b747eb9.html">Foundation</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_9f87200816c308c69831370edcfdd251.html">TTauri</a></li><li class="navelem"><a class="el" href="dir_7fadd25447c0a04ed6951ae08d30b831.html">Foundation</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -95,7 +95,7 @@ $(function() {
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="namespacett.html#ada8cd127fe65032dcba2efc5d81c99c7">   24</a></span>&#160;<a class="code" href="os__detect_8hpp.html#a0e647054ee38d1476b2ea49d6fa628bf">tt_force_inline</a> <span class="keywordtype">bool</span> <a class="code" href="namespacett.html#ada8cd127fe65032dcba2efc5d81c99c7">is_aligned</a>(T* <a class="code" href="range__map_8hpp.html#a1dd9fae95006795d666b2d7b04463aff">p</a>){</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">reinterpret_cast&lt;</span>ptrdiff_t<span class="keyword">&gt;</span>(<a class="code" href="range__map_8hpp.html#a1dd9fae95006795d666b2d7b04463aff">p</a>) % std::alignment_of&lt;T&gt;::value) == 0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> (<span class="keyword">reinterpret_cast&lt;</span>ptrdiff_t<span class="keyword">&gt;</span>(<a class="code" href="range__map_8hpp.html#a1dd9fae95006795d666b2d7b04463aff">p</a>) % <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">std::alignment_of&lt;T&gt;::value</a>) == 0;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> R, <span class="keyword">typename</span> T&gt;</div>
@@ -170,20 +170,21 @@ $(function() {
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Value, <span class="keyword">typename</span> Map, <span class="keyword">typename</span> Key, <span class="keyword">typename</span>... Args&gt;</div>
 <div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="namespacett.html#af3187cfa8a8b585b79bb9b21a5ecadac">  102</a></span>&#160;<span class="keyword">inline</span> std::shared_ptr&lt;Value&gt; <a class="code" href="namespacett.html#af3187cfa8a8b585b79bb9b21a5ecadac">try_make_shared</a>(Map &amp;map, Key key, Args... args) {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    std::shared_ptr&lt;Value&gt; value;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    std::shared_ptr&lt;Value&gt; <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> i = map.find(key);</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">if</span> (i == map.end()) {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        value = std::make_shared&lt;Value&gt;(std::forward&lt;Args&gt;(args)...);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        map.insert_or_assign(key, value);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> = std::make_shared&lt;Value&gt;(std::forward&lt;Args&gt;(args)...);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        map.insert_or_assign(key, <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>);</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        value = i-&gt;second;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> = i-&gt;second;</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;}</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div>
+<div class="ttc" id="anamespacebase-93_html_ab5ed527bf01cca4c86801670d4da33d8"><div class="ttname"><a href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">base-93.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> base-93.py:5</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> Application.hpp:11</div></div>
 <div class="ttc" id="anamespacett_html_a5c00a5e84c50f7210c53a1991e051a92"><div class="ttname"><a href="namespacett.html#a5c00a5e84c50f7210c53a1991e051a92">tt::gsl_suppress5</a></div><div class="ttdeci">gsl_suppress5(f.23, bounds.3, type.1, 26487, lifetime.4) inline R align_end(T ptr</div></div>
 <div class="ttc" id="anamespacett_html_a9142b8051c10151b83cdfb00d6ecb351"><div class="ttname"><a href="namespacett.html#a9142b8051c10151b83cdfb00d6ecb351">tt::noexcept</a></div><div class="ttdeci">size_t alignment noexcept</div><div class="ttdef"><b>Definition:</b> memory.hpp:31</div></div>

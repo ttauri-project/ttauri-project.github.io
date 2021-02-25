@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -106,7 +106,7 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, on_overflow_t OnOverflow&gt;</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="namespacett.html#a7eb4be5de0f3c80386b6cdcd4846c26e">   48</a></span>&#160;<a class="code" href="namespacett.html#ada81ca03357d7a2768e276cd7794bdb3ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> <a class="code" href="namespacett.html#a7eb4be5de0f3c80386b6cdcd4846c26e">safe_handle_overflow</a>(T value, <span class="keywordtype">bool</span> overflow, <span class="keywordtype">bool</span> is_positive) noexcept(OnOverflow != <a class="code" href="namespacett.html#ae647b8479475fb877750e210a1b3155aa8ce61dd2505effd96f937fa743b6491f">on_overflow_t::Throw</a>)</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="namespacett.html#a7eb4be5de0f3c80386b6cdcd4846c26e">   48</a></span>&#160;<a class="code" href="namespacett.html#ada81ca03357d7a2768e276cd7794bdb3ab9ece18c950afbfa6b0fdbfa4ff731d3">T</a> <a class="code" href="namespacett.html#a7eb4be5de0f3c80386b6cdcd4846c26e">safe_handle_overflow</a>(T <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>, <span class="keywordtype">bool</span> overflow, <span class="keywordtype">bool</span> is_positive) noexcept(OnOverflow != <a class="code" href="namespacett.html#ae647b8479475fb877750e210a1b3155aa8ce61dd2505effd96f937fa743b6491f">on_overflow_t::Throw</a>)</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> constexpr (OnOverflow == <a class="code" href="namespacett.html#ae647b8479475fb877750e210a1b3155aa8ce61dd2505effd96f937fa743b6491f">on_overflow_t::Throw</a>) {</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">if</span> (overflow) {</div>
@@ -118,10 +118,10 @@ $(function() {
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="assert_8hpp.html#a7e4741fb683d5c0fbebd761c072e3bbf">tt_axiom</a>(!overflow);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (OnOverflow == <a class="code" href="namespacett.html#ae647b8479475fb877750e210a1b3155aafbf427bdeb4244eecca41246de32b36d">on_overflow_t::Saturate</a>) {</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">if</span> (overflow) {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            [[unlikely]] value = is_positive ? std::numeric_limits&lt;T&gt;::max() : std::numeric_limits&lt;T&gt;::min();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            [[unlikely]] <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> = is_positive ? std::numeric_limits&lt;T&gt;::max() : std::numeric_limits&lt;T&gt;::min();</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, on_overflow_t OnOverflow, <span class="keyword">typename</span> U&gt;</div>
@@ -348,6 +348,7 @@ $(function() {
 <div class="ttc" id="aassert_8hpp_html_a94bb317e6294954c283e3f36e7e5450d"><div class="ttname"><a href="assert_8hpp.html#a94bb317e6294954c283e3f36e7e5450d">tt_assert</a></div><div class="ttdeci">#define tt_assert(expression,...)</div><div class="ttdoc">Assert if expression is true.</div><div class="ttdef"><b>Definition:</b> assert.hpp:21</div></div>
 <div class="ttc" id="aexception_8hpp_html"><div class="ttname"><a href="exception_8hpp.html">exception.hpp</a></div></div>
 <div class="ttc" id="aint__overflow_8hpp_html"><div class="ttname"><a href="int__overflow_8hpp.html">int_overflow.hpp</a></div></div>
+<div class="ttc" id="anamespacebase-93_html_ab5ed527bf01cca4c86801670d4da33d8"><div class="ttname"><a href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">base-93.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> base-93.py:5</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
 <div class="ttc" id="anamespacett_html_a11a38ae8bd291578e2e4ba2e14803332"><div class="ttname"><a href="namespacett.html#a11a38ae8bd291578e2e4ba2e14803332">tt::safe_convert</a></div><div class="ttdeci">T safe_convert(U const &amp;rhs) noexcept(OnOverflow !=on_overflow_t::Throw)</div><div class="ttdef"><b>Definition:</b> safe_int.hpp:67</div></div>
 <div class="ttc" id="anamespacett_html_a37f8a644367d34c849c680c217505de0"><div class="ttname"><a href="namespacett.html#a37f8a644367d34c849c680c217505de0">tt::add_overflow</a></div><div class="ttdeci">bool add_overflow(T lhs, T rhs, T *r)</div><div class="ttdef"><b>Definition:</b> int_overflow.hpp:43</div></div>

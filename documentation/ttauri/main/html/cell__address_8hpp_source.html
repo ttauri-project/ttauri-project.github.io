@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -222,7 +222,7 @@ $(function() {
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        part_t part = part_t::Coord;</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordtype">bool</span> is_absolute = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordtype">bool</span> is_positive = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordtype">int</span> value = 0;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> = 0;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keyword">auto</span> state = state_t::Idle;</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordtype">char</span> <a class="code" href="namespacett.html#ae4bb98382fd42f6bdb05a279bc482119a4a8a08f09d37b73795649038408b5f33">c</a> = 0;</div>
@@ -232,7 +232,7 @@ $(function() {
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordflow">switch</span> (state) {</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="keywordflow">case</span> state_t::Idle:</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                value = 0;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> = 0;</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                is_positive = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                part = part_t::Coord;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                is_absolute = <span class="keyword">true</span>;</div>
@@ -295,12 +295,12 @@ $(function() {
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="keywordflow">case</span> state_t::Number:</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="namespacett.html#ae4bb98382fd42f6bdb05a279bc482119a4a8a08f09d37b73795649038408b5f33">c</a> &gt;= <span class="charliteral">&#39;0&#39;</span> &amp;&amp; <a class="code" href="namespacett.html#ae4bb98382fd42f6bdb05a279bc482119a4a8a08f09d37b73795649038408b5f33">c</a> &lt;= <span class="charliteral">&#39;9&#39;</span>) {</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                    value *= 10;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                    value += <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code" href="namespacett.html#ae4bb98382fd42f6bdb05a279bc482119a4a8a08f09d37b73795649038408b5f33">c</a> - <span class="charliteral">&#39;0&#39;</span>);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                    <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> *= 10;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                    <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> += <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code" href="namespacett.html#ae4bb98382fd42f6bdb05a279bc482119a4a8a08f09d37b73795649038408b5f33">c</a> - <span class="charliteral">&#39;0&#39;</span>);</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                    <span class="keywordflow">if</span> (!is_positive) {</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                        value = -value;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                        <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> = -<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>;</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                    }</div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                    <span class="comment">// The first non-digit character (including &#39;\0&#39;) is the new</span></div>
@@ -311,11 +311,11 @@ $(function() {
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                    <span class="keywordflow">switch</span> (part) {</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                    <span class="keywordflow">case</span> part_t::Coord:</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                        <span class="keywordflow">if</span> (is_row) {</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#ab6e3bc9fc80ca2958ba4d97d4502b16f">row</a>.<a class="code" href="structtt_1_1cell__address__axis.html#a9da56a6e86fa63282b220fbc4cc7fadd">index</a> = narrow_cast&lt;int16_t&gt;(value);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#ab6e3bc9fc80ca2958ba4d97d4502b16f">row</a>.<a class="code" href="structtt_1_1cell__address__axis.html#a9da56a6e86fa63282b220fbc4cc7fadd">index</a> = narrow_cast&lt;int16_t&gt;(<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>);</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#ab6e3bc9fc80ca2958ba4d97d4502b16f">row</a>.<a class="code" href="structtt_1_1cell__address__axis.html#ad114a083dd3d1704b4312adc9a0e79d2">is_opposite</a> = is_opposite;</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#ab6e3bc9fc80ca2958ba4d97d4502b16f">row</a>.<a class="code" href="structtt_1_1cell__address__axis.html#a08da95a16cbbc8c1a22b03b752d945f9">is_absolute</a> = is_absolute;</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#a7842fbc0555890aac21a48737c2b5d5d">column</a>.<a class="code" href="structtt_1_1cell__address__axis.html#a9da56a6e86fa63282b220fbc4cc7fadd">index</a> = narrow_cast&lt;int16_t&gt;(value);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#a7842fbc0555890aac21a48737c2b5d5d">column</a>.<a class="code" href="structtt_1_1cell__address__axis.html#a9da56a6e86fa63282b220fbc4cc7fadd">index</a> = narrow_cast&lt;int16_t&gt;(<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>);</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#a7842fbc0555890aac21a48737c2b5d5d">column</a>.<a class="code" href="structtt_1_1cell__address__axis.html#ad114a083dd3d1704b4312adc9a0e79d2">is_opposite</a> = is_opposite;</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#a7842fbc0555890aac21a48737c2b5d5d">column</a>.<a class="code" href="structtt_1_1cell__address__axis.html#a08da95a16cbbc8c1a22b03b752d945f9">is_absolute</a> = is_absolute;</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                        }</div>
@@ -323,19 +323,19 @@ $(function() {
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                    <span class="keywordflow">case</span> part_t::Span:</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                        <span class="keywordflow">if</span> (is_row) {</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#ab6e3bc9fc80ca2958ba4d97d4502b16f">row</a>.<a class="code" href="structtt_1_1cell__address__axis.html#aa3690c566f9a24976cdba699362d752d">span</a> = narrow_cast&lt;int8_t&gt;(value);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#ab6e3bc9fc80ca2958ba4d97d4502b16f">row</a>.<a class="code" href="structtt_1_1cell__address__axis.html#aa3690c566f9a24976cdba699362d752d">span</a> = narrow_cast&lt;int8_t&gt;(<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>);</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#ab6e3bc9fc80ca2958ba4d97d4502b16f">row</a>.<a class="code" href="structtt_1_1cell__address__axis.html#ad114a083dd3d1704b4312adc9a0e79d2">is_opposite</a> = is_opposite;</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#a7842fbc0555890aac21a48737c2b5d5d">column</a>.<a class="code" href="structtt_1_1cell__address__axis.html#aa3690c566f9a24976cdba699362d752d">span</a> = narrow_cast&lt;int8_t&gt;(value);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#a7842fbc0555890aac21a48737c2b5d5d">column</a>.<a class="code" href="structtt_1_1cell__address__axis.html#aa3690c566f9a24976cdba699362d752d">span</a> = narrow_cast&lt;int8_t&gt;(<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>);</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#a7842fbc0555890aac21a48737c2b5d5d">column</a>.<a class="code" href="structtt_1_1cell__address__axis.html#ad114a083dd3d1704b4312adc9a0e79d2">is_opposite</a> = is_opposite;</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                        }</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                    <span class="keywordflow">case</span> part_t::Alignment:</div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                        <span class="keywordflow">if</span> (is_row) {</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#ab6e3bc9fc80ca2958ba4d97d4502b16f">row</a>.<a class="code" href="structtt_1_1cell__address__axis.html#a7c8beea4c9fca0a64398d81022502812">alignment</a> = narrow_cast&lt;int8_t&gt;(value);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#ab6e3bc9fc80ca2958ba4d97d4502b16f">row</a>.<a class="code" href="structtt_1_1cell__address__axis.html#a7c8beea4c9fca0a64398d81022502812">alignment</a> = narrow_cast&lt;int8_t&gt;(<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>);</div>
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#a7842fbc0555890aac21a48737c2b5d5d">column</a>.<a class="code" href="structtt_1_1cell__address__axis.html#a7c8beea4c9fca0a64398d81022502812">alignment</a> = narrow_cast&lt;int8_t&gt;(value);</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                            <a class="code" href="structtt_1_1cell__address.html#a7842fbc0555890aac21a48737c2b5d5d">column</a>.<a class="code" href="structtt_1_1cell__address__axis.html#a7c8beea4c9fca0a64398d81022502812">alignment</a> = narrow_cast&lt;int8_t&gt;(<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>);</div>
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                        }</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                        <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
@@ -346,7 +346,7 @@ $(function() {
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                        <span class="keywordflow">switch</span> (part) {</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                        <span class="keywordflow">case</span> part_t::Coord:</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                            <span class="comment">// A &#39;:&#39; after a coord means a span, parse the next number.</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                            value = 0;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                            <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> = 0;</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                            part = part_t::Span;</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                            is_positive = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                            state = state_t::Number;</div>
@@ -354,7 +354,7 @@ $(function() {
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                        <span class="keywordflow">case</span> part_t::Span:</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                            <span class="comment">// A &#39;:&#39; after a span means an alignment, parse the next number.</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                            value = 0;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                            <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> = 0;</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                            part = part_t::Alignment;</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                            is_positive = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                            state = state_t::Number;</div>
@@ -424,8 +424,9 @@ $(function() {
 <div class="ttc" id="aassert_8hpp_html_a6efe0724c81422b5e0652981827f217e"><div class="ttname"><a href="assert_8hpp.html#a6efe0724c81422b5e0652981827f217e">tt_no_default</a></div><div class="ttdeci">#define tt_no_default()</div><div class="ttdoc">This part of the code should not be reachable, unless a programming bug.</div><div class="ttdef"><b>Definition:</b> assert.hpp:42</div></div>
 <div class="ttc" id="aassert_8hpp_html_a7e4741fb683d5c0fbebd761c072e3bbf"><div class="ttname"><a href="assert_8hpp.html#a7e4741fb683d5c0fbebd761c072e3bbf">tt_axiom</a></div><div class="ttdeci">#define tt_axiom(expression,...)</div><div class="ttdoc">Specify an axiom; an expression that is true.</div><div class="ttdef"><b>Definition:</b> assert.hpp:37</div></div>
 <div class="ttc" id="acast_8hpp_html"><div class="ttname"><a href="cast_8hpp.html">cast.hpp</a></div></div>
-<div class="ttc" id="aclasstt_1_1parse__error_html"><div class="ttname"><a href="classtt_1_1parse__error.html">tt::parse_error</a></div><div class="ttdoc">Exception thrown during parsing on an error.</div><div class="ttdef"><b>Definition:</b> exception.hpp:21</div></div>
+<div class="ttc" id="aclasstt_1_1parse__error_html"><div class="ttname"><a href="classtt_1_1parse__error.html">tt::parse_error</a></div><div class="ttdoc">Exception thrown during parsing on an error.</div><div class="ttdef"><b>Definition:</b> exception.hpp:26</div></div>
 <div class="ttc" id="aexception_8hpp_html"><div class="ttname"><a href="exception_8hpp.html">exception.hpp</a></div></div>
+<div class="ttc" id="anamespacebase-93_html_ab5ed527bf01cca4c86801670d4da33d8"><div class="ttname"><a href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">base-93.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> base-93.py:5</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
 <div class="ttc" id="anamespacett_html_a47a1671206e928a4a2250feb9fffb3beae599161956d626eda4cb0a5ffb85271c"><div class="ttname"><a href="namespacett.html#a47a1671206e928a4a2250feb9fffb3beae599161956d626eda4cb0a5ffb85271c">tt::KeyboardState::Idle</a></div><div class="ttdeci">@ Idle</div></div>
 <div class="ttc" id="anamespacett_html_a60a6c400e74216c88f72513d876af5c1af1965a857bc285d26fe22023aa5ab50d"><div class="ttname"><a href="namespacett.html#a60a6c400e74216c88f72513d876af5c1af1965a857bc285d26fe22023aa5ab50d">tt::arrangement::row</a></div><div class="ttdeci">@ row</div></div>

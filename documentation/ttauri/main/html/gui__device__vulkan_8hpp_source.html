@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li><li class="navelem"><a class="el" href="dir_c11f1d5b546ba048acbc5196b03cea55.html">GUI</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li><li class="navelem"><a class="el" href="dir_837638f0771d2eb1a6093869529e860a.html">GUI</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -82,7 +82,7 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pipeline__flat__device__shared_8hpp.html">pipeline_flat_device_shared.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pipeline__image__device__shared_8hpp.html">pipeline_image_device_shared.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pipeline__box__device__shared_8hpp.html">pipeline_box_device_shared.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_pipeline___s_d_f__device__shared_8hpp.html">pipeline_SDF_device_shared.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pipeline___s_d_f__device__shared_8hpp.html">pipeline_SDF_device_shared.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pipeline__tone__mapper__device__shared_8hpp.html">pipeline_tone_mapper_device_shared.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;vulkan/vulkan.hpp&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vma/vk_mem_alloc.h&gt;</span></div>
@@ -272,7 +272,7 @@ $(function() {
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
 <div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="classtt_1_1gui__device__vulkan.html#a95fa50e2f23ac169219a1d0bd023e672">  228</a></span>&#160;    vk::Pipeline <a class="code" href="classtt_1_1gui__device__vulkan.html#a95fa50e2f23ac169219a1d0bd023e672">createGraphicsPipeline</a>(vk::PipelineCache pipelineCache, <span class="keyword">const</span> vk::GraphicsPipelineCreateInfo&amp; createInfo)<span class="keyword"> const </span>{</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> lock = std::scoped_lock(<a class="code" href="namespacett.html#ac20d6d3024e97fb8f500edd3eb0d2575">gui_system_mutex</a>);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classtt_1_1gui__device__vulkan.html#a2f4b0ed291077b4c41251d430719fddf">intrinsic</a>.createGraphicsPipeline(pipelineCache, createInfo);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classtt_1_1gui__device__vulkan.html#a2f4b0ed291077b4c41251d430719fddf">intrinsic</a>.createGraphicsPipeline(pipelineCache, createInfo).value;</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    }</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
 <div class="line"><a name="l00233"></a><span class="lineno"><a class="line" href="classtt_1_1gui__device__vulkan.html#a631f894cc578232370a223faa8ffa3ab">  233</a></span>&#160;    vk::Sampler <a class="code" href="classtt_1_1gui__device__vulkan.html#a631f894cc578232370a223faa8ffa3ab">createSampler</a>(<span class="keyword">const</span> vk::SamplerCreateInfo&amp; createInfo)<span class="keyword"> const </span>{</div>
@@ -322,7 +322,6 @@ $(function() {
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;};</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160; </div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;}</div>
-<div class="ttc" id="a_pipeline___s_d_f__device__shared_8hpp_html"><div class="ttname"><a href="_pipeline___s_d_f__device__shared_8hpp.html">Pipeline_SDF_device_shared.hpp</a></div></div>
 <div class="ttc" id="aclasstt_1_1_u_r_l_html"><div class="ttname"><a href="classtt_1_1_u_r_l.html">tt::URL</a></div><div class="ttdef"><b>Definition:</b> URL.hpp:46</div></div>
 <div class="ttc" id="aclasstt_1_1color_html"><div class="ttname"><a href="classtt_1_1color.html">tt::color</a></div><div class="ttdoc">This is a RGBA floating point color.</div><div class="ttdef"><b>Definition:</b> color.hpp:39</div></div>
 <div class="ttc" id="aclasstt_1_1gui__device__vulkan_html"><div class="ttname"><a href="classtt_1_1gui__device__vulkan.html">tt::gui_device_vulkan</a></div><div class="ttdef"><b>Definition:</b> gui_device_vulkan.hpp:23</div></div>
@@ -416,6 +415,7 @@ $(function() {
 <div class="ttc" id="anamespacett_html_a957879460174ecbf80927388419922f5"><div class="ttname"><a href="namespacett.html#a957879460174ecbf80927388419922f5">tt::format</a></div><div class="ttdeci">std::u8string format(const std::locale &amp;loc, std::u8string_view fmt, const Args &amp;... args)</div><div class="ttdef"><b>Definition:</b> format.hpp:23</div></div>
 <div class="ttc" id="anamespacett_html_ac20d6d3024e97fb8f500edd3eb0d2575"><div class="ttname"><a href="namespacett.html#ac20d6d3024e97fb8f500edd3eb0d2575">tt::gui_system_mutex</a></div><div class="ttdeci">unfair_recursive_mutex gui_system_mutex</div><div class="ttdoc">Global mutex for GUI elements, like gui_system, gui_device, Windows and Widgets.</div><div class="ttdef"><b>Definition:</b> gui_system_globals.hpp:12</div></div>
 <div class="ttc" id="anamespacett_html_ada81ca03357d7a2768e276cd7794bdb3ab9ece18c950afbfa6b0fdbfa4ff731d3"><div class="ttname"><a href="namespacett.html#ada81ca03357d7a2768e276cd7794bdb3ab9ece18c950afbfa6b0fdbfa4ff731d3">tt::keyboard_virtual_key::T</a></div><div class="ttdeci">@ T</div></div>
+<div class="ttc" id="apipeline___s_d_f__device__shared_8hpp_html"><div class="ttname"><a href="pipeline___s_d_f__device__shared_8hpp.html">pipeline_SDF_device_shared.hpp</a></div></div>
 <div class="ttc" id="apipeline__box__device__shared_8hpp_html"><div class="ttname"><a href="pipeline__box__device__shared_8hpp.html">pipeline_box_device_shared.hpp</a></div></div>
 <div class="ttc" id="apipeline__flat__device__shared_8hpp_html"><div class="ttname"><a href="pipeline__flat__device__shared_8hpp.html">pipeline_flat_device_shared.hpp</a></div></div>
 <div class="ttc" id="apipeline__image__device__shared_8hpp_html"><div class="ttname"><a href="pipeline__image__device__shared_8hpp.html">pipeline_image_device_shared.hpp</a></div></div>

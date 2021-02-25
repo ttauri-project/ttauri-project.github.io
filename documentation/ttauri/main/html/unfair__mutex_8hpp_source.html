@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_39a7edc7e084d529e4b73d005913a8dd.html">ttauri</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_8238e16d177c899146b7311096b713fa.html">ttauri</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -101,7 +101,7 @@ $(function() {
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// Switch to 1 means there are no waiters.</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        uint32_t expected = 0;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">if</span> (!semaphore.compare_exchange_strong(expected, 1, std::memory_order::memory_order_acquire)) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">if</span> (!semaphore.compare_exchange_strong(expected, 1, std::memory_order::acquire)) {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            [[unlikely]] lock_contented(expected);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#if TT_BUILD_TYPE == TT_BT_DEBUG</span></div>
@@ -115,7 +115,7 @@ $(function() {
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">// Switch to 1 means there are no waiters.</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        uint32_t expected = 0;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> (!semaphore.compare_exchange_strong(expected, 1, std::memory_order::memory_order_acquire)) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> (!semaphore.compare_exchange_strong(expected, 1, std::memory_order::acquire)) {</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <a class="code" href="assert_8hpp.html#a7e4741fb683d5c0fbebd761c072e3bbf">tt_axiom</a>(semaphore.load() &lt;= 2);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            [[unlikely]] <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
@@ -129,12 +129,12 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classtt_1_1unfair__mutex.html#ad34d8cac91a78f659efc4de0a8688727">   78</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtt_1_1unfair__mutex.html#ad34d8cac91a78f659efc4de0a8688727">unlock</a>() noexcept {</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="assert_8hpp.html#a7e4741fb683d5c0fbebd761c072e3bbf">tt_axiom</a>(semaphore.load() &lt;= 2);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">if</span> (semaphore.fetch_sub(1, std::memory_order::memory_order_relaxed) != 1) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            [[unlikely]] semaphore.store(0, std::memory_order::memory_order_release);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordflow">if</span> (semaphore.fetch_sub(1, std::memory_order::relaxed) != 1) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            [[unlikely]] semaphore.store(0, std::memory_order::release);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            semaphore.notify_one();</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            atomic_thread_fence(std::memory_order::memory_order_release);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            atomic_thread_fence(std::memory_order::release);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#if TT_BUILD_TYPE == TT_BT_DEBUG</span></div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        locking_thread = 0;</div>

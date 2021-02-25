@@ -103,9 +103,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7b2d539ab3bb561edcfc5953e85df343"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1label__stencil.html#a7b2d539ab3bb561edcfc5953e85df343">set_layout_parameters</a> (<a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> const &amp;rectangle, float base_line_position=std::numeric_limits&lt; float &gt;::infinity()) noexcept override</td></tr>
 <tr class="memdesc:a7b2d539ab3bb561edcfc5953e85df343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass layout parameters in local coordinates.  <a href="classtt_1_1label__stencil.html#a7b2d539ab3bb561edcfc5953e85df343">More...</a><br /></td></tr>
 <tr class="separator:a7b2d539ab3bb561edcfc5953e85df343"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa19a3c21b9f0dedbe2ece90c13d8906c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1label__stencil.html#aa19a3c21b9f0dedbe2ece90c13d8906c">draw</a> (<a class="el" href="classtt_1_1draw__context.html">draw_context</a> context, bool use_context_color=false) noexcept override</td></tr>
-<tr class="memdesc:aa19a3c21b9f0dedbe2ece90c13d8906c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the cell.  <a href="classtt_1_1label__stencil.html#aa19a3c21b9f0dedbe2ece90c13d8906c">More...</a><br /></td></tr>
-<tr class="separator:aa19a3c21b9f0dedbe2ece90c13d8906c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ef8df515de57e8e0ede0e2de2077fe2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1label__stencil.html#a2ef8df515de57e8e0ede0e2de2077fe2">draw</a> (<a class="el" href="classtt_1_1draw__context.html">draw_context</a> context, <a class="el" href="classtt_1_1color.html">tt::color</a> <a class="el" href="classtt_1_1color.html">color</a>) noexcept override</td></tr>
+<tr class="memdesc:a2ef8df515de57e8e0ede0e2de2077fe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the cell.  <a href="classtt_1_1label__stencil.html#a2ef8df515de57e8e0ede0e2de2077fe2">More...</a><br /></td></tr>
+<tr class="separator:a2ef8df515de57e8e0ede0e2de2077fe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -176,8 +176,8 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aa19a3c21b9f0dedbe2ece90c13d8906c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa19a3c21b9f0dedbe2ece90c13d8906c">&#9670;&nbsp;</a></span>draw()</h2>
+<a id="a2ef8df515de57e8e0ede0e2de2077fe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ef8df515de57e8e0ede0e2de2077fe2">&#9670;&nbsp;</a></span>draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,8 +194,8 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>use_context_color</em> = <code>false</code>&#160;</td>
+          <td class="paramtype"><a class="el" href="classtt_1_1color.html">tt::color</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -214,12 +214,12 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">context</td><td>The current draw context. </td></tr>
-    <tr><td class="paramname">use_context_color</td><td>True to use the colors in the context, False to use the colors in the cell itself. </td></tr>
+    <tr><td class="paramname">color</td><td>The color to use for drawing. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classtt_1_1stencil.html#a570459e3e10ba3faef77e8c070a06b0e">tt::stencil</a>.</p>
+<p>Implements <a class="el" href="classtt_1_1stencil.html#a9e4f5e4656c834e6f77a8595f316c245">tt::stencil</a>.</p>
 
 </div>
 </div>

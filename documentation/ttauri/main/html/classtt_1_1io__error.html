@@ -74,6 +74,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Exception thrown during I/O on an error.  
+ <a href="classtt_1_1io__error.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="exception_8hpp_source.html">ttauri/exception.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for tt::io_error:</div>
@@ -88,7 +91,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab22bb5a90bf4868da138d210f3b8b06b"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtt_1_1io__error.html#ab22bb5a90bf4868da138d210f3b8b06b">io_error</a> (std::string_view fmt, FirstArg const &amp;arg1, Args const &amp;... args) noexcept</td></tr>
 <tr class="separator:ab22bb5a90bf4868da138d210f3b8b06b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Exception thrown during I/O on an error. </p>
+<p>This exception is often thrown due to an error with permission or existence of files.</p>
+<p>The what-string should start with the path of the object where the error happened. Followed after ": " with a user-friendly error message. Optionally followed between single quotes the operating system error string. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab22bb5a90bf4868da138d210f3b8b06b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab22bb5a90bf4868da138d210f3b8b06b">&#9670;&nbsp;</a></span>io_error()</h2>
 

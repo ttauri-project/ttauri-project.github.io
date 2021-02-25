@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ttauri_20stencil_20template_20language_8421',['TTauri Stencil Template Language',['../md_ttauri_skeleton_skeleton.html',1,'']]]
+  ['application_20preferences_8569',['Application Preferences',['../md___users_takev__projects_ttauri_project_github_io_ttauri_docs_preferences.html',1,'']]]
 ];
