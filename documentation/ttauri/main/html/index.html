@@ -69,9 +69,9 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="mainpage"></a></p>
 <p>TTauri is a cross platform C++ GUI library.</p>
-<h1><a class="anchor" id="autotoc_md156"></a>
+<h1><a class="anchor" id="autotoc_md154"></a>
 Features</h1>
-<h2><a class="anchor" id="autotoc_md157"></a>
+<h2><a class="anchor" id="autotoc_md155"></a>
 Box drawing</h2>
 <p>Most drawing is done through the box-drawing shader. The box-drawing shader can draw an anti-aliased box with:</p>
 <ul>
@@ -88,12 +88,12 @@ Box drawing</h2>
 <li>slots, and</li>
 <li>circles.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md158"></a>
+<h2><a class="anchor" id="autotoc_md156"></a>
 Text drawing</h2>
 <p>Glyphs are drawn by the GPU using a signed-distance-field shader. This shader is able to render glyphs with subpixel-anti-aliasing without using a post processing filter.</p>
 <p>Glyphs are lazilly and asynchronous added to the texture-atlas when needed. By adding the glyphs as signed distance fields to the texture atlas a glyph needs to be added only once to be usable for displaying at any size.</p>
 <p>Due to the shader having to perform subpixel-compositing, it is not able to correctly draw overlapping glyphs. Since the shader will always rever to the background drawn by the previous sub-pass.</p>
-<h1><a class="anchor" id="autotoc_md159"></a>
+<h1><a class="anchor" id="autotoc_md157"></a>
 Performance</h1>
 <p>TTauri is designed for low latency interactive applications.</p>
 <p>For this reason we have the following design considerations:</p>
