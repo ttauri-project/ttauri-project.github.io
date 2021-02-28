@@ -68,7 +68,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>XXX Depth buffer can be used as per-primitive clipping/stencil buffer.</p>
-<h1><a class="anchor" id="autotoc_md120"></a>
+<h1><a class="anchor" id="autotoc_md88"></a>
 Render architecture</h1>
 <p>Vulkan is used as the backend for rendering windows.</p>
 <div class="fragment"><div class="line">  +---------+</div>
@@ -99,11 +99,11 @@ Render architecture</h1>
 <div class="line">              +---------+</div>
 <div class="line">              |  Atlas  |</div>
 <div class="line">              +---------+</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md121"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md89"></a>
 Window</h2>
 <p>The swap-chain of the window will consist of RGBA images with alpha set to 1.</p>
 <p>The window may either have the sRGB color space, or the extended-float16-sRGB color space.</p>
-<h2><a class="anchor" id="autotoc_md122"></a>
+<h2><a class="anchor" id="autotoc_md90"></a>
 Single pass, five sub-passes.</h2>
 <p>The whole render architecture is using a single pass with five sub-passes.</p>
 <p>By using a single pass the shader of the sub-passes are able to efficiently read from the frame-buffer. This frame buffer can be ephemeral and be located completely in fast on-GPU-chip memory. This will make rendering on mobile GPUs a lot more efficient compared to multi-pass architectures.</p>
@@ -115,7 +115,7 @@ Single pass, five sub-passes.</h2>
 <li>SDF Shader - Render text-glyphs with sub-pixel-anti-aliasing.</li>
 <li>Tone Mapper - Convert HDR/WCG image to the reduced range of the display.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md123"></a>
+<h2><a class="anchor" id="autotoc_md91"></a>
 Text Shaping</h2>
 <p>Steps of text-shaping:</p><ul>
 <li>Start: with a list of style-graphemes in logical ordering. The style-grapheme contains the Unicode-NFC and each grapheme as a style. Latin automatic ligatures such as 'ffi' are illegal and should never be composed into a single grapheme.</li>
@@ -132,7 +132,7 @@ Text Shaping</h2>
 </ul>
 </li>
 </ul>
-<h3><a class="anchor" id="autotoc_md124"></a>
+<h3><a class="anchor" id="autotoc_md92"></a>
 Glyph Lookup algorithm</h3>
 <ol type="1">
 <li>Lookup grapheme's NFC code points in the code-point-to-font table and take the intersection of fonts.</li>
@@ -145,7 +145,7 @@ Glyph Lookup algorithm</h3>
 </ol>
 <p>A grapheme's code point is looked up into the code-point-to-fonts table. he returned fonts are then matched with the font-style of the grapheme.</p>
 <p>This font is cached based on the style, and any code point is first checked with this cached font. If the code point is not found then the full lookup is done.</p>
-<h3><a class="anchor" id="autotoc_md125"></a>
+<h3><a class="anchor" id="autotoc_md93"></a>
 Font styles</h3>
 <p>A font style is a 32 bit description of how a grapheme should be displayed. It is only 32 bit so that it is accompanied with each attributed-grapheme.</p>
 <p>A font-style has the following characteristics:</p>
@@ -183,23 +183,23 @@ Font styles</h3>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyRight">9   </td><td class="markdownTableBodyRight">950   </td><td class="markdownTableBodyLeft">Extra-black / Ultra-black   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md126"></a>
+<h2><a class="anchor" id="autotoc_md94"></a>
 Themes</h2>
 <p>A theme consists of predefined colors, fonts and button shapes. A theme is loaded from a json file. The theme directory is scanned for all themes and from the preferences the user can select the current theme at runtime.</p>
-<h3><a class="anchor" id="autotoc_md127"></a>
+<h3><a class="anchor" id="autotoc_md95"></a>
 Colors</h3>
-<h4><a class="anchor" id="autotoc_md128"></a>
+<h4><a class="anchor" id="autotoc_md96"></a>
 Accent Color</h4>
-<h4><a class="anchor" id="autotoc_md129"></a>
+<h4><a class="anchor" id="autotoc_md97"></a>
 Semantic Color</h4>
-<h4><a class="anchor" id="autotoc_md130"></a>
+<h4><a class="anchor" id="autotoc_md98"></a>
 Custom Color</h4>
 <p>Custom colors are for application specific widgets. These colors may also be modified by the application at runtime. For example an audio application may use custom colors for drawing the audio level meters.</p>
-<h3><a class="anchor" id="autotoc_md131"></a>
+<h3><a class="anchor" id="autotoc_md99"></a>
 Font Styles</h3>
-<h3><a class="anchor" id="autotoc_md132"></a>
+<h3><a class="anchor" id="autotoc_md100"></a>
 Button shapes</h3>
-<h2><a class="anchor" id="autotoc_md133"></a>
+<h2><a class="anchor" id="autotoc_md101"></a>
 Box Pipeline</h2>
 <p>The box-pipeline is designed to draw axis-aligned quads with:</p><ul>
 <li>A fill color.</li>

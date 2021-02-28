@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['render_5farchitecture_8576',['render_architecture',['../md___users_takev__projects_ttauri_project_github_io_ttauri_docs_render_architecture.html',1,'']]]
+  ['information_20reporting_8542',['Information reporting',['../md___users_takev__projects_ttauri_project_github_io_ttauri_docs_information_reporting.html',1,'']]]
 ];

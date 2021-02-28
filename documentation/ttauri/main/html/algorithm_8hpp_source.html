@@ -142,10 +142,10 @@ $(function() {
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> It, <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="namespacett.html#a8321f550f024e7d3bf0e6542603bb666">   86</a></span>&#160;constexpr It <a class="code" href="namespacett.html#a8321f550f024e7d3bf0e6542603bb666">rfind</a>(It <span class="keyword">const</span> first, It <span class="keyword">const</span> last, T <span class="keyword">const</span> &amp;<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>)</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="namespacett.html#a8321f550f024e7d3bf0e6542603bb666">   86</a></span>&#160;constexpr It <a class="code" href="namespacett.html#a8321f550f024e7d3bf0e6542603bb666">rfind</a>(It <span class="keyword">const</span> first, It <span class="keyword">const</span> last, T <span class="keyword">const</span> &amp;value)</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="namespacett.html#abc2998c1210a20a7ceda2b8f8e2d9a0c">rfind_if</a>(first, last, [&amp;](<a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;x) {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> x == <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span> x == value;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    });</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
@@ -153,8 +153,8 @@ $(function() {
 <div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="namespacett.html#a84383b19e370985f35fa8006c030b4e2">  101</a></span>&#160;[[nodiscard]] constexpr It <a class="code" href="namespacett.html#a84383b19e370985f35fa8006c030b4e2">find_any</a>(It data_first, It data_last, ItAny value_first, ItAny value_last) noexcept</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordflow">return</span> std::find_if(data_first, data_last, [value_first, value_last](<a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;data) {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> std::any_of(value_first, value_last, [&amp;data](<a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>) {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">return</span> data == <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordflow">return</span> std::any_of(value_first, value_last, [&amp;data](<a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> &amp;value) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordflow">return</span> data == value;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        });</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    });</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
@@ -348,7 +348,6 @@ $(function() {
 <div class="ttc" id="aassert_8hpp_html"><div class="ttname"><a href="assert_8hpp.html">assert.hpp</a></div></div>
 <div class="ttc" id="aassert_8hpp_html_a7e4741fb683d5c0fbebd761c072e3bbf"><div class="ttname"><a href="assert_8hpp.html#a7e4741fb683d5c0fbebd761c072e3bbf">tt_axiom</a></div><div class="ttdeci">#define tt_axiom(expression,...)</div><div class="ttdoc">Specify an axiom; an expression that is true.</div><div class="ttdef"><b>Definition:</b> assert.hpp:37</div></div>
 <div class="ttc" id="acast_8hpp_html"><div class="ttname"><a href="cast_8hpp.html">cast.hpp</a></div></div>
-<div class="ttc" id="anamespacebase-93_html_ab5ed527bf01cca4c86801670d4da33d8"><div class="ttname"><a href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">base-93.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> base-93.py:5</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
 <div class="ttc" id="anamespacett_html_a1b2194d50afea7da849a9b7a02cc5658"><div class="ttname"><a href="namespacett.html#a1b2194d50afea7da849a9b7a02cc5658">tt::back_strip</a></div><div class="ttdeci">DataIt back_strip(DataIt data_first, DataIt data_last, ValueIt value_first, ValueIt value_last) noexcept</div><div class="ttdoc">Strip data from the back side.</div><div class="ttdef"><b>Definition:</b> algorithm.hpp:355</div></div>
 <div class="ttc" id="anamespacett_html_a4636d55e6ae2ed9ea20a100d00d9aeef"><div class="ttname"><a href="namespacett.html#a4636d55e6ae2ed9ea20a100d00d9aeef">tt::find_cluster</a></div><div class="ttdeci">constexpr It find_cluster(ConstIt last, It start, UnaryPredicate predicate)</div><div class="ttdoc">Find the start of the current cluster.</div><div class="ttdef"><b>Definition:</b> algorithm.hpp:117</div></div>

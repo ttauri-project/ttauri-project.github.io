@@ -114,13 +114,13 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structtt_1_1counter__functor.html#ab1de3f403df78cc212b801a016a895ae">   42</a></span>&#160;    int64_t <a class="code" href="structtt_1_1counter__functor.html#ab1de3f403df78cc212b801a016a895ae">increment</a>() const noexcept</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> = <a class="code" href="structtt_1_1counter__functor.html#a5af0a1a39b2905ea7639a783c12e90fb">counter</a>.fetch_add(1, std::memory_order::relaxed);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> value = <a class="code" href="structtt_1_1counter__functor.html#a5af0a1a39b2905ea7639a783c12e90fb">counter</a>.fetch_add(1, std::memory_order::relaxed);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> == 0) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">if</span> (value == 0) {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            [[unlikely]] <a class="code" href="structtt_1_1counter__functor.html#a8b7fe2197abc05cf180030c141737d86">add_to_map</a>();</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a> + 1;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> value + 1;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structtt_1_1counter__functor.html#aa25816c64d801728bde291a4b600364d">   53</a></span>&#160;    [[nodiscard]] int64_t <a class="code" href="structtt_1_1counter__functor.html#aa25816c64d801728bde291a4b600364d">read</a>() const noexcept</div>
@@ -158,7 +158,6 @@ $(function() {
 <div class="ttc" id="aclasstt_1_1wfree__unordered__map_html"><div class="ttname"><a href="classtt_1_1wfree__unordered__map.html">tt::wfree_unordered_map</a></div><div class="ttdef"><b>Definition:</b> wfree_unordered_map.hpp:56</div></div>
 <div class="ttc" id="aclasstt_1_1wfree__unordered__map_html_ab66c9015acb09f02f33bb4711fc484e8"><div class="ttname"><a href="classtt_1_1wfree__unordered__map.html#ab66c9015acb09f02f33bb4711fc484e8">tt::wfree_unordered_map::insert</a></div><div class="ttdeci">void insert(K key, V value) noexcept</div><div class="ttdef"><b>Definition:</b> wfree_unordered_map.hpp:79</div></div>
 <div class="ttc" id="afixed__string_8hpp_html"><div class="ttname"><a href="fixed__string_8hpp.html">fixed_string.hpp</a></div></div>
-<div class="ttc" id="anamespacebase-93_html_ab5ed527bf01cca4c86801670d4da33d8"><div class="ttname"><a href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">base-93.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> base-93.py:5</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
 <div class="ttc" id="anamespacett_html_a11614e67d89a4680ea4b7292bf6317b9"><div class="ttname"><a href="namespacett.html#a11614e67d89a4680ea4b7292bf6317b9">tt::MAX_NR_COUNTERS</a></div><div class="ttdeci">constexpr int MAX_NR_COUNTERS</div><div class="ttdef"><b>Definition:</b> counters.hpp:18</div></div>
 <div class="ttc" id="anamespacett_html_a193c5d71e047b14a88b9737e0d396b6e"><div class="ttname"><a href="namespacett.html#a193c5d71e047b14a88b9737e0d396b6e">tt::increment_counter</a></div><div class="ttdeci">int64_t increment_counter() noexcept</div><div class="ttdef"><b>Definition:</b> counters.hpp:62</div></div>

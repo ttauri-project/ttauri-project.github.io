@@ -67,9 +67,9 @@ $(function() {
 <div class="title">Code Style rules </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md88"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md45"></a>
 Identifiers</h1>
-<h2><a class="anchor" id="autotoc_md89"></a>
+<h2><a class="anchor" id="autotoc_md46"></a>
 Casing</h2>
 <p>The following identifiers are in snake_case:</p><ul>
 <li>functions,</li>
@@ -87,7 +87,7 @@ Casing</h2>
 <li>template arguments.</li>
 </ul>
 <p>Capital letters within a snake_case identifier are allowed for proper nouns and abbreviations.</p>
-<h2><a class="anchor" id="autotoc_md90"></a>
+<h2><a class="anchor" id="autotoc_md47"></a>
 Prefixes and Suffixes</h2>
 <p>Common prefixes and suffixes:</p>
 <ul>
@@ -104,14 +104,14 @@ Prefixes and Suffixes</h2>
 <p>Private or protected member functions may have the "\_" prefix when they implement the functionality of a public function of the same name.</p>
 <p>Macros, because they do not belong to a namespace, are prefixed with the prefix "tt\_".</p>
 <p>The suffix "\_" may be used when a new variable needs to be introduced when only its type has changed using casting or conversion. If more than one such variable is needed the name of the type should be appended.</p>
-<h1><a class="anchor" id="autotoc_md91"></a>
+<h1><a class="anchor" id="autotoc_md48"></a>
 Global variables</h1>
 <p>Singletons (classes that can only be instantiated once) are discouraged.</p>
 <p>Instead add a static-member-function to the class, which returns a reference to an instance of that class. When there is only one such member, call it <code>global()</code>.</p>
 <p>In certain cases these <code>global()</code> member functions have to initialize a subsystem and/or make sure that it is not being allocated during system shutdown. The <code>system_status</code> will help with correctly instantiating and closing down of subsystems,</p>
 <p>If it is not possible to add a static-member-function due to circular dependencies than naming a global variable as the name of the class followed by the name of the global variable with and underscore "\_" as separator.</p>
 <p>Another interesting global variable, either as a static-member-variable or as a global variable would be a mutex named <code>mutex</code>.</p>
-<h1><a class="anchor" id="autotoc_md92"></a>
+<h1><a class="anchor" id="autotoc_md49"></a>
 Two phase construction</h1>
 <p>When a polymorphic class needs to polymorphic initialization and destruction it should add the following two virtual functions:</p>
 <ul>
@@ -121,7 +121,7 @@ Two phase construction</h1>
 <p><code>init()</code> should be called directly after the lifetime of the object has started. It should be called from the same thread as its construction and the reference to the object should not have been shared with others.</p>
 <p><code>deinit()</code> should be called directly before the lifetime of the object is finished. It should be called from the same thread as the object's destructor and no reference to the object should exist anymore outside of the current function.</p>
 <p>This means that like in the constructor and destructor inside <code>init()</code> and <code>deinit()</code> there is no need for handling multithreading issues.</p>
-<h1><a class="anchor" id="autotoc_md93"></a>
+<h1><a class="anchor" id="autotoc_md50"></a>
 Delegates</h1>
 <p>Delegates are polymorphic class instances that are passed to an object that is being managed. The managed object will call into the delegate to send messages and retrieve information.</p>
 <p>The managed object should hold a <code>std::weak_ptr</code> to the base class of the delegate. This allows the delegate to be deallocated with the managed object functioning.</p>
@@ -132,7 +132,7 @@ Delegates</h1>
 <li>virtual void deinit(managed_object &amp;sender)</li>
 </ul>
 <p>The two functions mirror the two phase construction and are often called from <code>init()</code> and <code>deinit()</code> of the managed object. However they may be called from the constructor and destructor of the object as well.</p>
-<h1><a class="anchor" id="autotoc_md94"></a>
+<h1><a class="anchor" id="autotoc_md51"></a>
 Subsystems</h1>
 <p>A subsystem will have a name in the <code>system_status_type</code> enum, and will have a global function under the same name suffixed with _start. This subsystem_start function is used to initialize and register the deinitalize function with the system_status. The subsystem_start function must be low latency so that it can be called very often to make sure the subsystem is started when functionality of the subsystem is used for the first time. </p>
 </div></div><!-- contents -->

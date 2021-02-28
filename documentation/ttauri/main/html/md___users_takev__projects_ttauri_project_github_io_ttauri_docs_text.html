@@ -67,7 +67,7 @@ $(function() {
 <div class="title">Text </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md134"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md102"></a>
 FontBook initialization</h1>
 <p>When the application is started a global FontBook is instanced. During the FontBook's instantiation it will fast-parse each TrueType font in the operating system's font folder.</p>
 <p>During the fast-parse the 'name', 'OS/2' and optionally other tables are read and then the font files are closed and memory is freed. This fast-parse is designed to be very fast to reduce impact on application startup time.</p>
@@ -85,7 +85,7 @@ FontBook initialization</h1>
 <p>Each font family is assigned a FamilyID. Each font is assigned a FontID.</p>
 <p>There is a list of fallback font families for well known fonts, in case certain font families are not available on the system.</p>
 <p>Each font will be assigned a list of fallback fonts for missing glyph lookup. Priority is given for fonts that start with the same font family name. For example "Arial Arabic" will be prioritized when the current font is "Arial"</p>
-<h1><a class="anchor" id="autotoc_md135"></a>
+<h1><a class="anchor" id="autotoc_md103"></a>
 Font selection</h1>
 <p>A FontVariant consists of a FontWeight+serif-flag. This allows a user to select a font family to draw a text with and emphasize fragments of the text using italic and bold.</p>
 <p>There are a total of maximum 20 FontVariants for each FontFamilyID.</p>
@@ -95,9 +95,9 @@ Font selection</h1>
 <li>The FontFamilyID + FontVariant is looked up in the FontBook and a FontID is returned for the variant the closely matches the requested variant that is available for that family.</li>
 <li>A grapheme + FontID is looked up in the FontBook and a FontGlyphIDs is returned. The returned FontID may be of another font than requested if the glyphs where not available in the requested fonts.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md136"></a>
+<h1><a class="anchor" id="autotoc_md104"></a>
 Text shaping</h1>
-<h2><a class="anchor" id="autotoc_md137"></a>
+<h2><a class="anchor" id="autotoc_md105"></a>
 Phases</h2>
 <ol type="1">
 <li>Given a text and a text-style; calculate the natural size of the text<ul>
@@ -116,7 +116,7 @@ Phases</h2>
 <li>Given draw coordinates find character in the original text.</li>
 <li>Given a character in the original text find a neighboring character on the screen.</li>
 </ol>
-<h2><a class="anchor" id="autotoc_md138"></a>
+<h2><a class="anchor" id="autotoc_md106"></a>
 Sub-styles</h2>
 <p>Sub-styles can be selected in-line in the text using the following Unicode code-points:</p>
 <table class="markdownTable">

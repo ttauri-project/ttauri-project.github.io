@@ -130,19 +130,19 @@ $(function() {
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    const_iterator <a class="code" href="namespacett.html#a3512a6a276a52c29450aa160a713bccfa8d589afa4dfaeeed85fff5aa78e5ff6a">begin</a>() const noexcept {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>.begin();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> value.begin();</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    const_iterator <a class="code" href="namespacett.html#a3512a6a276a52c29450aa160a713bccfa7f021a1415b86f2d013b2618fb31ae53">end</a>() const noexcept {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>.begin() + size();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span> value.begin() + size();</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> sort() noexcept {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        std::sort(<a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>.begin(), <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>.begin() + size());</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        std::sort(value.begin(), value.begin() + size());</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> add(T a) noexcept {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">value</a>.at(count++) = a;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        value.at(count++) = a;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        sort();</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;};</div>
@@ -283,7 +283,6 @@ $(function() {
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
 <div class="ttc" id="aassert_8hpp_html_a94bb317e6294954c283e3f36e7e5450d"><div class="ttname"><a href="assert_8hpp.html#a94bb317e6294954c283e3f36e7e5450d">tt_assert</a></div><div class="ttdeci">#define tt_assert(expression,...)</div><div class="ttdoc">Assert if expression is true.</div><div class="ttdef"><b>Definition:</b> assert.hpp:21</div></div>
 <div class="ttc" id="amath_8hpp_html"><div class="ttname"><a href="math_8hpp.html">math.hpp</a></div></div>
-<div class="ttc" id="anamespacebase-93_html_ab5ed527bf01cca4c86801670d4da33d8"><div class="ttname"><a href="namespacebase-93.html#ab5ed527bf01cca4c86801670d4da33d8">base-93.value</a></div><div class="ttdeci">int value</div><div class="ttdef"><b>Definition:</b> base-93.py:5</div></div>
 <div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
 <div class="ttc" id="anamespacett_html_a3512a6a276a52c29450aa160a713bccfa7f021a1415b86f2d013b2618fb31ae53"><div class="ttname"><a href="namespacett.html#a3512a6a276a52c29450aa160a713bccfa7f021a1415b86f2d013b2618fb31ae53">tt::seek_whence::end</a></div><div class="ttdeci">@ end</div></div>
 <div class="ttc" id="anamespacett_html_a3512a6a276a52c29450aa160a713bccfa8d589afa4dfaeeed85fff5aa78e5ff6a"><div class="ttname"><a href="namespacett.html#a3512a6a276a52c29450aa160a713bccfa8d589afa4dfaeeed85fff5aa78e5ff6a">tt::seek_whence::begin</a></div><div class="ttdeci">@ begin</div></div>

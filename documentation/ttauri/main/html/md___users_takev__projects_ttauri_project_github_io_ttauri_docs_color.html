@@ -67,21 +67,21 @@ $(function() {
 <div class="title">Color </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md95"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md52"></a>
 Extended Linear sRGB</h1>
 <p>Absolute color values uses the extended-linear-sRGB color space internally in the application, the ttauri library and its shaders. This allows for HDR (high dynamic range) and high gamut colors while remaining backward compatible with normal sRGB and rec709 colors.</p>
 <p>The extended linear sRGB uses the ITU-R BT.709 color primaries and white-point, but uses a linear transfer function, where the value (0.0, 0.0, 0.0) is 0 cd/m2 black and (1.0, 1.0, 1.0) is 80 cd/m2 white.</p>
 <p>Values above 1.0 for high dynamic range, and values below 0.0 for high gamut are allowed.</p>
-<h1><a class="anchor" id="autotoc_md96"></a>
+<h1><a class="anchor" id="autotoc_md53"></a>
 Alpha</h1>
 <p>Alpha is encoded as a linear floating point number between 0.0 (transparent) and 1.0 (opaque).</p>
 <p>Inside the application and ttauri-library the color values are NOT pre-multiplied with the alpha value. However the shaders may pre-multiply alpha internally for optimization or color accuracy reasons.</p>
 <p>When anti-aliasing the coverage value is directly used as the alpha value during compositing. For text we use a more accurate anti-aliasing algorithm, for details see: <a class="el" href="md___users_takev__projects_ttauri_project_github_io_ttauri_docs_anti_aliasing.html">Anti Aliasing</a></p>
-<h1><a class="anchor" id="autotoc_md97"></a>
+<h1><a class="anchor" id="autotoc_md54"></a>
 Color format type</h1>
 <p>Color format types are used in vertex arrays when communicating with the GPU.</p>
 <p>The types have the following syntax: <code>numeric-type</code> _ <code>color-components</code> [ _pack ]</p>
-<h2><a class="anchor" id="autotoc_md98"></a>
+<h2><a class="anchor" id="autotoc_md55"></a>
 Numeric type</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -99,7 +99,7 @@ Numeric type</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">srgb   </td><td class="markdownTableBodyLeft">Non-linear sRGB format for the RGB component, the alpha remains linear. Values are mapped to a floating point range between 0.0 and 1.0.   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md99"></a>
+<h2><a class="anchor" id="autotoc_md56"></a>
 Color components</h2>
 <p>The color components are the lower case letters: r, g, b &amp; a. The ordering of the letters describe the order of the color components in memory. A number describes the number of bits of each component before it.</p>
 <p>Here are a few examples of components:</p>
@@ -123,7 +123,7 @@ Color components</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">a2bgr10   </td><td class="markdownTableBodyLeft">2 bit alpha, 10 bits per component blue, green &amp; red   </td></tr>
 </table>
-<h2><a class="anchor" id="autotoc_md100"></a>
+<h2><a class="anchor" id="autotoc_md57"></a>
 Packing</h2>
 <p>If the format is non-packed, then each each color component must be 8, 16, 32 or 64 bits in size. Each color component is stored in memory in native-byte-order, and the components are ordered with in increasing memory addresses.</p>
 <p>If the format is packed, then the color components are packed together in a single integer. The color components are packed inside the integer from msb to lsb. he integer is 8, 16, 32, 64 or 128 bits in size. The integer is stored in memory in native-byte-order. </p>
