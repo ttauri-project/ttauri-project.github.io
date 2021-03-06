@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -13,6 +14,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -22,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TTauri
-   &#160;<span id="projectnumber">main</span>
+   &#160;<span id="projectnumber">v0.1.0 v0.2.3 *main</span>
    </div>
    <div id="projectbrief">A low latency retained GUI</div>
   </td>
@@ -307,7 +309,7 @@ $(function() {
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        }</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    }</div>
 <div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
-<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="structtt_1_1bezier__curve.html#a114339a60c5c4cd1c0dafee37fe6bc81">  303</a></span>&#160;    [[nodiscard]] <span class="keyword">friend</span> <a class="code" href="structtt_1_1bezier__curve.html">bezier_curve</a> <a class="code" href="structtt_1_1bezier__curve.html#a114339a60c5c4cd1c0dafee37fe6bc81">operator*</a>(geo::transformer&lt;2&gt; <span class="keyword">auto</span> <span class="keyword">const</span> &amp;lhs, <a class="code" href="structtt_1_1bezier__curve.html">bezier_curve</a> <span class="keyword">const</span> &amp;rhs) noexcept</div>
+<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="structtt_1_1bezier__curve.html#a03cf2bccbd489af95eab0a650f4547e0">  303</a></span>&#160;    [[nodiscard]] <span class="keyword">friend</span> <a class="code" href="structtt_1_1bezier__curve.html">bezier_curve</a> <a class="code" href="structtt_1_1bezier__curve.html#a03cf2bccbd489af95eab0a650f4547e0">operator*</a>(<a class="code" href="namespacett_1_1geo.html#ae2e65ba21e8bd333e1688938783000cb">geo::transformer</a> <span class="keyword">auto</span> <span class="keyword">const</span> &amp;lhs, <a class="code" href="structtt_1_1bezier__curve.html">bezier_curve</a> <span class="keyword">const</span> &amp;rhs) noexcept</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    {</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keywordflow">return</span> {rhs.<a class="code" href="structtt_1_1bezier__curve.html#a1dcf1672dccbf58afd35ea90bf9dba77">type</a>, lhs * rhs.P1, lhs * rhs.C1, lhs * rhs.C2, lhs * rhs.P2};</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    }</div>
@@ -339,11 +341,12 @@ $(function() {
 <div class="ttc" id="abezier_8hpp_html"><div class="ttname"><a href="bezier_8hpp.html">bezier.hpp</a></div></div>
 <div class="ttc" id="aclasstt_1_1color_html"><div class="ttname"><a href="classtt_1_1color.html">tt::color</a></div><div class="ttdoc">This is a RGBA floating point color.</div><div class="ttdef"><b>Definition:</b> color.hpp:39</div></div>
 <div class="ttc" id="aclasstt_1_1geo_1_1point_html"><div class="ttname"><a href="classtt_1_1geo_1_1point.html">tt::geo::point&lt; 2 &gt;</a></div></div>
-<div class="ttc" id="aclasstt_1_1geo_1_1vector_html"><div class="ttname"><a href="classtt_1_1geo_1_1vector.html">tt::geo::vector</a></div><div class="ttdoc">A high-level geometric vector Part of the high-level vector, point, mat and color types.</div><div class="ttdef"><b>Definition:</b> vector.hpp:20</div></div>
+<div class="ttc" id="aclasstt_1_1geo_1_1vector_html"><div class="ttname"><a href="classtt_1_1geo_1_1vector.html">tt::geo::vector&lt; 2 &gt;</a></div></div>
 <div class="ttc" id="aclasstt_1_1pixel__map_html"><div class="ttname"><a href="classtt_1_1pixel__map.html">tt::pixel_map</a></div><div class="ttdoc">A 2D canvas of pixels.</div><div class="ttdef"><b>Definition:</b> pixel_map.hpp:99</div></div>
 <div class="ttc" id="amath_8hpp_html"><div class="ttname"><a href="math_8hpp.html">math.hpp</a></div></div>
-<div class="ttc" id="anamespacett_1_1geo_html_a35dbc954bf8473d43daccbde891e26ed"><div class="ttname"><a href="namespacett_1_1geo.html#a35dbc954bf8473d43daccbde891e26ed">tt::geo::cross</a></div><div class="ttdeci">constexpr vector&lt; 2 &gt; cross(vector&lt; 2 &gt; const &amp;rhs) noexcept</div><div class="ttdoc">Get the cross product of one 2D vectors.</div><div class="ttdef"><b>Definition:</b> vector.hpp:249</div></div>
-<div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
+<div class="ttc" id="anamespacett_1_1geo_html_a35dbc954bf8473d43daccbde891e26ed"><div class="ttname"><a href="namespacett_1_1geo.html#a35dbc954bf8473d43daccbde891e26ed">tt::geo::cross</a></div><div class="ttdeci">constexpr vector&lt; 2 &gt; cross(vector&lt; 2 &gt; const &amp;rhs) noexcept</div><div class="ttdoc">Get the cross product of one 2D vectors.</div><div class="ttdef"><b>Definition:</b> vector.hpp:285</div></div>
+<div class="ttc" id="anamespacett_1_1geo_html_ae2e65ba21e8bd333e1688938783000cb"><div class="ttname"><a href="namespacett_1_1geo.html#ae2e65ba21e8bd333e1688938783000cb">tt::geo::transformer</a></div><div class="ttdeci">concept transformer</div><div class="ttdef"><b>Definition:</b> transform.hpp:83</div></div>
+<div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:14</div></div>
 <div class="ttc" id="anamespacett_html_a0dfc521e02bf94978564cfddb63db197"><div class="ttname"><a href="namespacett.html#a0dfc521e02bf94978564cfddb63db197">tt::parrallelLine</a></div><div class="ttdeci">std::pair&lt; point2, point2 &gt; parrallelLine(point2 P1, point2 P2, float distance) noexcept</div><div class="ttdef"><b>Definition:</b> bezier.hpp:251</div></div>
 <div class="ttc" id="anamespacett_html_a1d959a201721ec7b0146a65c26bf565c"><div class="ttname"><a href="namespacett.html#a1d959a201721ec7b0146a65c26bf565c">tt::LineJoinStyle</a></div><div class="ttdeci">LineJoinStyle</div><div class="ttdef"><b>Definition:</b> bezier_curve.hpp:23</div></div>
 <div class="ttc" id="anamespacett_html_a1d959a201721ec7b0146a65c26bf565ca1b9ae4ca6d43fc984af318046e1e7bb5"><div class="ttname"><a href="namespacett.html#a1d959a201721ec7b0146a65c26bf565ca1b9ae4ca6d43fc984af318046e1e7bb5">tt::LineJoinStyle::Bevel</a></div><div class="ttdeci">@ Bevel</div></div>
@@ -366,8 +369,8 @@ $(function() {
 <div class="ttc" id="asdf__r8_8hpp_html"><div class="ttname"><a href="sdf__r8_8hpp.html">sdf_r8.hpp</a></div></div>
 <div class="ttc" id="astructtt_1_1bezier__curve_html"><div class="ttname"><a href="structtt_1_1bezier__curve.html">tt::bezier_curve</a></div><div class="ttdef"><b>Definition:</b> bezier_curve.hpp:28</div></div>
 <div class="ttc" id="astructtt_1_1bezier__curve_html_a02e97e9f9a04aefaa03bebbad8d685be"><div class="ttname"><a href="structtt_1_1bezier__curve.html#a02e97e9f9a04aefaa03bebbad8d685be">tt::bezier_curve::split</a></div><div class="ttdeci">std::pair&lt; bezier_curve, bezier_curve &gt; split(float const t) const noexcept</div><div class="ttdef"><b>Definition:</b> bezier_curve.hpp:230</div></div>
+<div class="ttc" id="astructtt_1_1bezier__curve_html_a03cf2bccbd489af95eab0a650f4547e0"><div class="ttname"><a href="structtt_1_1bezier__curve.html#a03cf2bccbd489af95eab0a650f4547e0">tt::bezier_curve::operator*</a></div><div class="ttdeci">friend bezier_curve operator*(geo::transformer auto const &amp;lhs, bezier_curve const &amp;rhs) noexcept</div><div class="ttdef"><b>Definition:</b> bezier_curve.hpp:303</div></div>
 <div class="ttc" id="astructtt_1_1bezier__curve_html_a085a292a5ce7cb12298dc1000f7acebb"><div class="ttname"><a href="structtt_1_1bezier__curve.html#a085a292a5ce7cb12298dc1000f7acebb">tt::bezier_curve::bezier_curve</a></div><div class="ttdeci">bezier_curve() noexcept=delete</div></div>
-<div class="ttc" id="astructtt_1_1bezier__curve_html_a114339a60c5c4cd1c0dafee37fe6bc81"><div class="ttname"><a href="structtt_1_1bezier__curve.html#a114339a60c5c4cd1c0dafee37fe6bc81">tt::bezier_curve::operator*</a></div><div class="ttdeci">friend bezier_curve operator*(geo::transformer&lt; 2 &gt; auto const &amp;lhs, bezier_curve const &amp;rhs) noexcept</div><div class="ttdef"><b>Definition:</b> bezier_curve.hpp:303</div></div>
 <div class="ttc" id="astructtt_1_1bezier__curve_html_a15fd0e081a7317f390e6cf4a5e3e2302"><div class="ttname"><a href="structtt_1_1bezier__curve.html#a15fd0e081a7317f390e6cf4a5e3e2302">tt::bezier_curve::C2</a></div><div class="ttdeci">point2 C2</div><div class="ttdoc">Control point.</div><div class="ttdef"><b>Definition:</b> bezier_curve.hpp:36</div></div>
 <div class="ttc" id="astructtt_1_1bezier__curve_html_a17eb16d5b1fb392d0afe285c55db4081"><div class="ttname"><a href="structtt_1_1bezier__curve.html#a17eb16d5b1fb392d0afe285c55db4081">tt::bezier_curve::tangentAt</a></div><div class="ttdeci">vector2 tangentAt(float const t) const noexcept</div><div class="ttdef"><b>Definition:</b> bezier_curve.hpp:118</div></div>
 <div class="ttc" id="astructtt_1_1bezier__curve_html_a1dcf1672dccbf58afd35ea90bf9dba77"><div class="ttname"><a href="structtt_1_1bezier__curve.html#a1dcf1672dccbf58afd35ea90bf9dba77">tt::bezier_curve::type</a></div><div class="ttdeci">Type type</div><div class="ttdef"><b>Definition:</b> bezier_curve.hpp:32</div></div>
@@ -407,6 +410,7 @@ $(function() {
 <div class="ttc" id="astructtt_1_1results_html"><div class="ttname"><a href="structtt_1_1results.html">tt::results</a></div><div class="ttdef"><b>Definition:</b> polynomial.hpp:14</div></div>
 <div class="ttc" id="atransform_8hpp_html"><div class="ttname"><a href="transform_8hpp.html">transform.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0

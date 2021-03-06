@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -13,6 +14,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -22,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TTauri
-   &#160;<span id="projectnumber">main</span>
+   &#160;<span id="projectnumber">v0.1.0 v0.2.3 *main</span>
    </div>
    <div id="projectbrief">A low latency retained GUI</div>
   </td>
@@ -70,6 +72,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Data Fields</a> &#124;
 <a href="#friends">Friends</a>  </div>
   <div class="headertitle">
 <div class="title">tt::axis_aligned_rectangle&lt; T &gt; Class Template Reference</div>  </div>
@@ -93,16 +96,31 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a77b4ed0eb895f54e0733712364033b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acea4d76816f565c7190d292fadfc4950"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#acea4d76816f565c7190d292fadfc4950">operator=</a> (<a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a> &amp;&amp;rhs) noexcept=default</td></tr>
 <tr class="separator:acea4d76816f565c7190d292fadfc4950"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5345041e88fbd210e3e5ce1a35d0fad4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a5345041e88fbd210e3e5ce1a35d0fad4">axis_aligned_rectangle</a> (<a class="el" href="namespacett.html#a5aecee6bfcf078a9221b698ac82c116f">tt::arithmetic</a> auto <a class="el" href="classtt_1_1axis__aligned__rectangle.html#a06425f39d31582a089a4da54facd94f1">x</a>, <a class="el" href="namespacett.html#a5aecee6bfcf078a9221b698ac82c116f">tt::arithmetic</a> auto <a class="el" href="classtt_1_1axis__aligned__rectangle.html#adaf11a158babe87bf0163ab89884e9e6">y</a>, <a class="el" href="namespacett.html#a5aecee6bfcf078a9221b698ac82c116f">tt::arithmetic</a> auto <a class="el" href="classtt_1_1axis__aligned__rectangle.html#ab27ae4d4f1b5891cfeb0b22956e35ee1">width</a>, <a class="el" href="namespacett.html#a5aecee6bfcf078a9221b698ac82c116f">tt::arithmetic</a> auto <a class="el" href="classtt_1_1axis__aligned__rectangle.html#a6703ef26f80efb828c7afefeb146752e">height</a>) noexcept</td></tr>
+<tr class="memitem:a2e153b39a92cfe6298f7b26d0b6cd7fa"><td class="memTemplParams" colspan="2">template&lt;typename O &gt; </td></tr>
+<tr class="memitem:a2e153b39a92cfe6298f7b26d0b6cd7fa"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a2e153b39a92cfe6298f7b26d0b6cd7fa">axis_aligned_rectangle</a> (<a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a>&lt; O &gt; const &amp;rhs) noexcept requires(<a class="el" href="namespacett.html#a68e8a498f33ae2f0c3b2c85b12fa0b4b">is_different_v</a>&lt; O</td></tr>
+<tr class="separator:a2e153b39a92cfe6298f7b26d0b6cd7fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a691a7b429f63b3243fd29db929d230f4"><td class="memItemLeft" align="right" valign="top">T rhs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a691a7b429f63b3243fd29db929d230f4">y</a> ()</td></tr>
+<tr class="separator:a691a7b429f63b3243fd29db929d230f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ee983bbc879979be2a049ccad5029ad"><td class="memItemLeft" align="right" valign="top">T rhs rhs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a4ee983bbc879979be2a049ccad5029ad">width</a> ()</td></tr>
+<tr class="separator:a4ee983bbc879979be2a049ccad5029ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab48fcd534b7a16cf698ae2f12d1478dc"><td class="memItemLeft" align="right" valign="top">T rhs rhs rhs&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#ab48fcd534b7a16cf698ae2f12d1478dc">height</a> ())</td></tr>
+<tr class="separator:ab48fcd534b7a16cf698ae2f12d1478dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5345041e88fbd210e3e5ce1a35d0fad4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a5345041e88fbd210e3e5ce1a35d0fad4">axis_aligned_rectangle</a> (<a class="el" href="namespacett.html#a5aecee6bfcf078a9221b698ac82c116f">tt::arithmetic</a> auto <a class="el" href="classtt_1_1axis__aligned__rectangle.html#a06425f39d31582a089a4da54facd94f1">x</a>, <a class="el" href="namespacett.html#a5aecee6bfcf078a9221b698ac82c116f">tt::arithmetic</a> auto <a class="el" href="classtt_1_1axis__aligned__rectangle.html#a691a7b429f63b3243fd29db929d230f4">y</a>, <a class="el" href="namespacett.html#a5aecee6bfcf078a9221b698ac82c116f">tt::arithmetic</a> auto <a class="el" href="classtt_1_1axis__aligned__rectangle.html#a4ee983bbc879979be2a049ccad5029ad">width</a>, <a class="el" href="namespacett.html#a5aecee6bfcf078a9221b698ac82c116f">tt::arithmetic</a> auto <a class="el" href="classtt_1_1axis__aligned__rectangle.html#ab48fcd534b7a16cf698ae2f12d1478dc">height</a>) noexcept</td></tr>
 <tr class="memdesc:a5345041e88fbd210e3e5ce1a35d0fad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a box from the position and size.  <a href="classtt_1_1axis__aligned__rectangle.html#a5345041e88fbd210e3e5ce1a35d0fad4">More...</a><br /></td></tr>
 <tr class="separator:a5345041e88fbd210e3e5ce1a35d0fad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1738c9117888b49da8b438425bb5f29"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#ac1738c9117888b49da8b438425bb5f29">axis_aligned_rectangle</a> (<a class="el" href="namespacett.html#a5aecee6bfcf078a9221b698ac82c116f">tt::arithmetic</a> auto <a class="el" href="classtt_1_1axis__aligned__rectangle.html#ab27ae4d4f1b5891cfeb0b22956e35ee1">width</a>, <a class="el" href="namespacett.html#a5aecee6bfcf078a9221b698ac82c116f">tt::arithmetic</a> auto <a class="el" href="classtt_1_1axis__aligned__rectangle.html#a6703ef26f80efb828c7afefeb146752e">height</a>) noexcept</td></tr>
+<tr class="memitem:ac1738c9117888b49da8b438425bb5f29"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#ac1738c9117888b49da8b438425bb5f29">axis_aligned_rectangle</a> (<a class="el" href="namespacett.html#a5aecee6bfcf078a9221b698ac82c116f">tt::arithmetic</a> auto <a class="el" href="classtt_1_1axis__aligned__rectangle.html#a4ee983bbc879979be2a049ccad5029ad">width</a>, <a class="el" href="namespacett.html#a5aecee6bfcf078a9221b698ac82c116f">tt::arithmetic</a> auto <a class="el" href="classtt_1_1axis__aligned__rectangle.html#ab48fcd534b7a16cf698ae2f12d1478dc">height</a>) noexcept</td></tr>
 <tr class="memdesc:ac1738c9117888b49da8b438425bb5f29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a box from the position and size.  <a href="classtt_1_1axis__aligned__rectangle.html#ac1738c9117888b49da8b438425bb5f29">More...</a><br /></td></tr>
 <tr class="separator:ac1738c9117888b49da8b438425bb5f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d2601d084a9fdc9e3037fb00a4c25d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a1d2601d084a9fdc9e3037fb00a4c25d4">axis_aligned_rectangle</a> (<a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt; const &amp;position, <a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt; const &amp;<a class="el" href="classtt_1_1axis__aligned__rectangle.html#a22463bd14136460e872b6da9b1f18930">extent</a>) noexcept</td></tr>
+<tr class="memitem:a1d2601d084a9fdc9e3037fb00a4c25d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a1d2601d084a9fdc9e3037fb00a4c25d4">axis_aligned_rectangle</a> (<a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt; const &amp;position, <a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt; const &amp;<a class="el" href="classtt_1_1axis__aligned__rectangle.html#ac59215bbcdeecd92674e80b127dcd4b9">extent</a>) noexcept</td></tr>
 <tr class="memdesc:a1d2601d084a9fdc9e3037fb00a4c25d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a rectangle from the position and size.  <a href="classtt_1_1axis__aligned__rectangle.html#a1d2601d084a9fdc9e3037fb00a4c25d4">More...</a><br /></td></tr>
 <tr class="separator:a1d2601d084a9fdc9e3037fb00a4c25d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bf963525a77ad63ca8d71be7d2a5725"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a9bf963525a77ad63ca8d71be7d2a5725">axis_aligned_rectangle</a> (<a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt; const &amp;<a class="el" href="classtt_1_1axis__aligned__rectangle.html#a22463bd14136460e872b6da9b1f18930">extent</a>) noexcept</td></tr>
+<tr class="memitem:a93f6745248cff1cf9c5253d2b5b412dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a93f6745248cff1cf9c5253d2b5b412dd">axis_aligned_rectangle</a> (<a class="el" href="namespacett.html#a2a7f17e9f9ecdcaec84c5012c4ca8bf3">extent2</a> const &amp;<a class="el" href="classtt_1_1axis__aligned__rectangle.html#ac59215bbcdeecd92674e80b127dcd4b9">extent</a>) noexcept</td></tr>
+<tr class="memdesc:a93f6745248cff1cf9c5253d2b5b412dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a rectangle from the size.  <a href="classtt_1_1axis__aligned__rectangle.html#a93f6745248cff1cf9c5253d2b5b412dd">More...</a><br /></td></tr>
+<tr class="separator:a93f6745248cff1cf9c5253d2b5b412dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac113a1df52ba13efb29bc80fa6f6638a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#ac113a1df52ba13efb29bc80fa6f6638a">axis_aligned_rectangle</a> (<a class="el" href="namespacett.html#ab4aa6628a387b7e5b6f6cadd0fe1fc23">point2</a> const &amp;<a class="el" href="classtt_1_1axis__aligned__rectangle.html#a1457a30d1d2d9fcdb737a5508be3a5bc">p0</a>, <a class="el" href="namespacett.html#ab4aa6628a387b7e5b6f6cadd0fe1fc23">point2</a> const &amp;<a class="el" href="classtt_1_1axis__aligned__rectangle.html#ac6f48864b47b8377ffa7b91e5c04008e">p3</a>) noexcept</td></tr>
+<tr class="memdesc:ac113a1df52ba13efb29bc80fa6f6638a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a rectangle from the left-bottom and right-top points.  <a href="classtt_1_1axis__aligned__rectangle.html#ac113a1df52ba13efb29bc80fa6f6638a">More...</a><br /></td></tr>
+<tr class="separator:ac113a1df52ba13efb29bc80fa6f6638a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bf963525a77ad63ca8d71be7d2a5725"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a9bf963525a77ad63ca8d71be7d2a5725">axis_aligned_rectangle</a> (<a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt; const &amp;<a class="el" href="classtt_1_1axis__aligned__rectangle.html#ac59215bbcdeecd92674e80b127dcd4b9">extent</a>) noexcept</td></tr>
 <tr class="memdesc:a9bf963525a77ad63ca8d71be7d2a5725"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a rectangle from the size.  <a href="classtt_1_1axis__aligned__rectangle.html#a9bf963525a77ad63ca8d71be7d2a5725">More...</a><br /></td></tr>
 <tr class="separator:a9bf963525a77ad63ca8d71be7d2a5725"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad2fdf0d672d2cc27321bfe325111a06"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#aad2fdf0d672d2cc27321bfe325111a06">valid</a> () const noexcept</td></tr>
@@ -129,20 +147,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7425824fba2798240c5a5419dd9a50c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a7425824fba2798240c5a5419dd9a50c9">operator*=</a> (T rhs) noexcept</td></tr>
 <tr class="memdesc:a7425824fba2798240c5a5419dd9a50c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scale the box by moving the positions (scaling the vectors).  <a href="classtt_1_1axis__aligned__rectangle.html#a7425824fba2798240c5a5419dd9a50c9">More...</a><br /></td></tr>
 <tr class="separator:a7425824fba2798240c5a5419dd9a50c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68f330f8e76012c2b1cbf6a19711e40b"><td class="memTemplParams" colspan="2">template&lt;size_t I&gt; </td></tr>
-<tr class="memitem:a68f330f8e76012c2b1cbf6a19711e40b"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a68f330f8e76012c2b1cbf6a19711e40b">corner</a> () const noexcept</td></tr>
-<tr class="memdesc:a68f330f8e76012c2b1cbf6a19711e40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get coordinate of a corner.  <a href="classtt_1_1axis__aligned__rectangle.html#a68f330f8e76012c2b1cbf6a19711e40b">More...</a><br /></td></tr>
-<tr class="separator:a68f330f8e76012c2b1cbf6a19711e40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac51c5e4e8de075ad5674e67e4b0247be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#ac51c5e4e8de075ad5674e67e4b0247be">p0</a> () const noexcept</td></tr>
-<tr class="separator:ac51c5e4e8de075ad5674e67e4b0247be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a019b887ec7e3057191e0efeed88cf569"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a019b887ec7e3057191e0efeed88cf569">p3</a> () const noexcept</td></tr>
-<tr class="separator:a019b887ec7e3057191e0efeed88cf569"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5855f5cbce74b4263e0e16c6ea3e8cce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a5855f5cbce74b4263e0e16c6ea3e8cce">offset</a> () const noexcept</td></tr>
-<tr class="memdesc:a5855f5cbce74b4263e0e16c6ea3e8cce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get vector from origin to the bottom-left corner.  <a href="classtt_1_1axis__aligned__rectangle.html#a5855f5cbce74b4263e0e16c6ea3e8cce">More...</a><br /></td></tr>
-<tr class="separator:a5855f5cbce74b4263e0e16c6ea3e8cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22463bd14136460e872b6da9b1f18930"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a22463bd14136460e872b6da9b1f18930">extent</a> () const noexcept</td></tr>
-<tr class="memdesc:a22463bd14136460e872b6da9b1f18930"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get size of the rectangle.  <a href="classtt_1_1axis__aligned__rectangle.html#a22463bd14136460e872b6da9b1f18930">More...</a><br /></td></tr>
-<tr class="separator:a22463bd14136460e872b6da9b1f18930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ed430b77ce130339fc781cea8c60443"><td class="memTemplParams" colspan="2">template&lt;size_t I&gt; </td></tr>
+<tr class="memitem:a0ed430b77ce130339fc781cea8c60443"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a0ed430b77ce130339fc781cea8c60443">corner</a> () const noexcept</td></tr>
+<tr class="memdesc:a0ed430b77ce130339fc781cea8c60443"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get coordinate of a corner.  <a href="classtt_1_1axis__aligned__rectangle.html#a0ed430b77ce130339fc781cea8c60443">More...</a><br /></td></tr>
+<tr class="separator:a0ed430b77ce130339fc781cea8c60443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11af801c1271283c84508a3f504e3477"><td class="memItemLeft" align="right" valign="top">constexpr <a class="el" href="namespacett.html#ab4aa6628a387b7e5b6f6cadd0fe1fc23">point2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a11af801c1271283c84508a3f504e3477">operator[]</a> (size_t i) const noexcept</td></tr>
+<tr class="separator:a11af801c1271283c84508a3f504e3477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1457a30d1d2d9fcdb737a5508be3a5bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a1457a30d1d2d9fcdb737a5508be3a5bc">p0</a> () const noexcept</td></tr>
+<tr class="separator:a1457a30d1d2d9fcdb737a5508be3a5bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6f48864b47b8377ffa7b91e5c04008e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#ac6f48864b47b8377ffa7b91e5c04008e">p3</a> () const noexcept</td></tr>
+<tr class="separator:ac6f48864b47b8377ffa7b91e5c04008e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a664073adb472a065c688fd0b3faeb055"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacett.html#a7cc3e9cba92819ad3939fa226f95f5fb">vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a664073adb472a065c688fd0b3faeb055">offset</a> () const noexcept</td></tr>
+<tr class="memdesc:a664073adb472a065c688fd0b3faeb055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get vector from origin to the bottom-left corner.  <a href="classtt_1_1axis__aligned__rectangle.html#a664073adb472a065c688fd0b3faeb055">More...</a><br /></td></tr>
+<tr class="separator:a664073adb472a065c688fd0b3faeb055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac59215bbcdeecd92674e80b127dcd4b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacett.html#a2a7f17e9f9ecdcaec84c5012c4ca8bf3">extent2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#ac59215bbcdeecd92674e80b127dcd4b9">extent</a> () const noexcept</td></tr>
+<tr class="memdesc:ac59215bbcdeecd92674e80b127dcd4b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get size of the rectangle.  <a href="classtt_1_1axis__aligned__rectangle.html#ac59215bbcdeecd92674e80b127dcd4b9">More...</a><br /></td></tr>
+<tr class="separator:ac59215bbcdeecd92674e80b127dcd4b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06425f39d31582a089a4da54facd94f1"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a06425f39d31582a089a4da54facd94f1">x</a> () const noexcept</td></tr>
 <tr class="separator:a06425f39d31582a089a4da54facd94f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adaf11a158babe87bf0163ab89884e9e6"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#adaf11a158babe87bf0163ab89884e9e6">y</a> () const noexcept</td></tr>
@@ -172,13 +192,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab5341a331c48665e71348d58eb82519f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#ab5341a331c48665e71348d58eb82519f">contains</a> (<a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt; const &amp;rhs) const noexcept</td></tr>
 <tr class="memdesc:ab5341a331c48665e71348d58eb82519f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a 2D coordinate is inside the rectangle.  <a href="classtt_1_1axis__aligned__rectangle.html#ab5341a331c48665e71348d58eb82519f">More...</a><br /></td></tr>
 <tr class="separator:ab5341a331c48665e71348d58eb82519f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc3dc908663768c600fc48ef077d9c79"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#afc3dc908663768c600fc48ef077d9c79">contains</a> (<a class="el" href="namespacett.html#ab4aa6628a387b7e5b6f6cadd0fe1fc23">point2</a> const &amp;rhs) const noexcept</td></tr>
+<tr class="memdesc:afc3dc908663768c600fc48ef077d9c79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a 2D coordinate is inside the rectangle.  <a href="classtt_1_1axis__aligned__rectangle.html#afc3dc908663768c600fc48ef077d9c79">More...</a><br /></td></tr>
+<tr class="separator:afc3dc908663768c600fc48ef077d9c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a775003bf049601bfd08bcad25ce017f7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a775003bf049601bfd08bcad25ce017f7">p0p3</a> (<a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt; const &amp;v) noexcept</td></tr>
 <tr class="memdesc:a775003bf049601bfd08bcad25ce017f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create <a class="el" href="classtt_1_1axis__aligned__rectangle.html" title="Class which represents an axis-aligned rectangle.">axis_aligned_rectangle</a> from packed p0p3 coordinates.  <a href="classtt_1_1axis__aligned__rectangle.html#a775003bf049601bfd08bcad25ce017f7">More...</a><br /></td></tr>
 <tr class="separator:a775003bf049601bfd08bcad25ce017f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20a3930aebc16562318b334bc067997d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a20a3930aebc16562318b334bc067997d">p0p3</a> (<a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt; const &amp;<a class="el" href="classtt_1_1axis__aligned__rectangle.html#ac51c5e4e8de075ad5674e67e4b0247be">p0</a>, <a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt; const &amp;<a class="el" href="classtt_1_1axis__aligned__rectangle.html#a019b887ec7e3057191e0efeed88cf569">p3</a>) noexcept</td></tr>
+<tr class="memitem:a20a3930aebc16562318b334bc067997d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a20a3930aebc16562318b334bc067997d">p0p3</a> (<a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt; const &amp;<a class="el" href="classtt_1_1axis__aligned__rectangle.html#a1457a30d1d2d9fcdb737a5508be3a5bc">p0</a>, <a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt; const &amp;<a class="el" href="classtt_1_1axis__aligned__rectangle.html#ac6f48864b47b8377ffa7b91e5c04008e">p3</a>) noexcept</td></tr>
 <tr class="memdesc:a20a3930aebc16562318b334bc067997d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create <a class="el" href="classtt_1_1axis__aligned__rectangle.html" title="Class which represents an axis-aligned rectangle.">axis_aligned_rectangle</a> from two oposite points.  <a href="classtt_1_1axis__aligned__rectangle.html#a20a3930aebc16562318b334bc067997d">More...</a><br /></td></tr>
 <tr class="separator:a20a3930aebc16562318b334bc067997d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4ea24e9696ee121254a094daedf7ef9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#ae4ea24e9696ee121254a094daedf7ef9">infinity</a> () noexcept requires(std</td></tr>
@@ -187,10 +210,18 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:aaa51d142a439730d7ad873ba974e7d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Need to call the hiden friend function from within another class.  <a href="classtt_1_1axis__aligned__rectangle.html#aaa51d142a439730d7ad873ba974e7d87">More...</a><br /></td></tr>
 <tr class="separator:aaa51d142a439730d7ad873ba974e7d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a90deb068cd6a115cca1ab139fa483b67"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a90deb068cd6a115cca1ab139fa483b67">__pad0__</a>: <a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a>(rhs.x()</td></tr>
+<tr class="separator:a90deb068cd6a115cca1ab139fa483b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a654ee5c11c9379b75c58558b7b0dd283"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a654ee5c11c9379b75c58558b7b0dd283">sfloat_rgba32</a></td></tr>
 <tr class="separator:a654ee5c11c9379b75c58558b7b0dd283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9ab4741da1b7d2ad4d43125c50453d5"><td class="memTemplParams" colspan="2">template&lt;int I&gt; </td></tr>
+<tr class="memitem:aa9ab4741da1b7d2ad4d43125c50453d5"><td class="memTemplItemLeft" align="right" valign="top">constexpr friend <a class="el" href="namespacett.html#ab4aa6628a387b7e5b6f6cadd0fe1fc23">point2</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#aa9ab4741da1b7d2ad4d43125c50453d5">get</a> (<a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a> const &amp;rhs) noexcept</td></tr>
+<tr class="separator:aa9ab4741da1b7d2ad4d43125c50453d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a82f82fcd11b9d0d2fcad146e8c167692"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a82f82fcd11b9d0d2fcad146e8c167692">align</a> (<a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a> haystack, <a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a> needle, <a class="el" href="namespacett.html#a6cf086729a79c2f5085e347eda5ec64b">alignment</a> <a class="el" href="namespacett.html#a6cf086729a79c2f5085e347eda5ec64b">alignment</a>) noexcept</td></tr>
 <tr class="memdesc:a82f82fcd11b9d0d2fcad146e8c167692"><td class="mdescLeft">&#160;</td><td class="mdescRight">Align a rectangle within another rectangle.  <a href="classtt_1_1axis__aligned__rectangle.html#a82f82fcd11b9d0d2fcad146e8c167692">More...</a><br /></td></tr>
 <tr class="separator:a82f82fcd11b9d0d2fcad146e8c167692"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,9 +241,9 @@ Friends</h2></td></tr>
 <tr class="separator:a97fb134242a520697712fa7cfcb01c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa994b6188b7a335ec61057725032eefb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#aa994b6188b7a335ec61057725032eefb">operator*</a> (<a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a> const &amp;lhs, T rhs) noexcept</td></tr>
 <tr class="separator:aa994b6188b7a335ec61057725032eefb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a653e8da9e54eb10c603dd28c1772ec6c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a653e8da9e54eb10c603dd28c1772ec6c">center</a> (<a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a> const &amp;rhs) noexcept</td></tr>
-<tr class="memdesc:a653e8da9e54eb10c603dd28c1772ec6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the center of the rectangle.  <a href="classtt_1_1axis__aligned__rectangle.html#a653e8da9e54eb10c603dd28c1772ec6c">More...</a><br /></td></tr>
-<tr class="separator:a653e8da9e54eb10c603dd28c1772ec6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9814503bf508721958dacaf1b5dca86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt; T, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#ae9814503bf508721958dacaf1b5dca86">center</a> (<a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a> const &amp;rhs) noexcept</td></tr>
+<tr class="memdesc:ae9814503bf508721958dacaf1b5dca86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the center of the rectangle.  <a href="classtt_1_1axis__aligned__rectangle.html#ae9814503bf508721958dacaf1b5dca86">More...</a><br /></td></tr>
+<tr class="separator:ae9814503bf508721958dacaf1b5dca86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0442b685e39bac3da99ebfc610c4943d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1axis__aligned__rectangle.html#a0442b685e39bac3da99ebfc610c4943d">scale</a> (<a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a> const &amp;lhs, T rhs) noexcept</td></tr>
 <tr class="memdesc:a0442b685e39bac3da99ebfc610c4943d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expand the rectangle for the same amount in all directions.  <a href="classtt_1_1axis__aligned__rectangle.html#a0442b685e39bac3da99ebfc610c4943d">More...</a><br /></td></tr>
 <tr class="separator:a0442b685e39bac3da99ebfc610c4943d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -250,7 +281,7 @@ class tt::axis_aligned_rectangle&lt; T &gt;</h3>
 <p>Class which represents an axis-aligned rectangle. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a52e9a787e98795268c9d80905eafda6b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52e9a787e98795268c9d80905eafda6b">&#9670;&nbsp;</a></span>axis_aligned_rectangle() <span class="overload">[1/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a52e9a787e98795268c9d80905eafda6b">&#9670;&nbsp;</a></span>axis_aligned_rectangle() <span class="overload">[1/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,7 +308,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a111cddb71f8bcaf3383bd03cdcc22712"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a111cddb71f8bcaf3383bd03cdcc22712">&#9670;&nbsp;</a></span>axis_aligned_rectangle() <span class="overload">[2/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a111cddb71f8bcaf3383bd03cdcc22712">&#9670;&nbsp;</a></span>axis_aligned_rectangle() <span class="overload">[2/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -305,7 +336,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a77b4ed0eb895f54e0733712364033b89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77b4ed0eb895f54e0733712364033b89">&#9670;&nbsp;</a></span>axis_aligned_rectangle() <span class="overload">[3/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a77b4ed0eb895f54e0733712364033b89">&#9670;&nbsp;</a></span>axis_aligned_rectangle() <span class="overload">[3/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -332,8 +363,38 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a2e153b39a92cfe6298f7b26d0b6cd7fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e153b39a92cfe6298f7b26d0b6cd7fa">&#9670;&nbsp;</a></span>axis_aligned_rectangle() <span class="overload">[4/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;typename O &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::<a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a>&lt; O &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5345041e88fbd210e3e5ce1a35d0fad4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5345041e88fbd210e3e5ce1a35d0fad4">&#9670;&nbsp;</a></span>axis_aligned_rectangle() <span class="overload">[4/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5345041e88fbd210e3e5ce1a35d0fad4">&#9670;&nbsp;</a></span>axis_aligned_rectangle() <span class="overload">[5/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -394,7 +455,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="ac1738c9117888b49da8b438425bb5f29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1738c9117888b49da8b438425bb5f29">&#9670;&nbsp;</a></span>axis_aligned_rectangle() <span class="overload">[5/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1738c9117888b49da8b438425bb5f29">&#9670;&nbsp;</a></span>axis_aligned_rectangle() <span class="overload">[6/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -441,7 +502,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a1d2601d084a9fdc9e3037fb00a4c25d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d2601d084a9fdc9e3037fb00a4c25d4">&#9670;&nbsp;</a></span>axis_aligned_rectangle() <span class="overload">[6/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d2601d084a9fdc9e3037fb00a4c25d4">&#9670;&nbsp;</a></span>axis_aligned_rectangle() <span class="overload">[7/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -487,8 +548,91 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a93f6745248cff1cf9c5253d2b5b412dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93f6745248cff1cf9c5253d2b5b412dd">&#9670;&nbsp;</a></span>axis_aligned_rectangle() <span class="overload">[8/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::<a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacett.html#a2a7f17e9f9ecdcaec84c5012c4ca8bf3">extent2</a> const &amp;&#160;</td>
+          <td class="paramname"><em>extent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a rectangle from the size. </p>
+<p>The rectangle's left bottom corner is at the origin. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">extent</td><td>The size of the box. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac113a1df52ba13efb29bc80fa6f6638a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac113a1df52ba13efb29bc80fa6f6638a">&#9670;&nbsp;</a></span>axis_aligned_rectangle() <span class="overload">[9/10]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::<a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacett.html#ab4aa6628a387b7e5b6f6cadd0fe1fc23">point2</a> const &amp;&#160;</td>
+          <td class="paramname"><em>p0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacett.html#ab4aa6628a387b7e5b6f6cadd0fe1fc23">point2</a> const &amp;&#160;</td>
+          <td class="paramname"><em>p3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create a rectangle from the left-bottom and right-top points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p0</td><td>The left bottom point. </td></tr>
+    <tr><td class="paramname">p3</td><td>The right opt point. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a9bf963525a77ad63ca8d71be7d2a5725"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bf963525a77ad63ca8d71be7d2a5725">&#9670;&nbsp;</a></span>axis_aligned_rectangle() <span class="overload">[7/7]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bf963525a77ad63ca8d71be7d2a5725">&#9670;&nbsp;</a></span>axis_aligned_rectangle() <span class="overload">[10/10]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -627,7 +771,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="ab5341a331c48665e71348d58eb82519f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab5341a331c48665e71348d58eb82519f">&#9670;&nbsp;</a></span>contains()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5341a331c48665e71348d58eb82519f">&#9670;&nbsp;</a></span>contains() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -662,8 +806,44 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a68f330f8e76012c2b1cbf6a19711e40b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68f330f8e76012c2b1cbf6a19711e40b">&#9670;&nbsp;</a></span>corner()</h2>
+<a id="afc3dc908663768c600fc48ef077d9c79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc3dc908663768c600fc48ef077d9c79">&#9670;&nbsp;</a></span>contains() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::contains </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacett.html#ab4aa6628a387b7e5b6f6cadd0fe1fc23">point2</a> const &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if a 2D coordinate is inside the rectangle. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rhs</td><td>The coordinate of the point to test. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0ed430b77ce130339fc781cea8c60443"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ed430b77ce130339fc781cea8c60443">&#9670;&nbsp;</a></span>corner()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -676,7 +856,7 @@ template&lt;size_t I&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt;T,4&gt; <a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::corner </td>
+          <td class="memname"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt;T, 4&gt; <a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::corner </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -729,8 +909,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a22463bd14136460e872b6da9b1f18930"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22463bd14136460e872b6da9b1f18930">&#9670;&nbsp;</a></span>extent()</h2>
+<a id="ac59215bbcdeecd92674e80b127dcd4b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac59215bbcdeecd92674e80b127dcd4b9">&#9670;&nbsp;</a></span>extent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -741,7 +921,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt;T,4&gt; <a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::extent </td>
+          <td class="memname"><a class="el" href="namespacett.html#a2a7f17e9f9ecdcaec84c5012c4ca8bf3">extent2</a> <a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::extent </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -760,7 +940,7 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <a id="a6703ef26f80efb828c7afefeb146752e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6703ef26f80efb828c7afefeb146752e">&#9670;&nbsp;</a></span>height()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6703ef26f80efb828c7afefeb146752e">&#9670;&nbsp;</a></span>height() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -780,6 +960,33 @@ template&lt;typename T &gt; </div>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab48fcd534b7a16cf698ae2f12d1478dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab48fcd534b7a16cf698ae2f12d1478dc">&#9670;&nbsp;</a></span>height() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T rhs rhs rhs <a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::height </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -869,8 +1076,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a5855f5cbce74b4263e0e16c6ea3e8cce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5855f5cbce74b4263e0e16c6ea3e8cce">&#9670;&nbsp;</a></span>offset()</h2>
+<a id="a664073adb472a065c688fd0b3faeb055"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a664073adb472a065c688fd0b3faeb055">&#9670;&nbsp;</a></span>offset()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -881,7 +1088,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt;T,4&gt; <a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::offset </td>
+          <td class="memname"><a class="el" href="namespacett.html#a7cc3e9cba92819ad3939fa226f95f5fb">vector2</a> <a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::offset </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1092,6 +1299,34 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a11af801c1271283c84508a3f504e3477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11af801c1271283c84508a3f504e3477">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="namespacett.html#ab4aa6628a387b7e5b6f6cadd0fe1fc23">point2</a> <a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3199371868a0de995228580a84a88849"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3199371868a0de995228580a84a88849">&#9670;&nbsp;</a></span>operator|=() <span class="overload">[1/2]</span></h2>
 
@@ -1166,8 +1401,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="ac51c5e4e8de075ad5674e67e4b0247be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac51c5e4e8de075ad5674e67e4b0247be">&#9670;&nbsp;</a></span>p0()</h2>
+<a id="a1457a30d1d2d9fcdb737a5508be3a5bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1457a30d1d2d9fcdb737a5508be3a5bc">&#9670;&nbsp;</a></span>p0()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1178,7 +1413,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt;T,4&gt; <a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::p0 </td>
+          <td class="memname"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt;T, 4&gt; <a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::p0 </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1276,8 +1511,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a019b887ec7e3057191e0efeed88cf569"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a019b887ec7e3057191e0efeed88cf569">&#9670;&nbsp;</a></span>p3()</h2>
+<a id="ac6f48864b47b8377ffa7b91e5c04008e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6f48864b47b8377ffa7b91e5c04008e">&#9670;&nbsp;</a></span>p3()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1288,7 +1523,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt;T,4&gt; <a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::p3 </td>
+          <td class="memname"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt;T, 4&gt; <a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::p3 </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1443,8 +1678,27 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a4ee983bbc879979be2a049ccad5029ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ee983bbc879979be2a049ccad5029ad">&#9670;&nbsp;</a></span>width() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T rhs rhs <a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::width </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab27ae4d4f1b5891cfeb0b22956e35ee1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab27ae4d4f1b5891cfeb0b22956e35ee1">&#9670;&nbsp;</a></span>width()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab27ae4d4f1b5891cfeb0b22956e35ee1">&#9670;&nbsp;</a></span>width() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1497,8 +1751,27 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a691a7b429f63b3243fd29db929d230f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a691a7b429f63b3243fd29db929d230f4">&#9670;&nbsp;</a></span>y() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T rhs <a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::y </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="adaf11a158babe87bf0163ab89884e9e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adaf11a158babe87bf0163ab89884e9e6">&#9670;&nbsp;</a></span>y()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adaf11a158babe87bf0163ab89884e9e6">&#9670;&nbsp;</a></span>y() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1610,8 +1883,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a653e8da9e54eb10c603dd28c1772ec6c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a653e8da9e54eb10c603dd28c1772ec6c">&#9670;&nbsp;</a></span>center</h2>
+<a id="ae9814503bf508721958dacaf1b5dca86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9814503bf508721958dacaf1b5dca86">&#9670;&nbsp;</a></span>center</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1622,7 +1895,7 @@ template&lt;typename T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt;T,4&gt; center </td>
+          <td class="memname"><a class="el" href="classtt_1_1numeric__array.html">numeric_array</a>&lt;T, 4&gt; center </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a>&lt; T &gt; const &amp;&#160;</td>
           <td class="paramname"><em>rhs</em></td><td>)</td>
@@ -1812,6 +2085,36 @@ template&lt;typename T &gt; </div>
 </div><div class="memdoc">
 
 <p>Round rectangle by shrinking to pixel edge. </p>
+
+</div>
+</div>
+<a id="aa9ab4741da1b7d2ad4d43125c50453d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9ab4741da1b7d2ad4d43125c50453d5">&#9670;&nbsp;</a></span>get</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<div class="memtemplate">
+template&lt;int I&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr friend <a class="el" href="namespacett.html#ab4aa6628a387b7e5b6f6cadd0fe1fc23">point2</a> get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtt_1_1axis__aligned__rectangle.html">axis_aligned_rectangle</a>&lt; T &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -2356,10 +2659,28 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="a90deb068cd6a115cca1ab139fa483b67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90deb068cd6a115cca1ab139fa483b67">&#9670;&nbsp;</a></span>__pad0__</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a>&lt; T &gt;::__pad0__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>ttauri/<a class="el" href="aarect_8hpp_source.html">aarect.hpp</a></li>
 </ul>
 </div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0

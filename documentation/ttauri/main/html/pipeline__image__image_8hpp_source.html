@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -13,6 +14,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -22,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TTauri
-   &#160;<span id="projectnumber">main</span>
+   &#160;<span id="projectnumber">v0.1.0 v0.2.3 *main</span>
    </div>
    <div id="projectbrief">A low latency retained GUI</div>
   </td>
@@ -129,7 +131,7 @@ $(function() {
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="structtt_1_1pipeline__image_1_1_image.html#a9f8faa567966d0b63956ab386c74d08b">   69</a></span>&#160;    <a class="code" href="classtt_1_1axis__aligned__rectangle.html">iaarect</a> <a class="code" href="structtt_1_1pipeline__image_1_1_image.html#a9f8faa567966d0b63956ab386c74d08b">indexToRect</a>(<span class="keywordtype">int</span> <span class="keyword">const</span> pageIndex) <span class="keyword">const</span> noexcept;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="structtt_1_1pipeline__image_1_1_image.html#af770cb98daf8024274e5fef63c5e1140">   75</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structtt_1_1pipeline__image_1_1_image.html#af770cb98daf8024274e5fef63c5e1140">placeVertices</a>(<a class="code" href="classtt_1_1vspan.html">vspan&lt;vertex&gt;</a> &amp;vertices, <a class="code" href="classtt_1_1geo_1_1matrix.html">matrix3</a> <a class="code" href="namespacett.html#a718450ee5b6ab802756663810db94826">transform</a>, <a class="code" href="classtt_1_1axis__aligned__rectangle.html">aarect</a> clippingRectangle);</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="structtt_1_1pipeline__image_1_1_image.html#aa7fdbdf3ca303473c8e358eb6e8a69d6">   75</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structtt_1_1pipeline__image_1_1_image.html#aa7fdbdf3ca303473c8e358eb6e8a69d6">place_vertices</a>(<a class="code" href="classtt_1_1vspan.html">vspan&lt;vertex&gt;</a> &amp;vertices, <a class="code" href="classtt_1_1axis__aligned__rectangle.html">aarect</a> clipping_rectangle, <a class="code" href="classtt_1_1geo_1_1matrix.html">matrix3</a> <a class="code" href="namespacett.html#a718450ee5b6ab802756663810db94826">transform</a>);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
 <div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="structtt_1_1pipeline__image_1_1_image.html#ade29a4dcfea049f3d333984b97848841">   79</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="structtt_1_1pipeline__image_1_1_image.html#ade29a4dcfea049f3d333984b97848841">upload</a>(<a class="code" href="classtt_1_1pixel__map.html">pixel_map&lt;sfloat_rgba16&gt;</a> <span class="keyword">const</span> &amp;image) noexcept;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
@@ -143,13 +145,13 @@ $(function() {
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
-<div class="ttc" id="aclasstt_1_1axis__aligned__rectangle_html"><div class="ttname"><a href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle&lt; int &gt;</a></div></div>
+<div class="ttc" id="aclasstt_1_1axis__aligned__rectangle_html"><div class="ttname"><a href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle</a></div><div class="ttdoc">Class which represents an axis-aligned rectangle.</div><div class="ttdef"><b>Definition:</b> aarect.hpp:19</div></div>
 <div class="ttc" id="aclasstt_1_1geo_1_1matrix_html"><div class="ttname"><a href="classtt_1_1geo_1_1matrix.html">tt::geo::matrix&lt; 3 &gt;</a></div></div>
 <div class="ttc" id="aclasstt_1_1i32x4_html"><div class="ttname"><a href="classtt_1_1i32x4.html">tt::i32x4</a></div><div class="ttdoc">A 4D vector.</div><div class="ttdef"><b>Definition:</b> ivec.hpp:38</div></div>
 <div class="ttc" id="aclasstt_1_1pixel__map_html"><div class="ttname"><a href="classtt_1_1pixel__map.html">tt::pixel_map</a></div><div class="ttdoc">A 2D canvas of pixels.</div><div class="ttdef"><b>Definition:</b> pixel_map.hpp:99</div></div>
 <div class="ttc" id="aclasstt_1_1vspan_html"><div class="ttname"><a href="classtt_1_1vspan.html">tt::vspan</a></div><div class="ttdef"><b>Definition:</b> vspan.hpp:73</div></div>
 <div class="ttc" id="anamespacett_1_1pipeline__image_html"><div class="ttname"><a href="namespacett_1_1pipeline__image.html">tt::pipeline_image</a></div><div class="ttdef"><b>Definition:</b> gui_window_vulkan.hpp:15</div></div>
-<div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
+<div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:14</div></div>
 <div class="ttc" id="anamespacett_html_a718450ee5b6ab802756663810db94826"><div class="ttname"><a href="namespacett.html#a718450ee5b6ab802756663810db94826">tt::transform</a></div><div class="ttdeci">T transform(const U &amp;input, F operation)</div><div class="ttdoc">Transform an input container to the output container.</div><div class="ttdef"><b>Definition:</b> algorithm.hpp:23</div></div>
 <div class="ttc" id="apipeline__image__page_8hpp_html"><div class="ttname"><a href="pipeline__image__page_8hpp.html">pipeline_image_page.hpp</a></div></div>
 <div class="ttc" id="astructtt_1_1pipeline__image_1_1_image_html"><div class="ttname"><a href="structtt_1_1pipeline__image_1_1_image.html">tt::pipeline_image::Image</a></div><div class="ttdoc">This is a image that is uploaded into the texture atlas.</div><div class="ttdef"><b>Definition:</b> pipeline_image_image.hpp:30</div></div>
@@ -162,6 +164,7 @@ $(function() {
 <div class="ttc" id="astructtt_1_1pipeline__image_1_1_image_html_a9c9422084c0cbaf280bc4a8714554964"><div class="ttname"><a href="structtt_1_1pipeline__image_1_1_image.html#a9c9422084c0cbaf280bc4a8714554964">tt::pipeline_image::Image::pageExtent</a></div><div class="ttdeci">i32x4 pageExtent</div><div class="ttdoc">This size of the image in pages.</div><div class="ttdef"><b>Definition:</b> pipeline_image_image.hpp:44</div></div>
 <div class="ttc" id="astructtt_1_1pipeline__image_1_1_image_html_a9f8faa567966d0b63956ab386c74d08b"><div class="ttname"><a href="structtt_1_1pipeline__image_1_1_image.html#a9f8faa567966d0b63956ab386c74d08b">tt::pipeline_image::Image::indexToRect</a></div><div class="ttdeci">iaarect indexToRect(int const pageIndex) const noexcept</div><div class="ttdoc">Find the image coordinates of a page in the image.</div></div>
 <div class="ttc" id="astructtt_1_1pipeline__image_1_1_image_html_aa2f9422b222d31a53846f8e08b005f1c"><div class="ttname"><a href="structtt_1_1pipeline__image_1_1_image.html#aa2f9422b222d31a53846f8e08b005f1c">tt::pipeline_image::Image::Image</a></div><div class="ttdeci">Image(Image &amp;&amp;other) noexcept</div></div>
+<div class="ttc" id="astructtt_1_1pipeline__image_1_1_image_html_aa7fdbdf3ca303473c8e358eb6e8a69d6"><div class="ttname"><a href="structtt_1_1pipeline__image_1_1_image.html#aa7fdbdf3ca303473c8e358eb6e8a69d6">tt::pipeline_image::Image::place_vertices</a></div><div class="ttdeci">void place_vertices(vspan&lt; vertex &gt; &amp;vertices, aarect clipping_rectangle, matrix3 transform)</div></div>
 <div class="ttc" id="astructtt_1_1pipeline__image_1_1_image_html_ab3f960972df7ee69372c26c18692ed23"><div class="ttname"><a href="structtt_1_1pipeline__image_1_1_image.html#ab3f960972df7ee69372c26c18692ed23">tt::pipeline_image::Image::State</a></div><div class="ttdeci">State</div><div class="ttdef"><b>Definition:</b> pipeline_image_image.hpp:31</div></div>
 <div class="ttc" id="astructtt_1_1pipeline__image_1_1_image_html_ab3f960972df7ee69372c26c18692ed23a681d72abce5de4f856e71bfb1856796b"><div class="ttname"><a href="structtt_1_1pipeline__image_1_1_image.html#ab3f960972df7ee69372c26c18692ed23a681d72abce5de4f856e71bfb1856796b">tt::pipeline_image::Image::State::Drawing</a></div><div class="ttdeci">@ Drawing</div></div>
 <div class="ttc" id="astructtt_1_1pipeline__image_1_1_image_html_ab3f960972df7ee69372c26c18692ed23af704f57ea420275ad51bf55b7dec2c96"><div class="ttname"><a href="structtt_1_1pipeline__image_1_1_image.html#ab3f960972df7ee69372c26c18692ed23af704f57ea420275ad51bf55b7dec2c96">tt::pipeline_image::Image::State::Uninitialized</a></div><div class="ttdeci">@ Uninitialized</div></div>
@@ -170,10 +173,10 @@ $(function() {
 <div class="ttc" id="astructtt_1_1pipeline__image_1_1_image_html_acf4a54e4c2525093ea5c42816f6a2433"><div class="ttname"><a href="structtt_1_1pipeline__image_1_1_image.html#acf4a54e4c2525093ea5c42816f6a2433">tt::pipeline_image::Image::~Image</a></div><div class="ttdeci">~Image()</div></div>
 <div class="ttc" id="astructtt_1_1pipeline__image_1_1_image_html_acf8833af64ec383b7b9ab15555f4a930"><div class="ttname"><a href="structtt_1_1pipeline__image_1_1_image.html#acf8833af64ec383b7b9ab15555f4a930">tt::pipeline_image::Image::Image</a></div><div class="ttdeci">Image(device_shared *parent, i32x4 extent, i32x4 pageExtent, std::vector&lt; Page &gt; &amp;&amp;pages) noexcept</div><div class="ttdef"><b>Definition:</b> pipeline_image_image.hpp:51</div></div>
 <div class="ttc" id="astructtt_1_1pipeline__image_1_1_image_html_ade29a4dcfea049f3d333984b97848841"><div class="ttname"><a href="structtt_1_1pipeline__image_1_1_image.html#ade29a4dcfea049f3d333984b97848841">tt::pipeline_image::Image::upload</a></div><div class="ttdeci">void upload(pixel_map&lt; sfloat_rgba16 &gt; const &amp;image) noexcept</div><div class="ttdoc">Upload image to atlas.</div></div>
-<div class="ttc" id="astructtt_1_1pipeline__image_1_1_image_html_af770cb98daf8024274e5fef63c5e1140"><div class="ttname"><a href="structtt_1_1pipeline__image_1_1_image.html#af770cb98daf8024274e5fef63c5e1140">tt::pipeline_image::Image::placeVertices</a></div><div class="ttdeci">void placeVertices(vspan&lt; vertex &gt; &amp;vertices, matrix3 transform, aarect clippingRectangle)</div></div>
 <div class="ttc" id="astructtt_1_1pipeline__image_1_1_image_html_afb6a6940fa93455649622ff36eccf991"><div class="ttname"><a href="structtt_1_1pipeline__image_1_1_image.html#afb6a6940fa93455649622ff36eccf991">tt::pipeline_image::Image::parent</a></div><div class="ttdeci">device_shared * parent</div><div class="ttdef"><b>Definition:</b> pipeline_image_image.hpp:35</div></div>
 <div class="ttc" id="astructtt_1_1pipeline__image_1_1device__shared_html"><div class="ttname"><a href="structtt_1_1pipeline__image_1_1device__shared.html">tt::pipeline_image::device_shared</a></div><div class="ttdef"><b>Definition:</b> pipeline_image_device_shared.hpp:24</div></div>
 </div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0

@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -13,6 +14,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -22,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TTauri
-   &#160;<span id="projectnumber">main</span>
+   &#160;<span id="projectnumber">v0.1.0 v0.2.3 *main</span>
    </div>
    <div id="projectbrief">A low latency retained GUI</div>
   </td>
@@ -95,9 +97,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5eb3271cb8a1d5bde2a48b65509da95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fc78555c313a845f3ba73fe1de70e48"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#a9fc78555c313a845f3ba73fe1de70e48">destroy</a> (<a class="el" href="classtt_1_1gui__device__vulkan.html">gui_device_vulkan</a> *vulkanDevice)</td></tr>
 <tr class="separator:a9fc78555c313a845f3ba73fe1de70e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63c3d77bbe6ebedc458d4800e83e6944"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1atlas__rect.html">atlas_rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#a63c3d77bbe6ebedc458d4800e83e6944">allocateRect</a> (<a class="el" href="namespacett.html#adaf211430d8bb84d2b53b4e0da491987">f32x4</a> drawExtent) noexcept</td></tr>
-<tr class="memdesc:a63c3d77bbe6ebedc458d4800e83e6944"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate an glyph in the atlas.  <a href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#a63c3d77bbe6ebedc458d4800e83e6944">More...</a><br /></td></tr>
-<tr class="separator:a63c3d77bbe6ebedc458d4800e83e6944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64a3d6aec9cf1a7357fe4de6fd454255"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1atlas__rect.html">atlas_rect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#a64a3d6aec9cf1a7357fe4de6fd454255">allocateRect</a> (<a class="el" href="namespacett.html#a2a7f17e9f9ecdcaec84c5012c4ca8bf3">extent2</a> drawExtent) noexcept</td></tr>
+<tr class="memdesc:a64a3d6aec9cf1a7357fe4de6fd454255"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate an glyph in the atlas.  <a href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#a64a3d6aec9cf1a7357fe4de6fd454255">More...</a><br /></td></tr>
+<tr class="separator:a64a3d6aec9cf1a7357fe4de6fd454255"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a665dde0b590f5cf2012c3216e53c8155"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#a665dde0b590f5cf2012c3216e53c8155">drawInCommandBuffer</a> (vk::CommandBuffer &amp;commandBuffer)</td></tr>
 <tr class="separator:a665dde0b590f5cf2012c3216e53c8155"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab28f6937caef889e3fa81ff929ab2144"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#ab28f6937caef889e3fa81ff929ab2144">uploadStagingPixmapToAtlas</a> (<a class="el" href="structtt_1_1pipeline___s_d_f_1_1atlas__rect.html">atlas_rect</a> location)</td></tr>
@@ -112,15 +114,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad7738220241bc21469ff8df7e269fa72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#ad7738220241bc21469ff8df7e269fa72">prepareAtlas</a> (<a class="el" href="classtt_1_1shaped__text.html">shaped_text</a> const &amp;text) noexcept</td></tr>
 <tr class="memdesc:ad7738220241bc21469ff8df7e269fa72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare the atlas for drawing a text.  <a href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#ad7738220241bc21469ff8df7e269fa72">More...</a><br /></td></tr>
 <tr class="separator:ad7738220241bc21469ff8df7e269fa72"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03cb49c74e90ef6deabb49b65596f209"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#a03cb49c74e90ef6deabb49b65596f209">placeVertices</a> (<a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline___s_d_f_1_1vertex.html">vertex</a> &gt; &amp;vertices, <a class="el" href="classtt_1_1font__glyph__ids.html">font_glyph_ids</a> const &amp;glyphs, <a class="el" href="classtt_1_1rect.html">rect</a> box, <a class="el" href="classtt_1_1color.html">color</a> <a class="el" href="classtt_1_1color.html">color</a>, <a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> clippingRectangle) noexcept</td></tr>
-<tr class="memdesc:a03cb49c74e90ef6deabb49b65596f209"><td class="mdescLeft">&#160;</td><td class="mdescRight">Place vertices for a single glyph.  <a href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#a03cb49c74e90ef6deabb49b65596f209">More...</a><br /></td></tr>
-<tr class="separator:a03cb49c74e90ef6deabb49b65596f209"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd38b4cac97b4711e36cd38ce8bb7e96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#abd38b4cac97b4711e36cd38ce8bb7e96">placeVertices</a> (<a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline___s_d_f_1_1vertex.html">vertex</a> &gt; &amp;vertices, <a class="el" href="classtt_1_1shaped__text.html">shaped_text</a> const &amp;text, <a class="el" href="namespacett.html#ac369fd314f15d0350f66a941dcf75703">matrix3</a> <a class="el" href="namespacett.html#a718450ee5b6ab802756663810db94826">transform</a>, <a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> clippingRectangle) noexcept</td></tr>
-<tr class="memdesc:abd38b4cac97b4711e36cd38ce8bb7e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the text on the screen.  <a href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#abd38b4cac97b4711e36cd38ce8bb7e96">More...</a><br /></td></tr>
-<tr class="separator:abd38b4cac97b4711e36cd38ce8bb7e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7af346daf3515b1f2d871429d335fbac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#a7af346daf3515b1f2d871429d335fbac">placeVertices</a> (<a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline___s_d_f_1_1vertex.html">vertex</a> &gt; &amp;vertices, <a class="el" href="classtt_1_1shaped__text.html">shaped_text</a> const &amp;text, <a class="el" href="namespacett.html#ac369fd314f15d0350f66a941dcf75703">matrix3</a> <a class="el" href="namespacett.html#a718450ee5b6ab802756663810db94826">transform</a>, <a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> clippingRectangle, <a class="el" href="classtt_1_1color.html">color</a> <a class="el" href="classtt_1_1color.html">color</a>) noexcept</td></tr>
-<tr class="memdesc:a7af346daf3515b1f2d871429d335fbac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the text on the screen.  <a href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#a7af346daf3515b1f2d871429d335fbac">More...</a><br /></td></tr>
-<tr class="separator:a7af346daf3515b1f2d871429d335fbac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00a66c056393033a5123cdded525035d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#a00a66c056393033a5123cdded525035d">place_vertices</a> (<a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline___s_d_f_1_1vertex.html">vertex</a> &gt; &amp;vertices, <a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> clipping_rectangle, <a class="el" href="classtt_1_1rect.html">rect</a> box, <a class="el" href="classtt_1_1font__glyph__ids.html">font_glyph_ids</a> const &amp;glyphs, <a class="el" href="classtt_1_1color.html">color</a> <a class="el" href="classtt_1_1color.html">color</a>) noexcept</td></tr>
+<tr class="memdesc:a00a66c056393033a5123cdded525035d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Place vertices for a single glyph.  <a href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#a00a66c056393033a5123cdded525035d">More...</a><br /></td></tr>
+<tr class="separator:a00a66c056393033a5123cdded525035d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0226b7f91c1d24775ff972456373cb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#ae0226b7f91c1d24775ff972456373cb2">place_vertices</a> (<a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline___s_d_f_1_1vertex.html">vertex</a> &gt; &amp;vertices, <a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> clipping_rectangle, <a class="el" href="namespacett.html#ac369fd314f15d0350f66a941dcf75703">matrix3</a> <a class="el" href="namespacett.html#a718450ee5b6ab802756663810db94826">transform</a>, <a class="el" href="classtt_1_1shaped__text.html">shaped_text</a> const &amp;text) noexcept</td></tr>
+<tr class="memdesc:ae0226b7f91c1d24775ff972456373cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the text on the screen.  <a href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#ae0226b7f91c1d24775ff972456373cb2">More...</a><br /></td></tr>
+<tr class="separator:ae0226b7f91c1d24775ff972456373cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7028584799b03f4726d7c8888bfe7ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#af7028584799b03f4726d7c8888bfe7ea">place_vertices</a> (<a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline___s_d_f_1_1vertex.html">vertex</a> &gt; &amp;vertices, <a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> clipping_rectangle, <a class="el" href="namespacett.html#ac369fd314f15d0350f66a941dcf75703">matrix3</a> <a class="el" href="namespacett.html#a718450ee5b6ab802756663810db94826">transform</a>, <a class="el" href="classtt_1_1shaped__text.html">shaped_text</a> const &amp;text, <a class="el" href="classtt_1_1color.html">color</a> <a class="el" href="classtt_1_1color.html">color</a>) noexcept</td></tr>
+<tr class="memdesc:af7028584799b03f4726d7c8888bfe7ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the text on the screen.  <a href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#af7028584799b03f4726d7c8888bfe7ea">More...</a><br /></td></tr>
+<tr class="separator:af7028584799b03f4726d7c8888bfe7ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -156,8 +158,8 @@ Data Fields</h2></td></tr>
 <tr class="separator:ab1245f6a4e26fcac5af4220d419520dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62d4a4f7dc5831ca77c56cb6d2fcf788"><td class="memItemLeft" align="right" valign="top">vk::DescriptorImageInfo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#a62d4a4f7dc5831ca77c56cb6d2fcf788">atlasSamplerDescriptorImageInfo</a></td></tr>
 <tr class="separator:a62d4a4f7dc5831ca77c56cb6d2fcf788"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a2b50ef1b320c6e594fd22e89b1c332"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1i32x4.html">i32x4</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#a4a2b50ef1b320c6e594fd22e89b1c332">atlasAllocationPosition</a> = {}</td></tr>
-<tr class="separator:a4a2b50ef1b320c6e594fd22e89b1c332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd84b0e2cf806e7fbff4862b02bedf44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacett.html#a20336d131f17d987785bf057e6b127b6">point3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#abd84b0e2cf806e7fbff4862b02bedf44">atlas_allocation_position</a> = {}</td></tr>
+<tr class="separator:abd84b0e2cf806e7fbff4862b02bedf44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32d196c4c948b810866e8287231b7a41"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#a32d196c4c948b810866e8287231b7a41">atlasAllocationMaxHeight</a> = 0</td></tr>
 <tr class="memdesc:a32d196c4c948b810866e8287231b7a41"><td class="mdescLeft">&#160;</td><td class="mdescRight">During allocation on a row, we keep track of the tallest glyph.  <a href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#a32d196c4c948b810866e8287231b7a41">More...</a><br /></td></tr>
 <tr class="separator:a32d196c4c948b810866e8287231b7a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -272,8 +274,8 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a63c3d77bbe6ebedc458d4800e83e6944"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63c3d77bbe6ebedc458d4800e83e6944">&#9670;&nbsp;</a></span>allocateRect()</h2>
+<a id="a64a3d6aec9cf1a7357fe4de6fd454255"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64a3d6aec9cf1a7357fe4de6fd454255">&#9670;&nbsp;</a></span>allocateRect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -284,7 +286,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="structtt_1_1pipeline___s_d_f_1_1atlas__rect.html">atlas_rect</a> tt::pipeline_SDF::device_shared::allocateRect </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacett.html#adaf211430d8bb84d2b53b4e0da491987">f32x4</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacett.html#a2a7f17e9f9ecdcaec84c5012c4ca8bf3">extent2</a>&#160;</td>
           <td class="paramname"><em>drawExtent</em></td><td>)</td>
           <td></td>
         </tr>
@@ -418,8 +420,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a03cb49c74e90ef6deabb49b65596f209"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03cb49c74e90ef6deabb49b65596f209">&#9670;&nbsp;</a></span>placeVertices() <span class="overload">[1/3]</span></h2>
+<a id="ae0226b7f91c1d24775ff972456373cb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0226b7f91c1d24775ff972456373cb2">&#9670;&nbsp;</a></span>place_vertices() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -428,82 +430,16 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void tt::pipeline_SDF::device_shared::placeVertices </td>
+          <td class="memname">void tt::pipeline_SDF::device_shared::place_vertices </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline___s_d_f_1_1vertex.html">vertex</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>vertices</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classtt_1_1font__glyph__ids.html">font_glyph_ids</a> const &amp;&#160;</td>
-          <td class="paramname"><em>glyphs</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classtt_1_1rect.html">rect</a>&#160;</td>
-          <td class="paramname"><em>box</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classtt_1_1color.html">color</a>&#160;</td>
-          <td class="paramname"><em>color</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
-          <td class="paramname"><em>clippingRectangle</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Place vertices for a single glyph. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">vertices</td><td>The list of vertices to add to. </td></tr>
-    <tr><td class="paramname">glyphs</td><td>The font-id, composed-glyphs to render </td></tr>
-    <tr><td class="paramname">box</td><td>The rectangle of the glyph in window coordinates; including the draw border. </td></tr>
-    <tr><td class="paramname">color</td><td>The color of the glyph. </td></tr>
-    <tr><td class="paramname">clippingRectangle</td><td>The rectangle to clip the glyph. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="abd38b4cac97b4711e36cd38ce8bb7e96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd38b4cac97b4711e36cd38ce8bb7e96">&#9670;&nbsp;</a></span>placeVertices() <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void tt::pipeline_SDF::device_shared::placeVertices </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline___s_d_f_1_1vertex.html">vertex</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>vertices</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classtt_1_1shaped__text.html">shaped_text</a> const &amp;&#160;</td>
-          <td class="paramname"><em>text</em>, </td>
+          <td class="paramname"><em>clipping_rectangle</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -514,8 +450,8 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
-          <td class="paramname"><em>clippingRectangle</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="classtt_1_1shaped__text.html">shaped_text</a> const &amp;&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -543,8 +479,8 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a7af346daf3515b1f2d871429d335fbac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7af346daf3515b1f2d871429d335fbac">&#9670;&nbsp;</a></span>placeVertices() <span class="overload">[3/3]</span></h2>
+<a id="af7028584799b03f4726d7c8888bfe7ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7028584799b03f4726d7c8888bfe7ea">&#9670;&nbsp;</a></span>place_vertices() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -553,7 +489,7 @@ Static Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void tt::pipeline_SDF::device_shared::placeVertices </td>
+          <td class="memname">void tt::pipeline_SDF::device_shared::place_vertices </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline___s_d_f_1_1vertex.html">vertex</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>vertices</em>, </td>
@@ -561,8 +497,8 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classtt_1_1shaped__text.html">shaped_text</a> const &amp;&#160;</td>
-          <td class="paramname"><em>text</em>, </td>
+          <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
+          <td class="paramname"><em>clipping_rectangle</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -573,8 +509,8 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
-          <td class="paramname"><em>clippingRectangle</em>, </td>
+          <td class="paramtype"><a class="el" href="classtt_1_1shaped__text.html">shaped_text</a> const &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -603,6 +539,72 @@ Static Public Attributes</h2></td></tr>
     <tr><td class="paramname">clippingRectangle</td><td>The clipping rectangle in screen space where glyphs should be cut off. </td></tr>
     <tr><td class="paramname">vertices</td><td>The vertices to draw the glyphs to. </td></tr>
     <tr><td class="paramname">color</td><td>Override the color of the text to draw. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a00a66c056393033a5123cdded525035d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00a66c056393033a5123cdded525035d">&#9670;&nbsp;</a></span>place_vertices() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tt::pipeline_SDF::device_shared::place_vertices </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline___s_d_f_1_1vertex.html">vertex</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>vertices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
+          <td class="paramname"><em>clipping_rectangle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtt_1_1rect.html">rect</a>&#160;</td>
+          <td class="paramname"><em>box</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtt_1_1font__glyph__ids.html">font_glyph_ids</a> const &amp;&#160;</td>
+          <td class="paramname"><em>glyphs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtt_1_1color.html">color</a>&#160;</td>
+          <td class="paramname"><em>color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Place vertices for a single glyph. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertices</td><td>The list of vertices to add to. </td></tr>
+    <tr><td class="paramname">glyphs</td><td>The font-id, composed-glyphs to render </td></tr>
+    <tr><td class="paramname">box</td><td>The rectangle of the glyph in window coordinates; including the draw border. </td></tr>
+    <tr><td class="paramname">color</td><td>The color of the glyph. </td></tr>
+    <tr><td class="paramname">clippingRectangle</td><td>The rectangle to clip the glyph. </td></tr>
   </table>
   </dd>
 </dl>
@@ -697,6 +699,20 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Field Documentation</h2>
+<a id="abd84b0e2cf806e7fbff4862b02bedf44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd84b0e2cf806e7fbff4862b02bedf44">&#9670;&nbsp;</a></span>atlas_allocation_position</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacett.html#a20336d131f17d987785bf057e6b127b6">point3</a> tt::pipeline_SDF::device_shared::atlas_allocation_position = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a32d196c4c948b810866e8287231b7a41"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a32d196c4c948b810866e8287231b7a41">&#9670;&nbsp;</a></span>atlasAllocationMaxHeight</h2>
 
@@ -710,20 +726,6 @@ Static Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>During allocation on a row, we keep track of the tallest glyph. </p>
-
-</div>
-</div>
-<a id="a4a2b50ef1b320c6e594fd22e89b1c332"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a2b50ef1b320c6e594fd22e89b1c332">&#9670;&nbsp;</a></span>atlasAllocationPosition</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classtt_1_1i32x4.html">i32x4</a> tt::pipeline_SDF::device_shared::atlasAllocationPosition = {}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -1111,6 +1113,7 @@ Static Public Attributes</h2></td></tr>
 <li>ttauri/GUI/<a class="el" href="pipeline___s_d_f__device__shared_8hpp_source.html">pipeline_SDF_device_shared.hpp</a></li>
 </ul>
 </div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0

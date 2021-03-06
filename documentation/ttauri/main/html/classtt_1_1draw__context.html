@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -13,6 +14,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -22,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TTauri
-   &#160;<span id="projectnumber">main</span>
+   &#160;<span id="projectnumber">v0.1.0 v0.2.3 *main</span>
    </div>
    <div id="projectbrief">A low latency retained GUI</div>
   </td>
@@ -69,7 +71,6 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Data Fields</a> &#124;
 <a href="#friends">Friends</a>  </div>
   <div class="headertitle">
 <div class="title">tt::draw_context Class Reference</div>  </div>
@@ -83,8 +84,6 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2ca08578f28260972a7727d87676681f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a2ca08578f28260972a7727d87676681f">draw_context</a> (<a class="el" href="classtt_1_1gui__window.html">gui_window</a> &amp;<a class="el" href="classtt_1_1draw__context.html#a7de8c19c6d37db33240dbad920d21643">window</a>, <a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> scissor_rectangle, <a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline__flat_1_1vertex.html">pipeline_flat::vertex</a> &gt; &amp;flatVertices, <a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline__box_1_1vertex.html">pipeline_box::vertex</a> &gt; &amp;boxVertices, <a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline__image_1_1vertex.html">pipeline_image::vertex</a> &gt; &amp;imageVertices, <a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline___s_d_f_1_1vertex.html">pipeline_SDF::vertex</a> &gt; &amp;sdfVertices) noexcept</td></tr>
-<tr class="separator:a2ca08578f28260972a7727d87676681f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2a9e2a469ecab3ed873ee78d9253996"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#af2a9e2a469ecab3ed873ee78d9253996">draw_context</a> (<a class="el" href="classtt_1_1draw__context.html">draw_context</a> const &amp;rhs) noexcept=default</td></tr>
 <tr class="separator:af2a9e2a469ecab3ed873ee78d9253996"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae882b8f3a16be8083370822c005a77d6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#ae882b8f3a16be8083370822c005a77d6">draw_context</a> (<a class="el" href="classtt_1_1draw__context.html">draw_context</a> &amp;&amp;rhs) noexcept=default</td></tr>
@@ -95,52 +94,51 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a63a2fdf4d1f05f142300945e266ea6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab564b6e409f8bb572542e92c43b3cac5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#ab564b6e409f8bb572542e92c43b3cac5">~draw_context</a> ()=default</td></tr>
 <tr class="separator:ab564b6e409f8bb572542e92c43b3cac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca08578f28260972a7727d87676681f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a2ca08578f28260972a7727d87676681f">draw_context</a> (<a class="el" href="classtt_1_1gui__window.html">gui_window</a> &amp;<a class="el" href="classtt_1_1draw__context.html#a7de8c19c6d37db33240dbad920d21643">window</a>, <a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> scissor_rectangle, <a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline__flat_1_1vertex.html">pipeline_flat::vertex</a> &gt; &amp;flatVertices, <a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline__box_1_1vertex.html">pipeline_box::vertex</a> &gt; &amp;boxVertices, <a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline__image_1_1vertex.html">pipeline_image::vertex</a> &gt; &amp;imageVertices, <a class="el" href="classtt_1_1vspan.html">vspan</a>&lt; <a class="el" href="structtt_1_1pipeline___s_d_f_1_1vertex.html">pipeline_SDF::vertex</a> &gt; &amp;sdfVertices) noexcept</td></tr>
+<tr class="separator:a2ca08578f28260972a7727d87676681f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6280bc390a367de5134998c4ecb5dc69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1draw__context.html">draw_context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a6280bc390a367de5134998c4ecb5dc69">make_child_context</a> (<a class="el" href="namespacett.html#ac369fd314f15d0350f66a941dcf75703">matrix3</a> parent_to_local, <a class="el" href="namespacett.html#ac369fd314f15d0350f66a941dcf75703">matrix3</a> local_to_window, <a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> <a class="el" href="classtt_1_1draw__context.html#a9994bb1ddc91b5a200cbdc290afb0a88">clipping_rectangle</a>) const noexcept</td></tr>
+<tr class="separator:a6280bc390a367de5134998c4ecb5dc69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9994bb1ddc91b5a200cbdc290afb0a88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a9994bb1ddc91b5a200cbdc290afb0a88">clipping_rectangle</a> () const noexcept</td></tr>
+<tr class="separator:a9994bb1ddc91b5a200cbdc290afb0a88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a673e95fcc312834b7cbc10d9ba73d52f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a673e95fcc312834b7cbc10d9ba73d52f">set_clipping_rectangle</a> (<a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> <a class="el" href="classtt_1_1draw__context.html#a9994bb1ddc91b5a200cbdc290afb0a88">clipping_rectangle</a>) noexcept</td></tr>
+<tr class="separator:a673e95fcc312834b7cbc10d9ba73d52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36de2a6d1859a930ab048fbe29378152"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacett.html#ac369fd314f15d0350f66a941dcf75703">matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a36de2a6d1859a930ab048fbe29378152">transform</a> () const noexcept</td></tr>
+<tr class="separator:a36de2a6d1859a930ab048fbe29378152"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7de8c19c6d37db33240dbad920d21643"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1gui__window.html">gui_window</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a7de8c19c6d37db33240dbad920d21643">window</a> () const noexcept</td></tr>
 <tr class="separator:a7de8c19c6d37db33240dbad920d21643"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a9a1d60e8c9d0aaf701f910ff8bdcde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classtt_1_1gui__device.html">gui_device</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a2a9a1d60e8c9d0aaf701f910ff8bdcde">device</a> () const noexcept</td></tr>
 <tr class="separator:a2a9a1d60e8c9d0aaf701f910ff8bdcde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a970c995cb31cd0ef6805d7d5ecc79fd5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a970c995cb31cd0ef6805d7d5ecc79fd5">draw_filled_quad</a> (<a class="el" href="namespacett.html#adaf211430d8bb84d2b53b4e0da491987">f32x4</a> p1, <a class="el" href="namespacett.html#adaf211430d8bb84d2b53b4e0da491987">f32x4</a> p2, <a class="el" href="namespacett.html#adaf211430d8bb84d2b53b4e0da491987">f32x4</a> p3, <a class="el" href="namespacett.html#adaf211430d8bb84d2b53b4e0da491987">f32x4</a> p4, <a class="el" href="classtt_1_1color.html">color</a> fill_color) const noexcept</td></tr>
-<tr class="memdesc:a970c995cb31cd0ef6805d7d5ecc79fd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a polygon with four corners of one color.  <a href="classtt_1_1draw__context.html#a970c995cb31cd0ef6805d7d5ecc79fd5">More...</a><br /></td></tr>
-<tr class="separator:a970c995cb31cd0ef6805d7d5ecc79fd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd71a558989c3e9d229cbfe9f30f59b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#afd71a558989c3e9d229cbfe9f30f59b3">draw_filled_quad</a> (<a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> r, <a class="el" href="classtt_1_1color.html">color</a> fill_color) const noexcept</td></tr>
-<tr class="memdesc:afd71a558989c3e9d229cbfe9f30f59b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a rectangle of one color.  <a href="classtt_1_1draw__context.html#afd71a558989c3e9d229cbfe9f30f59b3">More...</a><br /></td></tr>
-<tr class="separator:afd71a558989c3e9d229cbfe9f30f59b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93e5e66e9b59b06f2012839e4caa6b07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a93e5e66e9b59b06f2012839e4caa6b07">draw_box</a> (<a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> box, <a class="el" href="classtt_1_1color.html">color</a> fill_color, <a class="el" href="classtt_1_1color.html">color</a> line_color, float line_width=1.0, <a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a> <a class="el" href="classtt_1_1corner__shapes.html">corner_shapes</a>=<a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a>{}) const noexcept</td></tr>
-<tr class="memdesc:a93e5e66e9b59b06f2012839e4caa6b07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an axis aligned box This function will draw the given box.  <a href="classtt_1_1draw__context.html#a93e5e66e9b59b06f2012839e4caa6b07">More...</a><br /></td></tr>
-<tr class="separator:a93e5e66e9b59b06f2012839e4caa6b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dcf34cfdbdf32707dae06b98e927da6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a4dcf34cfdbdf32707dae06b98e927da6">draw_box</a> (<a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> box, <a class="el" href="classtt_1_1color.html">color</a> fill_color, <a class="el" href="classtt_1_1color.html">color</a> line_color, <a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a> <a class="el" href="classtt_1_1corner__shapes.html">corner_shapes</a>) const noexcept</td></tr>
-<tr class="separator:a4dcf34cfdbdf32707dae06b98e927da6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a799ea7708569e59992581f8c16797ce0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a799ea7708569e59992581f8c16797ce0">draw_box</a> (<a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> box, <a class="el" href="classtt_1_1color.html">color</a> fill_color, <a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a> <a class="el" href="classtt_1_1corner__shapes.html">corner_shapes</a>) const noexcept</td></tr>
-<tr class="separator:a799ea7708569e59992581f8c16797ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42643691fcd24d64a8d732f1954eb8e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a42643691fcd24d64a8d732f1954eb8e6">draw_box_with_border_inside</a> (<a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> rectangle, <a class="el" href="classtt_1_1color.html">color</a> fill_color, <a class="el" href="classtt_1_1color.html">color</a> line_color, float line_width=1.0, <a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a> <a class="el" href="classtt_1_1corner__shapes.html">corner_shapes</a>=<a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a>{}) const noexcept</td></tr>
-<tr class="memdesc:a42643691fcd24d64a8d732f1954eb8e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an axis aligned box This function will shrink to include the size of the border inside the given rectangle.  <a href="classtt_1_1draw__context.html#a42643691fcd24d64a8d732f1954eb8e6">More...</a><br /></td></tr>
-<tr class="separator:a42643691fcd24d64a8d732f1954eb8e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd99ffd9e06ad432a617119f70264575"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#acd99ffd9e06ad432a617119f70264575">draw_box_with_border_inside</a> (<a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> rectangle, <a class="el" href="classtt_1_1color.html">color</a> fill_color, <a class="el" href="classtt_1_1color.html">color</a> line_color, <a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a> <a class="el" href="classtt_1_1corner__shapes.html">corner_shapes</a>) const noexcept</td></tr>
-<tr class="separator:acd99ffd9e06ad432a617119f70264575"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80102477873ccd269240b87663d5f1fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a80102477873ccd269240b87663d5f1fc">draw_box_with_border_outside</a> (<a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> rectangle, <a class="el" href="classtt_1_1color.html">color</a> fill_color, <a class="el" href="classtt_1_1color.html">color</a> line_color, float line_width=1.0, <a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a> <a class="el" href="classtt_1_1corner__shapes.html">corner_shapes</a>=<a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a>{}) const noexcept</td></tr>
-<tr class="memdesc:a80102477873ccd269240b87663d5f1fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an axis aligned box This function will expand to include the size of the border outside the given rectangle.  <a href="classtt_1_1draw__context.html#a80102477873ccd269240b87663d5f1fc">More...</a><br /></td></tr>
-<tr class="separator:a80102477873ccd269240b87663d5f1fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08e94389b280c1f8e296104ec3a2dabf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a08e94389b280c1f8e296104ec3a2dabf">draw_box_with_border_outside</a> (<a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> rectangle, <a class="el" href="classtt_1_1color.html">color</a> fill_color, <a class="el" href="classtt_1_1color.html">color</a> line_color, <a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a> <a class="el" href="classtt_1_1corner__shapes.html">corner_shapes</a>) const noexcept</td></tr>
-<tr class="separator:a08e94389b280c1f8e296104ec3a2dabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcbf085154e2dbab57d28096ab3e4211"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#adcbf085154e2dbab57d28096ab3e4211">draw_image</a> (<a class="el" href="structtt_1_1pipeline__image_1_1_image.html">pipeline_image::Image</a> &amp;image) const noexcept</td></tr>
-<tr class="memdesc:adcbf085154e2dbab57d28096ab3e4211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image This function will draw an image.  <a href="classtt_1_1draw__context.html#adcbf085154e2dbab57d28096ab3e4211">More...</a><br /></td></tr>
-<tr class="separator:adcbf085154e2dbab57d28096ab3e4211"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0988425fcbee9d5ebebdd74ff7b810bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a0988425fcbee9d5ebebdd74ff7b810bd">draw_text</a> (<a class="el" href="classtt_1_1shaped__text.html">shaped_text</a> const &amp;text, std::optional&lt; <a class="el" href="classtt_1_1color.html">color</a> &gt; text_color={}) const noexcept</td></tr>
-<tr class="memdesc:a0988425fcbee9d5ebebdd74ff7b810bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw shaped text.  <a href="classtt_1_1draw__context.html#a0988425fcbee9d5ebebdd74ff7b810bd">More...</a><br /></td></tr>
-<tr class="separator:a0988425fcbee9d5ebebdd74ff7b810bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cdfe1623dacf293983d0813dd03bce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a3cdfe1623dacf293983d0813dd03bce7">draw_glyph</a> (<a class="el" href="classtt_1_1font__glyph__ids.html">font_glyph_ids</a> const &amp;glyph, <a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> box, <a class="el" href="classtt_1_1color.html">color</a> text_color) const noexcept</td></tr>
-<tr class="separator:a3cdfe1623dacf293983d0813dd03bce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Data Fields</h2></td></tr>
-<tr class="memitem:a57f8df90497b6f6318bd04f2dbc273cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a57f8df90497b6f6318bd04f2dbc273cc">clipping_rectangle</a></td></tr>
-<tr class="memdesc:a57f8df90497b6f6318bd04f2dbc273cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The clipping rectangle when drawing.  <a href="classtt_1_1draw__context.html#a57f8df90497b6f6318bd04f2dbc273cc">More...</a><br /></td></tr>
-<tr class="separator:a57f8df90497b6f6318bd04f2dbc273cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa61014e7460d9ae318e965d8ccd99d39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacett.html#ac369fd314f15d0350f66a941dcf75703">matrix3</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#aa61014e7460d9ae318e965d8ccd99d39">transform</a> = <a class="el" href="classtt_1_1geo_1_1identity.html">geo::identity</a>{}</td></tr>
-<tr class="memdesc:aa61014e7460d9ae318e965d8ccd99d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform used on the given coordinates.  <a href="classtt_1_1draw__context.html#aa61014e7460d9ae318e965d8ccd99d39">More...</a><br /></td></tr>
-<tr class="separator:aa61014e7460d9ae318e965d8ccd99d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af532562310ad8f5fba7db9a80a1241b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#af532562310ad8f5fba7db9a80a1241b7">_scissor_rectangle</a></td></tr>
-<tr class="separator:af532562310ad8f5fba7db9a80a1241b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8983fb9e8d308007d3402b43a5966400"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a8983fb9e8d308007d3402b43a5966400">draw_filled_quad</a> (<a class="el" href="namespacett.html#a20336d131f17d987785bf057e6b127b6">point3</a> p1, <a class="el" href="namespacett.html#a20336d131f17d987785bf057e6b127b6">point3</a> p2, <a class="el" href="namespacett.html#a20336d131f17d987785bf057e6b127b6">point3</a> p3, <a class="el" href="namespacett.html#a20336d131f17d987785bf057e6b127b6">point3</a> p4, <a class="el" href="classtt_1_1color.html">color</a> fill_color) const noexcept</td></tr>
+<tr class="memdesc:a8983fb9e8d308007d3402b43a5966400"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a polygon with four corners of one color.  <a href="classtt_1_1draw__context.html#a8983fb9e8d308007d3402b43a5966400">More...</a><br /></td></tr>
+<tr class="separator:a8983fb9e8d308007d3402b43a5966400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad45f86f4bc436a530634c68686fdd627"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#ad45f86f4bc436a530634c68686fdd627">draw_filled_quad</a> (<a class="el" href="classtt_1_1rect.html">rect</a> r, <a class="el" href="classtt_1_1color.html">color</a> fill_color) const noexcept</td></tr>
+<tr class="memdesc:ad45f86f4bc436a530634c68686fdd627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a rectangle of one color.  <a href="classtt_1_1draw__context.html#ad45f86f4bc436a530634c68686fdd627">More...</a><br /></td></tr>
+<tr class="separator:ad45f86f4bc436a530634c68686fdd627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56e535e69c84e834c5d74848e908dce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a56e535e69c84e834c5d74848e908dce7">draw_box</a> (<a class="el" href="classtt_1_1rect.html">rect</a> box, <a class="el" href="classtt_1_1color.html">color</a> fill_color, <a class="el" href="classtt_1_1color.html">color</a> line_color, float line_width=1.0, <a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a> <a class="el" href="classtt_1_1corner__shapes.html">corner_shapes</a>=<a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a>{}) const noexcept</td></tr>
+<tr class="memdesc:a56e535e69c84e834c5d74848e908dce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an axis aligned box This function will draw the given box.  <a href="classtt_1_1draw__context.html#a56e535e69c84e834c5d74848e908dce7">More...</a><br /></td></tr>
+<tr class="separator:a56e535e69c84e834c5d74848e908dce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab613188ea9b8fb79719adab3b2a4fcde"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#ab613188ea9b8fb79719adab3b2a4fcde">draw_box</a> (<a class="el" href="classtt_1_1rect.html">rect</a> box, <a class="el" href="classtt_1_1color.html">color</a> fill_color, <a class="el" href="classtt_1_1color.html">color</a> line_color, <a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a> <a class="el" href="classtt_1_1corner__shapes.html">corner_shapes</a>) const noexcept</td></tr>
+<tr class="separator:ab613188ea9b8fb79719adab3b2a4fcde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a667d650ca6251598e3bd56c5b4281841"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a667d650ca6251598e3bd56c5b4281841">draw_box</a> (<a class="el" href="classtt_1_1rect.html">rect</a> box, <a class="el" href="classtt_1_1color.html">color</a> fill_color, <a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a> <a class="el" href="classtt_1_1corner__shapes.html">corner_shapes</a>) const noexcept</td></tr>
+<tr class="separator:a667d650ca6251598e3bd56c5b4281841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1002c818240b794f84515c8acd5d1dfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a1002c818240b794f84515c8acd5d1dfc">draw_box_with_border_inside</a> (<a class="el" href="classtt_1_1rect.html">rect</a> rectangle, <a class="el" href="classtt_1_1color.html">color</a> fill_color, <a class="el" href="classtt_1_1color.html">color</a> line_color, float line_width=1.0, <a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a> <a class="el" href="classtt_1_1corner__shapes.html">corner_shapes</a>=<a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a>{}) const noexcept</td></tr>
+<tr class="memdesc:a1002c818240b794f84515c8acd5d1dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an axis aligned box This function will shrink to include the size of the border inside the given rectangle.  <a href="classtt_1_1draw__context.html#a1002c818240b794f84515c8acd5d1dfc">More...</a><br /></td></tr>
+<tr class="separator:a1002c818240b794f84515c8acd5d1dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ed61ac8998cc1a208283843d1e49e63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a5ed61ac8998cc1a208283843d1e49e63">draw_box_with_border_inside</a> (<a class="el" href="classtt_1_1rect.html">rect</a> rectangle, <a class="el" href="classtt_1_1color.html">color</a> fill_color, <a class="el" href="classtt_1_1color.html">color</a> line_color, <a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a> <a class="el" href="classtt_1_1corner__shapes.html">corner_shapes</a>) const noexcept</td></tr>
+<tr class="separator:a5ed61ac8998cc1a208283843d1e49e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a067a23a91c215e8d0db4b8316eb6c97a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a067a23a91c215e8d0db4b8316eb6c97a">draw_box_with_border_outside</a> (<a class="el" href="classtt_1_1rect.html">rect</a> rectangle, <a class="el" href="classtt_1_1color.html">color</a> fill_color, <a class="el" href="classtt_1_1color.html">color</a> line_color, float line_width=1.0, <a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a> <a class="el" href="classtt_1_1corner__shapes.html">corner_shapes</a>=<a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a>{}) const noexcept</td></tr>
+<tr class="memdesc:a067a23a91c215e8d0db4b8316eb6c97a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an axis aligned box This function will expand to include the size of the border outside the given rectangle.  <a href="classtt_1_1draw__context.html#a067a23a91c215e8d0db4b8316eb6c97a">More...</a><br /></td></tr>
+<tr class="separator:a067a23a91c215e8d0db4b8316eb6c97a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bf526e5ea848c0fd5d1cfd5e3fba235"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a8bf526e5ea848c0fd5d1cfd5e3fba235">draw_box_with_border_outside</a> (<a class="el" href="classtt_1_1rect.html">rect</a> rectangle, <a class="el" href="classtt_1_1color.html">color</a> fill_color, <a class="el" href="classtt_1_1color.html">color</a> line_color, <a class="el" href="classtt_1_1corner__shapes.html">tt::corner_shapes</a> <a class="el" href="classtt_1_1corner__shapes.html">corner_shapes</a>) const noexcept</td></tr>
+<tr class="separator:a8bf526e5ea848c0fd5d1cfd5e3fba235"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9d5cc2faa0187de00119dbfccb1264c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#ae9d5cc2faa0187de00119dbfccb1264c">draw_image</a> (<a class="el" href="structtt_1_1pipeline__image_1_1_image.html">pipeline_image::Image</a> &amp;image, <a class="el" href="namespacett.html#ac369fd314f15d0350f66a941dcf75703">matrix3</a> image_transform) const noexcept</td></tr>
+<tr class="memdesc:ae9d5cc2faa0187de00119dbfccb1264c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw an image This function will draw an image.  <a href="classtt_1_1draw__context.html#ae9d5cc2faa0187de00119dbfccb1264c">More...</a><br /></td></tr>
+<tr class="separator:ae9d5cc2faa0187de00119dbfccb1264c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac145b63e65bc21d7bc91ef20f41bde0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#ac145b63e65bc21d7bc91ef20f41bde0f">draw_text</a> (<a class="el" href="classtt_1_1shaped__text.html">shaped_text</a> const &amp;text, std::optional&lt; <a class="el" href="classtt_1_1color.html">color</a> &gt; text_color={}, <a class="el" href="namespacett.html#ac369fd314f15d0350f66a941dcf75703">matrix3</a> <a class="el" href="classtt_1_1draw__context.html#a36de2a6d1859a930ab048fbe29378152">transform</a>=<a class="el" href="classtt_1_1geo_1_1identity.html">geo::identity</a>{}) const noexcept</td></tr>
+<tr class="memdesc:ac145b63e65bc21d7bc91ef20f41bde0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw shaped text.  <a href="classtt_1_1draw__context.html#ac145b63e65bc21d7bc91ef20f41bde0f">More...</a><br /></td></tr>
+<tr class="separator:ac145b63e65bc21d7bc91ef20f41bde0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c8ab5a7ce2080d61189555b21b23f17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1draw__context.html#a0c8ab5a7ce2080d61189555b21b23f17">draw_glyph</a> (<a class="el" href="classtt_1_1font__glyph__ids.html">font_glyph_ids</a> const &amp;glyph, <a class="el" href="classtt_1_1rect.html">rect</a> box, <a class="el" href="classtt_1_1color.html">color</a> text_color) const noexcept</td></tr>
+<tr class="separator:a0c8ab5a7ce2080d61189555b21b23f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -150,8 +148,85 @@ Friends</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Draw context for drawing using the TTauri shaders. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af2a9e2a469ecab3ed873ee78d9253996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2a9e2a469ecab3ed873ee78d9253996">&#9670;&nbsp;</a></span>draw_context() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt::draw_context::draw_context </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtt_1_1draw__context.html">draw_context</a> const &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae882b8f3a16be8083370822c005a77d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae882b8f3a16be8083370822c005a77d6">&#9670;&nbsp;</a></span>draw_context() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt::draw_context::draw_context </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtt_1_1draw__context.html">draw_context</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab564b6e409f8bb572542e92c43b3cac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab564b6e409f8bb572542e92c43b3cac5">&#9670;&nbsp;</a></span>~draw_context()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tt::draw_context::~draw_context </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2ca08578f28260972a7727d87676681f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ca08578f28260972a7727d87676681f">&#9670;&nbsp;</a></span>draw_context() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ca08578f28260972a7727d87676681f">&#9670;&nbsp;</a></span>draw_context() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,8 +285,9 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="af2a9e2a469ecab3ed873ee78d9253996"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2a9e2a469ecab3ed873ee78d9253996">&#9670;&nbsp;</a></span>draw_context() <span class="overload">[2/3]</span></h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9994bb1ddc91b5a200cbdc290afb0a88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9994bb1ddc91b5a200cbdc290afb0a88">&#9670;&nbsp;</a></span>clipping_rectangle()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,74 +296,21 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">tt::draw_context::draw_context </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classtt_1_1draw__context.html">draw_context</a> const &amp;&#160;</td>
-          <td class="paramname"><em>rhs</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae882b8f3a16be8083370822c005a77d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae882b8f3a16be8083370822c005a77d6">&#9670;&nbsp;</a></span>draw_context() <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">tt::draw_context::draw_context </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classtt_1_1draw__context.html">draw_context</a> &amp;&amp;&#160;</td>
-          <td class="paramname"><em>rhs</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab564b6e409f8bb572542e92c43b3cac5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab564b6e409f8bb572542e92c43b3cac5">&#9670;&nbsp;</a></span>~draw_context()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">tt::draw_context::~draw_context </td>
+          <td class="memname"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> tt::draw_context::clipping_rectangle </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a2a9a1d60e8c9d0aaf701f910ff8bdcde"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2a9a1d60e8c9d0aaf701f910ff8bdcde">&#9670;&nbsp;</a></span>device()</h2>
 
@@ -313,8 +336,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a93e5e66e9b59b06f2012839e4caa6b07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93e5e66e9b59b06f2012839e4caa6b07">&#9670;&nbsp;</a></span>draw_box() <span class="overload">[1/3]</span></h2>
+<a id="a56e535e69c84e834c5d74848e908dce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56e535e69c84e834c5d74848e908dce7">&#9670;&nbsp;</a></span>draw_box() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -325,7 +348,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void tt::draw_context::draw_box </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classtt_1_1rect.html">rect</a>&#160;</td>
           <td class="paramname"><em>box</em>, </td>
         </tr>
         <tr>
@@ -378,8 +401,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a4dcf34cfdbdf32707dae06b98e927da6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4dcf34cfdbdf32707dae06b98e927da6">&#9670;&nbsp;</a></span>draw_box() <span class="overload">[2/3]</span></h2>
+<a id="ab613188ea9b8fb79719adab3b2a4fcde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab613188ea9b8fb79719adab3b2a4fcde">&#9670;&nbsp;</a></span>draw_box() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -390,7 +413,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void tt::draw_context::draw_box </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classtt_1_1rect.html">rect</a>&#160;</td>
           <td class="paramname"><em>box</em>, </td>
         </tr>
         <tr>
@@ -426,8 +449,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a799ea7708569e59992581f8c16797ce0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a799ea7708569e59992581f8c16797ce0">&#9670;&nbsp;</a></span>draw_box() <span class="overload">[3/3]</span></h2>
+<a id="a667d650ca6251598e3bd56c5b4281841"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a667d650ca6251598e3bd56c5b4281841">&#9670;&nbsp;</a></span>draw_box() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -438,7 +461,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void tt::draw_context::draw_box </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classtt_1_1rect.html">rect</a>&#160;</td>
           <td class="paramname"><em>box</em>, </td>
         </tr>
         <tr>
@@ -468,8 +491,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a42643691fcd24d64a8d732f1954eb8e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42643691fcd24d64a8d732f1954eb8e6">&#9670;&nbsp;</a></span>draw_box_with_border_inside() <span class="overload">[1/2]</span></h2>
+<a id="a1002c818240b794f84515c8acd5d1dfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1002c818240b794f84515c8acd5d1dfc">&#9670;&nbsp;</a></span>draw_box_with_border_inside() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -480,7 +503,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void tt::draw_context::draw_box_with_border_inside </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classtt_1_1rect.html">rect</a>&#160;</td>
           <td class="paramname"><em>rectangle</em>, </td>
         </tr>
         <tr>
@@ -534,8 +557,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="acd99ffd9e06ad432a617119f70264575"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd99ffd9e06ad432a617119f70264575">&#9670;&nbsp;</a></span>draw_box_with_border_inside() <span class="overload">[2/2]</span></h2>
+<a id="a5ed61ac8998cc1a208283843d1e49e63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ed61ac8998cc1a208283843d1e49e63">&#9670;&nbsp;</a></span>draw_box_with_border_inside() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -546,7 +569,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void tt::draw_context::draw_box_with_border_inside </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classtt_1_1rect.html">rect</a>&#160;</td>
           <td class="paramname"><em>rectangle</em>, </td>
         </tr>
         <tr>
@@ -582,8 +605,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a80102477873ccd269240b87663d5f1fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80102477873ccd269240b87663d5f1fc">&#9670;&nbsp;</a></span>draw_box_with_border_outside() <span class="overload">[1/2]</span></h2>
+<a id="a067a23a91c215e8d0db4b8316eb6c97a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a067a23a91c215e8d0db4b8316eb6c97a">&#9670;&nbsp;</a></span>draw_box_with_border_outside() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -594,7 +617,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void tt::draw_context::draw_box_with_border_outside </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classtt_1_1rect.html">rect</a>&#160;</td>
           <td class="paramname"><em>rectangle</em>, </td>
         </tr>
         <tr>
@@ -649,8 +672,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a08e94389b280c1f8e296104ec3a2dabf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08e94389b280c1f8e296104ec3a2dabf">&#9670;&nbsp;</a></span>draw_box_with_border_outside() <span class="overload">[2/2]</span></h2>
+<a id="a8bf526e5ea848c0fd5d1cfd5e3fba235"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bf526e5ea848c0fd5d1cfd5e3fba235">&#9670;&nbsp;</a></span>draw_box_with_border_outside() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -661,7 +684,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void tt::draw_context::draw_box_with_border_outside </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classtt_1_1rect.html">rect</a>&#160;</td>
           <td class="paramname"><em>rectangle</em>, </td>
         </tr>
         <tr>
@@ -697,8 +720,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="afd71a558989c3e9d229cbfe9f30f59b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd71a558989c3e9d229cbfe9f30f59b3">&#9670;&nbsp;</a></span>draw_filled_quad() <span class="overload">[1/2]</span></h2>
+<a id="a8983fb9e8d308007d3402b43a5966400"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8983fb9e8d308007d3402b43a5966400">&#9670;&nbsp;</a></span>draw_filled_quad() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -709,68 +732,25 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">void tt::draw_context::draw_filled_quad </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
-          <td class="paramname"><em>r</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classtt_1_1color.html">color</a>&#160;</td>
-          <td class="paramname"><em>fill_color</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Draw a rectangle of one color. </p>
-<p>This function will draw the given rectangle. This will use the current:</p><ul>
-<li>transform, to transform each corner of the rectangle.</li>
-<li>clippingRectangle</li>
-<li>fillColor </li>
-</ul>
-
-</div>
-</div>
-<a id="a970c995cb31cd0ef6805d7d5ecc79fd5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a970c995cb31cd0ef6805d7d5ecc79fd5">&#9670;&nbsp;</a></span>draw_filled_quad() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void tt::draw_context::draw_filled_quad </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="namespacett.html#adaf211430d8bb84d2b53b4e0da491987">f32x4</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacett.html#a20336d131f17d987785bf057e6b127b6">point3</a>&#160;</td>
           <td class="paramname"><em>p1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacett.html#adaf211430d8bb84d2b53b4e0da491987">f32x4</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacett.html#a20336d131f17d987785bf057e6b127b6">point3</a>&#160;</td>
           <td class="paramname"><em>p2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacett.html#adaf211430d8bb84d2b53b4e0da491987">f32x4</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacett.html#a20336d131f17d987785bf057e6b127b6">point3</a>&#160;</td>
           <td class="paramname"><em>p3</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacett.html#adaf211430d8bb84d2b53b4e0da491987">f32x4</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="namespacett.html#a20336d131f17d987785bf057e6b127b6">point3</a>&#160;</td>
           <td class="paramname"><em>p4</em>, </td>
         </tr>
         <tr>
@@ -801,8 +781,51 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a3cdfe1623dacf293983d0813dd03bce7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3cdfe1623dacf293983d0813dd03bce7">&#9670;&nbsp;</a></span>draw_glyph()</h2>
+<a id="ad45f86f4bc436a530634c68686fdd627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad45f86f4bc436a530634c68686fdd627">&#9670;&nbsp;</a></span>draw_filled_quad() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tt::draw_context::draw_filled_quad </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classtt_1_1rect.html">rect</a>&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classtt_1_1color.html">color</a>&#160;</td>
+          <td class="paramname"><em>fill_color</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draw a rectangle of one color. </p>
+<p>This function will draw the given rectangle. This will use the current:</p><ul>
+<li>transform, to transform each corner of the rectangle.</li>
+<li>clippingRectangle</li>
+<li>fillColor </li>
+</ul>
+
+</div>
+</div>
+<a id="a0c8ab5a7ce2080d61189555b21b23f17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c8ab5a7ce2080d61189555b21b23f17">&#9670;&nbsp;</a></span>draw_glyph()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -819,7 +842,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classtt_1_1rect.html">rect</a>&#160;</td>
           <td class="paramname"><em>box</em>, </td>
         </tr>
         <tr>
@@ -843,8 +866,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="adcbf085154e2dbab57d28096ab3e4211"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adcbf085154e2dbab57d28096ab3e4211">&#9670;&nbsp;</a></span>draw_image()</h2>
+<a id="ae9d5cc2faa0187de00119dbfccb1264c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9d5cc2faa0187de00119dbfccb1264c">&#9670;&nbsp;</a></span>draw_image()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -856,8 +879,18 @@ Friends</h2></td></tr>
           <td class="memname">void tt::draw_context::draw_image </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structtt_1_1pipeline__image_1_1_image.html">pipeline_image::Image</a> &amp;&#160;</td>
-          <td class="paramname"><em>image</em></td><td>)</td>
-          <td> const</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacett.html#ac369fd314f15d0350f66a941dcf75703">matrix3</a>&#160;</td>
+          <td class="paramname"><em>image_transform</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -875,8 +908,8 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a0988425fcbee9d5ebebdd74ff7b810bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0988425fcbee9d5ebebdd74ff7b810bd">&#9670;&nbsp;</a></span>draw_text()</h2>
+<a id="ac145b63e65bc21d7bc91ef20f41bde0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac145b63e65bc21d7bc91ef20f41bde0f">&#9670;&nbsp;</a></span>draw_text()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -894,7 +927,13 @@ Friends</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::optional&lt; <a class="el" href="classtt_1_1color.html">color</a> &gt;&#160;</td>
-          <td class="paramname"><em>text_color</em> = <code>{}</code>&#160;</td>
+          <td class="paramname"><em>text_color</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacett.html#ac369fd314f15d0350f66a941dcf75703">matrix3</a>&#160;</td>
+          <td class="paramname"><em>transform</em> = <code><a class="el" href="classtt_1_1geo_1_1identity.html">geo::identity</a>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -921,6 +960,48 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a6280bc390a367de5134998c4ecb5dc69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6280bc390a367de5134998c4ecb5dc69">&#9670;&nbsp;</a></span>make_child_context()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtt_1_1draw__context.html">draw_context</a> tt::draw_context::make_child_context </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacett.html#ac369fd314f15d0350f66a941dcf75703">matrix3</a>&#160;</td>
+          <td class="paramname"><em>parent_to_local</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacett.html#ac369fd314f15d0350f66a941dcf75703">matrix3</a>&#160;</td>
+          <td class="paramname"><em>local_to_window</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
+          <td class="paramname"><em>clipping_rectangle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -970,6 +1051,57 @@ Friends</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">default</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a673e95fcc312834b7cbc10d9ba73d52f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a673e95fcc312834b7cbc10d9ba73d52f">&#9670;&nbsp;</a></span>set_clipping_rectangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void tt::draw_context::set_clipping_rectangle </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a>&#160;</td>
+          <td class="paramname"><em>clipping_rectangle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36de2a6d1859a930ab048fbe29378152"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36de2a6d1859a930ab048fbe29378152">&#9670;&nbsp;</a></span>transform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacett.html#ac369fd314f15d0350f66a941dcf75703">matrix3</a> tt::draw_context::transform </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1038,59 +1170,11 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Field Documentation</h2>
-<a id="af532562310ad8f5fba7db9a80a1241b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af532562310ad8f5fba7db9a80a1241b7">&#9670;&nbsp;</a></span>_scissor_rectangle</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> tt::draw_context::_scissor_rectangle</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a57f8df90497b6f6318bd04f2dbc273cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57f8df90497b6f6318bd04f2dbc273cc">&#9670;&nbsp;</a></span>clipping_rectangle</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacett.html#a472270b9cacc0d3a4b957ab7284fac6e">aarect</a> tt::draw_context::clipping_rectangle</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The clipping rectangle when drawing. </p>
-<p>The clipping rectangle is passes as-is to the pipelines and is not modified by the transform. </p>
-
-</div>
-</div>
-<a id="aa61014e7460d9ae318e965d8ccd99d39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa61014e7460d9ae318e965d8ccd99d39">&#9670;&nbsp;</a></span>transform</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacett.html#ac369fd314f15d0350f66a941dcf75703">matrix3</a> tt::draw_context::transform = <a class="el" href="classtt_1_1geo_1_1identity.html">geo::identity</a>{}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Transform used on the given coordinates. </p>
-<p>The z-axis translate is used for specifying the elevation (inverse depth buffer) of the shape. </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>ttauri/GUI/<a class="el" href="draw__context_8hpp_source.html">draw_context.hpp</a></li>
 </ul>
 </div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0

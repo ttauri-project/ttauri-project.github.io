@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -13,6 +14,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -22,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TTauri
-   &#160;<span id="projectnumber">main</span>
+   &#160;<span id="projectnumber">v0.1.0 v0.2.3 *main</span>
    </div>
    <div id="projectbrief">A low latency retained GUI</div>
   </td>
@@ -101,7 +103,7 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="structtt_1_1glyph__metrics.html#a84ffe126e53a0c58424a3f5a04567684">   55</a></span>&#160;    <span class="keywordtype">float</span> <a class="code" href="structtt_1_1glyph__metrics.html#a84ffe126e53a0c58424a3f5a04567684">xHeight</a> = 0.0f;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="structtt_1_1glyph__metrics.html#a00208ab272e8564897d1791c5abac17e">   59</a></span>&#160;    <a class="code" href="classtt_1_1numeric__array.html">f32x4</a> <a class="code" href="structtt_1_1glyph__metrics.html#a00208ab272e8564897d1791c5abac17e">advance</a> = {0.0f, 0.0f};</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="structtt_1_1glyph__metrics.html#a3ed5cbe5e32707cff892e1cda2b622ca">   59</a></span>&#160;    <a class="code" href="classtt_1_1geo_1_1vector.html">vector2</a> <a class="code" href="structtt_1_1glyph__metrics.html#a3ed5cbe5e32707cff892e1cda2b622ca">advance</a> = {0.0f, 0.0f};</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="structtt_1_1glyph__metrics.html#a989cafd882cf7eadcc73eecb740b879b">   64</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structtt_1_1glyph__metrics.html#a989cafd882cf7eadcc73eecb740b879b">numberOfgraphemes</a> = 1;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
@@ -111,10 +113,10 @@ $(function() {
 <div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="structtt_1_1glyph__metrics.html#a7708a5f34325514c90a251b1be97567f">   69</a></span>&#160;    <a class="code" href="structtt_1_1glyph__metrics.html">glyph_metrics</a> &amp;operator=(<a class="code" href="structtt_1_1glyph__metrics.html">glyph_metrics</a> const &amp;) noexcept = default;</div>
 <div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="structtt_1_1glyph__metrics.html#a3ac124ca7dd873e181a119a59268c99a">   70</a></span>&#160;    <a class="code" href="structtt_1_1glyph__metrics.html">glyph_metrics</a> &amp;operator=(<a class="code" href="structtt_1_1glyph__metrics.html">glyph_metrics</a> &amp;&amp;) noexcept = default;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="structtt_1_1glyph__metrics.html#aadd8321c762362e0668ea5b92d125882">   75</a></span>&#160;    <a class="code" href="classtt_1_1numeric__array.html">f32x4</a> <a class="code" href="structtt_1_1glyph__metrics.html#aadd8321c762362e0668ea5b92d125882">advanceForgrapheme</a>(<span class="keywordtype">int</span> index) const noexcept {</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="structtt_1_1glyph__metrics.html#ad30ca9575d9838a145cd7c6a2d5e0314">   75</a></span>&#160;    <a class="code" href="classtt_1_1geo_1_1vector.html">vector2</a> <a class="code" href="structtt_1_1glyph__metrics.html#ad30ca9575d9838a145cd7c6a2d5e0314">advanceForgrapheme</a>(<span class="keywordtype">int</span> index) const noexcept {</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a> ligatureRatio = 1.0f / <a class="code" href="structtt_1_1glyph__metrics.html#a989cafd882cf7eadcc73eecb740b879b">numberOfgraphemes</a>;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="structtt_1_1glyph__metrics.html#a00208ab272e8564897d1791c5abac17e">advance</a> * ligatureRatio * narrow_cast&lt;float&gt;(index);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="structtt_1_1glyph__metrics.html#a3ed5cbe5e32707cff892e1cda2b622ca">advance</a> * ligatureRatio * narrow_cast&lt;float&gt;(index);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
 <div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="structtt_1_1glyph__metrics.html#af8a5ae49e6e1ca5712ef9453d5f34108">   81</a></span>&#160;    <a class="code" href="structtt_1_1glyph__metrics.html">glyph_metrics</a> &amp;<a class="code" href="structtt_1_1glyph__metrics.html#af8a5ae49e6e1ca5712ef9453d5f34108">scale</a>(<span class="keywordtype">float</span> rhs) noexcept</div>
@@ -124,7 +126,7 @@ $(function() {
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="structtt_1_1glyph__metrics.html#a8454668090297e2915c6445cee9966ec">boundingBox</a> = <a class="code" href="namespacett.html#ada81ca03357d7a2768e276cd7794bdb3a5dbc98dcc983a70728bd082d1a47546e">S</a> * <a class="code" href="structtt_1_1glyph__metrics.html#a8454668090297e2915c6445cee9966ec">boundingBox</a>;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="structtt_1_1glyph__metrics.html#a2f1e35119a63f97bc19bb73cbe863724">leftSideBearing</a> *= rhs;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="structtt_1_1glyph__metrics.html#a1622f7f4a2403715abd39a96b704286b">rightSideBearing</a> *= rhs;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="structtt_1_1glyph__metrics.html#a00208ab272e8564897d1791c5abac17e">advance</a> = <a class="code" href="namespacett.html#ada81ca03357d7a2768e276cd7794bdb3a5dbc98dcc983a70728bd082d1a47546e">S</a> * <a class="code" href="structtt_1_1glyph__metrics.html#a00208ab272e8564897d1791c5abac17e">advance</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="structtt_1_1glyph__metrics.html#a3ed5cbe5e32707cff892e1cda2b622ca">advance</a> = <a class="code" href="namespacett.html#ada81ca03357d7a2768e276cd7794bdb3a5dbc98dcc983a70728bd082d1a47546e">S</a> * <a class="code" href="structtt_1_1glyph__metrics.html#a3ed5cbe5e32707cff892e1cda2b622ca">advance</a>;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="structtt_1_1glyph__metrics.html#aa083f5d2eca07f7dde001d33d04366ce">ascender</a> *= rhs;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="structtt_1_1glyph__metrics.html#a3ca4de274350755175c75eadde22620e">descender</a> *= rhs;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="structtt_1_1glyph__metrics.html#a4ce6d071c21ad73530c1bd78070b7f6d">lineGap</a> *= rhs;</div>
@@ -138,16 +140,16 @@ $(function() {
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
 <div class="ttc" id="aclasstt_1_1axis__aligned__rectangle_html"><div class="ttname"><a href="classtt_1_1axis__aligned__rectangle.html">tt::axis_aligned_rectangle&lt; float &gt;</a></div></div>
-<div class="ttc" id="aclasstt_1_1numeric__array_html"><div class="ttname"><a href="classtt_1_1numeric__array.html">tt::numeric_array&lt; float, 4 &gt;</a></div></div>
-<div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
+<div class="ttc" id="aclasstt_1_1geo_1_1vector_html"><div class="ttname"><a href="classtt_1_1geo_1_1vector.html">tt::geo::vector&lt; 2 &gt;</a></div></div>
+<div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:14</div></div>
 <div class="ttc" id="anamespacett_html_ada81ca03357d7a2768e276cd7794bdb3a5dbc98dcc983a70728bd082d1a47546e"><div class="ttname"><a href="namespacett.html#ada81ca03357d7a2768e276cd7794bdb3a5dbc98dcc983a70728bd082d1a47546e">tt::keyboard_virtual_key::S</a></div><div class="ttdeci">@ S</div></div>
 <div class="ttc" id="anamespacett_html_afcb554c89fc71f02b046341ce74c6d53"><div class="ttname"><a href="namespacett.html#afcb554c89fc71f02b046341ce74c6d53">tt::scale2</a></div><div class="ttdeci">geo::scale&lt; 2 &gt; scale2</div><div class="ttdef"><b>Definition:</b> scale.hpp:151</div></div>
 <div class="ttc" id="arequired_8hpp_html_a96edbf598a3958f315e8a989dbafdec0"><div class="ttname"><a href="required_8hpp.html#a96edbf598a3958f315e8a989dbafdec0">ttlet</a></div><div class="ttdeci">#define ttlet</div><div class="ttdef"><b>Definition:</b> required.hpp:21</div></div>
 <div class="ttc" id="astructtt_1_1glyph__metrics_html"><div class="ttname"><a href="structtt_1_1glyph__metrics.html">tt::glyph_metrics</a></div><div class="ttdef"><b>Definition:</b> glyph_metrics.hpp:18</div></div>
-<div class="ttc" id="astructtt_1_1glyph__metrics_html_a00208ab272e8564897d1791c5abac17e"><div class="ttname"><a href="structtt_1_1glyph__metrics.html#a00208ab272e8564897d1791c5abac17e">tt::glyph_metrics::advance</a></div><div class="ttdeci">f32x4 advance</div><div class="ttdef"><b>Definition:</b> glyph_metrics.hpp:59</div></div>
 <div class="ttc" id="astructtt_1_1glyph__metrics_html_a1622f7f4a2403715abd39a96b704286b"><div class="ttname"><a href="structtt_1_1glyph__metrics.html#a1622f7f4a2403715abd39a96b704286b">tt::glyph_metrics::rightSideBearing</a></div><div class="ttdeci">float rightSideBearing</div><div class="ttdef"><b>Definition:</b> glyph_metrics.hpp:35</div></div>
 <div class="ttc" id="astructtt_1_1glyph__metrics_html_a2f1e35119a63f97bc19bb73cbe863724"><div class="ttname"><a href="structtt_1_1glyph__metrics.html#a2f1e35119a63f97bc19bb73cbe863724">tt::glyph_metrics::leftSideBearing</a></div><div class="ttdeci">float leftSideBearing</div><div class="ttdef"><b>Definition:</b> glyph_metrics.hpp:29</div></div>
 <div class="ttc" id="astructtt_1_1glyph__metrics_html_a3ca4de274350755175c75eadde22620e"><div class="ttname"><a href="structtt_1_1glyph__metrics.html#a3ca4de274350755175c75eadde22620e">tt::glyph_metrics::descender</a></div><div class="ttdeci">float descender</div><div class="ttdef"><b>Definition:</b> glyph_metrics.hpp:43</div></div>
+<div class="ttc" id="astructtt_1_1glyph__metrics_html_a3ed5cbe5e32707cff892e1cda2b622ca"><div class="ttname"><a href="structtt_1_1glyph__metrics.html#a3ed5cbe5e32707cff892e1cda2b622ca">tt::glyph_metrics::advance</a></div><div class="ttdeci">vector2 advance</div><div class="ttdef"><b>Definition:</b> glyph_metrics.hpp:59</div></div>
 <div class="ttc" id="astructtt_1_1glyph__metrics_html_a4ce6d071c21ad73530c1bd78070b7f6d"><div class="ttname"><a href="structtt_1_1glyph__metrics.html#a4ce6d071c21ad73530c1bd78070b7f6d">tt::glyph_metrics::lineGap</a></div><div class="ttdeci">float lineGap</div><div class="ttdef"><b>Definition:</b> glyph_metrics.hpp:47</div></div>
 <div class="ttc" id="astructtt_1_1glyph__metrics_html_a7beb3702df60a53d0a3a534116a158ed"><div class="ttname"><a href="structtt_1_1glyph__metrics.html#a7beb3702df60a53d0a3a534116a158ed">tt::glyph_metrics::capHeight</a></div><div class="ttdeci">float capHeight</div><div class="ttdef"><b>Definition:</b> glyph_metrics.hpp:51</div></div>
 <div class="ttc" id="astructtt_1_1glyph__metrics_html_a8454668090297e2915c6445cee9966ec"><div class="ttname"><a href="structtt_1_1glyph__metrics.html#a8454668090297e2915c6445cee9966ec">tt::glyph_metrics::boundingBox</a></div><div class="ttdeci">aarect boundingBox</div><div class="ttdef"><b>Definition:</b> glyph_metrics.hpp:21</div></div>
@@ -155,9 +157,10 @@ $(function() {
 <div class="ttc" id="astructtt_1_1glyph__metrics_html_a989cafd882cf7eadcc73eecb740b879b"><div class="ttname"><a href="structtt_1_1glyph__metrics.html#a989cafd882cf7eadcc73eecb740b879b">tt::glyph_metrics::numberOfgraphemes</a></div><div class="ttdeci">int numberOfgraphemes</div><div class="ttdef"><b>Definition:</b> glyph_metrics.hpp:64</div></div>
 <div class="ttc" id="astructtt_1_1glyph__metrics_html_aa083f5d2eca07f7dde001d33d04366ce"><div class="ttname"><a href="structtt_1_1glyph__metrics.html#aa083f5d2eca07f7dde001d33d04366ce">tt::glyph_metrics::ascender</a></div><div class="ttdeci">float ascender</div><div class="ttdef"><b>Definition:</b> glyph_metrics.hpp:39</div></div>
 <div class="ttc" id="astructtt_1_1glyph__metrics_html_aac4e337a69142c5a39d68370b049285c"><div class="ttname"><a href="structtt_1_1glyph__metrics.html#aac4e337a69142c5a39d68370b049285c">tt::glyph_metrics::glyph_metrics</a></div><div class="ttdeci">glyph_metrics() noexcept=default</div></div>
-<div class="ttc" id="astructtt_1_1glyph__metrics_html_aadd8321c762362e0668ea5b92d125882"><div class="ttname"><a href="structtt_1_1glyph__metrics.html#aadd8321c762362e0668ea5b92d125882">tt::glyph_metrics::advanceForgrapheme</a></div><div class="ttdeci">f32x4 advanceForgrapheme(int index) const noexcept</div><div class="ttdef"><b>Definition:</b> glyph_metrics.hpp:75</div></div>
+<div class="ttc" id="astructtt_1_1glyph__metrics_html_ad30ca9575d9838a145cd7c6a2d5e0314"><div class="ttname"><a href="structtt_1_1glyph__metrics.html#ad30ca9575d9838a145cd7c6a2d5e0314">tt::glyph_metrics::advanceForgrapheme</a></div><div class="ttdeci">vector2 advanceForgrapheme(int index) const noexcept</div><div class="ttdef"><b>Definition:</b> glyph_metrics.hpp:75</div></div>
 <div class="ttc" id="astructtt_1_1glyph__metrics_html_af8a5ae49e6e1ca5712ef9453d5f34108"><div class="ttname"><a href="structtt_1_1glyph__metrics.html#af8a5ae49e6e1ca5712ef9453d5f34108">tt::glyph_metrics::scale</a></div><div class="ttdeci">glyph_metrics &amp; scale(float rhs) noexcept</div><div class="ttdef"><b>Definition:</b> glyph_metrics.hpp:81</div></div>
 </div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0

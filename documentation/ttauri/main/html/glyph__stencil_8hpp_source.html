@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -13,6 +14,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -22,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TTauri
-   &#160;<span id="projectnumber">main</span>
+   &#160;<span id="projectnumber">v0.1.0 v0.2.3 *main</span>
    </div>
    <div id="projectbrief">A low latency retained GUI</div>
   </td>
@@ -89,7 +91,7 @@ $(function() {
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classtt_1_1glyph__stencil.html#ae2b9c91810a8da44c290949d96da19fc">   17</a></span>&#160;    <a class="code" href="classtt_1_1glyph__stencil.html#ae2b9c91810a8da44c290949d96da19fc">glyph_stencil</a>(<a class="code" href="namespacett.html#a6cf086729a79c2f5085e347eda5ec64b">alignment</a> <a class="code" href="namespacett.html#a6cf086729a79c2f5085e347eda5ec64b">alignment</a>, <a class="code" href="classtt_1_1font__glyph__ids.html">font_glyph_ids</a> glyph) noexcept;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classtt_1_1glyph__stencil.html#afc8d08b75be57cfbcd8df004a1f00ab8">   19</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtt_1_1glyph__stencil.html#afc8d08b75be57cfbcd8df004a1f00ab8">draw</a>(<a class="code" href="classtt_1_1draw__context.html">draw_context</a> context, <a class="code" href="classtt_1_1color.html">tt::color</a> <a class="code" href="classtt_1_1color.html">color</a>) noexcept <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classtt_1_1glyph__stencil.html#a081a9e52384ed776acc7e396501efcef">   19</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classtt_1_1glyph__stencil.html#a081a9e52384ed776acc7e396501efcef">draw</a>(<a class="code" href="classtt_1_1draw__context.html">draw_context</a> context, <a class="code" href="classtt_1_1color.html">tt::color</a> <a class="code" href="classtt_1_1color.html">color</a>, <a class="code" href="classtt_1_1geo_1_1matrix.html">matrix3</a> <a class="code" href="namespacett.html#a718450ee5b6ab802756663810db94826">transform</a>) noexcept <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classtt_1_1font__glyph__ids.html">font_glyph_ids</a> _glyph;</div>
@@ -102,16 +104,18 @@ $(function() {
 <div class="ttc" id="aclasstt_1_1color_html"><div class="ttname"><a href="classtt_1_1color.html">tt::color</a></div><div class="ttdoc">This is a RGBA floating point color.</div><div class="ttdef"><b>Definition:</b> color.hpp:39</div></div>
 <div class="ttc" id="aclasstt_1_1draw__context_html"><div class="ttname"><a href="classtt_1_1draw__context.html">tt::draw_context</a></div><div class="ttdoc">Draw context for drawing using the TTauri shaders.</div><div class="ttdef"><b>Definition:</b> draw_context.hpp:34</div></div>
 <div class="ttc" id="aclasstt_1_1font__glyph__ids_html"><div class="ttname"><a href="classtt_1_1font__glyph__ids.html">tt::font_glyph_ids</a></div><div class="ttdef"><b>Definition:</b> font_glyph_ids.hpp:78</div></div>
-<div class="ttc" id="aclasstt_1_1geo_1_1matrix_html"><div class="ttname"><a href="classtt_1_1geo_1_1matrix.html">tt::geo::matrix&lt; 2 &gt;</a></div></div>
+<div class="ttc" id="aclasstt_1_1geo_1_1matrix_html"><div class="ttname"><a href="classtt_1_1geo_1_1matrix.html">tt::geo::matrix&lt; 3 &gt;</a></div></div>
 <div class="ttc" id="aclasstt_1_1glyph__stencil_html"><div class="ttname"><a href="classtt_1_1glyph__stencil.html">tt::glyph_stencil</a></div><div class="ttdef"><b>Definition:</b> glyph_stencil.hpp:13</div></div>
+<div class="ttc" id="aclasstt_1_1glyph__stencil_html_a081a9e52384ed776acc7e396501efcef"><div class="ttname"><a href="classtt_1_1glyph__stencil.html#a081a9e52384ed776acc7e396501efcef">tt::glyph_stencil::draw</a></div><div class="ttdeci">void draw(draw_context context, tt::color color, matrix3 transform) noexcept override</div><div class="ttdoc">Draw the cell.</div></div>
 <div class="ttc" id="aclasstt_1_1glyph__stencil_html_ae2b9c91810a8da44c290949d96da19fc"><div class="ttname"><a href="classtt_1_1glyph__stencil.html#ae2b9c91810a8da44c290949d96da19fc">tt::glyph_stencil::glyph_stencil</a></div><div class="ttdeci">glyph_stencil(alignment alignment, font_glyph_ids glyph) noexcept</div></div>
-<div class="ttc" id="aclasstt_1_1glyph__stencil_html_afc8d08b75be57cfbcd8df004a1f00ab8"><div class="ttname"><a href="classtt_1_1glyph__stencil.html#afc8d08b75be57cfbcd8df004a1f00ab8">tt::glyph_stencil::draw</a></div><div class="ttdeci">void draw(draw_context context, tt::color color) noexcept override</div><div class="ttdoc">Draw the cell.</div></div>
 <div class="ttc" id="aclasstt_1_1image__stencil_html"><div class="ttname"><a href="classtt_1_1image__stencil.html">tt::image_stencil</a></div><div class="ttdef"><b>Definition:</b> image_stencil.hpp:11</div></div>
 <div class="ttc" id="aclasstt_1_1image__stencil_html_a0590693c29df56c52a602d69c402b317"><div class="ttname"><a href="classtt_1_1image__stencil.html#a0590693c29df56c52a602d69c402b317">tt::image_stencil::image_stencil</a></div><div class="ttdeci">image_stencil(alignment alignment)</div><div class="ttdef"><b>Definition:</b> image_stencil.hpp:15</div></div>
 <div class="ttc" id="aimage__stencil_8hpp_html"><div class="ttname"><a href="image__stencil_8hpp.html">image_stencil.hpp</a></div></div>
-<div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:12</div></div>
+<div class="ttc" id="anamespacett_html"><div class="ttname"><a href="namespacett.html">tt</a></div><div class="ttdef"><b>Definition:</b> aarect.hpp:14</div></div>
 <div class="ttc" id="anamespacett_html_a6cf086729a79c2f5085e347eda5ec64b"><div class="ttname"><a href="namespacett.html#a6cf086729a79c2f5085e347eda5ec64b">tt::alignment</a></div><div class="ttdeci">alignment</div><div class="ttdef"><b>Definition:</b> alignment.hpp:18</div></div>
+<div class="ttc" id="anamespacett_html_a718450ee5b6ab802756663810db94826"><div class="ttname"><a href="namespacett.html#a718450ee5b6ab802756663810db94826">tt::transform</a></div><div class="ttdeci">T transform(const U &amp;input, F operation)</div><div class="ttdoc">Transform an input container to the output container.</div><div class="ttdef"><b>Definition:</b> algorithm.hpp:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0

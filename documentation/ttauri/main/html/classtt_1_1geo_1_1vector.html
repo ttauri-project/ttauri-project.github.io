@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -13,6 +14,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -22,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TTauri
-   &#160;<span id="projectnumber">main</span>
+   &#160;<span id="projectnumber">v0.1.0 v0.2.3 *main</span>
    </div>
    <div id="projectbrief">A low latency retained GUI</div>
   </td>
@@ -94,6 +96,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1fa439148c62ab1235cdfbea5171c999"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtt_1_1geo_1_1vector.html#a1fa439148c62ab1235cdfbea5171c999">requires</a> (E&lt; D) const expr <a class="el" href="classtt_1_1geo_1_1vector.html">vector</a>(<a class="el" href="classtt_1_1geo_1_1vector.html">vector</a>&lt; E &gt; const &amp;other) noexcept</td></tr>
 <tr class="memdesc:a1fa439148c62ab1235cdfbea5171c999"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a vector from a lower dimension vector.  <a href="classtt_1_1geo_1_1vector.html#a1fa439148c62ab1235cdfbea5171c999">More...</a><br /></td></tr>
 <tr class="separator:a1fa439148c62ab1235cdfbea5171c999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdef49f257032ce33d6260ed3eead521"><td class="memTemplParams" colspan="2">template&lt;int E&gt; </td></tr>
+<tr class="memitem:afdef49f257032ce33d6260ed3eead521"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classtt_1_1geo_1_1vector.html#afdef49f257032ce33d6260ed3eead521">requires</a> (E &gt; D) const expr explicit <a class="el" href="classtt_1_1geo_1_1vector.html">vector</a>(<a class="el" href="classtt_1_1geo_1_1vector.html">vector</a>&lt; E &gt; const &amp;other) noexcept</td></tr>
+<tr class="memdesc:afdef49f257032ce33d6260ed3eead521"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a vector from a higher dimension vector.  <a href="classtt_1_1geo_1_1vector.html#afdef49f257032ce33d6260ed3eead521">More...</a><br /></td></tr>
+<tr class="separator:afdef49f257032ce33d6260ed3eead521"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c3a5ad17afe9baaee921e4dd61cf02a"><td class="memItemLeft" align="right" valign="top">constexpr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtt_1_1geo_1_1vector.html#a3c3a5ad17afe9baaee921e4dd61cf02a">operator f32x4</a> () const noexcept</td></tr>
 <tr class="memdesc:a3c3a5ad17afe9baaee921e4dd61cf02a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert a vector to its f32x4-nummeric_array.  <a href="classtt_1_1geo_1_1vector.html#a3c3a5ad17afe9baaee921e4dd61cf02a">More...</a><br /></td></tr>
 <tr class="separator:a3c3a5ad17afe9baaee921e4dd61cf02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -367,8 +373,51 @@ template&lt;int D&gt; </div>
 
 </div>
 </div>
+<a id="afdef49f257032ce33d6260ed3eead521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdef49f257032ce33d6260ed3eead521">&#9670;&nbsp;</a></span>requires() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int D&gt; </div>
+<div class="memtemplate">
+template&lt;int E&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classtt_1_1geo_1_1vector.html">tt::geo::vector</a>&lt; D &gt;::requires </td>
+          <td>(</td>
+          <td class="paramtype">E&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">D&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const &amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a vector from a higher dimension vector. </p>
+<p>This will clear the values in the higher dimensions. </p>
+
+</div>
+</div>
 <a id="a1fa439148c62ab1235cdfbea5171c999"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fa439148c62ab1235cdfbea5171c999">&#9670;&nbsp;</a></span>requires()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fa439148c62ab1235cdfbea5171c999">&#9670;&nbsp;</a></span>requires() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -427,6 +476,7 @@ template&lt;int D&gt; </div>
 <li>ttauri/geometry/<a class="el" href="vector_8hpp_source.html">vector.hpp</a></li>
 </ul>
 </div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0

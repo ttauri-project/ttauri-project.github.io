@@ -1,3 +1,4 @@
+<!-- HTML header for doxygen 1.9.0-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -13,6 +14,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="customdoxygen.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -22,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">TTauri
-   &#160;<span id="projectnumber">main</span>
+   &#160;<span id="projectnumber">v0.1.0 v0.2.3 *main</span>
    </div>
    <div id="projectbrief">A low latency retained GUI</div>
   </td>
@@ -88,7 +90,7 @@ $(function() {
 : <a class="el" href="classtt_1_1byte__char__traits.html#a81d883d2b6aba53c3d906488095bb970">tt::byte_char_traits</a>
 </li>
 <li>offset()
-: <a class="el" href="classtt_1_1axis__aligned__rectangle.html#a5855f5cbce74b4263e0e16c6ea3e8cce">tt::axis_aligned_rectangle&lt; T &gt;</a>
+: <a class="el" href="classtt_1_1axis__aligned__rectangle.html#a664073adb472a065c688fd0b3faeb055">tt::axis_aligned_rectangle&lt; T &gt;</a>
 , <a class="el" href="classtt_1_1file__view.html#a7de84ccfc2ee016938d7c1c0a0d6f148">tt::file_view</a>
 , <a class="el" href="classtt_1_1resource__view.html#a7c4df0bf22c0a77cf1b5205ced9ed1b9">tt::resource_view</a>
 , <a class="el" href="classtt_1_1static__resource__view.html#ad46dd85d06cccd69c642998a7223c72f">tt::static_resource_view</a>
@@ -118,7 +120,8 @@ $(function() {
 : <a class="el" href="classtt_1_1i32x4.html#ab8306c5cae6bdd0d0562d50f1d8146d8">tt::i32x4</a>
 </li>
 <li>operator aarect()
-: <a class="el" href="classtt_1_1sfloat__rgba32.html#a5fb0f93b7e5f5491bfaf8458246d498f">tt::sfloat_rgba32</a>
+: <a class="el" href="classtt_1_1rect.html#a687c6939373539471d7391ceacf8b05d">tt::rect</a>
+, <a class="el" href="classtt_1_1sfloat__rgba32.html#a5fb0f93b7e5f5491bfaf8458246d498f">tt::sfloat_rgba32</a>
 </li>
 <li>operator bool()
 : <a class="el" href="classtt_1_1axis__aligned__rectangle.html#adaf00ea0c4f373a6e56374e78a299d41">tt::axis_aligned_rectangle&lt; T &gt;</a>
@@ -169,7 +172,6 @@ $(function() {
 , <a class="el" href="classtt_1_1geo_1_1extent.html#af1c23668f39e6a2293a2d7692dc42ec0">tt::geo::extent&lt; D &gt;</a>
 , <a class="el" href="classtt_1_1geo_1_1point.html#abc112c9e24bb14156b3a1d93385f2937">tt::geo::point&lt; D &gt;</a>
 , <a class="el" href="classtt_1_1geo_1_1scale.html#aa986ab97c13b9d4383768ba3451d24c7">tt::geo::scale&lt; D &gt;</a>
-, <a class="el" href="classtt_1_1geo_1_1translate.html#a75638df80f4e1eb1f280fa14ef7592b2">tt::geo::translate&lt; D &gt;</a>
 , <a class="el" href="classtt_1_1geo_1_1vector.html#a3c3a5ad17afe9baaee921e4dd61cf02a">tt::geo::vector&lt; D &gt;</a>
 , <a class="el" href="classtt_1_1i32x4.html#a4e24b1877eb3f5472508afd19852b0c9">tt::i32x4</a>
 , <a class="el" href="classtt_1_1sfloat__rg32.html#a18fb80357498706ad7e875709b027eae">tt::sfloat_rg32</a>
@@ -193,9 +195,11 @@ $(function() {
 : <a class="el" href="classtt_1_1decimal.html#a57c0c324d05e12db02e958c21686b055">tt::decimal</a>
 , <a class="el" href="structtt_1_1token__t.html#aacd53a350f7e2a3502039f318ad89ef6">tt::token_t</a>
 </li>
+<li>operator matrix&lt; 2 &gt;()
+: <a class="el" href="classtt_1_1geo_1_1translate.html#a7734f0099e4b47ce44e230b86af5fbc2">tt::geo::translate&lt; D &gt;</a>
+</li>
 <li>operator matrix&lt; D &gt;()
 : <a class="el" href="classtt_1_1geo_1_1scale.html#a2df9749b1d30c5e66ab853a3172f4f27">tt::geo::scale&lt; D &gt;</a>
-, <a class="el" href="classtt_1_1geo_1_1translate.html#ad626b7201b64ee84aebfb8ad74abbd89">tt::geo::translate&lt; D &gt;</a>
 </li>
 <li>operator matrix&lt; E &gt;()
 : <a class="el" href="classtt_1_1geo_1_1identity.html#a4c2557fb4eb931c19298170adea7873e">tt::geo::identity</a>
@@ -206,6 +210,9 @@ $(function() {
 <li>operator O()
 : <a class="el" href="structtt_1_1fixed.html#a984aee270574bcf05a603c944d9c3ad4">tt::fixed&lt; T, M &gt;</a>
 , <a class="el" href="structtt_1_1safe__int.html#ae8cd2363fb6bb29f04e49ba120d87505">tt::safe_int&lt; T, OnOverflow &gt;</a>
+</li>
+<li>operator point3()
+: <a class="el" href="classtt_1_1sfloat__rgb32.html#a9553f904118e99e2210018f3267359ec">tt::sfloat_rgb32</a>
 </li>
 <li>operator signed char()
 : <a class="el" href="classtt_1_1datum__impl.html#a60ff3bef2b87202a9339c7763e44f306">tt::datum_impl&lt; HasLargeObjects &gt;</a>
@@ -302,6 +309,9 @@ $(function() {
 <li>operator value_type const *()
 : <a class="el" href="structtt_1_1basic__fixed__string.html#a3bb4048a53cebdd94d40dfb6f9055f47">tt::basic_fixed_string&lt; CharT, N &gt;</a>
 </li>
+<li>operator vector&lt; E &gt;()
+: <a class="el" href="classtt_1_1geo_1_1extent.html#ab677326a17a4fa641b1c38d7c3f18147">tt::geo::extent&lt; D &gt;</a>
+</li>
 <li>operator!
 : <a class="el" href="classtt_1_1observable.html#a2809412e700dcb842e054894470d02cc">tt::observable&lt; T &gt;</a>
 </li>
@@ -363,8 +373,8 @@ $(function() {
 </li>
 <li>operator*
 : <a class="el" href="classtt_1_1axis__aligned__rectangle.html#aa994b6188b7a335ec61057725032eefb">tt::axis_aligned_rectangle&lt; T &gt;</a>
-, <a class="el" href="structtt_1_1bezier__curve.html#a114339a60c5c4cd1c0dafee37fe6bc81">tt::bezier_curve</a>
-, <a class="el" href="structtt_1_1bezier__point.html#a3ce3ff37c8a231a6c2a7e04a714220e4">tt::bezier_point</a>
+, <a class="el" href="structtt_1_1bezier__curve.html#a03cf2bccbd489af95eab0a650f4547e0">tt::bezier_curve</a>
+, <a class="el" href="structtt_1_1bezier__point.html#a88bd4031358614e8de8b1d345f7b1cd0">tt::bezier_point</a>
 , <a class="el" href="structtt_1_1cell__address.html#ad6b03820254a61409e015fbae3dbb38f">tt::cell_address</a>
 , <a class="el" href="structtt_1_1cell__address__axis.html#a6dd2f51f7e5660cfac76e8bd2a12e4a9">tt::cell_address_axis&lt; Arrangement &gt;</a>
 , <a class="el" href="classtt_1_1code__point__iterator.html#aa78a2fe433cc6fc761f66a8347137f82">tt::code_point_iterator&lt; Iterator &gt;</a>
@@ -378,8 +388,9 @@ $(function() {
 , <a class="el" href="classtt_1_1geo_1_1matrix.html#acbf2caf6fb8de409b1d4a005ee53c41f">tt::geo::matrix&lt; D &gt;</a>
 , <a class="el" href="classtt_1_1geo_1_1scale.html#a78962be146c24405101a60b208610bec">tt::geo::scale&lt; D &gt;</a>
 , <a class="el" href="classtt_1_1grapheme__iterator.html#af2c423dfd8f46e454e1072da1e699472">tt::grapheme_iterator&lt; Iterator &gt;</a>
-, <a class="el" href="structtt_1_1graphic__path.html#a614ae057155e836ec0c777519e1ee393">tt::graphic_path</a>
+, <a class="el" href="structtt_1_1graphic__path.html#a9d8eb1acacc68865d3b9bfd4035f57a7">tt::graphic_path</a>
 , <a class="el" href="classtt_1_1i32x4.html#ae5b70d96bce1cc9a3bbe859d1d3c52e7">tt::i32x4</a>
+, <a class="el" href="structtt_1_1mouse__event.html#a845568db72af3079dd901c4a8faf6fb5">tt::mouse_event</a>
 , <a class="el" href="classtt_1_1observable.html#a7d9f93bcd4194e94887f40ea5237cd6e">tt::observable&lt; T &gt;</a>
 , <a class="el" href="structtt_1_1parse__result.html#a99d50be81a0e11d0096ca444a6f026bc">tt::parse_result&lt; T &gt;</a>
 , <a class="el" href="classtt_1_1placement__ptr.html#acdef71198ee0052b8c4eab3fecf3ca5a">tt::placement_ptr&lt; T, Byte &gt;</a>
@@ -407,7 +418,7 @@ $(function() {
 , <a class="el" href="classtt_1_1i32x4.html#a8223b2c56c6e392a8df5e1da2478bd48">tt::i32x4</a>
 , <a class="el" href="classtt_1_1indent.html#a614c4282e09b8140ff89e955203f8039">tt::indent</a>
 , <a class="el" href="classtt_1_1interval.html#ad2d92b3cae2f1f512fd3ee1cea8e7d55">tt::interval&lt; T &gt;</a>
-, <a class="el" href="classtt_1_1interval__vec2.html#a3e9dc77909efdea73e9a6dd910051546">tt::interval_vec2</a>
+, <a class="el" href="classtt_1_1interval__extent2.html#a4eb4b09e6d92572e0d6b67f7593e56e5">tt::interval_extent2</a>
 , <a class="el" href="classtt_1_1recursive__iterator.html#a16ae53ce40c564e66706eb00db21dccd">tt::recursive_iterator&lt; ParentIt &gt;</a>
 , <a class="el" href="classtt_1_1vspan__iterator.html#a205146d41e25032441e847edf607ed41">tt::vspan_iterator&lt; T &gt;</a>
 </li>
@@ -439,7 +450,7 @@ $(function() {
 , <a class="el" href="classtt_1_1i32x4.html#aada85e9b02a306e0c2f073b5fd70927b">tt::i32x4</a>
 , <a class="el" href="classtt_1_1indent.html#a61c14debe81f08bc0e599d9cb30be42d">tt::indent</a>
 , <a class="el" href="classtt_1_1interval.html#a65588fd1bba017977752a9c125c2e203">tt::interval&lt; T &gt;</a>
-, <a class="el" href="classtt_1_1interval__vec2.html#a9a50c21f4de640720a7b4be3a621cc16">tt::interval_vec2</a>
+, <a class="el" href="classtt_1_1interval__extent2.html#a07f7b143a4cca439c7eea5b7e7347bf7">tt::interval_extent2</a>
 , <a class="el" href="classtt_1_1observable.html#ad498a2e4766a7749a3638aca4c609f21">tt::observable&lt; T &gt;</a>
 , <a class="el" href="classtt_1_1parse__location.html#af06cfe9ce5ec8d49acac93c98bb40fbd">tt::parse_location</a>
 , <a class="el" href="classtt_1_1recursive__iterator.html#a1c75f63a5aed53e70d54678cdd42a592">tt::recursive_iterator&lt; ParentIt &gt;</a>
@@ -454,7 +465,7 @@ $(function() {
 , <a class="el" href="classtt_1_1gap__buffer__iterator.html#ae83b4ec559a4bfea1bbe8436ecb2301e">tt::gap_buffer_iterator&lt; T &gt;</a>
 , <a class="el" href="classtt_1_1i32x4.html#ad6ce203db432882bb21d3e1f56eb781b">tt::i32x4</a>
 , <a class="el" href="classtt_1_1interval.html#ae7e1c625b1995a9daaf3939d59eef6f2">tt::interval&lt; T &gt;</a>
-, <a class="el" href="classtt_1_1interval__vec2.html#a00250f35398ec8759c63c09a4da4c9f6">tt::interval_vec2</a>
+, <a class="el" href="classtt_1_1interval__extent2.html#a5015c8b161864383fba26c8b3b2edc16">tt::interval_extent2</a>
 , <a class="el" href="classtt_1_1numeric__array.html#a19c5ae32edbfd6bf6f0539fc545e63e7">tt::numeric_array&lt; T, N &gt;</a>
 , <a class="el" href="classtt_1_1recursive__iterator.html#a153c4a0af3165ed823ba1d7cf3ef4fec">tt::recursive_iterator&lt; ParentIt &gt;</a>
 , <a class="el" href="classtt_1_1vspan__iterator.html#a553b80e7b1424e75ff0417537c6e1c04">tt::vspan_iterator&lt; T &gt;</a>
@@ -474,7 +485,7 @@ $(function() {
 , <a class="el" href="classtt_1_1gap__buffer__iterator.html#ac5352744306859b0c86848450252d51b">tt::gap_buffer_iterator&lt; T &gt;</a>
 , <a class="el" href="classtt_1_1i32x4.html#a5f701e22b1ce30c7eea71b47f91ce28e">tt::i32x4</a>
 , <a class="el" href="classtt_1_1interval.html#ac5042f03a9414bd17f5900b934984863">tt::interval&lt; T &gt;</a>
-, <a class="el" href="classtt_1_1interval__vec2.html#a9631b94d1d17ebb418646385976157b1">tt::interval_vec2</a>
+, <a class="el" href="classtt_1_1interval__extent2.html#a844f5947760f50581ff61b0b8b089f2c">tt::interval_extent2</a>
 , <a class="el" href="classtt_1_1recursive__iterator.html#a98f40e6ce36fe2c485c0aec074ce4e11">tt::recursive_iterator&lt; ParentIt &gt;</a>
 , <a class="el" href="classtt_1_1vspan__iterator.html#aa5b8b028d2a2c28d16a797a52a72d35a">tt::vspan_iterator&lt; T &gt;</a>
 </li>
@@ -521,7 +532,7 @@ $(function() {
 , <a class="el" href="structtt_1_1gstring.html#aa8fdba11823e15b3dd2a2be79cc2d236">tt::gstring</a>
 , <a class="el" href="classtt_1_1i32x4.html#aab6da299aa172c380f071c84a86daa8c">tt::i32x4</a>
 , <a class="el" href="classtt_1_1interval.html#a46caeb16bef2443a6b5ce47c2cda616a">tt::interval&lt; T &gt;</a>
-, <a class="el" href="classtt_1_1interval__vec2.html#ad5359f02bec7651cc42d0735a8a5d5f3">tt::interval_vec2</a>
+, <a class="el" href="classtt_1_1interval__extent2.html#acc4f8a4d034d83353d353130787f9e7a">tt::interval_extent2</a>
 , <a class="el" href="structtt_1_1keyboard__event.html#ab01e245d12736af481c5931d20925a67">tt::keyboard_event</a>
 , <a class="el" href="classtt_1_1keyboard__key.html#a72273ee828f5345969dc61500a1df170">tt::keyboard_key</a>
 , <a class="el" href="classtt_1_1label.html#a4a16fb3db753849ef220fdaad7a8d37a">tt::label</a>
@@ -570,111 +581,111 @@ $(function() {
 , <a class="el" href="structtt_1_1basic__fixed__string.html#a0cc0c637cfe524534603ef8e75fcef3c">tt::basic_fixed_string&lt; CharT, N &gt;</a>
 , <a class="el" href="structtt_1_1bezier__curve.html#a89ae3f8887bb21de4fc175e6fc1ec2dc">tt::bezier_curve</a>
 , <a class="el" href="structtt_1_1bigint.html#ad943e872b0ac20b63e0fc5c79483b09e">tt::bigint&lt; T, N &gt;</a>
-, <a class="el" href="classtt_1_1code__point__iterator.html#a3463863fe4d8d22d23524c6a3fb3b991">tt::code_point_iterator&lt; Iterator &gt;</a>
+, <a class="el" href="classtt_1_1code__point__iterator.html#a90123f8cc94f226d592df72a6f8fd112">tt::code_point_iterator&lt; Iterator &gt;</a>
 , <a class="el" href="classtt_1_1color.html#a6584568da2ae28dd294a1b82a8b36522">tt::color</a>
 , <a class="el" href="classtt_1_1corner__shapes.html#ae61e95cac35070df9717f73e8a27f27b">tt::corner_shapes</a>
-, <a class="el" href="classtt_1_1datum__impl.html#a78ac32fdb9ebd6b88dfa8ef2734710cb">tt::datum_impl&lt; HasLargeObjects &gt;</a>
-, <a class="el" href="classtt_1_1decimal.html#ac2ff0c7c693c28e63b2a53d75590e3e1">tt::decimal</a>
+, <a class="el" href="classtt_1_1datum__impl.html#af1f824b88372a9ace4f20142e8e28c5e">tt::datum_impl&lt; HasLargeObjects &gt;</a>
+, <a class="el" href="classtt_1_1decimal.html#a929fcf626b6bf5b7c98cbd796bb03c58">tt::decimal</a>
 , <a class="el" href="classtt_1_1delayed__format.html#a3e97eab462ff1c23e70ec71acc3e08a4">tt::delayed_format&lt; Fmt, Values &gt;</a>
-, <a class="el" href="classtt_1_1detail_1_1label__arguments__base.html#a611fd69d144ced24530a98509ab2f3be">tt::detail::label_arguments_base</a>
-, <a class="el" href="classtt_1_1detail_1_1observable__base.html#a51bd3e8381c0d8f76e7b09f5884790f4">tt::detail::observable_base&lt; T &gt;</a>
+, <a class="el" href="classtt_1_1detail_1_1label__arguments__base.html#a36bf39ec9aba791d0de8f3a9c538b620">tt::detail::label_arguments_base</a>
+, <a class="el" href="classtt_1_1detail_1_1observable__base.html#a77b9e63db98155038f5a74145bbe1866">tt::detail::observable_base&lt; T &gt;</a>
 , <a class="el" href="classtt_1_1draw__context.html#a1ec3d3a8454477d1ca2318a9c71366dd">tt::draw_context</a>
 , <a class="el" href="classtt_1_1editable__text.html#ab9c65cbbcdc21903db61bc4705a1f8d5">tt::editable_text</a>
 , <a class="el" href="structtt_1_1endian__buf__t.html#aa487cd83b1c3eb57c8b2ed79d7dd1cf3">tt::endian_buf_t&lt; T, E, A &gt;</a>
-, <a class="el" href="classtt_1_1file.html#a092ffea65751fd6e84ff2061628c45b7">tt::file</a>
+, <a class="el" href="classtt_1_1file.html#a346daa203170c1387850719262b26d27">tt::file</a>
 , <a class="el" href="classtt_1_1file__mapping.html#a6607cd25cc96bb249df09801453606dd">tt::file_mapping</a>
 , <a class="el" href="classtt_1_1file__view.html#a654851266ae349ef623a268706695d25">tt::file_view</a>
-, <a class="el" href="structtt_1_1fixed.html#a906f8b09f1dcb4df23f79eb294f6b036">tt::fixed&lt; T, M &gt;</a>
+, <a class="el" href="structtt_1_1fixed.html#a872e5bbcd0c67ed4bdc3c50c7e2743ba">tt::fixed&lt; T, M &gt;</a>
 , <a class="el" href="classtt_1_1float16.html#a3850d6d3594ab99d9de8f3bbfdbc0a5b">tt::float16</a>
-, <a class="el" href="classtt_1_1font.html#acf2dd0f8e94bb0e0d85a2afab56036d0">tt::font</a>
+, <a class="el" href="classtt_1_1font.html#aa24a2d063a475f32c0ae1f77bec0efd9">tt::font</a>
 , <a class="el" href="classtt_1_1font__glyph__ids.html#aa8b5307ae5ccdd43be2d849187505b1c">tt::font_glyph_ids</a>
-, <a class="el" href="classtt_1_1gap__buffer.html#a2b579a0af471bfb10a26a1b3fa7623df">tt::gap_buffer&lt; T, Allocator &gt;</a>
-, <a class="el" href="classtt_1_1gap__buffer__iterator.html#a6bf53ae2af4754c7573e15c0058bd0fc">tt::gap_buffer_iterator&lt; T &gt;</a>
+, <a class="el" href="classtt_1_1gap__buffer.html#a1d6848f3405cf0f34f2e3ec8420e13e5">tt::gap_buffer&lt; T, Allocator &gt;</a>
+, <a class="el" href="classtt_1_1gap__buffer__iterator.html#ace72e30580e6fedfa9a1bbb0b37dc0c2">tt::gap_buffer_iterator&lt; T &gt;</a>
 , <a class="el" href="classtt_1_1generator.html#a096855c1ff84db033cf110460e5259a2">tt::generator&lt; T &gt;</a>
 , <a class="el" href="classtt_1_1geo_1_1extent.html#adedc92e82e9e5498661f86c958f2aa3f">tt::geo::extent&lt; D &gt;</a>
-, <a class="el" href="classtt_1_1geo_1_1identity.html#ab9ad62654c4e803cfe9dc84c5a65a583">tt::geo::identity</a>
+, <a class="el" href="classtt_1_1geo_1_1identity.html#a0579b642a99eaaef08333f3064373b5b">tt::geo::identity</a>
 , <a class="el" href="classtt_1_1geo_1_1matrix.html#a10cfee01cf5a393a9b41804844a46943">tt::geo::matrix&lt; D &gt;</a>
-, <a class="el" href="classtt_1_1geo_1_1point.html#adf20a1be46e1e316ff1ae46e7abb0dde">tt::geo::point&lt; D &gt;</a>
+, <a class="el" href="classtt_1_1geo_1_1point.html#ab2d67a2e7f0d96e9b71bfcbfa34e5d98">tt::geo::point&lt; D &gt;</a>
 , <a class="el" href="classtt_1_1geo_1_1rotate.html#a5d64e38c3487518cf1955462fb7588b3">tt::geo::rotate&lt; D &gt;</a>
-, <a class="el" href="classtt_1_1geo_1_1scale.html#ac5d2a441092d7cb43d77cbe493f2ad4a">tt::geo::scale&lt; D &gt;</a>
+, <a class="el" href="classtt_1_1geo_1_1scale.html#a0737876ae69c86ca3a5e54beea11c792">tt::geo::scale&lt; D &gt;</a>
 , <a class="el" href="classtt_1_1geo_1_1translate.html#ae4227c078c4aa624d3e9ef1440cddc39">tt::geo::translate&lt; D &gt;</a>
-, <a class="el" href="classtt_1_1geo_1_1vector.html#a99c2eb189876d2173a31c73d8a289768">tt::geo::vector&lt; D &gt;</a>
-, <a class="el" href="structtt_1_1glyph__metrics.html#a3ac124ca7dd873e181a119a59268c99a">tt::glyph_metrics</a>
-, <a class="el" href="classtt_1_1grapheme.html#a27ee30fc00777b64b282fbd9949feaf8">tt::grapheme</a>
-, <a class="el" href="classtt_1_1grapheme__iterator.html#a4d2261a3060caac6c6ec774d7f9fccbc">tt::grapheme_iterator&lt; Iterator &gt;</a>
+, <a class="el" href="classtt_1_1geo_1_1vector.html#afd07493caed21a2e87e1bd5e1f6368ed">tt::geo::vector&lt; D &gt;</a>
+, <a class="el" href="structtt_1_1glyph__metrics.html#a7708a5f34325514c90a251b1be97567f">tt::glyph_metrics</a>
+, <a class="el" href="classtt_1_1grapheme.html#a4e1ccf48b618e2fffc28fb28514cddac">tt::grapheme</a>
+, <a class="el" href="classtt_1_1grapheme__iterator.html#af7bf2beb5ed0c2542d649fbab48f23f9">tt::grapheme_iterator&lt; Iterator &gt;</a>
 , <a class="el" href="classtt_1_1gui__device.html#a256791e405703b8d6dbc87ff076e1bb9">tt::gui_device</a>
 , <a class="el" href="classtt_1_1gui__device__vulkan.html#a584ca09352e96f29106f116b27976d71">tt::gui_device_vulkan</a>
-, <a class="el" href="classtt_1_1gui__system.html#a195ab34415a1b930f106db536c3e08bc">tt::gui_system</a>
+, <a class="el" href="classtt_1_1gui__system.html#a58b88b10abcdb0590a77d6486daccc67">tt::gui_system</a>
 , <a class="el" href="classtt_1_1gui__system__vulkan.html#a926a5924ca77e4d41d2294889c5254ae">tt::gui_system_vulkan</a>
-, <a class="el" href="classtt_1_1gui__system__vulkan__macos.html#aed063fd0fe0f3b25b580f43218e9dcf0">tt::gui_system_vulkan_macos</a>
+, <a class="el" href="classtt_1_1gui__system__vulkan__macos.html#ada4c7dd3af510cc56f0a433bdb527e44">tt::gui_system_vulkan_macos</a>
 , <a class="el" href="classtt_1_1gui__system__vulkan__win32.html#a7c2e72d9449fa1a458fc2690e96eadb0">tt::gui_system_vulkan_win32</a>
 , <a class="el" href="classtt_1_1gui__window.html#afc0ef339ce7a33508b297618f539939b">tt::gui_window</a>
 , <a class="el" href="classtt_1_1gui__window__vulkan.html#a2898fef6ad358e4a97da3e0444ba72a3">tt::gui_window_vulkan</a>
-, <a class="el" href="classtt_1_1gui__window__vulkan__macos.html#a052009e749d532aaabbaa11005aa8900">tt::gui_window_vulkan_macos</a>
+, <a class="el" href="classtt_1_1gui__window__vulkan__macos.html#afb39766fe45eb8a633a922b23225b9a0">tt::gui_window_vulkan_macos</a>
 , <a class="el" href="classtt_1_1gui__window__vulkan__win32.html#abc4cbef41d8b9d5930e251d848250a16">tt::gui_window_vulkan_win32</a>
 , <a class="el" href="classtt_1_1i32x4.html#aebf5ece9acb5454aa76e2f823cd03149">tt::i32x4</a>
-, <a class="el" href="classtt_1_1icon.html#a399a69131063339bbb7b08e661ff513f">tt::icon</a>
+, <a class="el" href="classtt_1_1icon.html#adfde9b9bf9e39f3adcd30347cb1ea07d">tt::icon</a>
 , <a class="el" href="classtt_1_1indent.html#ab3edeebd11df8461f9eebda3b53d0744">tt::indent</a>
 , <a class="el" href="classtt_1_1interval.html#a2cd440a299f2842984abafd6563539b9">tt::interval&lt; T &gt;</a>
-, <a class="el" href="classtt_1_1interval__vec2.html#a104930bfa0cee2358dffee8b7db487ff">tt::interval_vec2</a>
-, <a class="el" href="classtt_1_1l10n.html#ace007ca56fdd3fabed8a49f896800025">tt::l10n</a>
-, <a class="el" href="classtt_1_1label.html#a15268e6815cfcd36040045d441d272ce">tt::label</a>
-, <a class="el" href="structtt_1_1language.html#a0618284d4382e6c588f379f3fa87cf45">tt::language</a>
+, <a class="el" href="classtt_1_1interval__extent2.html#a116696a0e0f62e6f8813e8817105d314">tt::interval_extent2</a>
+, <a class="el" href="classtt_1_1l10n.html#af9f6f54357a06915176190a23b00a78a">tt::l10n</a>
+, <a class="el" href="classtt_1_1label.html#a70c72ec2e6e1783a0cbf79d6baa66051">tt::label</a>
+, <a class="el" href="structtt_1_1language.html#ad22d3b8f654125f74294f95e0f9a47f5">tt::language</a>
 , <a class="el" href="classtt_1_1language__tag.html#a198a9d0179c6b1d81491235427b586ac">tt::language_tag</a>
-, <a class="el" href="classtt_1_1log__message__base.html#a1631ddac3d94d29f629ff396aadb404d">tt::log_message_base</a>
+, <a class="el" href="classtt_1_1log__message__base.html#aa28e78953987e74bc7b21150ed09c1e8">tt::log_message_base</a>
 , <a class="el" href="classtt_1_1numeric__array.html#a793f57f2e9b50ab66c7e84911a9c0c85">tt::numeric_array&lt; T, N &gt;</a>
-, <a class="el" href="classtt_1_1observable.html#a96c335a044aaeaa6998a6b6e945c5d46">tt::observable&lt; T &gt;</a>
+, <a class="el" href="classtt_1_1observable.html#a26dcf034d5815f55631157d79ccb1f28">tt::observable&lt; T &gt;</a>
 , <a class="el" href="classtt_1_1packet.html#af3bf20ab165e789064e4e28eebe8bd6f">tt::packet</a>
-, <a class="el" href="classtt_1_1pipeline.html#a0fe3c4b186bac1f5e4b9244e2846e779">tt::pipeline</a>
+, <a class="el" href="classtt_1_1pipeline.html#a5d0fafbe42696eb05148e01038f57ba2">tt::pipeline</a>
 , <a class="el" href="structtt_1_1pipeline__box_1_1device__shared.html#a335b08af63ce1ba718bd7db43a350d8a">tt::pipeline_box::device_shared</a>
 , <a class="el" href="classtt_1_1pipeline__box_1_1pipeline__box.html#a934da712e523e83797e5fd6dbf4cc8b4">tt::pipeline_box::pipeline_box</a>
 , <a class="el" href="structtt_1_1pipeline__flat_1_1device__shared.html#a217666fbfc2c70a63f8ad2df49dda9ee">tt::pipeline_flat::device_shared</a>
 , <a class="el" href="classtt_1_1pipeline__flat_1_1pipeline__flat.html#aa6de6b2c8af47f4e7d1a20110dab6842">tt::pipeline_flat::pipeline_flat</a>
-, <a class="el" href="structtt_1_1pipeline__image_1_1device__shared.html#a9fd89eed7aa65ad0d179efa29bb52b73">tt::pipeline_image::device_shared</a>
-, <a class="el" href="structtt_1_1pipeline__image_1_1_image.html#ab647738a23150b812f6a3dbd6e3d62fa">tt::pipeline_image::Image</a>
-, <a class="el" href="classtt_1_1pipeline__image_1_1pipeline__image.html#a056beca6dc5f577601ea9f17f9afa271">tt::pipeline_image::pipeline_image</a>
+, <a class="el" href="structtt_1_1pipeline__image_1_1device__shared.html#ace8c658447ef7e5e863082b7c3c2b660">tt::pipeline_image::device_shared</a>
+, <a class="el" href="structtt_1_1pipeline__image_1_1_image.html#a221d0db268acf0779a8b36ab51a6fa63">tt::pipeline_image::Image</a>
+, <a class="el" href="classtt_1_1pipeline__image_1_1pipeline__image.html#ae83eb7571777cd04e6d21c9befec8b3d">tt::pipeline_image::pipeline_image</a>
 , <a class="el" href="structtt_1_1pipeline___s_d_f_1_1device__shared.html#a023ba627d5551955df31dc73d5cb658b">tt::pipeline_SDF::device_shared</a>
-, <a class="el" href="classtt_1_1pipeline___s_d_f_1_1pipeline___s_d_f.html#ac2e9e709ab6de981c7a1ce82bb9c324d">tt::pipeline_SDF::pipeline_SDF</a>
+, <a class="el" href="classtt_1_1pipeline___s_d_f_1_1pipeline___s_d_f.html#aec0b7e73c2382a38ca235d7534264c02">tt::pipeline_SDF::pipeline_SDF</a>
 , <a class="el" href="structtt_1_1pipeline__tone__mapper_1_1device__shared.html#a2988fb52bdb1bf9d314de3d40209358e">tt::pipeline_tone_mapper::device_shared</a>
-, <a class="el" href="classtt_1_1pipeline__tone__mapper_1_1pipeline__tone__mapper.html#a112dd16e3ae07217bfc8f5417c16858a">tt::pipeline_tone_mapper::pipeline_tone_mapper</a>
+, <a class="el" href="classtt_1_1pipeline__tone__mapper_1_1pipeline__tone__mapper.html#a5daf450deff73fe3fa340a655666a5d6">tt::pipeline_tone_mapper::pipeline_tone_mapper</a>
 , <a class="el" href="classtt_1_1pipeline__vulkan.html#a3f1d72460863925718c4fdb4dd541e7e">tt::pipeline_vulkan</a>
-, <a class="el" href="classtt_1_1pixel__map.html#a7a1d300b675ee0ae723f188efcc9fcab">tt::pixel_map&lt; T &gt;</a>
-, <a class="el" href="classtt_1_1placement__array.html#aaf1cbcac42cc1cf36ebdff03ee98027b">tt::placement_array&lt; T, Byte &gt;</a>
+, <a class="el" href="classtt_1_1pixel__map.html#a0c1c9ab48d50c49963a8b43a8f41956e">tt::pixel_map&lt; T &gt;</a>
+, <a class="el" href="classtt_1_1placement__array.html#a23136baf6ef5f1d631465b19c76464fb">tt::placement_array&lt; T, Byte &gt;</a>
 , <a class="el" href="classtt_1_1polymorphic__optional.html#a85e2137a3a7e0ff170e0d27e2be388b5">tt::polymorphic_optional&lt; BaseType, Capacity &gt;</a>
-, <a class="el" href="classtt_1_1preferences.html#a45011f64dd2b86b9c1d57370cce78458">tt::preferences</a>
-, <a class="el" href="classtt_1_1ranged__numeric.html#abf86711d9b91fdec9814b499a366ce08">tt::ranged_numeric&lt; T, A, B &gt;</a>
-, <a class="el" href="classtt_1_1rect.html#a0a8b5ea6a8f34ec1ea07ecbe5809fc3b">tt::rect</a>
-, <a class="el" href="classtt_1_1recursive__iterator.html#a23667903f22b3cbafdd5d2fff660ad26">tt::recursive_iterator&lt; ParentIt &gt;</a>
+, <a class="el" href="classtt_1_1preferences.html#a3f6ad36f53339637f75c73df1d127b1e">tt::preferences</a>
+, <a class="el" href="classtt_1_1ranged__numeric.html#a2ae6e5ee186d55d3c1958a9722753702">tt::ranged_numeric&lt; T, A, B &gt;</a>
+, <a class="el" href="classtt_1_1rect.html#aabd90695408cf8b9bc96e8ca39110dca">tt::rect</a>
+, <a class="el" href="classtt_1_1recursive__iterator.html#af1fe606607ca142368c1b3cba920698b">tt::recursive_iterator&lt; ParentIt &gt;</a>
 , <a class="el" href="classtt_1_1resource__view.html#a46a60213e45533d9433bc5569b4a881f">tt::resource_view</a>
-, <a class="el" href="structtt_1_1safe__int.html#aacdaa6df5ac26d7538858d61a3b818be">tt::safe_int&lt; T, OnOverflow &gt;</a>
+, <a class="el" href="structtt_1_1safe__int.html#ae99ae8f9079d7c8cdb47b62b1c2bd6f0">tt::safe_int&lt; T, OnOverflow &gt;</a>
 , <a class="el" href="structtt_1_1sdf__r8.html#a656fd314afee5d97fcf9109546cc4564">tt::sdf_r8</a>
 , <a class="el" href="classtt_1_1sfloat__rg32.html#abacdef44854b864c811de8b7ad51001e">tt::sfloat_rg32</a>
-, <a class="el" href="classtt_1_1sfloat__rgb32.html#a4886efcea592549907a890020df73a92">tt::sfloat_rgb32</a>
-, <a class="el" href="classtt_1_1sfloat__rgba16.html#a25dd3fa2a04cffb5dc04be30b01ce2e0">tt::sfloat_rgba16</a>
-, <a class="el" href="classtt_1_1sfloat__rgba32.html#ac392c38f67eaf2694582ba34b58391b3">tt::sfloat_rgba32</a>
-, <a class="el" href="classtt_1_1shaped__text.html#a3e3ef3e88cdd1e2f7714d4ebe1f3e701">tt::shaped_text</a>
-, <a class="el" href="structtt_1_1skeleton__parse__context.html#a943425af9d6d6d4665cdcf787834c715">tt::skeleton_parse_context</a>
-, <a class="el" href="classtt_1_1small__map.html#a74bcd670f8ae6a6531318dedf0525ab5">tt::small_map&lt; K, V, N &gt;</a>
-, <a class="el" href="structtt_1_1snorm__r8.html#a2bcec8cd93ea6550670eb38b4e658f03">tt::snorm_r8</a>
-, <a class="el" href="classtt_1_1source__location.html#a6340b915a4ea3440fa72cf00d8e9faa3">tt::source_location</a>
-, <a class="el" href="classtt_1_1srgb__abgr8__pack.html#a032ff631f01313c6101fe9ec46630057">tt::srgb_abgr8_pack</a>
+, <a class="el" href="classtt_1_1sfloat__rgb32.html#a58df9833d3f2d5d82063f85160242e46">tt::sfloat_rgb32</a>
+, <a class="el" href="classtt_1_1sfloat__rgba16.html#a852d9d5ce052f248892b2b3e2890a561">tt::sfloat_rgba16</a>
+, <a class="el" href="classtt_1_1sfloat__rgba32.html#aef54485b6ef52df109af111b520c2862">tt::sfloat_rgba32</a>
+, <a class="el" href="classtt_1_1shaped__text.html#afe261479d3578664e5bf1ff82165ed16">tt::shaped_text</a>
+, <a class="el" href="structtt_1_1skeleton__parse__context.html#a1f9a74b0800e9ad4d55a6ac822f5dc85">tt::skeleton_parse_context</a>
+, <a class="el" href="classtt_1_1small__map.html#aa55cd459c43b570d6bad67ab8802d7b1">tt::small_map&lt; K, V, N &gt;</a>
+, <a class="el" href="structtt_1_1snorm__r8.html#afc09942ce75ae3b6726796cd388bc917">tt::snorm_r8</a>
+, <a class="el" href="classtt_1_1source__location.html#ac42f7db86a14ef6e112ac60a6799ba16">tt::source_location</a>
+, <a class="el" href="classtt_1_1srgb__abgr8__pack.html#aa17d8e8b24b758a41b5a4bdcd57e16a2">tt::srgb_abgr8_pack</a>
 , <a class="el" href="classtt_1_1static__resource__view.html#a5069cddfcd22ec16db0d545abdc043d2">tt::static_resource_view</a>
-, <a class="el" href="classtt_1_1stencil.html#a91ebb4ea0468be8aa2ae647e5c40ae31">tt::stencil</a>
-, <a class="el" href="classtt_1_1tagged__id.html#a87cc7a94906f4180b6f58eda21d1b294">tt::tagged_id&lt; T, Tag, Max &gt;</a>
+, <a class="el" href="classtt_1_1stencil.html#a87f2d80b94709cb447eb6ffdee084353">tt::stencil</a>
+, <a class="el" href="classtt_1_1tagged__id.html#a5216e084a98b6d7723e3100856da9682">tt::tagged_id&lt; T, Tag, Max &gt;</a>
 , <a class="el" href="structtt_1_1text__style.html#ad030813a21df69462ee088da5f7a7652">tt::text_style</a>
-, <a class="el" href="classtt_1_1theme.html#a32039287d3206a340220e73769ef9dba">tt::theme</a>
+, <a class="el" href="classtt_1_1theme.html#a3468f5d6fb0b0ce8d7d3d517a6435aef">tt::theme</a>
 , <a class="el" href="structtt_1_1token__t.html#a0dc8e37761aafc98363e73a221d0617f">tt::token_t</a>
 , <a class="el" href="classtt_1_1trace.html#a49211bb9f6886c27c1fb2b9761cc2cc3">tt::trace&lt; Tag, InfoTags &gt;</a>
-, <a class="el" href="structtt_1_1trace__data.html#ad64a9f909cfe824c51f411ff1160edc1">tt::trace_data&lt; Tag, InfoTags &gt;</a>
-, <a class="el" href="classtt_1_1true__type__font.html#ae20ff798de486ca224f71343b2b1c539">tt::true_type_font</a>
+, <a class="el" href="structtt_1_1trace__data.html#a64fe60259fd90edb6aba01862472f7f5">tt::trace_data&lt; Tag, InfoTags &gt;</a>
+, <a class="el" href="classtt_1_1true__type__font.html#ac428a1120c40b19eed86fdb0d32fdc66">tt::true_type_font</a>
 , <a class="el" href="classtt_1_1unfair__mutex.html#a7fd016cd744d7466da88c617d54208c9">tt::unfair_mutex</a>
 , <a class="el" href="classtt_1_1unfair__recursive__mutex.html#a4e8d6e6117cd70a7d4b20afe31845ae4">tt::unfair_recursive_mutex</a>
-, <a class="el" href="structtt_1_1unorm__a2bgr10__pack.html#a3488c7d18219cb2ec5f4f65c52a6cf33">tt::unorm_a2bgr10_pack</a>
+, <a class="el" href="structtt_1_1unorm__a2bgr10__pack.html#af2871fe0ab6103b0240da8223d94c677">tt::unorm_a2bgr10_pack</a>
 , <a class="el" href="classtt_1_1_u_r_l.html#a368d3db15ad5fa90cb4c4dece0663b3c">tt::URL</a>
 , <a class="el" href="classtt_1_1vspan.html#a1328ebf4124ec91ef21cdc5411efb0cc">tt::vspan&lt; T &gt;</a>
-, <a class="el" href="classtt_1_1vspan__iterator.html#af6c222491325b77df5f89127e7b69a62">tt::vspan_iterator&lt; T &gt;</a>
-, <a class="el" href="classtt_1_1wfree__message__queue.html#ac3df86b18dd274a67abe57ddc3aae115">tt::wfree_message_queue&lt; T, Capacity &gt;</a>
-, <a class="el" href="classtt_1_1wfree__message__queue__operation.html#a7b81913fbb5b4845957974282c94949e">tt::wfree_message_queue_operation&lt; T, Capacity, WriteOperation &gt;</a>
+, <a class="el" href="classtt_1_1vspan__iterator.html#a1da6475bdd1b02aaf44c4d24704a2ce0">tt::vspan_iterator&lt; T &gt;</a>
+, <a class="el" href="classtt_1_1wfree__message__queue.html#a7a40f070b000aa6c1b44241a9b4d2522">tt::wfree_message_queue&lt; T, Capacity &gt;</a>
+, <a class="el" href="classtt_1_1wfree__message__queue__operation.html#ad9f84a141a325cc668163e8aa9863d2a">tt::wfree_message_queue_operation&lt; T, Capacity, WriteOperation &gt;</a>
 , <a class="el" href="classtt_1_1wfree__unordered__map.html#a7f1cd89c6643544afeaa0d3563da7c09">tt::wfree_unordered_map&lt; K, V, MAX_NR_ITEMS &gt;</a>
 , <a class="el" href="structtt_1_1wfree__unordered__map__item.html#ac4741e28e7a44925951040c613651509">tt::wfree_unordered_map_item&lt; K, V &gt;</a>
 , <a class="el" href="classtt_1_1widget.html#a6616edd2f46f7858fe56e02f4ed41496">tt::widget</a>
@@ -694,18 +705,18 @@ $(function() {
 , <a class="el" href="classtt_1_1font__glyph__ids.html#aaa1e256cadf0a36a9f4991dfafde28c4">tt::font_glyph_ids</a>
 , <a class="el" href="classtt_1_1font__glyph__ids__long.html#a419b1fde86d91869de65600807901071">tt::font_glyph_ids_long</a>
 , <a class="el" href="structtt_1_1font__grapheme__id.html#a996cecf68effd0db185ed0eb9a54eb14">tt::font_grapheme_id</a>
-, <a class="el" href="classtt_1_1gap__buffer.html#a96c519896baf5285030d5757eee669bb">tt::gap_buffer&lt; T, Allocator &gt;</a>
+, <a class="el" href="classtt_1_1gap__buffer.html#adfb5555d5c23651c3962f54d34d98782">tt::gap_buffer&lt; T, Allocator &gt;</a>
 , <a class="el" href="classtt_1_1generator_1_1iterator.html#a82baa838ce46bb412b2f0a6b581d82fd">tt::generator&lt; T &gt;::iterator</a>
 , <a class="el" href="classtt_1_1geo_1_1matrix.html#a47bbec717fdc7816c92cd3627aabc397">tt::geo::matrix&lt; D &gt;</a>
-, <a class="el" href="classtt_1_1grapheme.html#ab0573bc0823176818dab4101a4eb5d66">tt::grapheme</a>
+, <a class="el" href="classtt_1_1grapheme.html#a7531d2d02300835bbc127cba20e2a479">tt::grapheme</a>
 , <a class="el" href="classtt_1_1grapheme__iterator.html#a82908589aeb676102e6a6479cee79303">tt::grapheme_iterator&lt; Iterator &gt;</a>
 , <a class="el" href="classtt_1_1i32x4.html#ab3a17d585a0f00401e98c6c64110b859">tt::i32x4</a>
 , <a class="el" href="classtt_1_1icon.html#aaad4782032002ca152abc4a922145ed6">tt::icon</a>
-, <a class="el" href="classtt_1_1interval__vec2.html#aeb8abeee61eaf47052ac0849b8b6b09a">tt::interval_vec2</a>
+, <a class="el" href="classtt_1_1interval__extent2.html#ae75c4b71892be6cc3292e18b0cc0876b">tt::interval_extent2</a>
 , <a class="el" href="classtt_1_1keyboard__key.html#ad7fd44dcb7ed2ff1febb9ddf07a4954a">tt::keyboard_key</a>
 , <a class="el" href="classtt_1_1label.html#a0b845bfa1960851584a14969d6fb8a21">tt::label</a>
 , <a class="el" href="classtt_1_1language__tag.html#a9ca1f57d9e2ba2ea8b09daf4e60d7dd2">tt::language_tag</a>
-, <a class="el" href="classtt_1_1observable.html#a4b9b350ae3a1e3719ab5b0eb57cb52b1">tt::observable&lt; T &gt;</a>
+, <a class="el" href="classtt_1_1observable.html#a505264fefd4f6eb4f2f0fb8ea55f7b64">tt::observable&lt; T &gt;</a>
 , <a class="el" href="structtt_1_1pipeline__image_1_1_image_location.html#a3cdac0b35da01e05ef28f4d777cc5c92">tt::pipeline_image::ImageLocation</a>
 , <a class="el" href="classtt_1_1quarter.html#a3a9a6973d7e0e8632d97c10d4bee9ff4">tt::quarter</a>
 , <a class="el" href="classtt_1_1ranged__numeric.html#adbe67cd45f1793f8aef8447c233096e5">tt::ranged_numeric&lt; T, A, B &gt;</a>
@@ -716,8 +727,8 @@ $(function() {
 , <a class="el" href="classtt_1_1sfloat__rgba16.html#a9e3573d4418195687315acdfda0e7ad9">tt::sfloat_rgba16</a>
 , <a class="el" href="classtt_1_1sfloat__rgba32.html#abcca413c42c1272631edc71b4c758668">tt::sfloat_rgba32</a>
 , <a class="el" href="classtt_1_1srgb__abgr8__pack.html#a015c85ba7b823cf1b2e9a96f4aa3fc14">tt::srgb_abgr8_pack</a>
-, <a class="el" href="classtt_1_1tagged__id.html#af5795026b936ba07bda76c901f53c5e3">tt::tagged_id&lt; T, Tag, Max &gt;</a>
-, <a class="el" href="structtt_1_1token__t.html#ad67a7eb7450b30ccd30c14d0b96fffb3">tt::token_t</a>
+, <a class="el" href="classtt_1_1tagged__id.html#a77cff63f5cc2459ae0d2fd0b83fa8c91">tt::tagged_id&lt; T, Tag, Max &gt;</a>
+, <a class="el" href="structtt_1_1token__t.html#a5b7b24b5ac85d5b81f36ff41aa46e8a4">tt::token_t</a>
 , <a class="el" href="classtt_1_1unicode__composition.html#a3ba8e61574e58f49e422d9c08d85fd27">tt::unicode_composition</a>
 , <a class="el" href="classtt_1_1_u_r_l.html#ac0d1b2d369d4aa398cdda8663acc3473">tt::URL</a>
 , <a class="el" href="classtt_1_1vspan__iterator.html#af022dfd5ea1d4be97adb4b30842c57cd">tt::vspan_iterator&lt; T &gt;</a>
@@ -742,7 +753,7 @@ $(function() {
 , <a class="el" href="classtt_1_1interval.html#abeab5cd3a0bed854c4ae3c5dec4975f8">tt::interval&lt; T &gt;</a>
 , <a class="el" href="classtt_1_1quarter.html#aa7671a85d8e662b4e9f1aac430ac5b8b">tt::quarter</a>
 , <a class="el" href="classtt_1_1ranged__numeric.html#a6c7e174d076965e9a0571f567b4e25ce">tt::ranged_numeric&lt; T, A, B &gt;</a>
-, <a class="el" href="classtt_1_1tagged__id.html#a79cdf50b2bfe6f2b73ce3f5f160fda2d">tt::tagged_id&lt; T, Tag, Max &gt;</a>
+, <a class="el" href="classtt_1_1tagged__id.html#a7038649bdcf21a75b65db7751ea787a7">tt::tagged_id&lt; T, Tag, Max &gt;</a>
 , <a class="el" href="structtt_1_1unicode__ranges.html#ad4f0645dcd63d8b20c310d39cc3d10a5">tt::unicode_ranges</a>
 , <a class="el" href="classtt_1_1_u_r_l.html#a1b3ecae4d6486770c8d5bc4c528cc5ec">tt::URL</a>
 , <a class="el" href="classtt_1_1vspan__iterator.html#adb90af7bfa8347529fc701bed5233d64">tt::vspan_iterator&lt; T &gt;</a>
@@ -751,14 +762,15 @@ $(function() {
 <li>operator&gt;&gt;
 : <a class="el" href="classtt_1_1datum__impl.html#ae775d4955829042e31c52f68adc939fe">tt::datum_impl&lt; HasLargeObjects &gt;</a>
 , <a class="el" href="classtt_1_1interval.html#a6e55e27a5baa75b9182adc597aee27da">tt::interval&lt; T &gt;</a>
-, <a class="el" href="classtt_1_1interval__vec2.html#a8edcccc54051276ae866c3d4f98f20e6">tt::interval_vec2</a>
+, <a class="el" href="classtt_1_1interval__extent2.html#a5d84ba52e781998483434c2b5e85066c">tt::interval_extent2</a>
 </li>
 <li>operator&gt;&gt;=()
 : <a class="el" href="classtt_1_1datum__impl.html#af5f34a8949270824586dec617fe6f932">tt::datum_impl&lt; HasLargeObjects &gt;</a>
 </li>
 <li>operator[]()
-: <a class="el" href="classtt_1_1datum__impl.html#aaa61b7406db3e169d0f3adbcc813c488">tt::datum_impl&lt; HasLargeObjects &gt;</a>
-, <a class="el" href="structtt_1_1detail_1_1_s_h_a2_1_1block.html#acbccb1afc73c24965a3481e58569a72a">tt::detail::SHA2::block&lt; T &gt;</a>
+: <a class="el" href="classtt_1_1axis__aligned__rectangle.html#a11af801c1271283c84508a3f504e3477">tt::axis_aligned_rectangle&lt; T &gt;</a>
+, <a class="el" href="classtt_1_1datum__impl.html#aaa61b7406db3e169d0f3adbcc813c488">tt::datum_impl&lt; HasLargeObjects &gt;</a>
+, <a class="el" href="structtt_1_1detail_1_1_s_h_a2_1_1block.html#a54b534a981177bb55652e8af32bea583">tt::detail::SHA2::block&lt; T &gt;</a>
 , <a class="el" href="classtt_1_1font__glyph__ids.html#a5fbf8c315b581bfdcd39089dc47a4626">tt::font_glyph_ids</a>
 , <a class="el" href="classtt_1_1gap__buffer.html#a29a6418594cbf1945869a47b4db0ebe1">tt::gap_buffer&lt; T, Allocator &gt;</a>
 , <a class="el" href="classtt_1_1gap__buffer__iterator.html#a5ecfbc743ec1c1b2839cd153df7258d7">tt::gap_buffer_iterator&lt; T &gt;</a>
@@ -767,9 +779,10 @@ $(function() {
 , <a class="el" href="classtt_1_1pixel__row.html#a56f8093ffffc8316b4befd92e1a81d09">tt::pixel_row&lt; T &gt;</a>
 , <a class="el" href="classtt_1_1placement__array.html#adaaa908432ed08f965f662168a172f93">tt::placement_array&lt; T, Byte &gt;</a>
 , <a class="el" href="classtt_1_1range__map.html#a8c246c341b1b477b7fb6c22cd3d3fc10">tt::range_map&lt; Key, Value &gt;</a>
+, <a class="el" href="classtt_1_1rect.html#a9c69585fc23fa07f6e69ae50596a801d">tt::rect</a>
 , <a class="el" href="classtt_1_1recursive__iterator.html#a49184394e128129b5264a3f07b111cb2">tt::recursive_iterator&lt; ParentIt &gt;</a>
-, <a class="el" href="classtt_1_1stack.html#a01097b020251aca3021b14d93e9f0266">tt::stack&lt; T, MaxSize &gt;</a>
-, <a class="el" href="classtt_1_1tagged__map.html#a9ea72f7049038f546cea198e5babff47">tt::tagged_map&lt; T, Tags &gt;</a>
+, <a class="el" href="classtt_1_1stack.html#adb59666db216e97f4bf60980f6cbdc2f">tt::stack&lt; T, MaxSize &gt;</a>
+, <a class="el" href="classtt_1_1tagged__map.html#a75a4407f404dbf91faf6ca1c05dd6b85">tt::tagged_map&lt; T, Tags &gt;</a>
 , <a class="el" href="classtt_1_1vspan.html#a03fd00841091d7de89ee6208c651bce9">tt::vspan&lt; T &gt;</a>
 , <a class="el" href="classtt_1_1vspan__iterator.html#a18a7a78632c8f6a82c746ccfe226dc6b">tt::vspan_iterator&lt; T &gt;</a>
 , <a class="el" href="classtt_1_1wfree__message__queue.html#a5f9cddf663bbd8bb5b989f145818caf6">tt::wfree_message_queue&lt; T, Capacity &gt;</a>
@@ -782,18 +795,19 @@ $(function() {
 : <a class="el" href="classtt_1_1datum__impl.html#a4ff455634df137be292c28d1e5ca8688">tt::datum_impl&lt; HasLargeObjects &gt;</a>
 </li>
 <li>operator|
-: <a class="el" href="classtt_1_1axis__aligned__rectangle.html#a1a77196d634dd79997d9a5973d4747c5">tt::axis_aligned_rectangle&lt; T &gt;</a>
+: <a class="el" href="classtt_1_1axis__aligned__rectangle.html#aef1c37047f964fac283c5f0d10f0af36">tt::axis_aligned_rectangle&lt; T &gt;</a>
 , <a class="el" href="classtt_1_1datum__impl.html#aa297f7caf761ff5d07eeb496620c98b4">tt::datum_impl&lt; HasLargeObjects &gt;</a>
 , <a class="el" href="structtt_1_1unicode__ranges.html#ae7bbd058866018cda3a74bcc8ff14dd4">tt::unicode_ranges</a>
 </li>
 <li>operator|=()
-: <a class="el" href="classtt_1_1axis__aligned__rectangle.html#ac0910fa53cf40b42e053a6601514e2ba">tt::axis_aligned_rectangle&lt; T &gt;</a>
+: <a class="el" href="classtt_1_1axis__aligned__rectangle.html#a3199371868a0de995228580a84a88849">tt::axis_aligned_rectangle&lt; T &gt;</a>
 , <a class="el" href="classtt_1_1datum__impl.html#ab507908d640590611a905e02de44e51b">tt::datum_impl&lt; HasLargeObjects &gt;</a>
 , <a class="el" href="structtt_1_1unicode__ranges.html#ac6fdfaadef2c202bd9dd92802e5e6dc1">tt::unicode_ranges</a>
 </li>
 <li>operator~
 : <a class="el" href="structtt_1_1bezier__curve.html#aa5441b5d5a9550892cc5f3218deb1aac">tt::bezier_curve</a>
 , <a class="el" href="classtt_1_1datum__impl.html#a0e3e38ed2df44266ecd8af9e39bc160b">tt::datum_impl&lt; HasLargeObjects &gt;</a>
+, <a class="el" href="classtt_1_1geo_1_1identity.html#a36e43eb77fc9b9c9ba26f5792e65cea5">tt::geo::identity</a>
 , <a class="el" href="classtt_1_1geo_1_1matrix.html#a9c1b5e5eb91541db4e42a7fd8fe4339a">tt::geo::matrix&lt; D &gt;</a>
 </li>
 <li>optical_size
@@ -839,6 +853,7 @@ $(function() {
 </li>
 </ul>
 </div><!-- contents -->
+<!-- HTML footer for doxygen 1.9.0-->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.0

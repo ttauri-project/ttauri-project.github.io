@@ -8,19 +8,33 @@ then
     exit 2
 fi
 
-VERSIONS=`cat ttauri_versions.txt`
+TAGS=`cat ttauri_versions.txt`
 
 TTAURI_DIR="ttauri"
-git clone https://github.com/ttauri-project/ttauri.git "${TTAURI_DIR}"
+if [ ! -e ${TTAURI_DIR} ]
+then
+    git clone https://github.com/ttauri-project/ttauri.git "${TTAURI_DIR}"
+fi
 
-for VERSION in ${VERSIONS}
+for TAG in ${TAGS}
 do
-    echo "Checkout out version ${VERSION} of ttauri."
-    (cd "${TTAURI_DIR}"; git checkout -q "${VERSION}")
+    echo "Checkout out version ${TAG} of ttauri."
+    (cd "${TTAURI_DIR}"; git checkout -q "${TAG}")
 
-    mkdir -p "documentation/ttauri/${VERSION}"
+    mkdir -p "documentation/ttauri/${TAG}"
 
-    TTAURI_DIR="${TTAURI_DIR}" TTAURI_VERSION="$VERSION" "$DOXYGEN"
+    TAG_SELECT=""
+    for T in ${TAGS}
+    do
+        if [ "${T}" = "${TAG}" ]
+        then
+            TAG_SELECT="${TAG_SELECT} *${T}"
+        else
+            TAG_SELECT="${TAG_SELECT} ${T}"
+        fi
+    done
+
+    TTAURI_DIR="${TTAURI_DIR}" TTAURI_TAG="${TAG}" TTAURI_TAG_SELECT="${TAG_SELECT}" "${DOXYGEN}" "scripts/Doxyfile"
 done
 
 rm -fr ${TTAURI_DIR}
