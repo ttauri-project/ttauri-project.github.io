@@ -62,16 +62,16 @@ jobs:
           cd ttauri
           (echo "main" && git tag -l --sort=-version:refname "v*") > ../versions.txt
           git tag --sort=committerdate | tail -1 | cut -c2- > ../latest_version.txt
-          cd ..
           echo "Available versions:"
-          cat versions.txt
+          cat ../versions.txt
           echo "Latest version:"
-          cat latest_version.txt
+          cat ../latest_version.txt
+
 
       # Run doxygen on the checkouts of each tags to generate documentation for each version.
       - name: 🙏 Build documentation for all tags
-        run: >
-          cd ttauri
+        run: |
+          TAGS=$(<../versions.txt)
           for TAG in ${TAGS}
           do
             echo "Checking out version: $TAG"
