@@ -1,0 +1,108 @@
+#
+# .github/workflows/build-docs.yml
+#
+# Copyright 2021 Jens A. Koch.
+# SPDX-License-Identifier: BSL-1.0
+# This file is part of ttauri-project.
+#
+
+name: Documentation Pipeline
+
+on: push
+
+jobs:
+
+  build-docs:
+    name: Generate Documentation
+
+    # The base container to run the job on.
+    # "ubuntu-latest" is still stuck on 18.04, see https://github.com/actions/virtual-environments/issues/1816
+    # Let's use a newer version...
+    runs-on: ubuntu-20.04
+
+    # debian sid needs no sudo
+    #container:
+    #  image: debian:sid-slim
+
+    steps:
+      # Checks out a copy of your repository
+      - name: 🤘 Checkout Code
+        uses: actions/checkout@v2 # https://github.com/actions/checkout.
+
+      # Install tools for documentation generation
+      - name: Install Tools
+        # sudo apt-get upgrade -y
+        run: |
+          export DEBIAN_FRONTEND=noninteractive
+          sudo apt-get update -y
+          sudo apt-get install -y doxygen graphviz
+
+      # Show the version of the tools we use, e.g. Doxygen. Graphviz version is displayed via "dot".
+      - name: Show Tool Versions
+        run: |
+          doxygen -v
+          dot -V
+
+      # Get the source repository, for which we want to generate the documentation for.
+      # Then fetch all tagged versions.
+      - name: Get Source Repository
+        run: |
+          rm -rf ttauri
+          git clone https://github.com/ttauri-project/ttauri.git ttauri
+
+      # Get the list of version numbers from git tags.
+      # Use reverse version sorting of "git tag list".
+      # Append "main" branch to version list.
+      # Write to "version.txt"
+      #
+      # Get latest tag version without "v" prefix.
+      # Write to "latest_version.txt".
+      - name: Get Versions
+        run: |
+          cd ttauri
+          (echo "main" && git tag -l --sort=-version:refname "v*") > ../versions.txt
+          git tag --sort=committerdate | tail -1 | cut -c2- > ../latest_version.txt
+          cd ..
+          echo "Available versions:"
+          cat versions.txt
+          echo "Latest version:"
+          cat latest_version.txt
+
+      # Run doxygen on the checkouts of each tags to generate documentation for each version.
+      - name: Generate docs for all tags
+        run: |
+          cd ttauri
+          for TAG in ${TAGS}
+          do
+            echo "Checking out version: $TAG"
+
+            git checkout -q $TAG
+
+            if [[ $TAG == v* ]];
+            then
+              VER="${TAG:1}"
+            else
+              VER=$TAG
+            fi
+
+            mkdir -p "../docs/ttauri/${VER}"
+
+            echo "Setting environment vars for doxygen config:"
+            export TTAURI_TAG="${TAG}"
+            export TTAURI_VERSION="${VER}"
+
+            echo "TTAURI_TAG     -> $TTAURI_TAG"
+            echo "TTAURI_VERSION -> $TTAURI_VERSION"
+
+            echo "Current working dir: $PWD"
+
+            doxygen ../scripts/Doxyfile
+
+          done
+
+      # Automatically removes all workflow runs older than 7 days, but always keeps the last run.
+      - name: Delete Workflow Runs
+        uses: GitRML/delete-workflow-runs@main
+        with:
+          retain_days: 7
+          keep_minimum_runs: 1
