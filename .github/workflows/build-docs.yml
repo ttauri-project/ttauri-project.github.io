@@ -44,7 +44,6 @@ jobs:
           dot -V
 
       # Get the source repository, for which we want to generate the documentation for.
-      # Then fetch all tagged versions.
       - name: 🔽 Get Source Repository
         run: |
           rm -rf ttauri
@@ -76,26 +75,35 @@ jobs:
       - name: 🖉 Set Repository
         run: echo "REPOSITORY=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
 
-      - name: ✗ Delete all files, which should not be published
+      # Delete all files, which should not be published on the website branch
+      - name: ✗ Pre-deploy cleanup
         run: |
           rm -rf .github
           rm -rf ttauri
           rm -rf scripts
+          dir
 
+      - name: Show Workspace folder
+        run: |
+          dir ${GITHUB_WORKSPACE}
+
+      # Re-initialize the cleaned repo and commit it
       - name: ✓ Commit
         run: |
-          cd docs
+          rm -rf .git
           git init
           git add -A
           git config --local user.email "github-actions[bot]@users.noreply.ttauri-project.org"
           git config --local user.name "github-actions[bot]"
           git commit -m "Publish docs from ${GITHUB_REPOSITORY}@${GITHUB_SHA:0:9}"
 
-      - name: 🚀 push
+      # Push the repo to the gh-pages branch
+      - name: 🚀 Push
         uses: ad-m/github-push-action@v0.6.0 # https://github.com/ad-m/github-push-action
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
+          directory: ${GITHUB_WORKSPACE}
           force: true
 
       # Automatically removes all workflow runs older than 7 days, but always keeps the last run.

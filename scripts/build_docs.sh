@@ -26,7 +26,7 @@ do
     VER=$TAG
   fi
 
-  mkdir -p "../docs/ttauri/${VER}"
+  mkdir -p "docs/ttauri/${VER}"
 
   echo "Setting environment vars for doxygen config:"
   export TTAURI_TAG="${TAG}"
