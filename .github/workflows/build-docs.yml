@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@v2 # https://github.com/actions/checkout
 
       # Install tools for documentation generation
-      - name: Install Tools
+      - name: 🔽 Install Tools
         # sudo apt-get upgrade -y
         run: |
           export DEBIAN_FRONTEND=noninteractive
@@ -38,14 +38,14 @@ jobs:
           sudo apt-get install -y doxygen graphviz
 
       # Show the version of the tools we use, e.g. Doxygen. Graphviz version is displayed via "dot".
-      - name: Show Tool Versions
+      - name: 🛈 Show Tool Versions
         run: |
           doxygen -v
           dot -V
 
       # Get the source repository, for which we want to generate the documentation for.
       # Then fetch all tagged versions.
-      - name: Get Source Repository
+      - name: 🔽 Get Source Repository
         run: |
           rm -rf ttauri
           git clone https://github.com/ttauri-project/ttauri.git ttauri
@@ -66,7 +66,6 @@ jobs:
           cat ../versions.txt
           echo "Latest version:"
           cat ../latest_version.txt
-
 
       # Run doxygen on the checkouts of each tags to generate documentation for each version.
       - name: 🙏 Build documentation for all tags
@@ -89,7 +88,7 @@ jobs:
       - name: 🚀 push
         uses: ad-m/github-push-action@v0.6.0 # https://github.com/ad-m/github-push-action
         with:
-          #github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           #repository: jakoch/${{ env.REPOSITORY }}
           branch: gh-pages
           directory: ./docs
