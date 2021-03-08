@@ -104,7 +104,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          directory: ${GITHUB_WORKSPACE}
+          directory: ${{ env.GITHUB_WORKSPACE }}
           force: true
 
       # Automatically removes all workflow runs older than 7 days, but always keeps the last run.
