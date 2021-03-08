@@ -56,7 +56,7 @@ jobs:
       #
       # Get latest tag version without "v" prefix.
       # Write to "ttauri_latest_version.txt".
-      - name: Get Versions
+      - name: 🖉 Get Versions
         run: |
           cd ttauri
           git fetch --tags
@@ -73,25 +73,20 @@ jobs:
           chmod +x scripts/build_docs_gh.sh
           scripts/build_docs_gh.sh
 
-      - name: 🖉 Set Repository
-        run: echo "REPOSITORY=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
-
       # Delete all files, which should not be published on the website branch
       - name: ✗ Pre-deploy cleanup
         run: |
+          rm -rf .git
           rm -rf .github
-          rm -rf ttauri
+          rm .gitignore
           rm -rf scripts
+          rm -rf ttauri
           dir
-
-      - name: Show Workspace folder
-        run: |
           dir ${GITHUB_WORKSPACE}
 
       # Re-initialize the cleaned repo and commit it
       - name: ✓ Commit
         run: |
-          rm -rf .git
           git init
           git add -A
           git config --local user.email "github-actions[bot]@users.noreply.ttauri-project.org"
