@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAGS=$(<versions.txt)
+TAGS=$(<ttauri_versions.txt)
 
 for TAG in ${TAGS}
 do

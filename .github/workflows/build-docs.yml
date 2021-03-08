@@ -60,10 +60,10 @@ jobs:
       - name: Get Versions
         run: |
           cd ttauri
-          (echo "main" && git tag -l --sort=-version:refname "v*") > ../versions.txt
+          (echo "main" && git tag -l --sort=-version:refname "v*") > ../ttauri_versions.txt
           git tag --sort=committerdate | tail -1 | cut -c2- > ../latest_version.txt
           echo "Available versions:"
-          cat ../versions.txt
+          cat ../ttauri_versions.txt
           echo "Latest version:"
           cat ../latest_version.txt
 
@@ -75,6 +75,12 @@ jobs:
 
       - name: 🖉 Set Repository
         run: echo "REPOSITORY=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
+
+      - name: ✗ Delete all files, which should not be published
+        run: |
+          rm -rf .github
+          rm -rf ttauri
+          rm -rf scripts
 
       - name: ✓ Commit
         run: |
@@ -89,9 +95,7 @@ jobs:
         uses: ad-m/github-push-action@v0.6.0 # https://github.com/ad-m/github-push-action
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          #repository: jakoch/${{ env.REPOSITORY }}
           branch: gh-pages
-          directory: ./docs
           force: true
 
       # Automatically removes all workflow runs older than 7 days, but always keeps the last run.

@@ -34,7 +34,7 @@
     if (current_version == 'main') {
       // setup alert box
       var alert_div = document.createElement("div");
-      alert_div.innerHTML = '⚠️ This documentation corresponds to the <a style="font-family: monospace;" href="https://ttauri-project.org/docs/ttauri/main">main</a> development branch of TTauri. It might differ from official releases.';
+      alert_div.innerHTML = '⚠️ This documentation corresponds to the <a style="font-family: monospace;" href="https://ttauri-project.org/docs/ttauri/main">main</a> development branch of TTauri. It might differ from official release versions.';
       alert_div.style.cssText = "color: #856404; background-color: #fff3cd; border-color: #ffeeba; margin: 1ex auto 1ex 1em; padding: 1ex; border-radius: 1ex; display: inline-block;"
       // insert after dropdown
       var dropdownNode = $(".project_version_dropdown")[0];
