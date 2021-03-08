@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAGS=$(<../versions.txt)
+TAGS=$(<versions.txt)
 
 for TAG in ${TAGS}
 do
@@ -15,7 +15,7 @@ do
     VER=$TAG
   fi
 
-  mkdir -p "../docs/ttauri/${VER}"
+  mkdir -p "docs/ttauri/${VER}"
 
   echo "Setting environment vars for doxygen config:"
   export TTAURI_TAG="${TAG}"
@@ -26,6 +26,6 @@ do
 
   echo "Current working dir: $PWD"
 
-  doxygen ../scripts/Doxyfile
+  doxygen scripts/Doxyfile
 
 done
