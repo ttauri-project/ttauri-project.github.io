@@ -27,7 +27,7 @@ jobs:
     steps:
       # Checks out a copy of your repository
       - name: 🤘 Checkout Code
-        uses: actions/checkout@v2 # https://github.com/actions/checkout.
+        uses: actions/checkout@v2 # https://github.com/actions/checkout
 
       # Install tools for documentation generation
       - name: Install Tools
@@ -69,7 +69,7 @@ jobs:
           cat latest_version.txt
 
       # Run doxygen on the checkouts of each tags to generate documentation for each version.
-      - name: Generate docs for all tags
+      - name: 🙏 Build documentation for all tags
         run: |
           cd ttauri
           for TAG in ${TAGS}
@@ -100,8 +100,29 @@ jobs:
 
           done
 
+      - name: 🖉 Set Repository
+        run: echo "REPOSITORY=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
+
+      - name: ✓ Commit
+        run: |
+          cd docs
+          git init
+          git add -A
+          git config --local user.email "github-actions[bot]@users.noreply.ttauri-project.org"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Publish docs from ${GITHUB_REPOSITORY}@${GITHUB_SHA:0:9}"
+
+      - name: 🚀 push
+        uses: ad-m/github-push-action@v0.6.0 # https://github.com/ad-m/github-push-action
+        with:
+          #github_token: ${{ secrets.GITHUB_TOKEN }}
+          #repository: jakoch/${{ env.REPOSITORY }}
+          branch: gh-pages
+          directory: ./docs
+          force: true
+
       # Automatically removes all workflow runs older than 7 days, but always keeps the last run.
-      - name: Delete Workflow Runs
+      - name: ✗ Delete Workflow Runs
         uses: GitRML/delete-workflow-runs@main
         with:
           retain_days: 7
