@@ -70,7 +70,7 @@ jobs:
 
       # Run doxygen on the checkouts of each tags to generate documentation for each version.
       - name: 🙏 Build documentation for all tags
-        run: |
+        run: >
           cd ttauri
           for TAG in ${TAGS}
           do
