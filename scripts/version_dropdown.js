@@ -54,10 +54,15 @@
     $.each(versions, function(id) {
       var version = versions[id];
       dropdown.push('<option value="' + version + '"');
-      if (version == current_version) {
-        dropdown.push(' selected="selected">' + version);
+      if (version.localeCompare(current_version, undefined, { numeric: true, sensitivity: 'base' }) == 0) {
+        dropdown.push(' selected="selected">');
       } else {
-        dropdown.push('>' + version);
+        dropdown.push('>');
+      }
+      if (version.localeCompare(latest_version, undefined, { numeric: true, sensitivity: 'base' }) == 0) {
+        dropdown.push(version + ' (latest)');
+      } else {
+        dropdown.push(version);
       }
       dropdown.push('</option>');
     });
