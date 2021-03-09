@@ -82,7 +82,6 @@ jobs:
           rm -rf scripts
           rm -rf ttauri
           dir
-          dir ${GITHUB_WORKSPACE}
 
       # Re-initialize the cleaned repo and commit it
       - name: ✓ Commit
