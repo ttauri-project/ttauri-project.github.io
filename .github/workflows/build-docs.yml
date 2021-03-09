@@ -67,17 +67,16 @@ jobs:
           echo "Latest version:"
           cat ../ttauri_latest_version.txt
 
-      -name: 🖉 Create versions.json
+      - name: 🖉 Create versions.json
         run: |
-          cat ../ttauri_versions.txt | jq -Rsc 'split("\n") | map(select(. != ""))' | jq ' { versions: [.]|ltrimstr("v") } ' > ttauri_versions.json
-          cat ttauri_versions.json
-          cat ../ttauri_latest_version.txt | jq -Rsc 'split("\n") | map(select(. != ""))' | jq ' { latest_version: .[]|ltrimstr("v") } ' > ttauri_latest_version.json
-          cat ttauri_latest_version.json
-          jq -s ' .[0] + .[1]' ttauri_latest_version.json ttauri_versions.json > ../versions.json
-          jq -c '{ttauri: { latest_version: .latest_version, versions: .versions[] } }' ../versions.json
-          rm ttauri_versions.* ttauri_latest_version.*
+          cat ttauri_versions.txt | jq -Rsc 'split("\n") | map(select(. != ""))' | jq ' { versions: [.]|ltrimstr("v") } ' > ttauri_versions.json
+          cat ttauri_latest_version.txt | jq -Rsc 'split("\n") | map(select(. != ""))' | jq ' { latest_version: .[]|ltrimstr("v") } ' > ttauri_latest_version.json
+
+          jq -s ' .[0] + .[1]' ttauri_latest_version.json ttauri_versions.json > versions_tmp.json
+          jq -c '{ttauri: { latest_version: .latest_version, versions: .versions[] } }' versions_tmp.json > versions.json
+
           echo "versions.json:"
-          cat ../versions.json
+          cat versions.json
 
       # Run doxygen on the checkouts of each tags to generate documentation for each version.
       - name: 🙏 Build documentation for all tags
@@ -88,12 +87,10 @@ jobs:
       # Delete all files, which should not be published on the website branch
       - name: ✗ Pre-deploy cleanup
         run: |
-          rm -rf .git
-          rm -rf .github
+          rm ttauri_versions.txt ttauri_latest_version.txt ttauri_versions.json ttauri_latest_version.json
+          rm -rf .git .github scripts ttauri
           rm .gitignore
-          rm -rf scripts
-          rm -rf ttauri
-          dir
+          ls
 
       # Re-initialize the cleaned repo and commit it
       - name: ✓ Commit
