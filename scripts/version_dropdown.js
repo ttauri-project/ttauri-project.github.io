@@ -4,7 +4,6 @@
   // the latest version is needed, when you want to add "latest" to the dropdown, too
   // e.g. after the latest_version (CMake - dropdown - style))
   var latest_version = '0.2.3';
-  var current_version_local = 'main';
 
   // the VERSIONS token is replaced/populated with data from the CLI
   // var versions = @VERSIONS@;
@@ -22,10 +21,10 @@
   // 1. jakoch.github.io/ttauri-project.github.io/docs/ttauri/
   // 2. ttauri-project.org/docs/ttauri/
   // 3. (main|latest|version_number), "version_number" matches "major.minor" and "major.minor.patch"
-  var url_web = /(jakoch\.github\.io\/ttauri-project\.github\.io\/docs\/ttauri\/|ttauri-project\.org\/docs\/ttauri\/)(main|latest|(\d\.\d+|\d\.\d+\.\d+)?)\//;
+  var url_web = /(ttauri-project\.org\/docs\/ttauri\/)(main|latest|(\d\.\d+|\d\.\d+\.\d+)?)\//;
 
   // Regepx for local URL
-  var url_local = /.*\/main\//;
+  var url_local = /(jakoch\.github\.io\/ttauri-project\.github\.io\/docs\/ttauri\/)(main|latest|(\d\.\d+|\d\.\d+\.\d+)?)\//;
 
   function build_select(current_version) {
     // display a warning message, if the user switches to the "main" development branch
@@ -71,7 +70,7 @@
     if(url.includes("ttauri-project.org")) {
       return url.replace(url_web, 'ttauri-project.org/docs/ttauri/' + new_version + '/');
     } else {
-      return url.replace(url_local, 'ttauri-project.github.io/docs/ttauri/' + new_version + '/');
+      return url.replace(url_local, 'jakoch.github.io/ttauri-project.github.io/docs/ttauri/' + new_version + '/');
     }
   }
 
@@ -112,20 +111,14 @@
 
       // are we handling the online URL?
       var match = url_web.exec(window.location.href);
-      if (match) {
-        var version = match[2];
-        var select = build_select(version);
-        spanNode.innerHTML=select;
-        $('#version_dropdown select').bind('change', on_change_switch_url);
-      } else {
+      if (!match) {
         // are we handling the local URL?
         match = url_local.exec(window.location.href);
-        if (match) {
-          var version = current_version_local;
-          var select = build_select(version);
-          spanNode.innerHTML=select;
-          $('#version_dropdown select').bind('change', on_change_switch_url);
-        }
       }
+
+      var version = match[2];
+      var select = build_select(version);
+      spanNode.innerHTML=select;
+      $('#version_dropdown select').bind('change', on_change_switch_url);
   });
 })();
