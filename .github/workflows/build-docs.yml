@@ -87,7 +87,7 @@ jobs:
       # Delete all files, which should not be published on the website branch
       - name: ✗ Pre-deploy cleanup
         run: |
-          rm ttauri_versions.txt ttauri_latest_version.txt ttauri_versions.json ttauri_latest_version.json
+          rm ttauri_versions.txt ttauri_latest_version.txt ttauri_versions.json ttauri_latest_version.json versions_tmp.json
           rm -rf .git .github scripts ttauri
           rm .gitignore
           ls
