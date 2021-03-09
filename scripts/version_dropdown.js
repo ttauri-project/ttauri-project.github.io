@@ -18,10 +18,11 @@
       '0.1.0'
   ];
 
-  // RegExp for online URL (ttauri-project.org/docs/ttauri/)(main|latest|version_number)
-  // "version_number" matches "major.minor" and "major.minor.patch"
-  // ttauri-project\.github\.io\/docs\/
-  var url_web = /(ttauri-project\.org\/docs\/ttauri\/)(main|latest|(\d\.\d+|\d\.\d+\.\d+)?)\//;
+  // RegExp for online URL
+  // 1. jakoch.github.io/ttauri-project.github.io/docs/ttauri/
+  // 2. ttauri-project.org/docs/ttauri/
+  // 3. (main|latest|version_number), "version_number" matches "major.minor" and "major.minor.patch"
+  var url_web = /(jakoch\.github\.io\/ttauri-project\.github\.io\/docs\/ttauri\/|ttauri-project\.org\/docs\/ttauri\/)(main|latest|(\d\.\d+|\d\.\d+\.\d+)?)\//;
 
   // Regepx for local URL
   var url_local = /.*\/main\//;
@@ -42,7 +43,7 @@
     if (current_version < latest_version) {
       // setup alert box
       var oldver_alert_div = document.createElement("div");
-      oldver_alert_div.innerHTML = '⚠️ This documents an old version of TTauri. <a style="font-family: monospace;" href="https://ttauri-project.org/docs/ttauri/latest">Click here to see the latest release.</a> Or, select a version from the drop-down menu above.';
+      oldver_alert_div.innerHTML = '⚠️ This documents an old version of TTauri. <a style="font-family: monospace;" href="https://ttauri-project.org/docs/ttauri/latest">Click here to see the latest release.</a> Or, select a version from the drop-down menu.';
       oldver_alert_div.style.cssText = "color: #856404; background-color: #fff3cd; border-color: #ffeeba; margin: 1ex auto 1ex 1em; padding: 1ex; border-radius: 1ex; display: inline-block;"
       // insert after dropdown
       var dropdownNode = $("#project_version_dropdown")[0];
@@ -70,7 +71,7 @@
     if(url.includes("ttauri-project.org")) {
       return url.replace(url_web, 'ttauri-project.org/docs/ttauri/' + new_version + '/');
     } else {
-      return url.replace(url_local, 'E:/0-dev/ttauri-project/ttauri-project.github.io/docs/ttauri/' + new_version + '/');
+      return url.replace(url_local, 'ttauri-project.github.io/docs/ttauri/' + new_version + '/');
     }
   }
 
