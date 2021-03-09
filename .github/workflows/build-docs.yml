@@ -67,14 +67,12 @@ jobs:
           echo "Latest version:"
           cat ../ttauri_latest_version.txt
 
+      # apply some txt-to-json magic spells to create a versions.json file
       - name: 🖉 Create versions.json
         run: |
-          cat ttauri_versions.txt | jq -Rsc 'split("\n") | map(select(. != ""))' | jq ' { versions: [.]|ltrimstr("v") } ' > ttauri_versions.json
-          cat ttauri_latest_version.txt | jq -Rsc 'split("\n") | map(select(. != ""))' | jq ' { latest_version: .[]|ltrimstr("v") } ' > ttauri_latest_version.json
-
-          jq -s ' .[0] + .[1]' ttauri_latest_version.json ttauri_versions.json > versions_tmp.json
-          jq -c '{ttauri: { latest_version: .latest_version, versions: .versions[] } }' versions_tmp.json > versions.json
-
+          cat ttauri_versions.txt | jq -Rsc 'split("\n") | map(select(. != "")) | .[]|ltrimstr("v")' | jq -s '{ versions: . }' > ttauri_versions.json
+          cat ttauri_latest_version.txt | jq -Rsc 'split("\n") | map(select(. != ""))' | jq ' { latest_version: .[] } ' > ttauri_latest_version.json
+          jq -s '.[0] + .[1]' ttauri_latest_version.json ttauri_versions.json | jq -c '{ttauri: [.] }' > versions.json
           echo "versions.json:"
           cat versions.json
 
@@ -87,7 +85,7 @@ jobs:
       # Delete all files, which should not be published on the website branch
       - name: ✗ Pre-deploy cleanup
         run: |
-          rm ttauri_versions.txt ttauri_latest_version.txt ttauri_versions.json ttauri_latest_version.json versions_tmp.json
+          rm ttauri_versions.txt ttauri_latest_version.txt ttauri_versions.json ttauri_latest_version.json
           rm -rf .git .github scripts ttauri
           rm .gitignore
           ls
