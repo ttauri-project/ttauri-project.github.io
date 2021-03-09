@@ -6,7 +6,7 @@ for TAG in ${TAGS}
 do
   echo "Checking out version: $TAG"
 
-  git checkout -q "${TAG}"
+  (cd ttauri; git checkout -q "${TAG}")
 
   if [[ $TAG == v* ]];
   then
