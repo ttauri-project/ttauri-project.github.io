@@ -31,7 +31,7 @@ jobs:
           sudo apt-get install -y doxygen graphviz
 
       # Show the version of the tools we use, e.g. Doxygen. Graphviz version is displayed via "dot".
-      - name: 🛈 Show Tool Versions
+      - name: ℹ Show Tool Versions
         run: |
           doxygen -v
           dot -V
@@ -61,9 +61,21 @@ jobs:
           jq -s '.[0] + .[1]' ttauri_latest_version.json ttauri_versions.json | jq -c '{ttauri: [.] }' > versions.json
           echo "versions.json:" && cat versions.json
 
-      # Run doxygen on the checkouts of each tags to generate documentation for each version.
+      # Insert version data into dropdown script, replacing tokens @LATEST_VERSION@ and @VERSIONS@.
+      - name: 🖉 Update dropdown_menu.js
+        run: |
+          VERSIONS=`jq -c '.ttauri[] | .versions' versions.json`
+          sed -i "s|@VERSIONS@|$VERSIONS|" scripts/version_dropdown.js
+          LATEST_VERSION=`jq -c '.ttauri[] | .latest_version' versions.json`
+          sed -i "s|@LATEST_VERSION@|$LATEST_VERSION|" scripts/version_dropdown.js
+
+      # Run doxygen on the checkout of each tag to generate documentation for each version.
       - name: 🙏 Build Documentation
         run: scripts/build_docs.sh
+
+      # Drop a readme.md into the /docs folder, which contains the documentations overview.
+      - name: 🖉 Build Documentation Overview (/docs/index.html)
+        run: cp scripts/docs_readme.md docs/readme.md
 
       # Delete all files, which should not be published on the website branch.
       - name: ✗ Pre-Commit Cleanup
@@ -73,7 +85,7 @@ jobs:
           ls
 
       # Re-initialize the cleaned repo and commit it.
-      - name: ✓ Commit
+      - name: ✔ Commit
         run: |
           git init
           git add -A

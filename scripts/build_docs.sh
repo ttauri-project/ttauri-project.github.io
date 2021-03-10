@@ -15,14 +15,15 @@ do
     VER=$TAG
   fi
 
-  mkdir -p "docs/ttauri/${VER}"
-
-  echo "Setting environment vars for doxygen config:"
+  echo "Environment variables used by Doxygen config:"
   export TTAURI_TAG="${TAG}"
   export TTAURI_VERSION="${VER}"
-
   echo "TTAURI_TAG     -> $TTAURI_TAG"
   echo "TTAURI_VERSION -> $TTAURI_VERSION"
+
+  mkdir -p "docs/ttauri/${TTAURI_VERSION}"
+
+  echo " - [${TTAURI_VERSION}](ttauri/${TTAURI_VERSION})" >> scripts/docs_readme.md
 
   echo "Current working dir: $PWD"
 
