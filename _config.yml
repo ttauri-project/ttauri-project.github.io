@@ -1,3 +1,4 @@
 theme: jekyll-theme-midnight
 markdown: GFM
-include: "documentation/ttauri/*/html/_*.html"
+include:
+  - "_*.html"
