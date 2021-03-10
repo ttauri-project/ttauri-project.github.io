@@ -15,21 +15,14 @@ jobs:
   build-docs:
     name: Generate Documentation
 
-    # The base container to run the job on.
-    # "ubuntu-latest" is still stuck on 18.04, see https://github.com/actions/virtual-environments/issues/1816
-    # Let's use a newer version...
     runs-on: ubuntu-20.04
 
-    # debian sid needs no sudo
-    #container:
-    #  image: debian:sid-slim
-
     steps:
-      # Checks out a copy of your repository
+      # Checks out a copy of your repository.
       - name: 🤘 Checkout Code
         uses: actions/checkout@v2 # https://github.com/actions/checkout
 
-      # Install tools for documentation generation
+      # Install tools for documentation generation.
       - name: 🔽 Install Tools
         # sudo apt-get upgrade -y
         run: |
@@ -49,46 +42,37 @@ jobs:
           rm -rf ttauri
           git clone https://github.com/ttauri-project/ttauri.git ttauri
 
-      # Get the list of version numbers from git tags.
-      # Use reverse version sorting of "git tag list".
-      # Append "main" branch to version list.
-      # Write to "ttauri_version.txt"
-      #
-      # Get latest tag version without "v" prefix.
-      # Write to "ttauri_latest_version.txt".
+      # ttauri_versions.txt: Get the list of version numbers from git tags, sorted in reverse and add "main" on top.
+      # ttauri_latest_version.txt: Get latest tag version without "v" prefix.
       - name: 🖉 Get Versions
         run: |
           cd ttauri
           git fetch --tags
           (echo "main" && git tag -l --sort=-version:refname "v*") > ../ttauri_versions.txt
+          echo "Available versions:" && cat ../ttauri_versions.txt
           git tag --sort=committerdate | tail -1 | cut -c2- > ../ttauri_latest_version.txt
-          echo "Available versions:"
-          cat ../ttauri_versions.txt
-          echo "Latest version:"
-          cat ../ttauri_latest_version.txt
+          echo "Latest version:" && cat ../ttauri_latest_version.txt
 
-      # apply some txt-to-json magic spells to create a versions.json file
+      # Convert version data from txt to json.
       - name: 🖉 Create versions.json
         run: |
+          echo "{\"latest_version\":\"$(<ttauri_latest_version.txt)\"}" > ttauri_latest_version.json
           cat ttauri_versions.txt | jq -Rsc 'split("\n") | map(select(. != "")) | .[]|ltrimstr("v")' | jq -s '{ versions: . }' > ttauri_versions.json
-          cat ttauri_latest_version.txt | jq -Rsc 'split("\n") | map(select(. != ""))' | jq ' { latest_version: .[] } ' > ttauri_latest_version.json
           jq -s '.[0] + .[1]' ttauri_latest_version.json ttauri_versions.json | jq -c '{ttauri: [.] }' > versions.json
-          echo "versions.json:"
-          cat versions.json
+          echo "versions.json:" && cat versions.json
 
       # Run doxygen on the checkouts of each tags to generate documentation for each version.
-      - name: 🙏 Build documentation for all tags
+      - name: 🙏 Build Documentation
         run: scripts/build_docs.sh
 
-      # Delete all files, which should not be published on the website branch
-      - name: ✗ Pre-deploy cleanup
+      # Delete all files, which should not be published on the website branch.
+      - name: ✗ Pre-Commit Cleanup
         run: |
-          rm ttauri_versions.txt ttauri_latest_version.txt ttauri_versions.json ttauri_latest_version.json
+          rm .gitignore ttauri_*.txt ttauri_*.json
           rm -rf .git .github scripts ttauri
-          rm .gitignore
           ls
 
-      # Re-initialize the cleaned repo and commit it
+      # Re-initialize the cleaned repo and commit it.
       - name: ✓ Commit
         run: |
           git init
@@ -97,7 +81,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git commit -m "Publish docs from ${GITHUB_REPOSITORY}@${GITHUB_SHA:0:9}"
 
-      # Push the repo to the gh-pages branch
+      # Push the repo to the gh-pages branch.
       - name: 🚀 Push
         uses: ad-m/github-push-action@v0.6.0 # https://github.com/ad-m/github-push-action
         with:

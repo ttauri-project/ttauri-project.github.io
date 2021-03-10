@@ -2,5 +2,4 @@ exclude: ttauri
 theme: jekyll-theme-midnight
 markdown: GFM
 include:
-  - docs/
-  - docs/main/
+  - "_*.html"
