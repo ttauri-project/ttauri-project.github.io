@@ -1,3 +1,4 @@
 exclude: ttauri
 theme: jekyll-theme-midnight
 markdown: GFM
+exclude: docs
