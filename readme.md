@@ -3,4 +3,4 @@ TTauri project website
 
 Documentation
 -------------
- - [ttauri main](documentation/ttauri/main/html/index.html)
+ - [ttauri main](docs/ttauri/main/index.html)
