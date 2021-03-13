@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['x_3999',['x',['../classtt_1_1numeric__array.html#aaa5dc8637f0f17ec9594d796bfb66368',1,'tt::numeric_array::x()'],['../namespacett.html#ada81ca03357d7a2768e276cd7794bdb3a02129bb861061d1a052c592e2dc6b383',1,'tt::X()']]],
+  ['x1button_4000',['x1Button',['../structtt_1_1mouse__buttons.html#aa064cc596c4ba5ca0f75eb8dba510466',1,'tt::mouse_buttons']]],
+  ['x2button_4001',['x2Button',['../structtt_1_1mouse__buttons.html#a6ad48fcee514d9357bd21ee04b88d05b',1,'tt::mouse_buttons']]],
+  ['x64_4002',['x64',['../namespacett.html#a0d594f2bba5187c9d45e9637ea9a481ba9c16d991c79c6330e655aa29ea623492',1,'tt']]],
+  ['xheight_4003',['xHeight',['../structtt_1_1attributed__glyph__line.html#aa7cb89f48de9aa0c62e37e3354f4c736',1,'tt::attributed_glyph_line::xHeight()'],['../structtt_1_1font__description.html#a930c3d6b73d9951db3dbb85d51395d84',1,'tt::font_description::xHeight()'],['../structtt_1_1glyph__metrics.html#a84ffe126e53a0c58424a3f5a04567684',1,'tt::glyph_metrics::xHeight()']]],
+  ['xint16_5ft_4004',['xint16_t',['../namespacett.html#a05d938010e35d7a49596c2a98d6308cc',1,'tt']]],
+  ['xint32_5ft_4005',['xint32_t',['../namespacett.html#a9acc10f8762c434c20dea3a9b4648253',1,'tt']]],
+  ['xint64_5ft_4006',['xint64_t',['../namespacett.html#abf013b014cb4ddb93f33fdb643d79b71',1,'tt']]],
+  ['xint8_5ft_4007',['xint8_t',['../namespacett.html#aaad0720f1702daa31e5ae53189cf2154',1,'tt']]],
+  ['xuint16_5ft_4008',['xuint16_t',['../namespacett.html#a296d8504089d0d512875da551912b27e',1,'tt']]],
+  ['xuint32_5ft_4009',['xuint32_t',['../namespacett.html#a8f249b28f10612b13790fe2b8b576ac0',1,'tt']]],
+  ['xuint64_5ft_4010',['xuint64_t',['../namespacett.html#a3a7c6633b4b74b94254bb12536d16a92',1,'tt']]],
+  ['xuint8_5ft_4011',['xuint8_t',['../namespacett.html#aaee47b2c7a65d88e8286564e4c45e27b',1,'tt']]],
+  ['xyz_5fto_5frec2020_4012',['XYZ_to_Rec2020',['../namespacett.html#a65e0253491c94baaf249a0b3dfda6654',1,'tt']]],
+  ['xyz_5fto_5frec2100_4013',['XYZ_to_Rec2100',['../namespacett.html#a80c0e4258a13021614a0048bd261db4e',1,'tt']]],
+  ['xyz_5fto_5fsrgb_4014',['XYZ_to_sRGB',['../namespacett.html#aea45ebc3746de633732cd5f740e5e1ec',1,'tt']]]
+];
