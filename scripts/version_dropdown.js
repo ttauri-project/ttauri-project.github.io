@@ -27,7 +27,7 @@
     // display a warning message, when user switches to an "old version"
     if (current_version.localeCompare(latest_version, undefined, { numeric: true, sensitivity: 'base' }) == -1) {
       var oldver_alert_div = document.createElement("div");
-      oldver_alert_div.innerHTML = '⚠️ This documents an old version of TTauri. <a href="https://ttauri-project.org/docs/ttauri/'+latest_version+'">Switch to the latest release.</a> Or, select a version from the drop-down menu.';
+      oldver_alert_div.innerHTML = '⚠️ This documents an old version of TTauri. <a href="https://www.ttauri-project.org/docs/ttauri/'+latest_version+'">Switch to the latest release.</a> Or, select a version from the drop-down menu.';
       oldver_alert_div.style.cssText = "color: #856404; background-color: #fff3cd; border-color: #ffeeba; margin: 5px 10px; padding: 5px; border-radius: 1ex; display: inline;"
       var dropdownNode = $("#project_version_dropdown")[0];
       $(oldver_alert_div).insertAfter(dropdownNode);
