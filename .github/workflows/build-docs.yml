@@ -8,7 +8,16 @@
 
 name: Documentation Pipeline
 
-on: push
+on:
+  push:
+    branches:
+      - main
+      - doc_fixes
+    # trigger this workflow, on receiving the repo_dispatch event type "build_documentation"
+    repository_dispatch:
+      types: [build_documentation]
+    # add button to trigger this workflow manually
+    workflow_dispatch:
 
 jobs:
 
